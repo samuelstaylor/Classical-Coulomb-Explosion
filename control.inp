@@ -1,0 +1,10 @@
+# EXAMPLE CONTROL.INP FILE
+
+run_type = 1
+N_simulations = 1
+N_time_steps = 120000
+time_step = .001
+trajectory_output_frequency = 500
+temperature_ions = 300.0 
+use_average_atomic_mass = .TRUE.
+include_electron_mass = .FALSE.
