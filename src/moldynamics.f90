@@ -1,5 +1,6 @@
 MODULE MOLDYNAMICS
   USE MOD_GLOBAL
+  USE MOD_IO
   implicit none
   
 CONTAINS
@@ -31,7 +32,8 @@ SUBROUTINE compute_atomic_masses
     end do
   end if
 
-  print*,'mass_convfactor=', mass_convfactor
+  write(log_file,*) "All atomic masses successfully computed:"
+  call print_masses_to_log
 
 END SUBROUTINE compute_atomic_masses
 
@@ -87,9 +89,6 @@ SUBROUTINE calculate_position
     integer :: i
 
     do i=1, N_total_atom
-      ! x = xi + v*dt + 1/2*(f/m)*dt**2
-      ! Position(j,atom)=P+V*dt+0.5d0*invmass*force(j,atom)*dt**2
-
       atom_position(:,i) = atom_position(:,i) + atom_velocity(:,i) * time_step + 0.5d0 * atom_acceleration(:,i) * time_step**2
     end do
 END SUBROUTINE calculate_position
@@ -101,10 +100,6 @@ SUBROUTINE calculate_velocity
     integer :: i
     
     do i=1, N_total_atom
-      ! v = vi + (f/m)*dt
-      ! fix this and get the units right
-      ! atom_velocity(j,atom)=V+invmass*force(j,atom)*dt
-      
       atom_velocity(:,i) = atom_velocity(:,i) + atom_acceleration(:,i) * time_step
     end do
 END SUBROUTINE calculate_velocity

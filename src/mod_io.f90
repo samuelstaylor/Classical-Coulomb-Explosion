@@ -8,17 +8,18 @@ CONTAINS
 ! INPUT SUBROUTINES
 SUBROUTINE read_molecule_input_file(input_filename)
   character(len=*), intent(in) :: input_filename
-  integer :: i, error_code, atom_counter
+  integer :: i, unit_num, error_code, atom_counter
   character(len=256) :: line
-  integer :: unit_num
 
   ! Open the file
-  unit_num = 10
+  unit_num = 10101010
   open(unit=unit_num, file=trim(adjustl(input_filename)), status='old', action='read', iostat=error_code)
   if (error_code /= 0) then
-      write(log_file,*) "Error opening: ", input_filename
-      write(log_file,*) "Ensure that ", input_filename, " is in your running directory"
-      stop
+    write(*,*) "***ERROR*** Error opening: ", input_filename
+    write(*,*) "Ensure that ", input_filename, " is in your running directory"
+    write(log_file,*) "***ERROR*** Error opening: ", input_filename
+    write(log_file,*) "Ensure that ", input_filename, " is in your running directory"
+    stop
   end if
 
   ! Read lines and skip those starting with '#'
@@ -40,7 +41,8 @@ SUBROUTINE read_molecule_input_file(input_filename)
       read(line, *, iostat=error_code) N_total_atom
       if (error_code == 0) exit
       if (error_code /= 0) then
-      write(log_file,*) "Error reading N_total_atom"
+      write(*,*) "***ERROR*** Error reading N_total_atom from ", input_filename
+      write(log_file,*) "***ERROR*** Error reading N_total_atom from ", input_filename
       stop
       end if
   end do
@@ -50,14 +52,12 @@ SUBROUTINE read_molecule_input_file(input_filename)
   allocate(atom_charge(N_total_atom))
   allocate(atom_mass(N_total_atom))
 
-
   ! 2-dimensional arrays that will be allocated to N_total_atoms columns
   allocate(atom_force(3,N_total_atom))
   allocate(atom_acceleration(3,N_total_atom))
   allocate(atom_velocity(3,N_total_atom))
   allocate(atom_position(3,N_total_atom))
  
-
   ! Initialize all arrays to zero
   atom_position = 0.0
   atom_velocity = 0.0
@@ -89,13 +89,18 @@ SUBROUTINE read_molecule_input_file(input_filename)
     read(line, *, iostat=error_code) atom_position(1, atom_counter), atom_position(2, atom_counter), &
                 atom_position(3, atom_counter), atom_atomic_number(atom_counter), atom_charge(atom_counter)
     if (error_code /= 0) then
-        write(log_file,*) "Error reading atom data at atom: ", atom_counter
+        write(*,*) "***ERROR*** Error reading atom data at atom: ", atom_counter
+        write(log_file,*) "***ERROR*** Error reading atom data at atom: ", atom_counter
         stop
     end if
   end do
 
   ! Close the file
-  110 close(unit_num)    
+  110 close(unit_num)  
+
+  write(log_file,*) "Successfully read and initialized data from: ", input_filename
+  call print_initial_atom_info_to_log
+
 END SUBROUTINE read_molecule_input_file
 
 
@@ -109,8 +114,8 @@ SUBROUTINE read_control_input_file(input_filename)
   unit_num = 11
   open(unit=unit_num, file=trim(adjustl(input_filename)), status='old', action='read', iostat=error_code)
   if (error_code /= 0) then
-      write(log_file,*) "Error opening: ", input_filename
-      write(log_file,*) "Ensure that ", input_filename, " is in your running directory"
+      write(log_file,*) "***ERROR*** Error opening: ", input_filename
+      write(log_file,*) "***ERROR*** Ensure that ", input_filename, " is in your running directory"
       stop 
   end if
 
@@ -157,14 +162,18 @@ SUBROUTINE read_control_input_file(input_filename)
   110 close(unit_num)
 
   ! full list of variables
+  write(all_variable_file,*) "  run_type=", run_type
   write(all_variable_file,*) "  N_simulations=", N_simulations
   write(all_variable_file,*) "  N_time_steps=", N_time_steps
   write(all_variable_file,*) "  time_step=", time_step
   write(all_variable_file,*) "  trajectory_output_frequency=", trajectory_output_frequency
   write(all_variable_file,*) "  temperature_ions=", temperature_ions
   write(all_variable_file,*) "  use_average_atomic_mass=", use_average_atomic_mass
-  write(all_variable_file,*) "  N_simulations=", N_simulations
+  write(all_variable_file,*) "  include_electron_mass=", include_electron_mass
   close(all_variable_file)
+
+  write(log_file,*) "Successfully read and initialized data from: ", input_filename
+  write(log_file,*)'All variables allocated and set, see: ', bare_all_variable_filename
   
 END SUBROUTINE read_control_input_file
 
@@ -192,16 +201,40 @@ SUBROUTINE append_paths_to_filenames(formatted_datetime)
   atom_info_filename=trim(adjustl(output_dir))//"/"//formatted_datetime//"/"//bare_atom_info_filename
 END SUBROUTINE append_paths_to_filenames
 
+SUBROUTINE print_masses_to_log
+  integer :: i
+
+  write(log_file,*) 'Atom atomic number and mass (eV_fs^2/A^2):'
+  do i=1, N_total_atom
+      write(log_File,*) atom_atomic_number(i), atom_mass(i)
+  end do
+
+END SUBROUTINE print_masses_to_log
+
+
+SUBROUTINE print_initial_atom_info_to_log
+  integer :: i, elem
+
+  write(log_file,*) 'Element, Atom atomic number, and charge:'
+  do i=1, N_total_atom
+    elem=atom_atomic_number(i)
+    write(log_File,*) element_symbols(elem), elem, atom_mass(i)
+  end do
+
+  write(log_file,*) 'Atom positions (A) in x,y,z:'
+  do i=1, N_total_atom
+    write(log_file,*) atom_position(:,i)
+  end do
+
+END SUBROUTINE print_initial_atom_info_to_log
+
+
 ! OUTPUT SUBROUTINES
 SUBROUTINE print_to_terminal
+  ! Printing all dynamic information to the terminal. Useful for debugging
   integer :: i
 
   write(*,*) '#iter=', iter, "#time=", time
-
-  write(*,*) 'Atom atomic number and mass (eV_fs^2/A^2):'
-  do i=1, N_total_atom
-      write(*,*) atom_atomic_number(i), atom_mass(i)
-  end do
 
   write(*,*) 'Atom positions (A) in x,y,z:'
   do i=1, N_total_atom
@@ -226,45 +259,45 @@ END SUBROUTINE print_to_terminal
 
 
 SUBROUTINE print_to_log_file
-  integer :: i
+  integer :: i, elem
 
   write(log_file,*) '#iter=', iter, '#time=', time
 
-  write(log_file,*) 'Atom atomic number and mass (eV_fs^2/A^2):'
-  do i=1, N_total_atom
-      write(log_file,*) atom_atomic_number(i), atom_mass(i)
-  end do
-
   write(log_file,*) 'Atom positions (A) in x,y,z:'
   do i=1, N_total_atom
-      write(log_file,*) atom_position(:,i)
+    elem=atom_atomic_number(i)
+    write(log_file,*) element_symbols(elem), atom_position(:,i)
   end do
 
   write(log_file,*) 'Atom velocities (A/fs) in x,y,z:'
   do i=1, N_total_atom
-      write(log_file,*) atom_velocity(:,i)
+    elem=atom_atomic_number(i)
+    write(log_file,*) element_symbols(elem), atom_velocity(:,i)
   end do
 
   write(log_file,*) 'Atom speed magnitude (A/fs):'
   do i=1, N_total_atom
-    write(log_file,*) SQRT(SUM(atom_velocity(:,i)**2))
+    elem=atom_atomic_number(i)
+    write(log_file,*) element_symbols(elem), SQRT(SUM(atom_velocity(:,i)**2))
   end do
 
   write(log_file,*) 'Atom acceleration (A/fs^2) in x,y,z:'
   do i=1, N_total_atom
-      write(log_file,*) atom_acceleration(:,i)
+    elem=atom_atomic_number(i)
+    write(log_file,*) element_symbols(elem), atom_acceleration(:,i)
   end do
 
   write(log_file,*) 'Atom force (eV/A) in x,y,z:'
   do i=1, N_total_atom
-      write(log_file,*) atom_force(:,i)
+    elem=atom_atomic_number(i)
+    write(log_file,*) element_symbols(elem), atom_force(:,i)
   end do
 
   write(log_file,*) 'Atom force magnitude (A/fs^2):'
   do i=1, N_total_atom
-    write(log_file,*) SQRT(SUM(atom_force(:,i)**2))
+    elem=atom_atomic_number(i)
+    write(log_file,*) element_symbols(elem), SQRT(SUM(atom_force(:,i)**2))
   end do
-  
 
   write(log_file,*) ""
 END SUBROUTINE print_to_log_file
@@ -327,66 +360,57 @@ SUBROUTINE update_atom_info_file
   ! write the atom info header
   WRITE(atom_info_file, '(A, I0, A)', ADVANCE='NO') "r_seed=", ion_velocity_init_seed, ", "
   do i = 1, N_total_atom
-    write(atom_info_file, '(A)', ADVANCE='NO') element_symbols(atom_atomic_number(i))
-    if (i < N_total_atom) write(atom_info_file, '(A)', ADVANCE='NO') ", "
+    write(atom_info_file, '(A, A)', ADVANCE='NO') element_symbols(atom_atomic_number(i)), ", "
   end do
-  write(atom_info_file, '(A)') ", "
-
+  write(atom_info_file,*) ""
 
   ! write charges
   write(atom_info_file, '(A)', ADVANCE='NO') "Charges, "
   do i = 1, N_total_atom
-      write(atom_info_file, '(F15.10)', ADVANCE='NO') atom_charge(i)
-      if (i < N_total_atom) write(atom_info_file, '(A)', ADVANCE='NO') ", "
+      write(atom_info_file, '(F15.10, A)', ADVANCE='NO') atom_charge(i), ", "
   end do
-  write(atom_info_file, '(A)') ", "
+  write(atom_info_file,*) ""
 
   ! write Time
   write(atom_info_file, '(A)', ADVANCE='NO') "Time[fs], "
   do i = 1, N_total_atom
-      write(atom_info_file, '(F10.6)', ADVANCE='NO') time
-      if (i < N_total_atom) write(atom_info_file, '(A)', ADVANCE='NO') ", "
+      write(atom_info_file, '(F10.6, A)', ADVANCE='NO') time, ", "
   end do
-  write(atom_info_file, '(A)') ", "
+  write(atom_info_file,*) ""
 
   ! write charge Sum
   charge_sum = SUM(atom_charge)
-  write(atom_info_file, '(A)', ADVANCE='NO') "Charge Sum, "
-  write(atom_info_file, '(F15.10)', ADVANCE='NO') charge_sum
-  write(atom_info_file, '(A)') ", "
+  write(atom_info_file, '(A, F15.10, A)', ADVANCE='NO') "Charge Sum, ", charge_sum, ", "
+  write(atom_info_file,*)
 
   ! write X Velocity
   write(atom_info_file, '(A)', ADVANCE='NO') "X Velocity[A/fs], "
   do i = 1, N_total_atom
-      write(atom_info_file, '(F10.6)', ADVANCE='NO') atom_velocity(1, i)
-      if (i < N_total_atom) write(atom_info_file, '(A)', ADVANCE='NO') ", "
+      write(atom_info_file, '(F10.6, A)', ADVANCE='NO') atom_velocity(1, i), ", "
   END do
-  write(atom_info_file, '(A)') ", "
+  write(atom_info_file,*) ""
 
   ! write Y Velocity
   write(atom_info_file, '(A)', ADVANCE='NO') "Y Velocity[A/fs], "
   do i = 1, N_total_atom
-      write(atom_info_file, '(F10.6)', ADVANCE='NO') atom_velocity(2, i)
-      if (i < N_total_atom) write(atom_info_file, '(A)', ADVANCE='NO') ", "
+      write(atom_info_file, '(F10.6, A)', ADVANCE='NO') atom_velocity(2, i), ", "
   END do
-  write(atom_info_file, '(A)') ", "
+  write(atom_info_file, '(A)') ""
 
   ! write Z Velocity
   write(atom_info_file, '(A)', ADVANCE='NO') "Z Velocity[A/fs], "
   do i = 1, N_total_atom
-      write(atom_info_file, '(F10.6)', ADVANCE='NO') atom_velocity(3, i)
-      if (i < N_total_atom) write(atom_info_file, '(A)', ADVANCE='NO') ", "
+      write(atom_info_file, '(F10.6, A)', ADVANCE='NO') atom_velocity(3, i), ", "
   END do
-  write(atom_info_file, '(A)') ", "
+  write(atom_info_file,*) ""
 
   ! write Speed
   write(atom_info_file, '(A)', ADVANCE='NO') "Speed[A/fs], "
   do i = 1, N_total_atom
-      write(atom_info_file, '(F10.6)', ADVANCE='NO') SQRT(SUM(atom_velocity(:, i)**2))
-      if (i < N_total_atom) write(atom_info_file, '(A)', ADVANCE='NO') ", "
+      write(atom_info_file, '(F10.6, A)', ADVANCE='NO') SQRT(SUM(atom_velocity(:, i)**2)), ", "
   end do
-  write(atom_info_file, '(A)') ", "
-  write(atom_info_file, '(A)') ""
+  write(atom_info_file,*) ""
+  write(atom_info_file,*) ""
 
   write(log_file,*) "Successfully updated atom info file: ", atom_info_file
 

@@ -21,17 +21,13 @@ SUBROUTINE initialize
   call open_files
   call read_molecule_input_file('molecule.inp')
   call read_control_input_file('control.inp')
-
-
-  ! global variables to not be set in control.inp
-  ion_velocity_init_seed = 1
-  ! OPTIONAL TO-DO: 
-  ! maybe use an array of the initial seeds to generate from? or iterate it 0,1,2,..
-
-  ! TO DO: Print to log file any info you want
-  write(log_file,*)'All variables allocated and set, see: ', bare_all_variable_filename
-
   call compute_atomic_masses
+
+  write(log_file,*)""
+  write(log_file,*)"Initialization complete. Beginning computation..."
+  write(log_file,*)""
+
+  write(*,*)"Initialization complete. Beginning computation..."
 
 END SUBROUTINE initialize
 
@@ -55,7 +51,7 @@ SUBROUTINE open_files
   output_dir_with_date_time = trim(adjustl(output_dir))//"/"//formatted_datetime
 
   call check_and_create_directory(output_dir_with_date_time, dir_exists)
-  write(*,'(A, A, A, A)') "output folder created: ", "'", trim(output_dir_with_date_time), "'"
+  write(*,'(A, A, A, A)') " Output folder created: ", "'", trim(output_dir_with_date_time), "'"
 
   ! Open output files
   open(log_file,file=trim(adjustl(log_output_filename)))
@@ -64,7 +60,7 @@ SUBROUTINE open_files
   open(atom_info_file,file=trim(adjustl(atom_info_filename)))  !Boltzmann dist. to calculate the velocities
 
   write(log_file,*) "Run Started and output directory successfully created. Initializing..."
-
+  write(log_file,'(A, A)') " Output folder created: ",  trim(output_dir_with_date_time)
 
 END SUBROUTINE open_files
 
@@ -127,6 +123,12 @@ END SUBROUTINE calculate
 subroutine cleanup
   real*8 :: program_elapsed_time
 
+  call cpu_time(program_end_time)
+  program_elapsed_time = program_end_time - program_start_time
+
+  write(log_file,*)"Run finished. Elapsed time (seconds): ", program_elapsed_time
+  write(*,*)"Run finished. Elapsed time (seconds): ", program_elapsed_time
+
   ! close the output files
   close(log_file)
   close(trajectory_file)
@@ -140,10 +142,6 @@ subroutine cleanup
   deallocate(atom_atomic_number)
   deallocate(atom_charge)
   deallocate(atom_mass)
-
-  call cpu_time(program_end_time)
-  program_elapsed_time = program_end_time - program_start_time
-  write(*,*)"Run finished. Elapsed time (s): ", program_elapsed_time
 
 end subroutine cleanup
 

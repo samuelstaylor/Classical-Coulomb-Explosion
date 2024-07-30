@@ -16,12 +16,12 @@ MODULE MOD_GLOBAL
     real*8  :: temperature_ions=300 ! The temperature of the ions in K
     logical :: use_average_atomic_mass=.TRUE. ! Use mass of average number of nucleons for the mass calculation
     logical :: include_electron_mass=.FALSE. ! Add the mass of the electrons to the mass for the calculation
+    integer :: ion_velocity_init_seed=1 ! Set this in the control.inp only if the run_type=1
 
 
     ! global variables to not be set in control.inp but used in the program
-    integer :: ion_velocity_init_seed
-    real*8  :: time ! The time (in fs) of the simulation at each step
-    integer :: iter 
+    real*8  :: time=0 ! The time (in fs) of the simulation at each step
+    integer :: iter=0
     real*8  :: program_start_time
     real*8  :: program_end_time
 
