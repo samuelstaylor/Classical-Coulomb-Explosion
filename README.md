@@ -34,7 +34,7 @@ quantum effects.
 
         trajectory_r<rval>.xyz file: Positions of the atoms at different time increments.
 
-**Running the Program:** The program must be compiled in order to create an executable. There are two methods of doing this: either via the Makefile or manually compiling and then linking each file. See the .txt files included in the 'instruction' directory. Run with the following command:
+**Running the Program:** The program must be compiled in order to create an executable. There are two methods of doing this: either via the Makefile or manually compiling and then linking each file. See the .txt files included in the 'instruction' directory. Ensure that all of the input files are in your current directory when you are running the program. Run with the following command:
 
         ./<program_executable>
 
