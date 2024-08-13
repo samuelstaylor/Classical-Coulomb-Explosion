@@ -1,7 +1,6 @@
 # EXAMPLE CONTROL.INP FILE
 
-run_type = 1
-N_simulations = 1
+N_simulations = 5
 N_time_steps = 120000
 time_step = 1.0 
 trajectory_output_frequency = 500

@@ -1,0 +1,8 @@
+   run_type=           2
+   N_simulations=          10
+   N_time_steps=      120000
+   time_step=   1.0000000000000000E-003
+   trajectory_output_frequency=         500
+   temperature_ions=   300.00000000000000     
+   use_average_atomic_mass= T
+   include_electron_mass= F

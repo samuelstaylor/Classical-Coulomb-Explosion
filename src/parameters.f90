@@ -3,7 +3,7 @@ MODULE PARAMETERS
     character*255,parameter :: output_dir="output"
     character*255,parameter :: bare_log_output_filename="monitor.out"
     character*255,parameter :: bare_all_variable_filename="all_variable_file.txt"
-    character*255,parameter :: bare_trajectory_filename="trajectory.xyz"
+    character*255,parameter :: bare_trajectory_filename="trajectory_r" !append r_val and .xyz extension
     character*255,parameter :: bare_atom_info_filename="atom_info.csv"
 
     ! Units to be used in calculations: "Nano"
@@ -41,8 +41,8 @@ MODULE PARAMETERS
 
 
     ! Files and their IDs
-    integer,parameter :: log_file=2,all_variable_file=3, trajectory_file=4, atom_info_file=5
-
+    integer,parameter :: log_file=10,control_file=11,molecule_file=12,seeds_file=13
+    integer,parameter :: all_variable_file=14, atom_info_file=15, trajectory_file=16
       ! Element symbols and names
     character*3,parameter   :: element_symbols(N_elements)=(/ &
     "  H"," He", &

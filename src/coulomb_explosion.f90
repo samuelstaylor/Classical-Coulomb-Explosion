@@ -18,9 +18,10 @@ SUBROUTINE initialize
   write(*,*) "-=================================-"
   write(*,*) "Run Started. Initializing..."
 
-  call open_files
+  call prepare_output
   call read_molecule_input_file('molecule.inp')
   call read_control_input_file('control.inp')
+  call read_seeds_input_file('seeds.inp')
   call compute_atomic_masses
 
   write(log_file,*)""
@@ -32,14 +33,13 @@ SUBROUTINE initialize
 END SUBROUTINE initialize
 
 
-SUBROUTINE open_files
+SUBROUTINE prepare_output
   character(len=15) :: formatted_datetime
   logical :: dir_exists
   character(len=255) :: output_dir_with_date_time
-
+  character(len=255) :: trajectory_directory
 
   call get_formatted_datetime(formatted_datetime)
-  call append_paths_to_filenames(formatted_datetime)
   
   call check_and_create_directory(output_dir, dir_exists)
   if (.not. dir_exists) then
@@ -53,72 +53,73 @@ SUBROUTINE open_files
   call check_and_create_directory(output_dir_with_date_time, dir_exists)
   write(*,'(A, A, A, A)') " Output folder created: ", "'", trim(output_dir_with_date_time), "'"
 
+  trajectory_directory = trim(adjustl(output_dir_with_date_time))//"/"//"trajectory"
+
+  call check_and_create_directory(trajectory_directory, dir_exists)
+  write(*,'(A, A, A, A)') " Trajectory output folder created: ", "'", trim(trajectory_directory), "'"
+
+  ! Adds the paths to each of the file_names
+  call append_paths_to_filenames(formatted_datetime, trajectory_directory)
+  
   ! Open output files
-  open(log_file,file=trim(adjustl(log_output_filename)))
-  open(all_variable_file,file=trim(adjustl(all_variable_filename)))
-  open(trajectory_file,file=trim(adjustl(trajectory_filename)))
-  open(atom_info_file,file=trim(adjustl(atom_info_filename)))  !Boltzmann dist. to calculate the velocities
+  open(log_file, file=trim(adjustl(log_output_filename)))
+  open(all_variable_file, file=trim(adjustl(all_variable_filename)))
+  open(atom_info_file, file=trim(adjustl(atom_info_filename)))
+  ! open the trajectory file for each run-->open in the "calculate" subroutine
 
   write(log_file,*) "Run Started and output directory successfully created. Initializing..."
   write(log_file,'(A, A)') " Output folder created: ",  trim(output_dir_with_date_time)
+  write(log_file,'(A, A)') " Output files created: ",  trim(output_dir_with_date_time)
+  write(log_file,'(A, A, A, A)') " all variable file created: ", "'", trim(all_variable_filename), "'"
+  write(log_File,'(A, A, A, A)') " atom info file created: ", "'", trim(atom_info_filename), "'"
+  write(log_file,'(A, A, A, A)') " Trajectory output folder created: ", "'", trim(trajectory_directory), "'"
 
-END SUBROUTINE open_files
-
-
-
-SUBROUTINE get_formatted_datetime(output_string)
-  implicit none
-  character(len=15), intent(out) :: output_string
-  character(len=8)  :: date
-  character(len=8)  :: time
-  character(len=5)  :: zone
-  integer, dimension(8) :: values
-  character(len=2) :: day_str, month_str, hour_str, minute_str, second_str
-  character(len=4) :: year_str
-
-  ! Obtain current date and time using keyword arguments
-  call date_and_time(DATE=date, TIME=time, ZONE=zone, VALUES=values)
-
-  ! Extract date and time components
-  year_str = date(1:4)
-  month_str = date(5:6)
-  day_str = date(7:8)
-  hour_str = time(1:2)
-  minute_str = time(3:4)
-  second_str = time(5:6)
-
-  ! Create formatted date and time string
-  output_string = trim(day_str) // trim(month_str) // trim(year_str) // '_' // &
-                  trim(hour_str) // trim(minute_str) // trim(second_str)
-END SUBROUTINE get_formatted_datetime
+END SUBROUTINE prepare_output
 
 
 ! Calculates the Coulomb Force at each time step in the simulation
-! and propagates it throughout time 
-SUBROUTINE calculate    
+! and propagates it throughout time. Sets a different seed value for each simulation
+SUBROUTINE calculate
   ! Initialize the atom's velocity via Boltzmann distribution
-  call calculate_atomic_velocities
-  call calculate_force
+  integer :: i, seed, unit_num
+  character(len=255) :: full_trajectory_filename, seed_string
 
-  do iter=0, N_time_steps
-      time = iter * time_step
-  
-      ! Output
-      if (mod(iter,trajectory_output_frequency) == 0) then
-        call update_trajectory_file(iter,time)
-        call print_to_log_file
-      end if
+  do i=1, N_simulations
+    ! reset the seed and perform the computation again
+    seed = seed_array(i)
+    ion_velocity_init_seed = seed
 
-      ! Update via Verlet Algorithm (force, position, velocity)
-      call calculate_force
-      call calculate_position
-      call calculate_velocity
+    write(seed_string, '(G0)') seed
+    full_trajectory_filename = trim(adjustl(trajectory_filename)) // trim(adjustl(seed_string)) // ".xyz"
+    unit_num = trajectory_file+1 
+    open(unit_num,file=trim(adjustl(full_trajectory_filename)))
+
+    ! Initial state of each simulations
+    atom_position = atom_initial_position
+    call calculate_atomic_velocities
+    call calculate_force
+
+    do iter=0, N_time_steps
+        time = iter * time_step
+    
+        ! Output
+        if (mod(iter,trajectory_output_frequency) == 0) then
+          call update_trajectory_file(unit_num)
+          call print_to_log_file
+        end if
+
+        ! Update via Verlet Algorithm (force, position, velocity)
+        call calculate_force
+        call calculate_position
+        call calculate_velocity
+    end do
+
+    call update_atom_info_file
+    close(unit_num)
+    write(*,'(A, A, A)') "  r=", trim(adjustl(seed_string)), " computation completed."
   end do
 
-  call update_atom_info_file
-
 END SUBROUTINE calculate
-
 
 subroutine cleanup
   real*8 :: program_elapsed_time
@@ -134,6 +135,7 @@ subroutine cleanup
   close(trajectory_file)
   close(atom_info_file)
   ! deallocate all of the matrices
+  deallocate(atom_initial_position)
   deallocate(atom_position)
   deallocate(atom_velocity)
   deallocate(atom_acceleration)
@@ -142,8 +144,10 @@ subroutine cleanup
   deallocate(atom_atomic_number)
   deallocate(atom_charge)
   deallocate(atom_mass)
+  deallocate(seed_array)
 
 end subroutine cleanup
+
 
 END MODULE COULOMB_EXPLOSION
 
