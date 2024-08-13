@@ -1,3 +1,5 @@
+! Module that contains commands and various useful utilities
+
 MODULE COMMANDS
     implicit none
 

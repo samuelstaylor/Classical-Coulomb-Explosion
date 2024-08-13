@@ -1,3 +1,5 @@
+! Module that contains all of the subroutines for molecule dynamics computations
+
 MODULE MOLDYNAMICS
   USE MOD_GLOBAL
   USE MOD_IO

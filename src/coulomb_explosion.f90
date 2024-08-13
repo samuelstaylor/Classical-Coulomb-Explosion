@@ -1,4 +1,4 @@
-
+! Masterfile that performs to Coulomb explosion computations
 
 MODULE COULOMB_EXPLOSION
     USE MOD_GLOBAL  ! Global structures to be used throughout the program.
@@ -23,6 +23,7 @@ SUBROUTINE initialize
   call read_control_input_file('control.inp')
   call read_seeds_input_file('seeds.inp')
   call compute_atomic_masses
+  call open_optional_output_files
 
   write(log_file,*)""
   write(log_file,*)"Initialization complete. Beginning computation..."
@@ -34,16 +35,11 @@ END SUBROUTINE initialize
 
 
 SUBROUTINE prepare_output
-  character(len=15) :: formatted_datetime
-  logical :: dir_exists
-  character(len=255) :: output_dir_with_date_time
-  character(len=255) :: trajectory_directory
-
   call get_formatted_datetime(formatted_datetime)
   
   call check_and_create_directory(output_dir, dir_exists)
   if (.not. dir_exists) then
-    write(*,'(A, A, A, A)') "Output directory created: ", "'", trim(output_dir), "'"
+    write(*,'(A, A, A, A)') " Output directory created:  ", "'", trim(output_dir), "'"
   else
       write(*,'(A, A, A, A)') "'", trim(output_dir), "'", " directory found"
   end if
@@ -54,29 +50,35 @@ SUBROUTINE prepare_output
   write(*,'(A)') " Output folder format:              DDMMYYYY_HHMMSS"
   write(*,'(A, A, A, A)') " Run output folder created: ", "'", trim(output_dir_with_date_time), "'"
 
-
   trajectory_directory = trim(adjustl(output_dir_with_date_time))//"/"//"trajectory"
-
-  call check_and_create_directory(trajectory_directory, dir_exists)
-  write(*,'(A, A, A, A)') " Trajectory output folder created: ", "'", trim(trajectory_directory), "'"
-
+  
   ! Adds the paths to each of the file_names
   call append_paths_to_filenames(formatted_datetime, trajectory_directory)
   
-  ! Open output files
   open(log_file, file=trim(adjustl(log_output_filename)))
   open(all_variable_file, file=trim(adjustl(all_variable_filename)))
-  open(atom_info_file, file=trim(adjustl(atom_info_filename)))
-  ! open the trajectory file for each run-->open in the "calculate" subroutine
 
   write(log_file,*) "Run Started and output directory successfully created. Initializing..."
   write(log_file,'(A, A)') " Output folder created: ",  trim(output_dir_with_date_time)
   write(log_file,'(A, A)') " Output files created: ",  trim(output_dir_with_date_time)
   write(log_file,'(A, A, A, A)') " all variable file created: ", "'", trim(all_variable_filename), "'"
-  write(log_File,'(A, A, A, A)') " atom info file created: ", "'", trim(atom_info_filename), "'"
-  write(log_file,'(A, A, A, A)') " Trajectory output folder created: ", "'", trim(trajectory_directory), "'"
+ 
 
 END SUBROUTINE prepare_output
+
+SUBROUTINE open_optional_output_files
+  if (output_trajectory) then
+    call check_and_create_directory(trajectory_directory, dir_exists)
+    write(*,'(A, A, A, A)') " Trajectory output folder created: ", "'", trim(trajectory_directory), "'"
+  end if
+
+  ! Open output files
+  if (output_atom_info) open(atom_info_file, file=trim(adjustl(atom_info_filename)))
+  ! open the trajectory file for each run-->open in the "calculate" subroutine
+
+  if (output_atom_info) write(log_File,'(A, A, A, A)') " Atom info file created: ", "'", trim(atom_info_filename), "'"
+  if (output_trajectory) write(log_file,'(A, A, A, A)') " Trajectory output folder created: ", "'", trim(trajectory_directory), "'"
+END SUBROUTINE
 
 
 ! Calculates the Coulomb Force at each time step in the simulation
@@ -92,9 +94,11 @@ SUBROUTINE calculate
     ion_velocity_init_seed = seed
 
     write(seed_string, '(G0)') seed
-    full_trajectory_filename = trim(adjustl(trajectory_filename)) // trim(adjustl(seed_string)) // ".xyz"
-    unit_num = trajectory_file+1 
-    open(unit_num,file=trim(adjustl(full_trajectory_filename)))
+    if (output_trajectory) then
+      full_trajectory_filename = trim(adjustl(trajectory_filename)) // trim(adjustl(seed_string)) // ".xyz"
+      unit_num = trajectory_file+1 
+      open(unit_num,file=trim(adjustl(full_trajectory_filename)))
+    end if
 
     write(log_file,'(A, A, A)') "r=", trim(adjustl(seed_string)), " computation started"
 
@@ -107,7 +111,7 @@ SUBROUTINE calculate
         time = iter * time_step
     
         ! Output
-        if (mod(iter,trajectory_output_frequency) == 0) then
+        if (output_trajectory .and. mod(iter,trajectory_output_frequency) == 0) then
           call update_trajectory_file(unit_num)
         end if
 
@@ -117,9 +121,13 @@ SUBROUTINE calculate
         call calculate_velocity
     end do
 
-    write(log_file,*) "Successfully finished trajectory file: ", full_trajectory_filename
-    call update_atom_info_file
-    close(unit_num)
+    if (output_trajectory) then
+      write(log_file,*) "Successfully finished trajectory file: ", full_trajectory_filename
+      close(unit_num)
+    end if
+
+    if (output_atom_info) call update_atom_info_file
+
     write(log_file,'(A, A, A)') "r=", trim(adjustl(seed_string)), " computation completed"
     write(log_file,*)
     write(*,'(A, A, A)') "  r=", trim(adjustl(seed_string)), " computation completed"
@@ -140,8 +148,8 @@ SUBROUTINE cleanup
 
   ! close the output files
   close(log_file)
-  close(trajectory_file)
-  close(atom_info_file)
+  if (output_trajectory) close(trajectory_file)
+  if (output_atom_info) close(atom_info_file)
   ! deallocate all of the matrices
   deallocate(atom_initial_position)
   deallocate(atom_position)

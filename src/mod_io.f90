@@ -1,3 +1,5 @@
+! Module that contains all of the input output operations used in the program
+
 MODULE MOD_IO
   USE MOD_GLOBAL
   implicit none
@@ -149,7 +151,11 @@ SUBROUTINE read_control_input_file(input_filename)
         case("use_average_atomic_mass")
           read(value_string,*)use_average_atomic_mass 
         case("include_electron_mass")
-          read(value_string,*)include_electron_mass 
+          read(value_string,*)include_electron_mass
+        case("output_trajectory")
+          read(value_string,*)output_trajectory
+        case("output_atom_info")
+          read(value_string,*)output_atom_info 
         case default
           write(log_file,*)"ERROR: Invalid variable name: ",trim(adjustl(the_key))
           write(*,*)"ERROR: Invalid variable name: ",trim(adjustl(the_key))
@@ -167,6 +173,9 @@ SUBROUTINE read_control_input_file(input_filename)
   write(all_variable_file,*) "  temperature_ions=", temperature_ions
   write(all_variable_file,*) "  use_average_atomic_mass=", use_average_atomic_mass
   write(all_variable_file,*) "  include_electron_mass=", include_electron_mass
+  write(all_variable_file,*) "  output_trajectory=", output_trajectory
+  write(all_variable_file,*) "  output_atom_info=", output_atom_info
+
   close(all_variable_file)
 
   write(log_file,*) "Successfully read and initialized data from: ", input_filename

@@ -1,3 +1,5 @@
+! Global parameters and constants to be used in the program
+
 MODULE PARAMETERS
     implicit none
     character*255,parameter :: output_dir="output"

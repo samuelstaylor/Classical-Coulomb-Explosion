@@ -25,6 +25,12 @@ MODULE MOD_GLOBAL
     integer :: iter=0
     real*8  :: program_start_time
     real*8  :: program_end_time
+    ! Used in the prepare_output subroutines
+    character(len=15) :: formatted_datetime
+    logical :: dir_exists
+    character(len=255) :: output_dir_with_date_time
+    character(len=255) :: trajectory_directory
+  
 
     ! file names with directories to be set
     character*255 :: log_output_filename=bare_log_output_filename
