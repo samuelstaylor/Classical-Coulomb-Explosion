@@ -43,15 +43,17 @@ SUBROUTINE prepare_output
   
   call check_and_create_directory(output_dir, dir_exists)
   if (.not. dir_exists) then
-    write(*,'(A, A, A, A)') "'", trim(output_dir), "'", " directory does not exist. Creating directory..."
+    write(*,'(A, A, A, A)') "Output directory created: ", "'", trim(output_dir), "'"
   else
-      write(*,'(A, A, A, A)') "'", trim(output_dir), "'", " directory found."
+      write(*,'(A, A, A, A)') "'", trim(output_dir), "'", " directory found"
   end if
 
   output_dir_with_date_time = trim(adjustl(output_dir))//"/"//formatted_datetime
 
   call check_and_create_directory(output_dir_with_date_time, dir_exists)
-  write(*,'(A, A, A, A)') " Output folder created: ", "'", trim(output_dir_with_date_time), "'"
+  write(*,'(A)') " Output folder format:              DDMMYYYY_HHMMSS"
+  write(*,'(A, A, A, A)') " Run output folder created: ", "'", trim(output_dir_with_date_time), "'"
+
 
   trajectory_directory = trim(adjustl(output_dir_with_date_time))//"/"//"trajectory"
 
@@ -94,6 +96,8 @@ SUBROUTINE calculate
     unit_num = trajectory_file+1 
     open(unit_num,file=trim(adjustl(full_trajectory_filename)))
 
+    write(log_file,'(A, A, A)') "r=", trim(adjustl(seed_string)), " computation started"
+
     ! Initial state of each simulations
     atom_position = atom_initial_position
     call calculate_atomic_velocities
@@ -105,7 +109,6 @@ SUBROUTINE calculate
         ! Output
         if (mod(iter,trajectory_output_frequency) == 0) then
           call update_trajectory_file(unit_num)
-          call print_to_log_file
         end if
 
         ! Update via Verlet Algorithm (force, position, velocity)
@@ -114,14 +117,19 @@ SUBROUTINE calculate
         call calculate_velocity
     end do
 
+    write(log_file,*) "Successfully finished trajectory file: ", full_trajectory_filename
     call update_atom_info_file
     close(unit_num)
-    write(*,'(A, A, A)') "  r=", trim(adjustl(seed_string)), " computation completed."
+    write(log_file,'(A, A, A)') "r=", trim(adjustl(seed_string)), " computation completed"
+    write(log_file,*)
+    write(*,'(A, A, A)') "  r=", trim(adjustl(seed_string)), " computation completed"
+
   end do
 
 END SUBROUTINE calculate
 
-subroutine cleanup
+
+SUBROUTINE cleanup
   real*8 :: program_elapsed_time
 
   call cpu_time(program_end_time)
@@ -146,7 +154,7 @@ subroutine cleanup
   deallocate(atom_mass)
   deallocate(seed_array)
 
-end subroutine cleanup
+END SUBROUTINE cleanup
 
 
 END MODULE COULOMB_EXPLOSION
