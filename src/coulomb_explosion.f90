@@ -45,10 +45,10 @@ SUBROUTINE program_checks
     print*, 'ERROR, output_atom_info AND parallelization both set to true. Stopping.'
     stop
   end if
-  
+
   call count_lines('seeds.inp', number_of_lines)
   if (number_of_lines < N_simulations) then
-    print* 'ERROR, more simulations are set than seeds read from seeds.inp. Stopping.'
+    print* 'ERROR, N_simulations is greater than the number of seeds (lines) in seeds.inp. Stopping.'
     stop
   endif
   
