@@ -17,14 +17,17 @@ MODULE MOD_GLOBAL
     logical :: include_electron_mass=.FALSE. ! Add the mass of the electrons to the mass for the calculation
     logical :: output_trajectory=.TRUE.
     logical :: output_atom_info=.TRUE.
+    logical :: parallelization=.TRUE.
 
     integer :: ion_velocity_init_seed=1 ! Values for this will be set in the seeds.inp file
 
     ! global variables to not be set in control.inp but used in the program
     real*8  :: time=0 ! The time (in fs) of the simulation at each step
     integer :: iter=0
-    real*8  :: program_start_time
-    real*8  :: program_end_time
+    character(len=8) :: start_date, end_date
+    character(len=8) :: start_time, end_time
+    real*8  :: program_CPU_start_time
+    real*8  :: program_CPU_end_time
     ! Used in the prepare_output subroutines
     character(len=15) :: formatted_datetime
     logical :: dir_exists

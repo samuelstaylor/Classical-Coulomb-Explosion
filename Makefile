@@ -2,7 +2,10 @@
 FC = gfortran
 
 # Define the compiler flags
-FFLAGS = -Jrelease -O3 -flto -Irelease
+FFLAGS = -Jrelease -O3 -flto -Irelease -fopenmp
+
+# Define the linker flags
+LINKFLAGS = $(FFLAGS)
 
 # Define the name of the executable
 EXE = main

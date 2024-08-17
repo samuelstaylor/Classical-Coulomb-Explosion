@@ -12,12 +12,15 @@ MODULE COULOMB_EXPLOSION
 CONTAINS
 
 SUBROUTINE initialize
-  CALL cpu_time(program_start_time)
+  call date_and_time(date=start_date, time=start_time)
+  call cpu_time(program_CPU_start_time)
+
   write(*,*) "-=================================-"
   write(*,*) "-=# CLASSICAL COULOMB EXPLOSION #=-"
   write(*,*) "-=================================-"
   write(*,*) "Run Started. Initializing..."
 
+  call program_checks
   call prepare_output
   call read_molecule_input_file('molecule.inp')
   call read_control_input_file('control.inp')
@@ -32,6 +35,52 @@ SUBROUTINE initialize
   write(*,*)"Initialization complete. Beginning computation..."
 
 END SUBROUTINE initialize
+
+
+SUBROUTINE program_checks
+  !TO-DO FINISH THIS
+  integer :: number_of_lines
+
+  if (output_atom_info .and. parallelization) then
+    print*, 'ERROR, output_atom_info AND parallelization both set to true. Stopping.'
+    stop
+  end if
+  
+  call count_lines('seeds.inp', number_of_lines)
+  if (number_of_lines < N_simulations) then
+    print* 'ERROR, more simulations are set than seeds read from seeds.inp. Stopping.'
+    stop
+  endif
+  
+END SUBROUTINE program_checks
+
+
+SUBROUTINE count_lines(filename, num_lines)
+  implicit none
+  character(len=*), intent(in) :: filename
+  integer, intent(out) :: num_lines
+  integer :: ios, line_count
+  character(len=1000) :: line
+
+  line_count = 0
+
+  open(unit=10, file=filename, status='old', action='read', iostat=ios)
+  if (ios /= 0) then
+      print *, "Error opening file: ", filename
+      num_lines = -1
+      return
+  end if
+
+  do
+      read(10, '(A)', iostat=ios) line
+      if (ios /= 0) exit
+      line_count = line_count + 1
+  end do
+
+  close(10)
+  num_lines = line_count
+end SUBROUTINE count_lines
+
 
 
 SUBROUTINE prepare_output
@@ -81,70 +130,115 @@ SUBROUTINE open_optional_output_files
 END SUBROUTINE
 
 
-! Calculates the Coulomb Force at each time step in the simulation
-! and propagates it throughout time. Sets a different seed value for each simulation
-SUBROUTINE calculate
-  ! Initialize the atom's velocity via Boltzmann distribution
-  integer :: i, seed, unit_num
+SUBROUTINE calculate_simulation(i)
+  integer, intent(in) :: i
+  integer :: seed, unit_num
   character(len=255) :: full_trajectory_filename, seed_string
 
-  do i=1, N_simulations
-    ! reset the seed and perform the computation again
-    seed = seed_array(i)
-    ion_velocity_init_seed = seed
+  ! Reset the seed and perform the computation again
+  seed = seed_array(i)
+  ion_velocity_init_seed = seed
 
-    write(seed_string, '(G0)') seed
-    if (output_trajectory) then
-      full_trajectory_filename = trim(adjustl(trajectory_filename)) // trim(adjustl(seed_string)) // ".xyz"
-      unit_num = trajectory_file+1 
-      open(unit_num,file=trim(adjustl(full_trajectory_filename)))
-    end if
+  write(seed_string, '(G0)') seed
+  if (output_trajectory) then
+    full_trajectory_filename = trim(adjustl(trajectory_filename)) // &
+                                trim(adjustl(seed_string)) // ".xyz"
+    unit_num = trajectory_file + 1 
+    open(unit_num, file=trim(adjustl(full_trajectory_filename)))
+  end if
 
-    write(log_file,'(A, A, A)') "r=", trim(adjustl(seed_string)), " computation started"
+  write(log_file, '(A, A, A)') "r=", trim(adjustl(seed_string)), &
+                                " computation started"
 
-    ! Initial state of each simulations
-    atom_position = atom_initial_position
-    call calculate_atomic_velocities
-    call calculate_force
+  ! Initial state of each simulation
+  atom_position = atom_initial_position
+  call calculate_atomic_velocities
+  call calculate_force
 
-    do iter=0, N_time_steps
-        time = iter * time_step
-    
-        ! Output
-        if (output_trajectory .and. mod(iter,trajectory_output_frequency) == 0) then
-          call update_trajectory_file(unit_num)
-        end if
+  do iter = 0, N_time_steps
+      time = iter * time_step
+  
+      ! Output
+      if (output_trajectory .and. mod(iter, trajectory_output_frequency) == 0) then
+        call update_trajectory_file(unit_num)
+      end if
 
-        ! Update via Verlet Algorithm (force, position, velocity)
-        call calculate_force
-        call calculate_position
-        call calculate_velocity
-    end do
-
-    if (output_trajectory) then
-      write(log_file,*) "Successfully finished trajectory file: ", full_trajectory_filename
-      close(unit_num)
-    end if
-
-    if (output_atom_info) call update_atom_info_file
-
-    write(log_file,'(A, A, A)') "r=", trim(adjustl(seed_string)), " computation completed"
-    write(log_file,*)
-    write(*,'(A, A, A)') "  r=", trim(adjustl(seed_string)), " computation completed"
-
+      ! Update via Verlet Algorithm (force, position, velocity)
+      call calculate_force
+      call calculate_position
+      call calculate_velocity
   end do
+
+  if (output_trajectory) then
+    write(log_file, *) "Successfully finished trajectory file: ", &
+                      full_trajectory_filename
+    close(unit_num)
+  end if
+
+  if (output_atom_info) call update_atom_info_file
+
+  write(log_file, '(A, A, A)') "r=", trim(adjustl(seed_string)), &
+                                " computation completed"
+  write(log_file, *)
+  write(*, '(A, A, A)') "  r=", trim(adjustl(seed_string)), &
+                          " computation completed"
+END SUBROUTINE calculate_simulation
+
+
+SUBROUTINE calculate
+  use omp_lib
+  integer :: i
+
+  if (parallelization) then
+    !$omp parallel private(i)
+    !$omp master
+    ! Print the number of threads used
+    print *, "Running with parallelization, number of threads: ", omp_get_num_threads()
+    !$omp end master
+
+    !$omp do
+    do i = 1, N_simulations
+      call calculate_simulation(i)
+    end do
+    !$omp end do
+    !$omp end parallel
+  else
+    ! In non-parallel mode, manually print the number of threads
+    ! Here, typically, the number of threads is 1
+    print *, "Running with no parallelization, number of threads: 1"
+    
+    do i = 1, N_simulations
+      call calculate_simulation(i)
+    end do
+  endif
 
 END SUBROUTINE calculate
 
 
+
+
 SUBROUTINE cleanup
-  real*8 :: program_elapsed_time
+  real*8 :: program_CPU_total_time
+  integer :: program_start_time
+  integer :: program_end_time
+  integer :: program_elapsed_time
 
-  call cpu_time(program_end_time)
+
+  call date_and_time(date=end_date, time=end_time)
+  call cpu_time(program_CPU_end_time)
+  call time_to_seconds(start_date, start_time, program_start_time)
+  call time_to_seconds(end_date, end_time, program_end_time)
+
   program_elapsed_time = program_end_time - program_start_time
+  program_CPU_total_time = program_CPU_end_time - program_CPU_start_time
 
-  write(log_file,*)"Run finished. Elapsed time (seconds): ", program_elapsed_time
-  write(*,*)"Run finished. Elapsed time (seconds): ", program_elapsed_time
+  write(*,*)"Run finished."
+  if (parallelization) then
+    write(*,*)" CPU time (seconds): ", program_CPU_total_time
+    write(*,*)" Elapsed time (seconds): ", program_elapsed_time
+  else
+    write(*,*)" Elapsed time (seconds): ", program_CPU_total_time
+  endif
 
   ! close the output files
   close(log_file)

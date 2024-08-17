@@ -46,5 +46,18 @@ SUBROUTINE execute_command(command, ios)
 
 END SUBROUTINE execute_command
 
+SUBROUTINE time_to_seconds(date, time, seconds)
+    character(len=8), intent(in) :: date, time
+    integer, intent(out) :: seconds
+    integer :: hour, minute, second, day, month, year
+
+    ! Extract date and time components
+    read(date, '(I4, I2, I2)') year, month, day
+    read(time, '(I2, I2, I2)') hour, minute, second
+
+    ! Convert to total seconds since start of the day
+    seconds = hour * 3600 + minute * 60 + second
+  END SUBROUTINE time_to_seconds
+
 
 END MODULE COMMANDS

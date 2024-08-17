@@ -156,6 +156,8 @@ SUBROUTINE read_control_input_file(input_filename)
           read(value_string,*)output_trajectory
         case("output_atom_info")
           read(value_string,*)output_atom_info 
+        case("parallelization")
+          read(value_string,*)parallelization 
         case default
           write(log_file,*)"ERROR: Invalid variable name: ",trim(adjustl(the_key))
           write(*,*)"ERROR: Invalid variable name: ",trim(adjustl(the_key))
