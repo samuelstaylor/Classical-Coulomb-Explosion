@@ -2,7 +2,7 @@
 
 molecule_input_path=/mnt/c/Users/Samuel/Research/varga/fortran/Classical-Coulomb-Explosion/input/c2h2/
 seeds_input_path=/mnt/c/Users/Samuel/Research/varga/fortran/Classical-Coulomb-Explosion/input/c2h2/
-N_simulations = 5
+N_simulations = 200
 N_time_steps = 120000
 time_step = .001
 trajectory_output_frequency = 500

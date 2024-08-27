@@ -12,9 +12,6 @@ MODULE COULOMB_EXPLOSION
 CONTAINS
 
 SUBROUTINE initialize
-  character(len=256) :: molecule_filename_full
-  character(len=256) :: seeds_filename_full
-
   call date_and_time(date=start_date, time=start_time)
   call cpu_time(program_CPU_start_time)
 
@@ -59,7 +56,7 @@ SUBROUTINE program_checks
     stop
   end if
 
-  call count_lines('seeds.inp', number_of_lines)
+  call count_lines(seeds_filename_full, number_of_lines)
   if (number_of_lines < N_simulations) then
     print*, 'ERROR, N_simulations is greater than the number of seeds (lines) in seeds.inp. Stopping.'
     stop

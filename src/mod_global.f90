@@ -35,7 +35,11 @@ MODULE MOD_GLOBAL
     logical :: dir_exists
     character(len=255) :: output_dir_with_date_time
     character(len=255) :: trajectory_directory
-  
+    
+    !full_filename
+    character(len=256) :: molecule_filename_full = "molecule.inp"
+    character(len=256) :: seeds_filename_full = "seeds.inp"
+
 
     ! file names with directories to be set
     character*255 :: log_output_filename=bare_log_output_filename
