@@ -1,12 +1,16 @@
 # EXAMPLE CONTROL.INP FILE
 
-N_simulations = 20
+molecule_input_path=/mnt/c/Users/Samuel/Research/varga/fortran/Classical-Coulomb-Explosion/input/c2h2/
+seeds_input_path=/mnt/c/Users/Samuel/Research/varga/fortran/Classical-Coulomb-Explosion/input/c2h2/
+N_simulations = 5
 N_time_steps = 120000
 time_step = .001
 trajectory_output_frequency = 500
 temperature_ions = 300.0 
-use_average_atomic_mass = .TRUE.
-include_electron_mass = .FALSE.
-output_trajectory = .FALSE.
-output_atom_info = .TRUE.
-parallelization = .TRUE.
+use_average_atomic_mass = True
+include_electron_mass = False
+output_trajectory = False
+output_atom_info = True
+
+#parallelization is feature in currently broken
+parallelization = False

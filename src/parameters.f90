@@ -43,8 +43,8 @@ MODULE PARAMETERS
 
 
     ! Files and their IDs
-    integer,parameter :: log_file=10,control_file=11,molecule_file=12,seeds_file=13
-    integer,parameter :: all_variable_file=14, atom_info_file=15, trajectory_file=16
+    integer,parameter :: log_file=11,control_file=12,molecule_file=13,seeds_file=14
+    integer,parameter :: all_variable_file=15, atom_info_file=16, trajectory_file=17
       ! Element symbols and names
     character*3,parameter   :: element_symbols(N_elements)=(/ &
     "  H"," He", &

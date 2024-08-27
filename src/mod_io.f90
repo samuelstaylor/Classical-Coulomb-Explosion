@@ -138,6 +138,10 @@ SUBROUTINE read_control_input_file(input_filename)
       call convert_to_lowercase(the_key)
     
       select case(trim(adjustl(the_key)))
+        case("molecule_input_path")
+          molecule_input_path = trim(adjustl(value_string))
+        case("seeds_input_path")
+          seeds_input_path = trim(adjustl(value_string))       
         case("n_simulations")
           read(value_string,*)N_simulations
         case("n_time_steps")
@@ -167,7 +171,11 @@ SUBROUTINE read_control_input_file(input_filename)
   enddo
   110 close(control_file)
 
+  call check_and_fix_paths
+
   ! full list of variables
+  write(all_variable_file,*) "  molecule_input_path=", molecule_input_path
+  write(all_variable_file,*) "  seeds_input_path=", seeds_input_path
   write(all_variable_file,*) "  N_simulations=", N_simulations
   write(all_variable_file,*) "  N_time_steps=", N_time_steps
   write(all_variable_file,*) "  time_step=", time_step
@@ -261,6 +269,28 @@ SUBROUTINE convert_to_lowercase(string)
     string(i:i)=the_char
   enddo
 END SUBROUTINE convert_to_lowercase
+
+
+SUBROUTINE check_and_fix_paths
+  ! Ensure dft_input_path and velocity_output_path start and end with '/'
+  if (len_trim(molecule_input_path) > 0 .and. molecule_input_path(1:1) /= ".") then
+    if (molecule_input_path(1:1) /= '/') then
+      molecule_input_path = '/' // trim(adjustl(molecule_input_path))
+    endif
+    if (molecule_input_path(len_trim(molecule_input_path):len_trim(molecule_input_path)) /= '/') then
+      molecule_input_path = trim(adjustl(molecule_input_path)) // '/'
+    endif
+  endif
+  if (len_trim(seeds_input_path) > 0 .and. seeds_input_path(1:1) /= ".") then
+    if (seeds_input_path(1:1) /= '/') then
+      seeds_input_path = '/' // trim(adjustl(seeds_input_path))
+    endif
+    if (seeds_input_path(len_trim(seeds_input_path):len_trim(seeds_input_path)) /= '/') then
+      seeds_input_path = trim(adjustl(seeds_input_path)) // '/'
+    endif
+  endif
+
+END SUBROUTINE check_and_fix_paths
 
 
 SUBROUTINE get_formatted_datetime(output_string)

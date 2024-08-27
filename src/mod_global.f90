@@ -8,6 +8,8 @@ MODULE MOD_GLOBAL
     integer :: N_total_atom ! The number of atoms in the simultaion
    
     ! All of these can be set in control.inp
+    character(len=256) :: molecule_input_path = "./"
+    character(len=256) :: seeds_input_path = "./"
     integer :: N_simulations=1 ! The number of simulations to run
     integer :: N_time_steps=120000 ! Number of timesteps (iterations) in the simulation 
     real*8  :: time_step=.001 ! Size of the time step to iterate program through

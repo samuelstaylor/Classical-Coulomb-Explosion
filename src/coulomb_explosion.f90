@@ -12,6 +12,9 @@ MODULE COULOMB_EXPLOSION
 CONTAINS
 
 SUBROUTINE initialize
+  character(len=256) :: molecule_filename_full
+  character(len=256) :: seeds_filename_full
+
   call date_and_time(date=start_date, time=start_time)
   call cpu_time(program_CPU_start_time)
 
@@ -20,14 +23,24 @@ SUBROUTINE initialize
   write(*,*) "-=================================-"
   write(*,*) "Run Started. Initializing..."
 
-  call program_checks
   call prepare_output
-  call read_molecule_input_file('molecule.inp')
   call read_control_input_file('control.inp')
-  call read_seeds_input_file('seeds.inp')
+
+  molecule_filename_full = trim(adjustl(molecule_input_path)) // 'molecule.inp'
+  call read_molecule_input_file(molecule_filename_full)
+
+  seeds_filename_full = trim(adjustl(seeds_input_path)) // 'seeds.inp'
+  call read_seeds_input_file(seeds_filename_full)
+
+  print*,"molecule file name=",molecule_filename_full
+  print*,"seeds file name=",seeds_filename_full
+
   call compute_atomic_masses
   call open_optional_output_files
+  
+  call program_checks
 
+  
   write(log_file,*)""
   write(log_file,*)"Initialization complete. Beginning computation..."
   write(log_file,*)""
@@ -48,7 +61,7 @@ SUBROUTINE program_checks
 
   call count_lines('seeds.inp', number_of_lines)
   if (number_of_lines < N_simulations) then
-    print* 'ERROR, N_simulations is greater than the number of seeds (lines) in seeds.inp. Stopping.'
+    print*, 'ERROR, N_simulations is greater than the number of seeds (lines) in seeds.inp. Stopping.'
     stop
   endif
   
