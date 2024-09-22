@@ -193,7 +193,7 @@ class NewtonPlot:
         self.hydrogen_z_momentum_norm = [val/h_absolute_max_val for val in self.hydrogen_z_momentum]
         
 
-    def plot_x_y_velocities(self,normalize=False):
+    def plot_x_y_velocities(self,normalize=False,graph_name_tag='',graph_xy_title=''):
         
         if normalize:
             carbon_x_vel = self.carbon_x_velocities_norm
@@ -221,15 +221,15 @@ class NewtonPlot:
         plt.legend()
         plt.grid(True)
         if normalize:
-            plt.title('Carbon and Hydrogen X,Y-Velocities Normalized')
-            plt.savefig('images/x_y_velocities_norm.png')
+            plt.title(graph_xy_title +' Normalized')
+            plt.savefig(f'images/x_y_velocities_norm_{graph_name_tag}.png')
         else:
-            plt.title('Carbon and Hydrogen X,Y-Velocities')
-            plt.savefig('images/x_y_velocities.png')
+            plt.title(graph_xy_title)
+            plt.savefig(f'images/x_y_velocities_{graph_name_tag}.png')
         if self.show_plot:
             plt.show()
         
-    def plot_x_z_velocities(self,normalize=False): 
+    def plot_x_z_velocities(self,normalize=False,graph_name_tag='',graph_xz_title=''): 
         if normalize:
             carbon_x_vel = self.carbon_x_velocities_norm
             carbon_z_vel = self.carbon_z_velocities_norm
@@ -256,15 +256,15 @@ class NewtonPlot:
         plt.legend()
         plt.grid(True)
         if normalize:
-            plt.title('Carbon and Hydrogen X,Z-Velocities Normalized')
-            plt.savefig('images/x_z_velocities_norm.png')
+            plt.title(graph_xz_title +' Normalized')
+            plt.savefig(f'images/x_z_velocities_norm_{graph_name_tag}.png')
         else:
-            plt.title('Carbon and Hydrogen X,Z-Velocities')
-            plt.savefig('images/x_z_velocities.png')
+            plt.title(graph_xz_title)
+            plt.savefig(f'images/x_z_velocities_{graph_name_tag}.png')
         if self.show_plot:
             plt.show()
 
-    def plot_y_z_velocities(self,normalize=False): 
+    def plot_y_z_velocities(self,normalize=False,graph_name_tag='',graph_yz_title=''): 
         if normalize:
             carbon_y_vel = self.carbon_y_velocities_norm
             carbon_z_vel = self.carbon_z_velocities_norm
@@ -291,11 +291,11 @@ class NewtonPlot:
         plt.legend()
         plt.grid(True)
         if normalize:
-            plt.title('Carbon and Hydrogen Y,Z-Velocities Normalized')
-            plt.savefig('images/y_z_velocities_norm.png')
+            plt.title(graph_yz_title +' Normalized')
+            plt.savefig(f'images/y_z_velocities_norm_{graph_name_tag}.png')
         else:
-            plt.title('Carbon and Hydrogen Y,Z-Velocities')
-            plt.savefig('images/y_z_velocities.png')
+            plt.title(graph_yz_title)
+            plt.savefig(f'images/y_z_velocities_{graph_name_tag}.png')
         if self.show_plot:
             plt.show()
 
@@ -354,8 +354,12 @@ class NewtonPlot:
         if self.show_plot:
             plt.show()
 
-    def plot_3d_projections_1_limits(self):
+    def plot_3d_projections_1_limits(self,graph_name_tag="",
+                                     graph_scatter_title="3D Scatter Plot of Velocities",
+                                     graph_projection_title="3D Projection of Velocities",
+                                     alpha=0.03):
         # Convert the carbon velocities lists to NumPy arrays for easier manipulation
+        
         C_X = np.array(self.carbon_x_velocities)
         C_Y = np.array(self.carbon_y_velocities)
         C_Z = np.array(self.carbon_z_velocities)
@@ -369,8 +373,8 @@ class NewtonPlot:
         ax1 = fig1.add_subplot(111, projection='3d')  # Create a 3D subplot
 
         # Scatter plot of the carbon velocities in 3D space
-        ax1.scatter(C_X, C_Y, C_Z, c='b', marker='.', label='Carbon', alpha=0.2)  # Plot with blue dots, slightly transparent
-        ax1.scatter(H_X, H_Y, H_Z, c='r', marker='.', label='Hydrogen', alpha=0.2)  # Plot with red dots, slightly transparent
+        ax1.scatter(C_X, C_Y, C_Z, c='b', marker='.', label='Carbon', alpha=alpha)  # Plot with blue dots, slightly transparent
+        ax1.scatter(H_X, H_Y, H_Z, c='r', marker='.', label='Hydrogen', alpha=alpha)  # Plot with red dots, slightly transparent
 
         ax1.set_xlabel('X Velocity (Å/fs)', fontweight='bold')  # Set the label for the X-axis
         ax1.set_ylabel('Y Velocity (Å/fs)', fontweight='bold')  # Set the label for the Y-axis
@@ -378,7 +382,7 @@ class NewtonPlot:
         ax1.set_xlim3d(-1, 1)
         ax1.set_ylim3d(-1, 1)
         ax1.set_zlim3d(-1, 1)
-        ax1.set_title('3D Scatter Plot of Velocities')
+        ax1.set_title(graph_scatter_title)
         
         # Set major ticks to show only every other tick
         ax1.set_xticks(np.arange(-1, 1.1, 0.5))
@@ -393,7 +397,7 @@ class NewtonPlot:
         plt.legend()
 
         # Save the first figure
-        plt.savefig('images/3d_scatter_plot.png')
+        plt.savefig(f'images/3d_scatter_plot_{graph_name_tag}.png')
         
         # Create a new figure for the second 3D plot
         fig2 = plt.figure()
@@ -412,14 +416,14 @@ class NewtonPlot:
         c_hz = -np.ones_like(H_Z)  # Constant Z for XY projection at the bottom edge of the plot
 
         # Scatter plots for the projections onto the XY, XZ, and YZ planes of carbon
-        ax2.scatter(C_X, C_Y, cz, c='b', marker='.', lw=0, alpha=0.2)  # XY projection, color by Z
-        ax2.scatter(C_X, cy, C_Z, c='b', marker='.', lw=0, alpha=0.2)  # XZ projection, color by negative Y
-        ax2.scatter(cx, C_Y, C_Z, c='b', marker='.', lw=0, alpha=0.2)  # YZ projection, color by X
+        ax2.scatter(C_X, C_Y, cz, c='b', marker='.', lw=0, alpha=alpha)  # XY projection, color by Z
+        ax2.scatter(C_X, cy, C_Z, c='b', marker='.', lw=0, alpha=alpha)  # XZ projection, color by negative Y
+        ax2.scatter(cx, C_Y, C_Z, c='b', marker='.', lw=0, alpha=alpha)  # YZ projection, color by X
         
         # Scatter plots for the projections onto the XY, XZ, and YZ planes of hydrogen
-        ax2.scatter(H_X, H_Y, cz, c='r', marker='.', lw=0, alpha=0.2)  # XY projection, color by Z
-        ax2.scatter(H_X, cy, H_Z, c='r', marker='.', lw=0, alpha=0.2)  # XZ projection, color by negative Y
-        ax2.scatter(cx, H_Y, H_Z, c='r', marker='.', lw=0, alpha=0.2)  # YZ projection, color by X
+        ax2.scatter(H_X, H_Y, cz, c='r', marker='.', lw=0, alpha=alpha)  # XY projection, color by Z
+        ax2.scatter(H_X, cy, H_Z, c='r', marker='.', lw=0, alpha=alpha)  # XZ projection, color by negative Y
+        ax2.scatter(cx, H_Y, H_Z, c='r', marker='.', lw=0, alpha=alpha)  # YZ projection, color by X
 
         # Set the limits of the second plot to be the same as the first plot
         ax2.set_xlim3d(-1, 1)
@@ -440,41 +444,61 @@ class NewtonPlot:
         ax2.set_xlabel('X Velocity (Å/fs)', fontweight='bold')
         ax2.set_ylabel('Y Velocity (Å/fs)', fontweight='bold')
         ax2.set_zlabel('Z Velocity (Å/fs)', fontweight='bold')
-        ax2.set_title('3D Projections of Velocities')
+        ax2.set_title(graph_projection_title)
 
         # Save the second figure
-        plt.savefig('images/3d_projections.png')
+        plt.savefig(f'images/3d_projections_{graph_name_tag}.png')
         
         # Display the plots
         if self.show_plot:
             plt.show()
             
-    def plot_2d_projections(self, normalize=False):
+            
+    def plot_2d_projections(self, normalize=False,graph_name_tag="",
+                                    graph_xy_title="Carbon and Hydrogen X,Y Velocities",
+                                    graph_xz_title="Carbon and Hydrogen X,Z Velocities",
+                                    graph_yz_title="Carbon and Hydrogen Y,Z Velocities"):
         # Plot all of the 2-D NORMALIZED velocity projections
-        self.plot_x_y_velocities(normalize=normalize)
-        self.plot_x_z_velocities(normalize=normalize)
-        self.plot_y_z_velocities(normalize=normalize)
-
+        self.plot_x_y_velocities(normalize=normalize,graph_name_tag=graph_name_tag,graph_xy_title=graph_xy_title)
+        self.plot_x_z_velocities(normalize=normalize,graph_name_tag=graph_name_tag,graph_xz_title=graph_xz_title)
+        self.plot_y_z_velocities(normalize=normalize,graph_name_tag=graph_name_tag,graph_yz_title=graph_yz_title)
 
 
 def main():
     print("-=GENERATING NEWTON PLOT=-")
     newton_plot = NewtonPlot()
-    input_file = 'output/13082024_125749/atom_info.csv'
-    
+    data_mode = "quantum"
     user_input_mode = False
+    
+    if (data_mode.lower().startswith('q')):
+        #QUANTUM INPUT FILE:
+        input_file = 'scripts/tddft_output/moleculeFormations_14.csv'  
+        graph_name_tag="quantum"
+
+    if (data_mode.lower().startswith('c')):
+        #CLASSICAL INPUT FILE:
+        input_file = 'output/classical_200/atom_info.csv'
+        graph_name_tag="classical"
+
+    
     if user_input_mode:
-        input_file = input("Enter the path from running directory to atom info file: ")
+        input_file = input("Enter the path from current working directory to atom info file: ")
     print("Searching for input file: ", input_file)
 
     newton_plot.process_data(input_file)
    
     # 2-d velocity projections
-    # newton_plot.plot_2d_projections(normalize=False)
+    newton_plot.plot_2d_projections(normalize=False,
+                                    graph_name_tag=graph_name_tag,
+                                    graph_xy_title=f"Carbon and Hydrogen X,Y Velocities ({graph_name_tag})",
+                                    graph_xz_title=f"Carbon and Hydrogen X,Z Velocities ({graph_name_tag})",
+                                    graph_yz_title=f"Carbon and Hydrogen Y,Z Velocities ({graph_name_tag})")
     
-    # 3-D velocity projections
-    #newton_plot.plot_3d_projections_basic()
-    newton_plot.plot_3d_projections_1_limits()
+    # 3-D scatter and projection plots    
+    newton_plot.plot_3d_projections_1_limits(graph_name_tag=graph_name_tag,
+                                             graph_scatter_title=f"3D Scatter Plot of Velocities ({graph_name_tag})",
+                                             graph_projection_title=f"3D Projection of Velociteis ({graph_name_tag})")
+    
 
 if __name__ == '__main__':
     main()
