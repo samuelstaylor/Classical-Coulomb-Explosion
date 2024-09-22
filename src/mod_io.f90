@@ -48,26 +48,7 @@ SUBROUTINE read_molecule_input_file(input_filename)
       end if
   end do
 
-  ! 1-dimensional arrays that will be allocated to the size N_total_atom
-  allocate(atom_atomic_number(N_total_atom))
-  allocate(atom_charge(N_total_atom))
-  allocate(atom_mass(N_total_atom))
-
-  ! 2-dimensional arrays that will be allocated to N_total_atoms columns
-  allocate(atom_force(3,N_total_atom))
-  allocate(atom_acceleration(3,N_total_atom))
-  allocate(atom_velocity(3,N_total_atom))
-  allocate(atom_position(3,N_total_atom))
-  allocate(atom_initial_position(3,N_total_atom))
- 
-  ! Initialize all arrays to zero
-  atom_initial_position = 0.0
-  atom_position = 0.0
-  atom_velocity = 0.0
-  atom_acceleration = 0.0
-  atom_force = 0.0
-  atom_atomic_number = 0
-  atom_mass = 0.0
+  call allocate_and_initialize_arrays
 
   atom_counter = 0
   ! Read lines and skip those starting with '#'
@@ -107,6 +88,30 @@ SUBROUTINE read_molecule_input_file(input_filename)
 END SUBROUTINE read_molecule_input_file
 
 
+SUBROUTINE allocate_and_initialize_arrays
+  ! 1-dimensional arrays that will be allocated to the size N_total_atom
+  allocate(atom_atomic_number(N_total_atom))
+  allocate(atom_charge(N_total_atom))
+  allocate(atom_mass(N_total_atom))
+
+  ! 2-dimensional arrays that will be allocated to N_total_atoms columns
+  allocate(atom_force(3,N_total_atom))
+  allocate(atom_acceleration(3,N_total_atom))
+  allocate(atom_velocity(3,N_total_atom))
+  allocate(atom_position(3,N_total_atom))
+  allocate(atom_initial_position(3,N_total_atom))
+ 
+  ! Initialize all arrays to zero
+  atom_initial_position = 0.0
+  atom_position = 0.0
+  atom_velocity = 0.0
+  atom_acceleration = 0.0
+  atom_force = 0.0
+  atom_atomic_number = 0
+  atom_mass = 0.0
+END SUBROUTINE allocate_and_initialize_arrays
+
+
 SUBROUTINE read_control_input_file(input_filename)
   character(len=*), intent(in) :: input_filename
   character*256 :: file_line, the_key, value_string
@@ -138,10 +143,18 @@ SUBROUTINE read_control_input_file(input_filename)
       call convert_to_lowercase(the_key)
     
       select case(trim(adjustl(the_key)))
+        case("run_type")
+          read(value_string,*)run_type
         case("molecule_input_path")
           molecule_input_path = trim(adjustl(value_string))
         case("seeds_input_path")
-          seeds_input_path = trim(adjustl(value_string))       
+          seeds_input_path = trim(adjustl(value_string))
+        case("moleculeformations_input_path")
+          moleculeformations_input_path = trim(adjustl(value_string)) 
+        case("full_runs_dir_input_path")
+          full_runs_dir_input_path = trim(adjustl(value_string))   
+        case("traj_time_step_to_initialize")
+          read(value_string,*)traj_time_step_to_initialize      
         case("n_simulations")
           read(value_string,*)N_simulations
         case("n_time_steps")
@@ -174,8 +187,12 @@ SUBROUTINE read_control_input_file(input_filename)
   call check_and_fix_paths
 
   ! full list of variables
+  write(all_variable_file,*) "  run_type=", run_type
   write(all_variable_file,*) "  molecule_input_path=", molecule_input_path
   write(all_variable_file,*) "  seeds_input_path=", seeds_input_path
+  write(all_variable_file,*) "  moleculeformations_input_path=", moleculeformations_input_path
+  write(all_variable_file,*) "  full_runs_dir_input_path=", full_runs_dir_input_path
+  write(all_variable_file,*) "  traj_time_step_to_initialize=", traj_time_step_to_initialize
   write(all_variable_file,*) "  N_simulations=", N_simulations
   write(all_variable_file,*) "  N_time_steps=", N_time_steps
   write(all_variable_file,*) "  time_step=", time_step
@@ -256,6 +273,312 @@ SUBROUTINE read_seeds_input_file(input_filename)
 END SUBROUTINE read_seeds_input_file
 
 
+SUBROUTINE read_molformations_input_file(input_filename)
+  character(len=*), intent(in) :: input_filename
+  integer :: i, error_code, run_counter
+  character(len=256) :: line,lower_line
+  logical :: match_found
+  character(len=4) :: N_simulations_str
+
+  ! Open the file to find number of simulations in the file
+  open(unit=moleculeformations_file, file=trim(adjustl(input_filename)), status='old', action='read', iostat=error_code)
+  if (error_code /= 0) then
+    write(*,*) "***ERROR*** Error opening: ", input_filename
+    write(*,*) "Ensure that ", input_filename, " is in your running directory"
+    write(log_file,*) "***ERROR*** Error opening: ", input_filename
+    write(log_file,*) "Ensure that ", input_filename, " is in your running directory"
+    stop
+  end if
+
+  N_simulations=0
+  do
+    read(moleculeformations_file, '(a)', end=110) line
+
+    ! Ignore anything on the line that appears after a ,
+    i = index(line, ',')
+    if (i > 0) then
+        line = trim(adjustl(line(1:i-1)))
+    endif
+
+    ! Skip to the next iteration if the line is empty
+    if (len(trim(line)) == 0) cycle
+
+    call convert_to_lowercase(line)
+
+    if (trim(adjustl(line)) == "speed[a/fs]") then
+        N_simulations = N_simulations + 1
+    endif
+  enddo
+  110 close(moleculeformations_file)
+
+  write(N_simulations_str, '(I0)') N_simulations   ! Write integer N_simulations to string without leading spaces
+  print*, 'Number of simulations is: ', trim(adjustl(N_simulations_str))
+
+
+  ! 1-dimensional arrays that will be allocated to the size N_total_atom
+  allocate(full_runs_array(N_simulations))
+
+  ! Open the file to find fill the array of full run names
+  open(unit=moleculeformations_file, file=trim(adjustl(input_filename)), status='old', action='read', iostat=error_code)
+  if (error_code /= 0) then
+    write(*,*) "***ERROR*** Error opening: ", input_filename
+    write(*,*) "Ensure that ", input_filename, " is in your running directory"
+    write(log_file,*) "***ERROR*** Error opening: ", input_filename
+    write(log_file,*) "Ensure that ", input_filename, " is in your running directory"
+    stop
+  end if
+
+  full_runs_array=""
+  run_counter=1
+  do
+    read(moleculeformations_file, '(a)', end=111) line
+
+    ! Ignore anything on the line after a comma
+    i = index(line, ',')
+    if (i > 0) then
+        line = line(1:i-1)
+    endif
+
+    ! Trim and adjust the line once, reuse it
+    line = trim(adjustl(line))
+
+    lower_line=line
+    call convert_to_lowercase(lower_line)
+
+    ! Check if the line matches any of the excluded conditions
+    match_found = (trim(adjustl(lower_line)) == "") .or. &
+                  (trim(adjustl(lower_line)) == "densities") .or. &
+                  (trim(adjustl(lower_line)) == "time[fs]") .or. &
+                  (trim(adjustl(lower_line)) == "density sum") .or. &
+                  (trim(adjustl(lower_line)) == "x velocity[a/fs]") .or. &
+                  (trim(adjustl(lower_line)) == "y velocity[a/fs]") .or. &
+                  (trim(adjustl(lower_line)) == "z velocity[a/fs]") .or. &
+                  (trim(adjustl(lower_line)) == "speed[a/fs]")
+
+    if (.not. match_found) then
+        ! Check if we need to reallocate array size
+        if (run_counter > size(full_runs_array)) then
+          print*, "***ERROR*** More runs found than in size of full_runs_array"
+          stop
+        endif
+        full_runs_array(run_counter) = line
+        run_counter = run_counter + 1
+    endif
+  enddo
+  111 close(moleculeformations_file)
+
+  ! Error check
+  if (N_simulations > run_counter) then
+    write(*,*) "***ERROR*** Less runs found than are in full_runs_array from: ", input_filename
+    write(log_file,*) "***ERROR*** Less runs found than are in full_runs_array from: ", input_filename
+    stop
+  end if
+  write(log_file,*) "Successfully read and initialized data from: ", input_filename
+
+END SUBROUTINE read_molformations_input_file
+
+
+SUBROUTINE read_trajectory_full_run(input_filename)
+  character(len=*), intent(in) :: input_filename
+  integer :: i, error_code, line_counter, atom_counter, atomic_number
+  character(len=256) :: line
+  character(len=3) :: atom_symbol
+
+  ! Open the file to find number of simulations in the file
+  open(unit=trajectory_input_file, file=trim(adjustl(input_filename)), status='old', action='read', iostat=error_code)
+  if (error_code /= 0) then
+    write(*,*) "***ERROR*** Error opening: ", input_filename
+    write(*,*) "Ensure that ", input_filename, " is in your running directory"
+    write(log_file,*) "***ERROR*** Error opening: ", input_filename
+    write(log_file,*) "Ensure that ", input_filename, " is in your running directory"
+    stop
+  end if
+
+  line_counter=0
+  atom_counter=0
+  do
+    read(trajectory_input_file, '(a)', end=110) line
+    line_counter=line_counter+1
+    line=trim(adjustl(line))
+
+    if (line_counter==1) then
+      read(line,*)N_total_atom
+      call allocate_and_initialize_arrays
+    endif
+
+    ! Ignore anything on the line that appears after a '#'
+    i = index(line, '#')
+    if (i > 0) then
+        line = trim(adjustl(line(1:i-1)))
+    endif
+
+    ! Skip to the next iteration if the line is empty
+    if (len(trim(line)) == 0) cycle
+
+    ! Read in the atom types and coordinates SAM FIX THIS
+    if (line_counter > 2) then
+      atom_counter = atom_counter + 1
+      if (atom_counter <= N_total_atom) then
+        read(line, '(A1)', iostat=error_code) atom_symbol
+        if (error_code == 0) then
+          ! Search for the corresponding atomic number
+          atomic_number = 0
+          do i = 1, N_elements
+            if (trim(adjustl(atom_symbol)) == trim(adjustl(element_symbols(i)))) then
+                atomic_number = i
+                exit
+            endif
+          enddo
+          if (atomic_number > 0) then
+            atom_atomic_number(atom_counter) = atomic_number
+          else
+            print *, "Unknown atom symbol: ", atom_symbol
+          endif
+        endif
+      endif
+    endif
+
+    ! Reset atom counter at the start of each new block
+    if (atom_counter == N_total_atom) then
+        exit
+    endif
+  enddo
+
+  110 close(trajectory_input_file)
+
+  ! Error check
+  if (size(atom_atomic_number) > atom_counter) then
+    write(*,*) "***ERROR*** Less atoms found (atom_counter) than are in atom_atomic_number from: ", input_filename
+    write(log_file,*) "***ERROR*** Less atoms found (atom_counter) than are in atom_atomic_number from: ", input_filename
+    stop
+  end if
+  write(log_file,*) "Successfully read and initialized data from: ", input_filename
+
+END SUBROUTINE read_trajectory_full_run
+
+
+SUBROUTINE find_atom_kinetics_at_t(input_filename,j)
+  character(len=*), intent(in) :: input_filename
+  integer, intent(in) :: j
+  integer :: file, i, error_code, line_counter, atom_counter,iter_num,next_iter,found_iter
+  real :: x,y,z
+  character(len=256) :: line
+  character(len=3) :: atom_symbol
+  logical :: time_step_found,initial_positions_set
+  real*8,dimension(3,N_total_atom) :: next_atom_position
+
+  file=trajectory_input_file+(2*j)
+  ! Open the file to find number of simulations in the file
+  open(unit=file, file=trim(adjustl(input_filename)), status='old', action='read', iostat=error_code)
+  if (error_code /= 0) then
+    write(*,*) "***ERROR*** Error opening: ", input_filename
+    write(*,*) "Ensure that ", input_filename, " is in your running directory"
+    write(log_file,*) "***ERROR*** Error opening: ", input_filename
+    write(log_file,*) "Ensure that ", input_filename, " is in your running directory"
+    stop
+  end if
+
+  print*,"DEBUG: successfully opened:", trim(adjustl(input_filename))
+  time_step_found=.FALSE.
+  initial_positions_set=.FALSE.
+  line_counter=0
+  atom_counter=0
+  iter_num=0
+  found_iter=0
+  next_iter=0
+
+  do
+    read(file, '(a)', end=110) line
+    line_counter=line_counter+1
+    line=trim(adjustl(line))
+
+    !print*,"DEBUG: OG LINE IS:", line
+
+    i = index(line, '#')
+      if (i>0) then
+        i = index(line, '=')
+        if (i > 0) then
+            line = trim(adjustl(line(i+1:)))
+        endif
+
+        i = index(line, " ")
+        if (i > 0) then
+          line = trim(adjustl(line(1:i-1)))
+        endif
+
+        read(line,*)iter_num
+
+      endif
+
+    ! Skip to the next iteration if the line is empty
+    if (iter_num < traj_time_step_to_initialize) cycle
+
+
+    if(iter_num >= traj_time_step_to_initialize) then
+      if(time_step_found .and. iter_num>found_iter .and. next_iter<found_iter) then
+        next_iter=iter_num !set the next iter number after the searched for iter number has been found
+        cycle
+      else if(.not.(time_step_found)) then
+        time_step_found=.TRUE.
+        found_iter=iter_num
+        cycle
+      endif
+    endif    
+
+    ! Read in the atom types and coordinates SAM FIX THIS
+    if (time_step_found) then
+      if (atom_counter <= N_total_atom .and. .not.(initial_positions_set)) then
+        atom_counter = atom_counter + 1
+        read(line, *, iostat=error_code) atom_symbol, x, y, z
+        if (error_code == 0) then
+          atom_position(1,atom_counter)=x
+          atom_position(2,atom_counter)=y
+          atom_position(3,atom_counter)=z
+        endif
+      else if (.not.(initial_positions_set)) then
+        initial_positions_set=.TRUE.
+      endif
+      
+      ! All of the checks to make sure it is at the next iteration after the found one
+      if (next_iter > traj_time_step_to_initialize .and. &
+      atom_counter > N_total_atom .and. &
+      atom_counter <= (2*N_total_atom+1) .and. &
+      initial_positions_set) then
+        atom_counter = atom_counter + 1
+        read(line, *, iostat=error_code) atom_symbol, x, y, z
+        if (error_code == 0) then
+          next_atom_position(1,atom_counter-N_total_atom-1)=x
+          next_atom_position(2,atom_counter-N_total_atom-1)=y
+          next_atom_position(3,atom_counter-N_total_atom-1)=z
+        endif
+      endif
+    endif
+
+    ! exit the loop after atom positions have been placed for set position and next position
+    if (atom_counter >= 2*N_total_atom+1) then
+        exit
+    endif
+  enddo
+  110 close(file)
+
+  do i=1, N_total_atom
+    print*, "DEBUG: atom_position=",atom_position(:,i)
+  end do
+  do i=1, N_total_atom
+    print*, "DEBUG: next_atom_position=",next_atom_position(:,i)
+  end do
+  do i=1, N_total_atom
+    atom_velocity(:,i) = (next_atom_position(:,i) - atom_position(:,i)) / ((next_iter-found_iter)*time_step)
+  end do
+  do i=1, N_total_atom
+    print*, "DEBUG: atom_velocity=",atom_velocity(:,i)
+  end do
+
+
+
+END SUBROUTINE find_atom_kinetics_at_t
+
+
 SUBROUTINE convert_to_lowercase(string)
   integer          :: i
   character(len=*) :: string
@@ -287,6 +610,22 @@ SUBROUTINE check_and_fix_paths
     endif
     if (seeds_input_path(len_trim(seeds_input_path):len_trim(seeds_input_path)) /= '/') then
       seeds_input_path = trim(adjustl(seeds_input_path)) // '/'
+    endif
+  endif
+  if (len_trim(moleculeformations_input_path) > 0 .and. moleculeformations_input_path(1:1) /= ".") then
+    if (moleculeformations_input_path(1:1) /= '/') then
+      moleculeformations_input_path = '/' // trim(adjustl(moleculeformations_input_path))
+    endif
+    if (moleculeformations_input_path(len_trim(moleculeformations_input_path):len_trim(moleculeformations_input_path)) /= '/') then
+      moleculeformations_input_path = trim(adjustl(moleculeformations_input_path)) // '/'
+    endif
+  endif
+  if (len_trim(full_runs_dir_input_path) > 0 .and. full_runs_dir_input_path(1:1) /= ".") then
+    if (full_runs_dir_input_path(1:1) /= '/') then
+      full_runs_dir_input_path = '/' // trim(adjustl(full_runs_dir_input_path))
+    endif
+    if (full_runs_dir_input_path(len_trim(full_runs_dir_input_path):len_trim(full_runs_dir_input_path)) /= '/') then
+      full_runs_dir_input_path = trim(adjustl(full_runs_dir_input_path)) // '/'
     endif
   endif
 

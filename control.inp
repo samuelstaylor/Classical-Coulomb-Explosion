@@ -1,8 +1,18 @@
 # EXAMPLE CONTROL.INP FILE
 
+run_type=2
+
+# run_type=1
 molecule_input_path=/mnt/c/Users/Samuel/Research/varga/fortran/Classical-Coulomb-Explosion/input/c2h2/
 seeds_input_path=/mnt/c/Users/Samuel/Research/varga/fortran/Classical-Coulomb-Explosion/input/c2h2/
-N_simulations = 200
+N_simulations=200
+
+# run_type=2
+moleculeformations_input_path=/mnt/c/Users/Samuel/Research/varga/fortran/Classical-Coulomb-Explosion/input/c2h2/
+full_runs_dir_input_path=/mnt/c/Users/Samuel/Research/varga/fortran/Classical-Coulomb-Explosion/input/c2h2/
+traj_time_step_to_initialize=25000 #(25 fs)
+
+# Universal configuration
 N_time_steps = 120000
 time_step = .001
 trajectory_output_frequency = 500
@@ -12,5 +22,5 @@ include_electron_mass = False
 output_trajectory = False
 output_atom_info = True
 
-#parallelization is feature in currently broken
+# ERROR: PARALLELIZATION FEATURE IS CURRENTLY BROKEN! SET TO FALSE
 parallelization = False

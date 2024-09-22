@@ -3,6 +3,7 @@
 MODULE MOD_GLOBAL
     USE PARAMETERS
     implicit none
+    integer :: run_type=1
 
     ! Set in molecule.inp
     integer :: N_total_atom ! The number of atoms in the simultaion
@@ -10,6 +11,9 @@ MODULE MOD_GLOBAL
     ! All of these can be set in control.inp
     character(len=256) :: molecule_input_path = "./"
     character(len=256) :: seeds_input_path = "./"
+    character(len=256) :: moleculeformations_input_path = "./"
+    character(len=256) :: full_runs_dir_input_path = "./"
+    integer :: traj_time_step_to_initialize=0 ! Iteration number to read info from the trajectory file from 
     integer :: N_simulations=1 ! The number of simulations to run
     integer :: N_time_steps=120000 ! Number of timesteps (iterations) in the simulation 
     real*8  :: time_step=.001 ! Size of the time step to iterate program through
@@ -39,7 +43,8 @@ MODULE MOD_GLOBAL
     !full_filename
     character(len=256) :: molecule_filename_full = "molecule.inp"
     character(len=256) :: seeds_filename_full = "seeds.inp"
-
+    character(len=256) :: moleculeformations_filename_full = "moleculeFormations.csv"
+    character(len=256) :: trajectory_filename_full = "trajectory.xyz"
 
     ! file names with directories to be set
     character*255 :: log_output_filename=bare_log_output_filename
@@ -60,6 +65,7 @@ MODULE MOD_GLOBAL
     real*8,dimension(:,:),allocatable :: atom_acceleration
 
     real*8,dimension(:),allocatable :: seed_array
+    character(len=256),dimension(:),allocatable :: full_runs_array
 
     
 END MODULE MOD_GLOBAL

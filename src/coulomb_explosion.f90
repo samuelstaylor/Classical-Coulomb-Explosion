@@ -12,6 +12,9 @@ MODULE COULOMB_EXPLOSION
 CONTAINS
 
 SUBROUTINE initialize
+  character(len=3) :: run_type_str
+  character(len=256) :: full_run_trajectory_input_file
+
   call date_and_time(date=start_date, time=start_time)
   call cpu_time(program_CPU_start_time)
 
@@ -22,19 +25,35 @@ SUBROUTINE initialize
 
   call prepare_output
   call read_control_input_file('control.inp')
+  write(run_type_str, '(I0)') run_type
 
-  molecule_filename_full = trim(adjustl(molecule_input_path)) // 'molecule.inp'
-  call read_molecule_input_file(molecule_filename_full)
-
-  seeds_filename_full = trim(adjustl(seeds_input_path)) // 'seeds.inp'
-  call read_seeds_input_file(seeds_filename_full)
-
-  print*,"molecule file name=",molecule_filename_full
-  print*,"seeds file name=",seeds_filename_full
+  if (run_type == 1) then
+    print*, "run_type = ", trim(adjustl(run_type_str)), " | mode set to: BOLTZMANN VELOCITY DISTRIBUTION FROM GROUNDSTATE"
+    molecule_filename_full = trim(adjustl(molecule_input_path)) // 'molecule.inp'
+    call read_molecule_input_file(molecule_filename_full)
+    print*, "molecule file name = ", molecule_filename_full
+    seeds_filename_full = trim(adjustl(seeds_input_path)) // 'seeds.inp'
+    call read_seeds_input_file(seeds_filename_full)
+    print*, "seeds file name = ", seeds_filename_full
+  else if (run_type == 2) then
+    print*, "run_type = ", trim(adjustl(run_type_str)), " | mode set to: CONTINUE FROM TDDFT WITHOUT QUANTUM EFFECTS"
+    moleculeformations_filename_full = trim(adjustl(moleculeformations_input_path)) // 'moleculeFormations.csv'
+    call read_molformations_input_file(moleculeformations_filename_full)
+    print*, "Successfully read from: moleculeFormations file = ", trim(adjustl(moleculeformations_filename_full))
+    ! READ THE NUMBER OF ATOMS FROM THE FIRST TRAJECTORY FILE. ALSO READ IN THE SPECIES. NEED THIS INFO TO COMPUTE MASS
+    full_run_trajectory_input_file = trim(adjustl(full_runs_dir_input_path)) // &
+                                     trim(adjustl(full_runs_array(1))) // "/trajectory.xyz"
+    call read_trajectory_full_run(full_run_trajectory_input_file)
+    print*,'Molecule initial info pulled from=',trim(adjustl(full_run_trajectory_input_file)) 
+  else
+    print*, "ERROR: invalid run_type"
+    print*, "  run_type = ", run_type, " Please set it to 1 or 2"
+    stop
+  endif
 
   call compute_atomic_masses
   call open_optional_output_files
-  
+
   call program_checks
 
   
@@ -56,11 +75,18 @@ SUBROUTINE program_checks
     stop
   end if
 
-  call count_lines(seeds_filename_full, number_of_lines)
-  if (number_of_lines < N_simulations) then
-    print*, 'ERROR, N_simulations is greater than the number of seeds (lines) in seeds.inp. Stopping.'
-    stop
+  if (run_type==1) then
+    call count_lines(seeds_filename_full, number_of_lines)
+    if (number_of_lines < N_simulations) then
+      print*, 'ERROR, N_simulations is greater than the number of seeds (lines) in seeds.inp. Stopping.'
+      stop
+    endif
   endif
+
+  if (run_type==2) then
+    print*,"run_type=2 checks"
+  endif
+
   
 END SUBROUTINE program_checks
 
@@ -153,7 +179,7 @@ SUBROUTINE calculate_simulation(i)
   if (output_trajectory) then
     full_trajectory_filename = trim(adjustl(trajectory_filename)) // &
                                 trim(adjustl(seed_string)) // ".xyz"
-    unit_num = trajectory_file + 1 
+    unit_num = trajectory_output_file + 1 
     open(unit_num, file=trim(adjustl(full_trajectory_filename)))
   end if
 
@@ -195,9 +221,61 @@ SUBROUTINE calculate_simulation(i)
 END SUBROUTINE calculate_simulation
 
 
+SUBROUTINE simulate_cont_from_tddft(input_filename,i)
+  character(len=256), intent(in) :: input_filename
+  integer, intent(in) :: i
+  integer :: seed, unit_num
+  character(len=255) :: full_trajectory_filename, seed_string
+
+  !sam fix this later
+  write(seed_string, '(G0)') i
+  if (output_trajectory) then
+    full_trajectory_filename = trim(adjustl(trajectory_filename)) // &
+                                trim(adjustl(seed_string)) // ".xyz"
+    unit_num = trajectory_output_file+(2*i)
+    open(unit_num, file=trim(adjustl(full_trajectory_filename)))
+  end if
+
+  write(log_file, '(A, A, A)') "r=", trim(adjustl(seed_string)), &
+                                " computation started"
+
+  ! Initial state of each simulation
+  call find_atom_kinetics_at_t(input_filename,i)
+
+  do iter = traj_time_step_to_initialize, N_time_steps
+      time = iter * time_step
+  
+      ! Output
+      if (output_trajectory .and. mod(iter, trajectory_output_frequency) == 0) then
+        call update_trajectory_file(unit_num)
+      end if
+
+      ! Update via Verlet Algorithm (force, position, velocity)
+      call calculate_force
+      call calculate_position
+      call calculate_velocity
+  end do
+
+  if (output_trajectory) then
+    write(log_file, *) "Successfully finished trajectory file: ", &
+                      full_trajectory_filename
+    close(unit_num)
+  end if
+
+  if (output_atom_info) call update_atom_info_file
+
+  write(log_file, '(A, A, A)') "r=", trim(adjustl(seed_string)), &
+                                " computation completed"
+  write(log_file, *)
+  write(*, '(A, A, A)') "  r=", trim(adjustl(seed_string)), &
+                          " computation completed"
+END SUBROUTINE simulate_cont_from_tddft
+
+
 SUBROUTINE calculate
   use omp_lib
   integer :: i
+  character(len=256) :: full_run_trajectory_input_file
 
   if (parallelization) then
     !$omp parallel private(i)
@@ -217,14 +295,22 @@ SUBROUTINE calculate
     ! Here, typically, the number of threads is 1
     print *, "Running with no parallelization, number of threads: 1"
     
-    do i = 1, N_simulations
-      call calculate_simulation(i)
-    end do
+    if (run_type==1) then  
+      do i = 1, N_simulations
+        call calculate_simulation(i)
+      end do
+    else if (run_type==2) then
+      do i = 1, 1!size(full_runs_array)
+        full_run_trajectory_input_file = trim(adjustl(full_runs_dir_input_path)) // &
+                                     trim(adjustl(full_runs_array(i))) // "/trajectory.xyz"
+        print*, "calling simulate_cont_from_tddft"
+        call simulate_cont_from_tddft(full_run_trajectory_input_file,i)
+        print*, "finished calling simulate_cont_from_tddft"
+      end do
+    endif
   endif
 
 END SUBROUTINE calculate
-
-
 
 
 SUBROUTINE cleanup
@@ -252,7 +338,7 @@ SUBROUTINE cleanup
 
   ! close the output files
   close(log_file)
-  if (output_trajectory) close(trajectory_file)
+  if (output_trajectory) close(trajectory_output_file)
   if (output_atom_info) close(atom_info_file)
   ! deallocate all of the matrices
   deallocate(atom_initial_position)
