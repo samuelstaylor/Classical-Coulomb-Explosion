@@ -574,7 +574,7 @@ SUBROUTINE find_atom_kinetics_at_t(input_filename,j)
   character(len=*), intent(in) :: input_filename
   integer, intent(in) :: j
   integer :: file, i, error_code, line_counter, atom_counter,iter_num,next_iter,found_iter
-  real :: x,y,z
+  real*8 :: x,y,z
   character(len=256) :: line
   character(len=3) :: atom_symbol
   logical :: time_step_found,initial_positions_set
@@ -679,9 +679,9 @@ SUBROUTINE find_atom_kinetics_at_t(input_filename,j)
   ! do i=1, N_total_atom
   !   print*, "DEBUG: next_atom_position=",next_atom_position(:,i)
   ! end do
-  ! do i=1, N_total_atom
-  !   atom_velocity(:,i) = (next_atom_position(:,i) - atom_position(:,i)) / ((next_iter-found_iter)*time_step)
-  ! end do
+  do i=1, N_total_atom
+    atom_velocity(:,i) = (next_atom_position(:,i) - atom_position(:,i)) / ((next_iter-found_iter)*time_step)
+  end do
   ! do i=1, N_total_atom
   !   print*, "DEBUG: atom_velocity=",atom_velocity(:,i)
   ! end do
