@@ -179,7 +179,8 @@ SUBROUTINE calculate_simulation(i)
   write(seed_string, '(G0)') seed
   if (output_trajectory) then
     full_trajectory_filename = trim(adjustl(trajectory_filename)) // &
-                                trim(adjustl(seed_string)) // ".xyz"
+                               "_r" // trim(adjustl(seed_string)) // &
+                               ".xyz"
     unit_num = trajectory_output_file + 1 
     open(unit_num, file=trim(adjustl(full_trajectory_filename)))
   end if
@@ -232,7 +233,8 @@ SUBROUTINE simulate_cont_from_tddft(input_filename,i)
   write(seed_string, '(G0)') i
   if (output_trajectory) then
     full_trajectory_filename = trim(adjustl(trajectory_filename)) // &
-                                trim(adjustl(full_runs_array(i))) // ".xyz"
+                               "_" // trim(adjustl(full_runs_array(i))) // &
+                               ".xyz"
     unit_num = trajectory_output_file+(2*i)
     open(unit_num, file=trim(adjustl(full_trajectory_filename)))
   end if

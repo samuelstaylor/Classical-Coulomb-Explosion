@@ -775,12 +775,6 @@ SUBROUTINE append_paths_to_filenames(formatted_datetime, trajectory_directory)
   all_variable_filename=trim(adjustl(output_dir))//"/"//formatted_datetime//"/"//bare_all_variable_filename
   atom_info_filename=trim(adjustl(output_dir))//"/"//formatted_datetime//"/"//bare_atom_info_filename
   trajectory_filename=trim(adjustl(trajectory_directory))//"/"//trim(adjustl(bare_trajectory_filename))
-  if (run_type==1) then
-    trajectory_filename=trim(adjustl(trajectory_filename))//"_r"
-  else if(run_type==2) then
-    trajectory_filename=trim(adjustl(trajectory_filename))//"_"
-  endif
-
 END SUBROUTINE append_paths_to_filenames
 
 
