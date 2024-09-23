@@ -271,7 +271,7 @@ SUBROUTINE simulate_cont_from_tddft(input_filename,i)
     close(unit_num)
   end if
 
-  if (output_atom_info) call update_atom_info_file
+  if (output_atom_info) call update_atom_info_file(i)
 
   write(log_file, '(A, A, A)') trim(adjustl(full_runs_array(i))), &
                                 " computation completed"

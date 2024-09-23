@@ -927,15 +927,22 @@ subroutine update_trajectory_file(unit_num)
   flush(unit_num)
   end subroutine update_trajectory_file
   
-SUBROUTINE update_atom_info_file
+SUBROUTINE update_atom_info_file(j)
   !This subroutine updates csv-file with info about each of the atoms
   !from each of the simulations. 
+  integer, intent(in), optional :: j
+
   integer :: i, error_code, atom_zero_index
   character(len=255) :: atom_zero_index_string
   real*8 :: charge_sum
 
   ! write the atom info header
-  WRITE(atom_info_file, '(A, I0, A)', ADVANCE='NO') "r_seed=", ion_velocity_init_seed, ", "
+  if (run_type==1) then
+    WRITE(atom_info_file, '(A, I0, A)', ADVANCE='NO') "r_seed=", ion_velocity_init_seed, ", "
+  endif
+  if (run_type==2) then
+    WRITE(atom_info_file, '(A, A)', ADVANCE='NO') trim(adjustl(full_runs_array(j))), ", "
+  endif
   do i = 1, N_total_atom
     atom_zero_index = i - 1
     write(atom_zero_index_string,*) atom_zero_index
