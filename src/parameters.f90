@@ -5,7 +5,7 @@ MODULE PARAMETERS
     character*255,parameter :: output_dir="output"
     character*255,parameter :: bare_log_output_filename="monitor.out"
     character*255,parameter :: bare_all_variable_filename="all_variable_file.txt"
-    character*255,parameter :: bare_trajectory_filename="trajectory_r" !append r_val and .xyz extension
+    character*255,parameter :: bare_trajectory_filename="trajectory" !append r_val and .xyz extension
     character*255,parameter :: bare_trajectory_input_filename="trajectory.xyz" !append r_val and .xyz extension
     character*255,parameter :: bare_atom_info_filename="atom_info.csv"
 
@@ -157,5 +157,34 @@ MODULE PARAMETERS
     272d0,  273d0,  276d0,  279d0,  278d0,                              & !  Sg, Bh, Hs, Mt, Ds
     283d0,  285d0,  287d0,  289d0,  291d0,                              & !  Rg, Cn, Uut, Uuq, Uup
     293d0,  295d0,  294d0 /)                                              !  Uuh, Uus, Uuo
+
+    ! Number of valence electrons for each element (neutral atom configuration)
+    integer, parameter :: element_valence_electrons(N_elements) = (/ &
+    1, 2, &                              ! H, He
+    1, 2, 3, 4, 5, &                     ! Li, Be, B, C, N
+    6, 7, 8, 1, 2, &                     ! O, F, Ne, Na, Mg
+    3, 4, 5, 6, 7, &                     ! Al, Si, P, S, Cl
+    8, 1, 2, 3, 4, &                     ! Ar, K, Ca, Sc, Ti
+    5, 6, 7, 8, 9, &                     ! V, Cr, Mn, Fe, Co
+    10, 11, 12, 3, 4, &                  ! Ni, Cu, Zn, Ga, Ge
+    5, 6, 7, 8, 1, &                     ! As, Se, Br, Kr, Rb
+    2, 3, 4, 5, 6, &                     ! Sr, Y, Zr, Nb, Mo
+    7, 8, 9, 10, 11, &                   ! Tc, Ru, Rh, Pd, Ag
+    12, 13, 14, 15, 16, &                ! Cd, In, Sn, Sb, Te
+    17, 18, 1, 2, 3, &                   ! I, Xe, Cs, Ba, La
+    4, 5, 6, 7, 8, &                     ! Ce, Pr, Nd, Pm, Sm
+    9, 10, 11, 12, 13, &                 ! Eu, Gd, Tb, Dy, Ho
+    14, 15, 16, 17, 18, &                ! Er, Tm, Yb, Lu, Hf
+    19, 20, 21, 22, 23, &                ! Ta, W, Re, Os, Ir
+    24, 25, 26, 27, 28, &                ! Pt, Au, Hg, Tl, Pb
+    29, 30, 31, 32, 33, &                ! Bi, Po, At, Rn, Fr
+    34, 35, 36, 37, 38, &                ! Ra, Ac, Th, Pa, U
+    39, 40, 41, 42, 43, &                ! Np, Pu, Am, Cm, Bk
+    44, 45, 46, 47, 48, &                ! Cf, Es, Fm, Md, No
+    49, 50, 51, 52, 53, &                ! Lr, Rf, Db, Sg, Bh
+    54, 55, 56, 57, 58, &                ! Hs, Mt, Ds, Rg, Cn
+    0, 59, 0, 60, 0, &                   ! Uut, Uuq, Uup, Uuh, Uus
+    0 /)                                 ! Uuo
+
 
 END MODULE PARAMETERS

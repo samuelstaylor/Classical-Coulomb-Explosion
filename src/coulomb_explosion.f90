@@ -39,12 +39,13 @@ SUBROUTINE initialize
     print*, "run_type = ", trim(adjustl(run_type_str)), " | mode set to: CONTINUE FROM TDDFT WITHOUT QUANTUM EFFECTS"
     moleculeformations_filename_full = trim(adjustl(moleculeformations_input_path)) // 'moleculeFormations.csv'
     call read_molformations_input_file(moleculeformations_filename_full)
-    print*, "Successfully read from: moleculeFormations file = ", trim(adjustl(moleculeformations_filename_full))
+    print*, "Successfully read from: moleculeFormations file: ", trim(adjustl(moleculeformations_filename_full))
     ! READ THE NUMBER OF ATOMS FROM THE FIRST TRAJECTORY FILE. ALSO READ IN THE SPECIES. NEED THIS INFO TO COMPUTE MASS
     full_run_trajectory_input_file = trim(adjustl(full_runs_dir_input_path)) // &
                                      trim(adjustl(full_runs_array(1))) // "/trajectory.xyz"
     call read_trajectory_full_run(full_run_trajectory_input_file)
-    print*,'Molecule initial info pulled from=',trim(adjustl(full_run_trajectory_input_file)) 
+    print*,'Molecule initial info pulled from: ',trim(adjustl(full_run_trajectory_input_file)) 
+    call read_molformations_charges(moleculeformations_filename_full)
   else
     print*, "ERROR: invalid run_type"
     print*, "  run_type = ", run_type, " Please set it to 1 or 2"
@@ -224,23 +225,29 @@ END SUBROUTINE calculate_simulation
 SUBROUTINE simulate_cont_from_tddft(input_filename,i)
   character(len=256), intent(in) :: input_filename
   integer, intent(in) :: i
-  integer :: seed, unit_num
+  integer :: j, unit_num
   character(len=255) :: full_trajectory_filename, seed_string
 
   !sam fix this later
   write(seed_string, '(G0)') i
   if (output_trajectory) then
     full_trajectory_filename = trim(adjustl(trajectory_filename)) // &
-                                trim(adjustl(seed_string)) // ".xyz"
+                                trim(adjustl(full_runs_array(i))) // ".xyz"
     unit_num = trajectory_output_file+(2*i)
     open(unit_num, file=trim(adjustl(full_trajectory_filename)))
   end if
 
-  write(log_file, '(A, A, A)') "r=", trim(adjustl(seed_string)), &
+  write(log_file, '(A, A, A)') trim(adjustl(full_runs_array(i))), &
                                 " computation started"
 
   ! Initial state of each simulation
   call find_atom_kinetics_at_t(input_filename,i)
+
+  ! Charge of each atom
+  atom_charge = atom_charges_every_tddft(:,i)
+  do j=1, N_total_atom
+    write(log_file,*)"atom", j, "charge=",atom_charge(j)
+  enddo
 
   do iter = traj_time_step_to_initialize, N_time_steps
       time = iter * time_step
@@ -264,10 +271,10 @@ SUBROUTINE simulate_cont_from_tddft(input_filename,i)
 
   if (output_atom_info) call update_atom_info_file
 
-  write(log_file, '(A, A, A)') "r=", trim(adjustl(seed_string)), &
+  write(log_file, '(A, A, A)') trim(adjustl(full_runs_array(i))), &
                                 " computation completed"
   write(log_file, *)
-  write(*, '(A, A, A)') "  r=", trim(adjustl(seed_string)), &
+  write(*, '(A, A, A)') "  ", trim(adjustl(full_runs_array(i))), &
                           " computation completed"
 END SUBROUTINE simulate_cont_from_tddft
 
@@ -300,12 +307,10 @@ SUBROUTINE calculate
         call calculate_simulation(i)
       end do
     else if (run_type==2) then
-      do i = 1, 1!size(full_runs_array)
+      do i = 1, N_simulations
         full_run_trajectory_input_file = trim(adjustl(full_runs_dir_input_path)) // &
                                      trim(adjustl(full_runs_array(i))) // "/trajectory.xyz"
-        print*, "calling simulate_cont_from_tddft"
         call simulate_cont_from_tddft(full_run_trajectory_input_file,i)
-        print*, "finished calling simulate_cont_from_tddft"
       end do
     endif
   endif
@@ -346,11 +351,14 @@ SUBROUTINE cleanup
   deallocate(atom_velocity)
   deallocate(atom_acceleration)
   deallocate(atom_force)
+  if (run_type==2) deallocate(atom_charges_every_tddft)
   ! deallocate all of the arrays
   deallocate(atom_atomic_number)
   deallocate(atom_charge)
   deallocate(atom_mass)
-  deallocate(seed_array)
+  if (run_type==1) deallocate(seed_array)
+  if (run_type==2) deallocate(full_runs_array)
+
 
 END SUBROUTINE cleanup
 

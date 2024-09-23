@@ -100,6 +100,7 @@ SUBROUTINE allocate_and_initialize_arrays
   allocate(atom_velocity(3,N_total_atom))
   allocate(atom_position(3,N_total_atom))
   allocate(atom_initial_position(3,N_total_atom))
+  if (run_type==2) allocate(atom_charges_every_tddft(N_total_atom,N_simulations))
  
   ! Initialize all arrays to zero
   atom_initial_position = 0.0
@@ -378,6 +379,119 @@ SUBROUTINE read_molformations_input_file(input_filename)
 END SUBROUTINE read_molformations_input_file
 
 
+SUBROUTINE read_molformations_charges(input_filename)
+  character(len=*), intent(in) :: input_filename
+  integer :: i, j, error_code, run_counter
+  character(len=256) :: line,lower_line,line_header,line_body
+  logical :: match_found
+  real :: line_array(N_total_atom)
+  real :: temp_density
+
+  
+  ! Open the file to find fill the array of full run names
+  open(unit=moleculeformations_file, file=trim(adjustl(input_filename)), status='old', action='read', iostat=error_code)
+  if (error_code /= 0) then
+    write(*,*) "***ERROR*** Error opening: ", input_filename
+    write(*,*) "Ensure that ", input_filename, " is in your running directory"
+    write(log_file,*) "***ERROR*** Error opening: ", input_filename
+    write(log_file,*) "Ensure that ", input_filename, " is in your running directory"
+    stop
+  end if
+
+  run_counter=1
+  do
+    read(moleculeformations_file, '(a)', end=110) line
+
+    ! Ignore anything on the line after a comma
+    i = index(line, ',')
+    if (i > 0) then
+        line_header = line(1:i-1)
+        line_body= line(i+1:)
+    endif
+
+    ! Trim and adjust the line once, reuse it
+    line_header = trim(adjustl(line_header))
+
+    lower_line=line_header
+    call convert_to_lowercase(lower_line)
+
+    if (trim(adjustl(lower_line)) == "densities") then
+      ! Split line_body by commas
+      call split_line_to_real_array(line_body,line_array)
+    
+      ! Check if we need to reallocate atom_charge size based on N_simulations
+      do i = 1, N_total_atom
+        ! Convert the i-th element from line_array to a real and assign it to atom_charge
+        temp_density=line_array(i)
+        ! fill with densities
+        atom_charges_every_tddft(i,run_counter) = temp_density
+      end do
+      run_counter = run_counter + 1
+    endif
+  enddo
+  110 close(moleculeformations_file)
+
+  !convert the densities to charges
+  call convert_density_to_charges
+END SUBROUTINE read_molformations_charges
+
+
+SUBROUTINE convert_density_to_charges
+  integer :: i, elem
+
+  ! Calculates assuming a neutral charge and most common isotope
+  do i=1,N_total_atom
+    elem=atom_atomic_number(i)
+    if (elem/=0) then
+      atom_charges_every_tddft(i,:)=element_valence_electrons(elem)-atom_charges_every_tddft(i,:)
+    endif
+  enddo
+END SUBROUTINE convert_density_to_charges
+
+
+SUBROUTINE split_line_to_real_array(line_body, line_array_out)
+  implicit none
+  ! Inputs
+  character(len=*), intent(in) :: line_body
+  ! Outputs
+  real, intent(out) :: line_array_out(N_total_atom)
+  
+  ! Local variables
+  character(len=32) :: line_array(N_total_atom)  ! Assuming each value is at most 20 characters long
+  integer :: i, j, start, num_values
+  real :: temp_real
+  
+  ! Initialize
+  num_values = 0
+  start = 1
+
+  ! Loop over the line and split by commas
+  do i = 1, len_trim(line_body)
+      if (line_body(i:i) == ',') then
+          num_values = num_values + 1
+          line_array(num_values) = line_body(start:i-1)
+          start = i + 1
+      end if
+  end do
+
+  ! Capture the last value after the final comma
+  if (start <= len_trim(line_body)) then
+      num_values = num_values + 1
+      line_array(num_values) = line_body(start:)
+  end if
+
+  ! Convert the strings in line_array to atom_charge
+  do j = 1, num_values
+      read(line_array(j), *, iostat=i) temp_real
+      if (i == 0) then
+          line_array_out(j) = temp_real
+      else
+          write(*,*) "Error converting string to real at index ", j
+      end if
+  end do
+end subroutine split_line_to_real_array
+
+
 SUBROUTINE read_trajectory_full_run(input_filename)
   character(len=*), intent(in) :: input_filename
   integer :: i, error_code, line_counter, atom_counter, atomic_number
@@ -443,7 +557,6 @@ SUBROUTINE read_trajectory_full_run(input_filename)
         exit
     endif
   enddo
-
   110 close(trajectory_input_file)
 
   ! Error check
@@ -478,7 +591,6 @@ SUBROUTINE find_atom_kinetics_at_t(input_filename,j)
     stop
   end if
 
-  print*,"DEBUG: successfully opened:", trim(adjustl(input_filename))
   time_step_found=.FALSE.
   initial_positions_set=.FALSE.
   line_counter=0
@@ -561,21 +673,18 @@ SUBROUTINE find_atom_kinetics_at_t(input_filename,j)
   enddo
   110 close(file)
 
-  do i=1, N_total_atom
-    print*, "DEBUG: atom_position=",atom_position(:,i)
-  end do
-  do i=1, N_total_atom
-    print*, "DEBUG: next_atom_position=",next_atom_position(:,i)
-  end do
-  do i=1, N_total_atom
-    atom_velocity(:,i) = (next_atom_position(:,i) - atom_position(:,i)) / ((next_iter-found_iter)*time_step)
-  end do
-  do i=1, N_total_atom
-    print*, "DEBUG: atom_velocity=",atom_velocity(:,i)
-  end do
-
-
-
+  ! do i=1, N_total_atom
+  !   print*, "DEBUG: atom_position=",atom_position(:,i)
+  ! end do
+  ! do i=1, N_total_atom
+  !   print*, "DEBUG: next_atom_position=",next_atom_position(:,i)
+  ! end do
+  ! do i=1, N_total_atom
+  !   atom_velocity(:,i) = (next_atom_position(:,i) - atom_position(:,i)) / ((next_iter-found_iter)*time_step)
+  ! end do
+  ! do i=1, N_total_atom
+  !   print*, "DEBUG: atom_velocity=",atom_velocity(:,i)
+  ! end do
 END SUBROUTINE find_atom_kinetics_at_t
 
 
@@ -665,7 +774,12 @@ SUBROUTINE append_paths_to_filenames(formatted_datetime, trajectory_directory)
   log_output_filename=trim(adjustl(output_dir))//"/"//formatted_datetime//"/"//bare_log_output_filename
   all_variable_filename=trim(adjustl(output_dir))//"/"//formatted_datetime//"/"//bare_all_variable_filename
   atom_info_filename=trim(adjustl(output_dir))//"/"//formatted_datetime//"/"//bare_atom_info_filename
-  trajectory_filename=trim(adjustl(trajectory_directory))//"/"//bare_trajectory_filename
+  trajectory_filename=trim(adjustl(trajectory_directory))//"/"//trim(adjustl(bare_trajectory_filename))
+  if (run_type==1) then
+    trajectory_filename=trim(adjustl(trajectory_filename))//"_r"
+  else if(run_type==2) then
+    trajectory_filename=trim(adjustl(trajectory_filename))//"_"
+  endif
 
 END SUBROUTINE append_paths_to_filenames
 

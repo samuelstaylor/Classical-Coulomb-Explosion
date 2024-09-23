@@ -63,9 +63,11 @@ MODULE MOD_GLOBAL
     real*8,dimension(:,:),allocatable :: atom_velocity
     real*8,dimension(:,:),allocatable :: atom_force
     real*8,dimension(:,:),allocatable :: atom_acceleration
+    real*8,dimension(:,:),allocatable :: atom_charges_every_tddft
 
     real*8,dimension(:),allocatable :: seed_array
     character(len=256),dimension(:),allocatable :: full_runs_array
+    
 
     
 END MODULE MOD_GLOBAL
