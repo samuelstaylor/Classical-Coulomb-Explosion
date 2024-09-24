@@ -277,7 +277,7 @@ END SUBROUTINE read_seeds_input_file
 SUBROUTINE read_molformations_input_file(input_filename)
   character(len=*), intent(in) :: input_filename
   integer :: i, error_code, run_counter
-  character(len=256) :: line,lower_line
+  character(len=512) :: line,lower_line
   logical :: match_found
   character(len=4) :: N_simulations_str
 
@@ -382,7 +382,7 @@ END SUBROUTINE read_molformations_input_file
 SUBROUTINE read_molformations_charges(input_filename)
   character(len=*), intent(in) :: input_filename
   integer :: i, j, error_code, run_counter
-  character(len=256) :: line,lower_line,line_header,line_body
+  character(len=512) :: line,lower_line,line_header,line_body
   logical :: match_found
   real :: line_array(N_total_atom)
   real :: temp_density

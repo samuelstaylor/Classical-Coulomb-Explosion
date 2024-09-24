@@ -467,17 +467,18 @@ class NewtonPlot:
 def main():
     print("-=GENERATING NEWTON PLOT=-")
     newton_plot = NewtonPlot()
-    data_mode = "quantum"
+    data_mode = "classic"
     user_input_mode = False
     
     if (data_mode.lower().startswith('q')):
         #QUANTUM INPUT FILE:
-        input_file = 'scripts/tddft_output/moleculeFormations_14.csv'  
+        input_file = 'scripts/C2H2_run_type1/moleculeFormations_14.csv'  
         graph_name_tag="quantum"
 
     if (data_mode.lower().startswith('c')):
         #CLASSICAL INPUT FILE:
-        input_file = 'output/classical_200/atom_info.csv'
+        input_file = 'scripts/C2H2_run_type1/atom_info.csv'
+        input_file = 'aces_output/atom_info.csv'
         graph_name_tag="classical"
 
     

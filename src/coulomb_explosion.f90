@@ -56,7 +56,6 @@ SUBROUTINE initialize
   call open_optional_output_files
 
   call program_checks
-
   
   write(log_file,*)""
   write(log_file,*)"Initialization complete. Beginning computation..."

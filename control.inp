@@ -3,19 +3,19 @@
 run_type=2
 
 # run_type=1
-molecule_input_path=/mnt/c/Users/Samuel/Research/varga/fortran/Classical-Coulomb-Explosion/input/c2h2/
-seeds_input_path=/mnt/c/Users/Samuel/Research/varga/fortran/Classical-Coulomb-Explosion/input/c2h2/
-N_simulations=200
+molecule_input_path=/mnt/c/Users/Samuel/Research/varga/fortran/Classical-Coulomb-Explosion/input/c4h10
+seeds_input_path=/mnt/c/Users/Samuel/Research/varga/fortran/Classical-Coulomb-Explosion/input/c4h10/
+N_simulations=20
 temperature_ions = 300.0 
 
 
 # run_type=2
-moleculeformations_input_path=/mnt/c/Users/Samuel/Research/varga/fortran/Classical-Coulomb-Explosion/input/c2h2/
-full_runs_dir_input_path=/mnt/c/Users/Samuel/Research/varga/fortran/Classical-Coulomb-Explosion/input/c2h2/
+moleculeformations_input_path=/mnt/c/Users/Samuel/Research/varga/fortran/Classical-Coulomb-Explosion/input/c4h10/
+full_runs_dir_input_path=/mnt/c/Users/Samuel/Research/varga/fortran/Classical-Coulomb-Explosion/input/c4h10/
 traj_time_step_to_initialize=25000 #(25 fs)
 
 # Universal configuration
-N_time_steps = 80000
+N_time_steps = 120000
 time_step = .001
 trajectory_output_frequency = 500
 use_average_atomic_mass = True
