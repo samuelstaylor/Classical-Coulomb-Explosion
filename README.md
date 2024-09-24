@@ -15,7 +15,6 @@ quantum effects.
                 N_time_steps - The number of time steps in each of the simulations.
                 time_step - The time step of each simulation (in fs).
                 trajectory_output_frequency - The frequency to output position data to the trajectory.xyz file. 
-                temperature_ions - Temperature of the molecule in kelvin
                 use_average_atomic_mass - Use the average number of nucleons for the atom mass computation
                 include_electron_mass - Logical: Include the electron difference in the mass computation.
                 output_trajectory - Logical: Generate trajectory output files.
@@ -26,6 +25,9 @@ For Run-type 1 (classical):
         molecule.inp file: Must be in the same directory that you are in when you run the program. Needed in order to access the number of atoms, species, and positions of atoms in a molecule, and charge of each atom. 
         
         seeds.inp file: A list of seeds for each Coulomb explosion simulation.
+
+        temperature_ions - Temperature of the molecule in kelvin
+
 
 For Run-type 2 (semi-classical):
 
