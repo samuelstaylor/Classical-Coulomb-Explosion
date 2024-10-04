@@ -9,20 +9,33 @@ quantum effects.
 
 **Program Input:** The program expects three different input files:
         
-        molecule.inp file: Must be in the same directory that you are in when you run the program. Needed in order to access the number of atoms, species, and positions of atoms in a molecule, and charge of each atom. 
-
         control.inp file: Specifies the run conditions for the program. Key words to set in this file:
+                run_type - The type of calculation perform: 1 (classical) or 2 (semiclassical)
                 N_simulations - The number of Coulomb Explosion simulations to run and generate output for.
                 N_time_steps - The number of time steps in each of the simulations.
                 time_step - The time step of each simulation (in fs).
                 trajectory_output_frequency - The frequency to output position data to the trajectory.xyz file. 
-                temperature_ions - Temperature of the molecule in kelvin
                 use_average_atomic_mass - Use the average number of nucleons for the atom mass computation
                 include_electron_mass - Logical: Include the electron difference in the mass computation.
                 output_trajectory - Logical: Generate trajectory output files.
                 output_atom_info - Logical: Generate atom info file for the run.
 
-        seeds.inp file: A list of seeds for each Coulomb explosion simulation. 
+For Run-type 1 (classical):
+
+        molecule.inp file: Must be in the same directory that you are in when you run the program. Needed in order to access the number of atoms, species, and positions of atoms in a molecule, and charge of each atom. 
+        
+        seeds.inp file: A list of seeds for each Coulomb explosion simulation.
+
+        temperature_ions - Temperature of the molecule in kelvin
+
+
+For Run-type 2 (semi-classical):
+
+        moleculeformations_input_path - Path to pull molecule formations file from
+
+        full_runs_dir_input_path - Path to all of the TDDFT runs
+
+        traj_time_step_to_initialize= Iteration number to resume TDDFT simulations classically
 
 **Program Output:** The program will output the following files:
         
