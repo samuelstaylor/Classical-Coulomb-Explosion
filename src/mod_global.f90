@@ -13,7 +13,10 @@ MODULE MOD_GLOBAL
     character(len=256) :: seeds_input_path = "./"
     character(len=256) :: moleculeformations_input_path = "./"
     character(len=256) :: full_runs_dir_input_path = "./"
+    character(len=256) :: fragment_input_path = "./"
+    character(len=256) :: velocity_input_path = "./"
     integer :: traj_time_step_to_initialize=0 ! Iteration number to read info from the trajectory file from 
+    integer :: time_step_start=0 ! The iteration number to start the simulation at
     integer :: N_simulations=1 ! The number of simulations to run
     integer :: N_time_steps=120000 ! Number of timesteps (iterations) in the simulation 
     real*8  :: time_step=.001 ! Size of the time step to iterate program through
@@ -45,6 +48,9 @@ MODULE MOD_GLOBAL
     character(len=256) :: seeds_filename_full = "seeds.inp"
     character(len=256) :: moleculeformations_filename_full = "moleculeFormations.csv"
     character(len=256) :: trajectory_filename_full = "trajectory.xyz"
+    character(len=256) :: fragment_filename_full = "fragment.inp"
+    character(len=256) :: velocity_filename_full = "velocity.inp"
+
 
     ! file names with directories to be set
     character*255 :: log_output_filename=bare_log_output_filename

@@ -156,6 +156,12 @@ SUBROUTINE read_control_input_file(input_filename)
           full_runs_dir_input_path = trim(adjustl(value_string))   
         case("traj_time_step_to_initialize")
           read(value_string,*)traj_time_step_to_initialize      
+        case("fragment_input_path")
+          fragment_input_path = trim(adjustl(value_string))   
+        case("velocity_input_path")
+          velocity_input_path = trim(adjustl(value_string))   
+        case("time_step_start")
+          read(value_string,*)time_step_start
         case("n_simulations")
           read(value_string,*)N_simulations
         case("n_time_steps")
@@ -194,6 +200,9 @@ SUBROUTINE read_control_input_file(input_filename)
   write(all_variable_file,*) "  moleculeformations_input_path=", moleculeformations_input_path
   write(all_variable_file,*) "  full_runs_dir_input_path=", full_runs_dir_input_path
   write(all_variable_file,*) "  traj_time_step_to_initialize=", traj_time_step_to_initialize
+  write(all_variable_file,*) "  fragment_input_path=", fragment_input_path
+  write(all_variable_file,*) "  velocity_input_path=", velocity_input_path
+  write(all_variable_file,*) "  time_step_start=", time_step_start
   write(all_variable_file,*) "  N_simulations=", N_simulations
   write(all_variable_file,*) "  N_time_steps=", N_time_steps
   write(all_variable_file,*) "  time_step=", time_step
@@ -434,6 +443,173 @@ SUBROUTINE read_molformations_charges(input_filename)
   !convert the densities to charges
   call convert_density_to_charges
 END SUBROUTINE read_molformations_charges
+
+
+SUBROUTINE read_fragment_input_file(input_filename)
+  character(len=*), intent(in) :: input_filename
+  integer :: i, error_code, atom_counter
+  character(len=256) :: line
+
+  ! Open the file
+  open(unit=fragment_file, file=trim(adjustl(input_filename)), status='old', action='read', iostat=error_code)
+  if (error_code /= 0) then
+    write(*,*) "***ERROR*** Error opening: ", input_filename
+    write(*,*) "Ensure that ", input_filename, " is in your running directory"
+    write(log_file,*) "***ERROR*** Error opening: ", input_filename
+    write(log_file,*) "Ensure that ", input_filename, " is in your running directory"
+    stop
+  end if
+
+  ! Read lines and skip those starting with '#'
+  do
+    read(fragment_file, '(A)', iostat=error_code) line
+    if (error_code /= 0) exit
+
+    ! Ignore anything on the line that appears after a '#'
+    i = index(line, '#')
+    if (i > 0) then
+        line = line(1:i-1)
+    end if
+
+    ! Trim leading and trailing spaces
+    line = adjustl(line)
+    if (len_trim(line) == 0) cycle  ! Skip empty lines
+
+    ! First non-comment line should be the number of atoms
+    read(line, *, iostat=error_code) N_total_atom
+    if (error_code == 0) exit
+    if (error_code /= 0) then
+    write(*,*) "***ERROR*** Error reading N_total_atom from ", input_filename
+    write(log_file,*) "***ERROR*** Error reading N_total_atom from ", input_filename
+    stop
+    end if
+  end do
+
+  call allocate_and_initialize_arrays
+
+  atom_counter = 0
+  ! Read lines and skip those starting with '#'
+  do while (atom_counter < N_total_atom)
+    read(fragment_file, '(A)', end=110,iostat=error_code) line
+    if (error_code /= 0) exit
+
+    ! Ignore anything on the line that appears after a '#'
+    i = index(line, '#')
+    if (i > 0) then
+        line = line(1:i-1)
+    end if
+
+    ! Trim leading and trailing spaces
+    line = adjustl(line)
+    if (len_trim(line) == 0) cycle  ! Skip empty lines
+
+    ! First non-comment line should be the number of atoms
+    ! Read the atom positions and atomic numbers
+    atom_counter = atom_counter + 1        
+
+    read(line, *, iostat=error_code) atom_initial_position(1, atom_counter), atom_initial_position(2, atom_counter), &
+                atom_initial_position(3, atom_counter), atom_mass(atom_counter), atom_charge(atom_counter)
+    if (error_code /= 0) then
+        write(*,*) "***ERROR*** Error reading atom data at atom: ", atom_counter
+        write(log_file,*) "***ERROR*** Error reading atom data at atom: ", atom_counter
+        stop
+    end if
+  end do
+
+  ! Close the file
+  110 close(fragment_file) 
+
+  !initalize all elements in atom_atomic_number to 1 "hydrogen
+  atom_atomic_number=1
+
+  write(log_file,*) "Successfully read and initialized data from: ", input_filename
+  call print_initial_atom_info_to_log
+
+END SUBROUTINE read_fragment_input_file
+
+
+SUBROUTINE read_velocity_input_file(input_filename)
+  character(len=*), intent(in) :: input_filename
+  integer :: i, error_code, atom_counter, num_atom
+  character(len=256) :: line
+
+  ! Open the file
+  open(unit=velocity_file, file=trim(adjustl(input_filename)), status='old', action='read', iostat=error_code)
+  if (error_code /= 0) then
+    write(*,*) "***ERROR*** Error opening: ", input_filename
+    write(*,*) "Ensure that ", input_filename, " is in your running directory"
+    write(log_file,*) "***ERROR*** Error opening: ", input_filename
+    write(log_file,*) "Ensure that ", input_filename, " is in your running directory"
+    stop
+  end if
+
+  ! Read lines and skip those starting with '#'
+  do
+      read(velocity_file, '(A)', iostat=error_code) line
+      if (error_code /= 0) exit
+
+      ! Ignore anything on the line that appears after a '#'
+      i = index(line, '#')
+      if (i > 0) then
+          line = line(1:i-1)
+      end if
+
+      ! Trim leading and trailing spaces
+      line = adjustl(line)
+      if (len_trim(line) == 0) cycle  ! Skip empty lines
+
+      ! First non-comment line should be the number of atoms
+      read(line, *, iostat=error_code) num_atom
+      if (error_code == 0) exit
+      if (error_code /= 0) then
+      write(*,*) "***ERROR*** Error reading num_atom from ", input_filename
+      write(log_file,*) "***ERROR*** Error reading num_atom from ", input_filename
+      stop
+      end if
+  end do
+
+  ! CHECK THAT N_total_atom = num_atom
+  if (num_atom /= N_total_atom) then
+    write(*,*) "***ERROR*** N_total_atom must equal num_atom from ", input_filename
+    write(log_file,*) "***ERROR*** N_total_atom must equal num_atom from ", input_filename
+    stop
+  end if
+
+  atom_counter = 0
+  ! Read lines and skip those starting with '#'
+  do while (atom_counter < N_total_atom)
+    read(velocity_file, '(A)', end=110,iostat=error_code) line
+    if (error_code /= 0) exit
+
+    ! Ignore anything on the line that appears after a '#'
+    i = index(line, '#')
+    if (i > 0) then
+        line = line(1:i-1)
+    end if
+
+    ! Trim leading and trailing spaces
+    line = adjustl(line)
+    if (len_trim(line) == 0) cycle  ! Skip empty lines
+
+    ! First non-comment line should be the number of atoms
+    ! Read the atom positions and atomic numbers
+    atom_counter = atom_counter + 1        
+
+    read(line, *, iostat=error_code) atom_velocity(1, atom_counter), atom_velocity(2, atom_counter), &
+                atom_velocity(3, atom_counter)
+    if (error_code /= 0) then
+        write(*,*) "***ERROR*** Error reading atom data at atom: ", atom_counter
+        write(log_file,*) "***ERROR*** Error reading atom data at atom: ", atom_counter
+        stop
+    end if
+  end do
+
+  ! Close the file
+  110 close(velocity_file)  
+
+  write(log_file,*) "Successfully read and initialized data from: ", input_filename
+
+END SUBROUTINE read_velocity_input_file
 
 
 SUBROUTINE convert_density_to_charges
@@ -737,6 +913,22 @@ SUBROUTINE check_and_fix_paths
       full_runs_dir_input_path = trim(adjustl(full_runs_dir_input_path)) // '/'
     endif
   endif
+  if (len_trim(fragment_input_path) > 0 .and. fragment_input_path(1:1) /= ".") then
+    if (fragment_input_path(1:1) /= '/') then
+      fragment_input_path = '/' // trim(adjustl(fragment_input_path))
+    endif
+    if (fragment_input_path(len_trim(fragment_input_path):len_trim(fragment_input_path)) /= '/') then
+      fragment_input_path = trim(adjustl(fragment_input_path)) // '/'
+    endif
+  endif
+  if (len_trim(velocity_input_path) > 0 .and. velocity_input_path(1:1) /= ".") then
+    if (velocity_input_path(1:1) /= '/') then
+      velocity_input_path = '/' // trim(adjustl(velocity_input_path))
+    endif
+    if (velocity_input_path(len_trim(velocity_input_path):len_trim(velocity_input_path)) /= '/') then
+      velocity_input_path = trim(adjustl(velocity_input_path)) // '/'
+    endif
+  endif
 
 END SUBROUTINE check_and_fix_paths
 
@@ -792,7 +984,7 @@ END SUBROUTINE print_masses_to_log
 SUBROUTINE print_initial_atom_info_to_log
   integer :: i, elem
 
-  write(log_file,*) 'Element, Atom atomic number, and charge:'
+  write(log_file,*) 'Element, Atom atomic number, and mass:'
   do i=1, N_total_atom
     elem=atom_atomic_number(i)
     write(log_File,*) element_symbols(elem), elem, atom_mass(i)
@@ -800,7 +992,7 @@ SUBROUTINE print_initial_atom_info_to_log
 
   write(log_file,*) 'Atom positions (A) in x,y,z:'
   do i=1, N_total_atom
-    write(log_file,*) atom_position(:,i)
+    write(log_file,*) atom_initial_position(:,i)
   end do
 
 END SUBROUTINE print_initial_atom_info_to_log

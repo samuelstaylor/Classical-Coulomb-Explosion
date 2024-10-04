@@ -1,0 +1,15 @@
+   run_type=           2
+   molecule_input_path=/scratch/group/p.phy240167.000/coulomb_explosion/C4H10/C4H10_14_runs/                                                                                                                                                                                           
+   seeds_input_path=/scratch/group/p.phy240167.000/coulomb_explosion/C4H10/C4H10_14_runs/                                                                                                                                                                                           
+   moleculeformations_input_path=/scratch/group/p.phy240167.000/coulomb_explosion/C4H10/C4H10_14_runs/LeeMolOutput/03102024_162516/                                                                                                                                                              
+   full_runs_dir_input_path=/scratch/group/p.phy240167.000/coulomb_explosion/C4H10/C4H10_14_runs/                                                                                                                                                                                           
+   traj_time_step_to_initialize=       25000
+   N_simulations=          50
+   N_time_steps=      120000
+   time_step=   1.0000000000000000E-003
+   trajectory_output_frequency=         500
+   temperature_ions=   300.00000000000000     
+   use_average_atomic_mass= T
+   include_electron_mass= F
+   output_trajectory= T
+   output_atom_info= T

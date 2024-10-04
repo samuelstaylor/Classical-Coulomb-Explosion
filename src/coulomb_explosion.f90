@@ -46,13 +46,22 @@ SUBROUTINE initialize
     call read_trajectory_full_run(full_run_trajectory_input_file)
     print*,'Molecule initial info pulled from: ',trim(adjustl(full_run_trajectory_input_file)) 
     call read_molformations_charges(moleculeformations_filename_full)
+  else if (run_type == 3) then
+    print*, "run_type = ", trim(adjustl(run_type_str)), " | mode set to: CUSTOM FRAGMENT AND VELOCITY INPUT"
+    fragment_filename_full = trim(adjustl(fragment_input_path)) // 'fragment.inp'
+    call read_fragment_input_file(fragment_filename_full)
+    print*, "fragment file name = ", fragment_filename_full
+    velocity_filename_full = trim(adjustl(velocity_input_path)) // 'velocity.inp'
+    call read_velocity_input_file(velocity_filename_full)
+    print*, "velocity file name = ", velocity_filename_full
   else
     print*, "ERROR: invalid run_type"
-    print*, "  run_type = ", run_type, " Please set it to 1 or 2"
+    print*, "  run_type = ", run_type, " Please set it to 1, 2, or 3"
     stop
   endif
 
-  call compute_atomic_masses
+  ! call compute atomic masses only if run_typ /= 3
+  if (run_type /= 3) call compute_atomic_masses
   call open_optional_output_files
 
   call program_checks
@@ -280,6 +289,57 @@ SUBROUTINE simulate_cont_from_tddft(input_filename,i)
 END SUBROUTINE simulate_cont_from_tddft
 
 
+SUBROUTINE run_single_simulation
+  integer :: i, unit_num
+  character(len=255) :: full_trajectory_filename
+  real*8 :: atom_velocity_magnitude
+
+  if (output_trajectory) then
+    full_trajectory_filename = trim(adjustl(trajectory_filename)) // ".xyz"
+    unit_num = trajectory_output_file + 1 
+    open(unit_num, file=trim(adjustl(full_trajectory_filename)))
+  end if
+
+  print*, "atom velocity: ", atom_velocity
+  write(log_file, '(A)') "computation started"
+  ! Initial state of each simulation
+  atom_position = atom_initial_position
+  call calculate_force
+
+  do iter = time_step_start, N_time_steps + time_step_start
+    time = iter * time_step
+
+    ! Output
+    if (output_trajectory .and. mod(iter, trajectory_output_frequency) == 0) then
+      call update_trajectory_file(unit_num)
+    end if
+
+    ! Update via Verlet Algorithm (force, position, velocity)
+    call calculate_force
+    call calculate_position
+    call calculate_velocity
+
+  
+    if (mod(iter,500) == 0) then
+      atom_velocity_magnitude = sqrt(atom_velocity(1,1)**2 + &
+                                      atom_velocity(2,1)**2 + &
+                                      atom_velocity(3,1)**2)
+      write(*,*) "iter=",iter," | atom_speed=",atom_velocity_magnitude
+      write(*,*) "iter=",iter," | atom_force=",atom_force(1,1), atom_force(2,1), atom_force(3,1)
+    end if
+
+  end do
+
+  if (output_trajectory) then
+    write(log_file, *) "Successfully finished trajectory file: ", &
+                      full_trajectory_filename
+    close(unit_num)
+  end if
+
+  if (output_atom_info) call update_atom_info_file
+END SUBROUTINE run_single_simulation
+
+
 SUBROUTINE calculate
   use omp_lib
   integer :: i
@@ -313,7 +373,10 @@ SUBROUTINE calculate
                                      trim(adjustl(full_runs_array(i))) // "/trajectory.xyz"
         call simulate_cont_from_tddft(full_run_trajectory_input_file,i)
       end do
+    else if (run_type==3) then
+      call run_single_simulation
     endif
+    
   endif
 
 END SUBROUTINE calculate

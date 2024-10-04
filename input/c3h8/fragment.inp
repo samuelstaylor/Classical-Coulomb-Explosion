@@ -1,0 +1,13 @@
+# FRAGMENT.INP
+
+# NUMBER of fragments (C2H, CH2)
+2
+
+#  Carbon  mass in "nano" units (eV_fs^2/A^2) = 1243.7123176930008  
+# Hydrogen mass in "nano" units (eV_fs^2/A^2) = 103.64269314108340  
+
+# CENTER OF MASS FRAGMENT POSITION (X,Y,Z)
+#  X-POS         Y-POS           Z-POS   MASS(NANO)
+#                                                 CHARGE
+-1.44047511    -0.03977814     0.36006808    2591.0673285270850     2.22 #C2H
+ 3.53786871     0.05402593     2.04653016    1554.6403971162510     0.91 #CH2

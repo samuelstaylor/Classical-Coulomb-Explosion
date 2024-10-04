@@ -1,27 +1,33 @@
 import csv
 
-# Initialize sums and counters for densities and speeds
-density_sum = {'C[0]': 0, 'C[1]': 0, 'H[2]': 0, 'H[3]': 0}
-speed_sum = {'C[0]': 0, 'C[1]': 0, 'H[2]': 0, 'H[3]': 0}
+N_carbon   = 4
+N_hydrogen = 10
+input_csv_file = 'data/c4h10_quantum/28/moleculeFormations_28.csv'
+
+# Initialize sums and counters for densities and speeds for C₄H₁₀
+density_sum = {f'C[{i}]': 0 for i in range(N_carbon)}
+density_sum.update({f'H[{i}]': 0 for i in range(N_carbon, N_carbon+N_hydrogen)})
+speed_sum = {f'C[{i}]': 0 for i in range(N_carbon)}
+speed_sum.update({f'H[{i}]': 0 for i in range(N_carbon, N_carbon+N_hydrogen)})
 count = 0
 
 # Read the CSV file
-with open('scripts\\tddft_output\\\moleculeFormations_14.csv', 'r') as file:
+with open(input_csv_file, 'r') as file:
     reader = csv.reader(file)
     for row in reader:
         if 'Densities' in row:
-            # Extract densities for C[0], C[1], H[2], H[3]
-            density_sum['C[0]'] += float(row[1])
-            density_sum['C[1]'] += float(row[2])
-            density_sum['H[2]'] += float(row[3])
-            density_sum['H[3]'] += float(row[4])
-            count += 1
+            # Extract densities for C[0] to C[3] and H[4] to H[13]
+            for i in range(N_carbon):
+                density_sum[f'C[{i}]'] += float(row[i + 1])
+            for i in range(N_carbon, N_carbon+N_hydrogen):
+                density_sum[f'H[{i}]'] += float(row[i + 1])
+                count += 1
         elif 'Speed[A/fs]' in row:
-            # Extract speeds for C[0], C[1], H[2], H[3]
-            speed_sum['C[0]'] += float(row[1])
-            speed_sum['C[1]'] += float(row[2])
-            speed_sum['H[2]'] += float(row[3])
-            speed_sum['H[3]'] += float(row[4])
+            # Extract speeds for C[0] to C[3] and H[4] to H[13]
+            for i in range(N_carbon):
+                speed_sum[f'C[{i}]'] += float(row[i + 1])
+            for i in range(N_carbon, N_carbon+N_hydrogen):
+                speed_sum[f'H[{i}]'] += float(row[i + 1])
 
 # Calculate averages
 average_density = {atom: density_sum[atom] / count for atom in density_sum}
@@ -37,26 +43,9 @@ print("\nAverage Speeds:")
 for atom, speed in average_speed.items():
     print(f"{atom}: {speed}")
 
-'''
-8/27 program ran... Here are the results:
-
-Pulling from 200 simulations...
-
-Average Densities:
-C[0]: 1.9346947610792389
-C[1]: 1.7448427843593408
-H[2]: 0.0008513266054706691
-H[3]: 7.47648574243741e-05
-
-Average Speeds:
-C[0]: 0.15821626000000008
-C[1]: 0.15869406
-H[2]: 0.8019361199999993
-H[3]: 0.8087323350000003
-'''
+# Example charges (adjust based on actual molecular charges if needed)
 print()
-print("Charge of C[0]=", 4-1.9346947610792389)
-print("Charge of C[1]=", 4-1.7448427843593408)
-print("Charge of H[2]=", 1-0.0008513266054706691)
-print("Charge of H[3]=", 1-7.47648574243741e-05)
-
+for i in range(N_carbon):
+    print(f"Charge of C[{i}]=", 4 - average_density[f'C[{i}]'])
+for i in range(N_carbon, N_carbon+N_hydrogen):
+    print(f"Charge of H[{i}]=", 1 - average_density[f'H[{i}]'])

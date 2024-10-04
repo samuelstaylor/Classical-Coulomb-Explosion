@@ -421,9 +421,9 @@ class NewtonPlot:
         ax2.scatter(cx, C_Y, C_Z, c='b', marker='.', lw=0, alpha=alpha)  # YZ projection, color by X
         
         # Scatter plots for the projections onto the XY, XZ, and YZ planes of hydrogen
-        ax2.scatter(H_X, H_Y, cz, c='r', marker='.', lw=0, alpha=alpha)  # XY projection, color by Z
-        ax2.scatter(H_X, cy, H_Z, c='r', marker='.', lw=0, alpha=alpha)  # XZ projection, color by negative Y
-        ax2.scatter(cx, H_Y, H_Z, c='r', marker='.', lw=0, alpha=alpha)  # YZ projection, color by X
+        ax2.scatter(H_X, H_Y, c_hz, c='r', marker='.', lw=0, alpha=alpha)  # XY projection, color by Z
+        ax2.scatter(H_X, c_hy, H_Z, c='r', marker='.', lw=0, alpha=alpha)  # XZ projection, color by negative Y
+        ax2.scatter(c_hx, H_Y, H_Z, c='r', marker='.', lw=0, alpha=alpha)  # YZ projection, color by X
 
         # Set the limits of the second plot to be the same as the first plot
         ax2.set_xlim3d(-1, 1)
@@ -467,19 +467,24 @@ class NewtonPlot:
 def main():
     print("-=GENERATING NEWTON PLOT=-")
     newton_plot = NewtonPlot()
-    data_mode = "classic"
+    data_mode = "s"
     user_input_mode = False
     
     if (data_mode.lower().startswith('q')):
         #QUANTUM INPUT FILE:
-        input_file = 'scripts/C2H2_run_type1/moleculeFormations_14.csv'  
+        input_file = 'scripts/C4H10_boltzmann/moleculeFormations_14.csv'  
         graph_name_tag="quantum"
 
     if (data_mode.lower().startswith('c')):
         #CLASSICAL INPUT FILE:
-        input_file = 'scripts/C2H2_run_type1/atom_info.csv'
-        input_file = 'aces_output/atom_info.csv'
+        input_file = 'scripts/C4H10_boltzmann/atom_info.csv'
         graph_name_tag="classical"
+
+    if (data_mode.lower().startswith('s')):
+        #CLASSICAL INPUT FILE:
+        input_file = 'c4h10_aces_cont_from_tddft_output/atom_info.csv'
+        input_file = 'c2h2_aces_cont_from_tddft_output/atom_info.csv'
+        graph_name_tag="semi-classical"
 
     
     if user_input_mode:
@@ -498,7 +503,8 @@ def main():
     # 3-D scatter and projection plots    
     newton_plot.plot_3d_projections_1_limits(graph_name_tag=graph_name_tag,
                                              graph_scatter_title=f"3D Scatter Plot of Velocities ({graph_name_tag})",
-                                             graph_projection_title=f"3D Projection of Velociteis ({graph_name_tag})")
+                                             graph_projection_title=f"3D Projection of Velocities ({graph_name_tag})",
+                                             alpha=0.03) #set alpha =0.2 for c4h10 and =0.03 default
     
 
 if __name__ == '__main__':

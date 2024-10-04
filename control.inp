@@ -1,26 +1,29 @@
-# EXAMPLE CONTROL.INP FILE
+run_type=1
 
-run_type=2
 
-# run_type=1
-molecule_input_path=/mnt/c/Users/Samuel/Research/varga/fortran/Classical-Coulomb-Explosion/input/c4h10
+# run_type=1 | BOLTZMANN VELOCITY DISTRIBUTION FROM GROUNDSTATE
+molecule_input_path=/mnt/c/Users/Samuel/Research/varga/fortran/Classical-Coulomb-Explosion/data/c4h10_classical/28/
 seeds_input_path=/mnt/c/Users/Samuel/Research/varga/fortran/Classical-Coulomb-Explosion/input/c4h10/
-N_simulations=20
+N_simulations=50
 temperature_ions = 300.0 
 
-
-# run_type=2
+# run_type=2 | CONTINUE FROM TDDFT WITHOUT QUANTUM EFFECTS
 moleculeformations_input_path=/mnt/c/Users/Samuel/Research/varga/fortran/Classical-Coulomb-Explosion/input/c4h10/
 full_runs_dir_input_path=/mnt/c/Users/Samuel/Research/varga/fortran/Classical-Coulomb-Explosion/input/c4h10/
 traj_time_step_to_initialize=25000 #(25 fs)
 
-# Universal configuration
+# run_type=3 | CUSTOM FRAGMENT AND VELOCITY INPUT
+fragment_input_path=/mnt/c/Users/Samuel/Research/varga/fortran/Classical-Coulomb-Explosion/input/c2h6
+velocity_input_path=/mnt/c/Users/Samuel/Research/varga/fortran/Classical-Coulomb-Explosion/input/c2h6
+time_step_start=120000 #(120 fs) what the first iteration should be set at
+
+# UNIVERSAL CONFIGURATION
 N_time_steps = 120000
 time_step = .001
-trajectory_output_frequency = 500
 use_average_atomic_mass = True
 include_electron_mass = False
 output_trajectory = True
+trajectory_output_frequency = 500
 output_atom_info = True
 
 # ERROR: PARALLELIZATION FEATURE IS CURRENTLY BROKEN! SET TO FALSE
