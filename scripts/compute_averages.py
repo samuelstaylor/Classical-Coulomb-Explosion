@@ -1,14 +1,25 @@
 import csv
+#O, N, C, C, C, H, H, H,
+N_carbon   = 3
+N_hydrogen = 3
+N_oxygen   = 1
+N_nitrogen = 1 
+input_csv_file = 'data\\isoxazole_quantum\\moleculeFormations_14.csv'
 
-N_carbon   = 4
-N_hydrogen = 10
-input_csv_file = 'data/c4h10_quantum/28/moleculeFormations_28.csv'
+# Initialize sums and counters for densities and speeds for molecule
+# W/ INDEX BRACKETS
 
-# Initialize sums and counters for densities and speeds for C₄H₁₀
-density_sum = {f'C[{i}]': 0 for i in range(N_carbon)}
-density_sum.update({f'H[{i}]': 0 for i in range(N_carbon, N_carbon+N_hydrogen)})
-speed_sum = {f'C[{i}]': 0 for i in range(N_carbon)}
-speed_sum.update({f'H[{i}]': 0 for i in range(N_carbon, N_carbon+N_hydrogen)})
+density_sum = {f'O[{i}]': 0 for i in range(N_oxygen)}
+density_sum.update({f'N[{i}]': 0 for i in range(N_oxygen, N_oxygen+N_nitrogen)})
+density_sum.update({f'C[{i}]': 0 for i in range(N_oxygen+N_nitrogen, N_oxygen+N_nitrogen+N_carbon)})
+density_sum.update({f'H[{i}]': 0 for i in range(N_oxygen+N_nitrogen+N_carbon, N_oxygen+N_nitrogen+N_carbon+N_hydrogen)})
+
+speed_sum = {f'O[{i}]': 0 for i in range(N_oxygen)}
+speed_sum.update({f'N[{i}]': 0 for i in range(N_oxygen, N_oxygen+N_nitrogen)})
+speed_sum.update({f'C[{i}]': 0 for i in range(N_oxygen+N_nitrogen, N_oxygen+N_nitrogen+N_carbon)})
+speed_sum.update({f'H[{i}]': 0 for i in range(N_oxygen+N_nitrogen+N_carbon, N_oxygen+N_nitrogen+N_carbon+N_hydrogen)})
+
+
 count = 0
 
 # Read the CSV file
@@ -16,17 +27,25 @@ with open(input_csv_file, 'r') as file:
     reader = csv.reader(file)
     for row in reader:
         if 'Densities' in row:
-            # Extract densities for C[0] to C[3] and H[4] to H[13]
-            for i in range(N_carbon):
+            # Extract densities for C[0] to C[3], H[4] to H[13], O[14], and N[15]
+            for i in range(N_oxygen):
+                density_sum[f'O[{i}]'] += float(row[i + 1])  # Add oxygen data
+            for i in range(N_oxygen,N_oxygen+N_nitrogen):
+                density_sum[f'N[{i}]'] += float(row[i + 1])  # Add nitrogen data
+            for i in range(N_oxygen+N_nitrogen,N_oxygen+N_nitrogen+N_carbon):
                 density_sum[f'C[{i}]'] += float(row[i + 1])
-            for i in range(N_carbon, N_carbon+N_hydrogen):
+            for i in range(N_oxygen+N_nitrogen+N_carbon,N_oxygen+N_nitrogen+N_carbon+N_hydrogen):
                 density_sum[f'H[{i}]'] += float(row[i + 1])
-                count += 1
+            count += 1
         elif 'Speed[A/fs]' in row:
-            # Extract speeds for C[0] to C[3] and H[4] to H[13]
-            for i in range(N_carbon):
+            # Extract densities for C[0] to C[3], H[4] to H[13], O[14], and N[15]
+            for i in range(N_oxygen):
+                speed_sum[f'O[{i}]'] += float(row[i + 1])  # Add oxygen data
+            for i in range(N_oxygen,N_oxygen+N_nitrogen):
+                speed_sum[f'N[{i}]'] += float(row[i + 1])  # Add nitrogen data
+            for i in range(N_oxygen+N_nitrogen,N_oxygen+N_nitrogen+N_carbon):
                 speed_sum[f'C[{i}]'] += float(row[i + 1])
-            for i in range(N_carbon, N_carbon+N_hydrogen):
+            for i in range(N_oxygen+N_nitrogen+N_carbon,N_oxygen+N_nitrogen+N_carbon+N_hydrogen):
                 speed_sum[f'H[{i}]'] += float(row[i + 1])
 
 # Calculate averages
@@ -45,7 +64,11 @@ for atom, speed in average_speed.items():
 
 # Example charges (adjust based on actual molecular charges if needed)
 print()
-for i in range(N_carbon):
+for i in range(0, N_oxygen):
+    print(f"Charge of O[{i}]=", 6 - average_density[f'O[{i}]'])
+for i in range(N_oxygen, N_oxygen+N_nitrogen):
+    print(f"Charge of N[{i}]=", 5 - average_density[f'N[{i}]'])
+for i in range(N_oxygen+N_nitrogen,N_oxygen+N_nitrogen+N_carbon):
     print(f"Charge of C[{i}]=", 4 - average_density[f'C[{i}]'])
-for i in range(N_carbon, N_carbon+N_hydrogen):
+for i in range(N_oxygen+N_nitrogen+N_carbon,N_oxygen+N_nitrogen+N_carbon+N_hydrogen):
     print(f"Charge of H[{i}]=", 1 - average_density[f'H[{i}]'])
