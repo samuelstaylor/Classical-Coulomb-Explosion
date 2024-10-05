@@ -193,7 +193,7 @@ class NewtonPlot:
         self.hydrogen_z_momentum_norm = [val/h_absolute_max_val for val in self.hydrogen_z_momentum]
         
 
-    def plot_x_y_velocities(self,normalize=False,graph_name_tag='',graph_xy_title=''):
+    def plot_x_y_velocities(self,normalize=False,graph_name_tag='',graph_xy_title='',alpha=0.03):
         
         if normalize:
             carbon_x_vel = self.carbon_x_velocities_norm
@@ -210,8 +210,8 @@ class NewtonPlot:
         # Plot the velocities
         plt.figure(figsize=(10, 6))
 
-        plt.scatter(carbon_x_vel, carbon_y_vel, color='blue', label='Carbon')
-        plt.scatter(hydrogen_x_vel, hydrogen_y_vel, color='red', label='Hydrogen')
+        plt.scatter(carbon_x_vel, carbon_y_vel, color='blue', label='Carbon',alpha=alpha)
+        plt.scatter(hydrogen_x_vel, hydrogen_y_vel, color='red', label='Hydrogen',alpha=alpha)
 
         plt.xlim(-1, 1)
         plt.ylim(-1,1)
@@ -229,7 +229,7 @@ class NewtonPlot:
         if self.show_plot:
             plt.show()
         
-    def plot_x_z_velocities(self,normalize=False,graph_name_tag='',graph_xz_title=''): 
+    def plot_x_z_velocities(self,normalize=False,graph_name_tag='',graph_xz_title='',alpha=0.03): 
         if normalize:
             carbon_x_vel = self.carbon_x_velocities_norm
             carbon_z_vel = self.carbon_z_velocities_norm
@@ -245,13 +245,13 @@ class NewtonPlot:
         # Plot the velocities
         plt.figure(figsize=(10, 6))
 
-        plt.scatter(carbon_x_vel, carbon_z_vel, color='blue', label='Carbon')
-        plt.scatter(hydrogen_x_vel, hydrogen_z_vel, color='red', label='Hydrogen')
+        plt.scatter(carbon_x_vel, carbon_z_vel, color='blue', label='Carbon',alpha=alpha)
+        plt.scatter(hydrogen_x_vel, hydrogen_z_vel, color='red', label='Hydrogen',alpha=alpha)
 
         plt.xlim(-1, 1)
         plt.ylim(-1,1)
 
-        plt.xlabel('Y Velocity [A/fs]')
+        plt.xlabel('X Velocity [A/fs]')
         plt.ylabel('Z Velocity [A/fs]')
         plt.legend()
         plt.grid(True)
@@ -264,7 +264,7 @@ class NewtonPlot:
         if self.show_plot:
             plt.show()
 
-    def plot_y_z_velocities(self,normalize=False,graph_name_tag='',graph_yz_title=''): 
+    def plot_y_z_velocities(self,normalize=False,graph_name_tag='',graph_yz_title='',alpha=0.03): 
         if normalize:
             carbon_y_vel = self.carbon_y_velocities_norm
             carbon_z_vel = self.carbon_z_velocities_norm
@@ -280,8 +280,8 @@ class NewtonPlot:
         # Plot the velocities
         plt.figure(figsize=(10, 6))
 
-        plt.scatter(carbon_y_vel, carbon_z_vel, color='blue', label='Carbon')
-        plt.scatter(hydrogen_y_vel, hydrogen_z_vel, color='red', label='Hydrogen')
+        plt.scatter(carbon_y_vel, carbon_z_vel, color='blue', label='Carbon',alpha=alpha)
+        plt.scatter(hydrogen_y_vel, hydrogen_z_vel, color='red', label='Hydrogen',alpha=alpha)
 
         plt.xlim(-1, 1)
         plt.ylim(-1,1)
@@ -457,11 +457,15 @@ class NewtonPlot:
     def plot_2d_projections(self, normalize=False,graph_name_tag="",
                                     graph_xy_title="Carbon and Hydrogen X,Y Velocities",
                                     graph_xz_title="Carbon and Hydrogen X,Z Velocities",
-                                    graph_yz_title="Carbon and Hydrogen Y,Z Velocities"):
+                                    graph_yz_title="Carbon and Hydrogen Y,Z Velocities",
+                                    alpha=0.03):
         # Plot all of the 2-D NORMALIZED velocity projections
-        self.plot_x_y_velocities(normalize=normalize,graph_name_tag=graph_name_tag,graph_xy_title=graph_xy_title)
-        self.plot_x_z_velocities(normalize=normalize,graph_name_tag=graph_name_tag,graph_xz_title=graph_xz_title)
-        self.plot_y_z_velocities(normalize=normalize,graph_name_tag=graph_name_tag,graph_yz_title=graph_yz_title)
+        self.plot_x_y_velocities(normalize=normalize,graph_name_tag=graph_name_tag,graph_xy_title=graph_xy_title,
+                                 alpha=alpha)
+        self.plot_x_z_velocities(normalize=normalize,graph_name_tag=graph_name_tag,graph_xz_title=graph_xz_title,
+                                 alpha=alpha)
+        self.plot_y_z_velocities(normalize=normalize,graph_name_tag=graph_name_tag,graph_yz_title=graph_yz_title,
+                                 alpha=alpha)
 
 
 def main():
@@ -469,21 +473,29 @@ def main():
     newton_plot = NewtonPlot()
     data_mode = "s"
     user_input_mode = False
+    alpha = 0.2  #set alpha =0.2 for c4h10 and =0.03 default
     
-    if (data_mode.lower().startswith('q')):
-        #QUANTUM INPUT FILE:
-        input_file = 'scripts/C4H10_boltzmann/moleculeFormations_14.csv'  
-        graph_name_tag="quantum"
 
     if (data_mode.lower().startswith('c')):
         #CLASSICAL INPUT FILE:
-        input_file = 'scripts/C4H10_boltzmann/atom_info.csv'
+        input_file = 'data\\c2h2_classical\\atom_info.csv'
+        input_file = 'data\\c4h10_classical\\14\\atom_info.csv'
+        input_file = 'data\\c4h10_classical\\28\\atom_info.csv'
+        input_file = 'data\\c4h10_classical\\28\\atom_info.csv'
         graph_name_tag="classical"
+        
+    if (data_mode.lower().startswith('q')):
+        #QUANTUM INPUT FILE:
+        input_file = 'data\\c2h2_quantum\\moleculeFormations_14.csv'
+        input_file = 'data\\c4h10_quantum\\14\\moleculeFormations_14.csv'
+        input_file = 'data\\c4h10_quantum\\28\\moleculeFormations_14.csv'  
+        graph_name_tag="quantum"
 
     if (data_mode.lower().startswith('s')):
-        #CLASSICAL INPUT FILE:
-        input_file = 'c4h10_aces_cont_from_tddft_output/atom_info.csv'
-        input_file = 'c2h2_aces_cont_from_tddft_output/atom_info.csv'
+        #SEMI-CLASSICAL INPUT FILE:
+        input_file = 'data\\c2h2_semi_classical\\atom_info.csv'
+        input_file = 'data\\c4h10_semi_classical\\14\\atom_info.csv'
+        input_file = 'data\\c4h10_semi_classical\\28\\atom_info.csv'
         graph_name_tag="semi-classical"
 
     
@@ -492,20 +504,23 @@ def main():
     print("Searching for input file: ", input_file)
 
     newton_plot.process_data(input_file)
-   
+    
+    print("Generating Plots...")
     # 2-d velocity projections
     newton_plot.plot_2d_projections(normalize=False,
                                     graph_name_tag=graph_name_tag,
                                     graph_xy_title=f"Carbon and Hydrogen X,Y Velocities ({graph_name_tag})",
                                     graph_xz_title=f"Carbon and Hydrogen X,Z Velocities ({graph_name_tag})",
-                                    graph_yz_title=f"Carbon and Hydrogen Y,Z Velocities ({graph_name_tag})")
+                                    graph_yz_title=f"Carbon and Hydrogen Y,Z Velocities ({graph_name_tag})",
+                                    alpha=alpha)
     
     # 3-D scatter and projection plots    
     newton_plot.plot_3d_projections_1_limits(graph_name_tag=graph_name_tag,
                                              graph_scatter_title=f"3D Scatter Plot of Velocities ({graph_name_tag})",
                                              graph_projection_title=f"3D Projection of Velocities ({graph_name_tag})",
-                                             alpha=0.03) #set alpha =0.2 for c4h10 and =0.03 default
+                                             alpha=alpha)
     
+    print("FINSIHED: ALL PLOTS GENERATED")
 
 if __name__ == '__main__':
     main()
