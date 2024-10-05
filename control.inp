@@ -2,9 +2,9 @@ run_type=1
 
 
 # run_type=1 | BOLTZMANN VELOCITY DISTRIBUTION FROM GROUNDSTATE
-molecule_input_path=/mnt/c/Users/Samuel/Research/varga/fortran/Classical-Coulomb-Explosion/data/c4h10_classical/28/
+molecule_input_path=/mnt/c/Users/Samuel/Research/varga/fortran/Classical-Coulomb-Explosion/data/isoxazole_classical/
 seeds_input_path=/mnt/c/Users/Samuel/Research/varga/fortran/Classical-Coulomb-Explosion/input/c4h10/
-N_simulations=50
+N_simulations=30
 temperature_ions = 300.0 
 
 # run_type=2 | CONTINUE FROM TDDFT WITHOUT QUANTUM EFFECTS
