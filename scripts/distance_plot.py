@@ -16,8 +16,13 @@ mpl.rcParams['legend.fontsize'] = 16  # Legend font size
 
 matplotlib.rc('font', family='Times New Roman')  # set default font to Times New Roman
 
-C_mass = 1243.7123176930008 # (eV_fs^2/A^2)
-H_mass = 103.64269314108340 # (eV_fs^2/A^2)
+# Atomic masses (eV_fs^2/A^2)
+O_mass = 1996.4246581046500
+N_mass = 1728.5655449161800
+C_mass = 1243.7123176930008
+H_mass = 103.64269314108340
+
+SHOW_LEGENDS = True
 
 def read_trajectory(file, num_atoms):
     with open(file, 'r') as f:
@@ -56,8 +61,8 @@ def calculate_acceleration(speeds, time):
     return accelerations
 
 
-def plot_distance(time, distances, directory, mode='',show=False):
-    plt.plot(time, distances,color='black')
+def plot_distance(time, distances, directory, mode='', show=False):
+    plt.plot(time, distances, color='black')
     if mode.lower().startswith('s'):
         plt.axvline(x=25, color='#ee87ee', linestyle='--')  # Add vertical dashed line at time=25
     plt.xlabel('Time (fs)')
@@ -70,18 +75,20 @@ def plot_distance(time, distances, directory, mode='',show=False):
     plt.close()
 
 
-def plot_positions(time, positions, directory, labels, mode='',show=False):
+def plot_positions(time, positions, directory, labels, mode='', show=False):
     for i, pos in enumerate(positions):
         distance = np.linalg.norm(pos, axis=1)
-        # Ensure Times New Roman is applied for atom names in LaTeX math mode
         plt.plot(time, distance, label=f'{labels[i]}')
     if mode.lower().startswith('s'):
         plt.axvline(x=25, color='#ee87ee', linestyle='--')  # Add vertical dashed line at time=25
     
     plt.xlabel('Time (fs)')
     plt.ylabel('Distance from origin (Å)')
+    plt.xlim(0, 90)
+    plt.ylim(0, 80)  # Set y-axis limits
     plt.grid(True)
-    plt.legend(prop={'family': 'Times New Roman'})
+    if SHOW_LEGENDS:
+        plt.legend(prop={'family': 'Times New Roman'})
     plt.tight_layout()
     plt.savefig(os.path.join(directory, 'position.png'))
     if show:
@@ -89,16 +96,18 @@ def plot_positions(time, positions, directory, labels, mode='',show=False):
     plt.close()
 
 
-def plot_velocity(time, speeds, directory, labels, mode='',show=False):
+def plot_velocity(time, speeds, directory, labels, mode='', show=False):
     for i, speed in enumerate(speeds):
-        # Ensure Times New Roman is applied for atom names in LaTeX math mode
         plt.plot(time[1:], speed, label=f'{labels[i]}')
     if mode.lower().startswith('s'):
         plt.axvline(x=25, color='#ee87ee', linestyle='--')  # Add vertical dashed line at time=25
     plt.xlabel('Time (fs)')
     plt.ylabel('Speed (Å/fs)')
+    plt.xlim(0, 90)
+    plt.ylim(0, 0.9)  # Set y-axis limits
     plt.grid(True)
-    plt.legend(prop={'family': 'Times New Roman'})
+    if SHOW_LEGENDS:
+        plt.legend(prop={'family': 'Times New Roman'})
     plt.tight_layout()    
     plt.savefig(os.path.join(directory, 'velocity.png'))
     if show:
@@ -106,9 +115,8 @@ def plot_velocity(time, speeds, directory, labels, mode='',show=False):
     plt.close()
 
 
-def plot_acceleration(time, accelerations, directory, labels, mode='',show=False):
+def plot_acceleration(time, accelerations, directory, labels, mode='', show=False):
     for i, accel in enumerate(accelerations):
-        # Ensure Times New Roman is applied for atom names in LaTeX math mode
         plt.plot(time[2:], accel, label=f'{labels[i]}')
     
     if mode.lower().startswith('s'):
@@ -116,7 +124,8 @@ def plot_acceleration(time, accelerations, directory, labels, mode='',show=False
     plt.xlabel('Time (fs)')
     plt.ylabel('Acceleration (Å/fs²)')
     plt.grid(True)
-    plt.legend(prop={'family': 'Times New Roman'})
+    if SHOW_LEGENDS:
+        plt.legend(prop={'family': 'Times New Roman'})
     plt.tight_layout()
     plt.savefig(os.path.join(directory, 'acceleration.png'))
     if show:
@@ -124,17 +133,17 @@ def plot_acceleration(time, accelerations, directory, labels, mode='',show=False
     plt.close()
 
 
-def plot_force(time, accelerations, masses, directory, labels, mode='',show=False):
+def plot_force(time, accelerations, masses, directory, labels, mode='', show=False):
     for i, accel in enumerate(accelerations):
         force = masses[i] * accel
-        # Ensure Times New Roman is applied for atom names in LaTeX math mode
         plt.plot(time[2:], force, label=f'{labels[i]}')
     if mode.lower().startswith('s'):
         plt.axvline(x=25, color='#ee87ee', linestyle='--')  # Add vertical dashed line at time=25
     plt.xlabel('Time (fs)')
     plt.ylabel('Force (eV²/Å)')
     plt.grid(True)
-    plt.legend(prop={'family': 'Times New Roman'})
+    if SHOW_LEGENDS:
+        plt.legend(prop={'family': 'Times New Roman'})
     plt.tight_layout()
     plt.savefig(os.path.join(directory, 'force.png'))
     if show:
@@ -143,31 +152,37 @@ def plot_force(time, accelerations, masses, directory, labels, mode='',show=Fals
 
 
 # Example usage
-trajectory_file_list=['','','']
 '''
-trajectory_file_list[0] = 'data\\c2h2_classical\\trajectory_r1.xyz'
-trajectory_file_list[1] = 'data\\c2h2_semi_classical\\trajectory_r1.xyz'
-trajectory_file_list[2] = 'data\\c2h2_quantum\\trajectory_r1.xyz'
-'''
+trajectory_file_list = [
+    'data\\c4h10_classical\\28\\trajectory_r1.xyz',
+    'data\\c4h10_semi_classical\\28\\trajectory_r1.xyz',
+    'data\\c4h10_quantum\\28\\trajectory_r1.xyz'
+]'''
 
-trajectory_file_list[0] = 'data\\c4h10_classical\\14\\trajectory_r1.xyz'
-trajectory_file_list[1] = 'data\\c4h10_semi_classical\\14\\trajectory_r1.xyz'
-trajectory_file_list[2] = 'data\\c4h10_quantum\\14\\trajectory_r1.xyz'
+trajectory_file_list = [
+    'data\\isoxazole_classical\\trajectory_r3.xyz',
+    'data\\isoxazole_semi_classical\\trajectory_r3.xyz',
+    'data\\isoxazole_quantum\\trajectory_r3.xyz'
+]
 
-modes=['','s','']
+modes = ['', 's', '']
 
-num_carbon_atoms = 4
-num_hydrogen_atoms = 10
-total_atoms = num_carbon_atoms + num_hydrogen_atoms
+# Number of atoms of each type
+num_oxygen_atoms = 1 
+num_nitrogen_atoms = 1  
+num_carbon_atoms = 3
+num_hydrogen_atoms = 3
 
-show=False
 
+total_atoms = num_carbon_atoms + num_hydrogen_atoms + num_oxygen_atoms + num_nitrogen_atoms
 
-for i in range(0,len(trajectory_file_list)): 
-    trajectory_file=trajectory_file_list[i]
-    mode=modes[i]
-    labels = ['C'] * num_carbon_atoms + ['H'] * num_hydrogen_atoms
-    masses = [C_mass] * num_carbon_atoms + [H_mass] * num_hydrogen_atoms
+show = False
+
+for i in range(len(trajectory_file_list)):
+    trajectory_file = trajectory_file_list[i]
+    mode = modes[i]
+    labels = ['O'] * num_oxygen_atoms + ['N'] * num_nitrogen_atoms + ['C'] * num_carbon_atoms + ['H'] * num_hydrogen_atoms 
+    masses = [O_mass] * num_oxygen_atoms + [N_mass] * num_nitrogen_atoms + [C_mass] * num_carbon_atoms + [H_mass] * num_hydrogen_atoms
 
     iterations, positions, distances = read_trajectory(trajectory_file, total_atoms)
     directory = os.path.dirname(trajectory_file)
@@ -175,10 +190,10 @@ for i in range(0,len(trajectory_file_list)):
     speeds = calculate_velocity(positions, time)
     accelerations = calculate_acceleration(speeds, time)
 
-    plot_distance(time, distances, directory,mode=mode,show=show)
-    plot_positions(time, positions, directory, labels,mode=mode,show=show)
-    plot_velocity(time, speeds, directory, labels,mode=mode,show=show)
-    plot_acceleration(time, accelerations, directory, labels,mode=mode,show=show)
-    plot_force(time, accelerations, masses, directory, labels,mode=mode,show=show)
+    plot_distance(time, distances, directory, mode=mode, show=show)
+    plot_positions(time, positions, directory, labels, mode=mode, show=show)
+    plot_velocity(time, speeds, directory, labels, mode=mode, show=show)
+    plot_acceleration(time, accelerations, directory, labels, mode=mode, show=show)
+    plot_force(time, accelerations, masses, directory, labels, mode=mode, show=show)
 
 print("Finished. All graphs generated.")

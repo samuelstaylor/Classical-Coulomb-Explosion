@@ -68,9 +68,9 @@ class AngularDistribution:
         ax.grid(True)
         ax.legend()
         if self.thetas[1] > -30 and self.thetas[1] < 30:
-            ax.set_xlim(-30, 30)
+            ax.set_xlim(-60, 60) #default is (-30, 30)
         elif self.thetas[1] > 150 and self.thetas[1] < 210:
-            ax.set_xlim(150, 210)
+            ax.set_xlim(120, 240) #default is (150, 210)
         else:
             ax.set_xlim(-180, 180)
 
@@ -78,10 +78,10 @@ class AngularDistribution:
 def main():
     atom_types = ['C', 'C', 'H', 'H']
     '''
-    file_path = 'data/c2h2_aces_cont_from_tddft_output/atom_info.csv'
+    file_path = 'data\\c2h2_classical\\all_variable_file.txt'
     data_type = "Semi-classical"
     '''
-    file_path = 'scripts/C2H2_boltzmann/moleculeFormations_14.csv'
+    file_path = 'data\\c2h2_quantum\\moleculeFormations_14.csv'
     data_type = 'Quantum'
     
     fig, axes = plt.subplots(2, 2, figsize=(12, 10))  # Create a 2x2 grid for subplots
