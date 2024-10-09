@@ -16,10 +16,10 @@ EPSILON = 1e-10
 mpl.rcParams['font.family'] = 'Times New Roman'
 mpl.rcParams['font.weight'] = 'bold'
 mpl.rcParams['axes.labelweight'] = 'bold'
-mpl.rcParams['axes.labelsize'] = 14  # increase label font size
-mpl.rcParams['xtick.labelsize'] = 12  # increase x tick font size
-mpl.rcParams['ytick.labelsize'] = 12  # increase y tick font size
-mpl.rcParams['legend.fontsize'] = 12  # Legend font size
+mpl.rcParams['axes.labelsize'] = 16  # increase label font size
+mpl.rcParams['xtick.labelsize'] = 14  # increase x tick font size
+mpl.rcParams['ytick.labelsize'] = 14  # increase y tick font size
+mpl.rcParams['legend.fontsize'] = 14  # Legend font size
 # either make axis label 14, then ticks and legend 12
 # or make axis label 16, then ticks and legend 14
 
@@ -696,45 +696,46 @@ class NewtonPlot:
 def main():
     print("-=GENERATING NEWTON PLOT=-")
     newton_plot = NewtonPlot()
-    data_mode = "q"
+    data_mode = "c"
     user_input_mode = False
     alpha = 0.2  #set alpha =0.2 for c4h10 and =0.03 for c2h2
-    lim_2d_left=-1.3
-    lim_2d_right=1.3
-    lim_2d_bottom=-1.3
-    lim_2d_top=1.3
-    lim_3d_x_lower=-1.3
-    lim_3d_x_upper=1.3
-    lim_3d_y_lower=-1.3
-    lim_3d_y_upper=1.3
-    lim_3d_z_lower=-1.3
-    lim_3d_z_upper=1.3
-    newton_plot.axis_subdivide = 4
+    lim_2d_left=-1.0
+    lim_2d_right=1.0
+    lim_2d_bottom=-1.0
+    lim_2d_top=1.0
+    lim_3d_x_lower=-1.0
+    lim_3d_x_upper=1.0
+    lim_3d_y_lower=-1.0
+    lim_3d_y_upper=1.0
+    lim_3d_z_lower=-1.0
+    lim_3d_z_upper=1.0
+    newton_plot.axis_subdivide = 5
 
     
 
     if (data_mode.lower().startswith('c')):
         #CLASSICAL INPUT FILE:
-        input_file = 'data\\isoxazole_classical\\atom_info.csv'
         input_file = 'data\\c2h2_classical\\atom_info.csv'
-        input_file = 'data\\c4h10_classical\\14\\atom_info.csv'
         input_file = 'data\\c4h10_classical\\28\\atom_info.csv'
+        input_file = 'data\\c4h10_classical\\14\\atom_info.csv'
+        input_file = 'data\\isoxazole_classical\\atom_info.csv'
+
         graph_name_tag="classical"
         
     if (data_mode.lower().startswith('q')):
         #QUANTUM INPUT FILE:
-        input_file = 'data\\isoxazole_quantum\\moleculeFormations_14.csv' 
         input_file = 'data\\c2h2_quantum\\moleculeFormations_14.csv'
         input_file = 'data\\c4h10_quantum\\28\\moleculeFormations_28.csv' 
         input_file = 'data\\c4h10_quantum\\14\\moleculeFormations_14.csv'
+        input_file = 'data\\isoxazole_quantum\\moleculeFormations_14.csv' 
         graph_name_tag="quantum"
 
     if (data_mode.lower().startswith('s')):
         #SEMI-CLASSICAL INPUT FILE:
-        input_file = 'data\\isoxazole_semi_classical\\atom_info.csv'
         input_file = 'data\\c2h2_semi_classical\\atom_info.csv'
-        input_file = 'data\\c4h10_semi_classical\\14\\atom_info.csv'
         input_file = 'data\\c4h10_semi_classical\\28\\atom_info.csv'
+        input_file = 'data\\c4h10_semi_classical\\14\\atom_info.csv'
+        input_file = 'data\\isoxazole_semi_classical\\atom_info.csv'
         graph_name_tag="semi-classical"
 
     
