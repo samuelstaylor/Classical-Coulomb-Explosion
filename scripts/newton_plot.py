@@ -16,10 +16,12 @@ EPSILON = 1e-10
 mpl.rcParams['font.family'] = 'Times New Roman'
 mpl.rcParams['font.weight'] = 'bold'
 mpl.rcParams['axes.labelweight'] = 'bold'
-mpl.rcParams['axes.labelsize'] = 16  # increase label font size
-mpl.rcParams['xtick.labelsize'] = 14  # increase x tick font size
-mpl.rcParams['ytick.labelsize'] = 14  # increase y tick font size
-mpl.rcParams['legend.fontsize'] = 14  # Legend font size
+mpl.rcParams['axes.labelsize'] = 14  # increase label font size
+mpl.rcParams['xtick.labelsize'] = 12  # increase x tick font size
+mpl.rcParams['ytick.labelsize'] = 12  # increase y tick font size
+mpl.rcParams['legend.fontsize'] = 12  # Legend font size
+# either make axis label 14, then ticks and legend 12
+# or make axis label 16, then ticks and legend 14
 
 class NewtonPlot:
     def __init__(self, SHOW_PLOT=False,SHOW_TITLE=False,SHOW_LEGEND=False):
@@ -31,6 +33,7 @@ class NewtonPlot:
         self.c_mass = 12.0107  # in g/mol
         self.o_mass = 15.9994  # in g/mol
         self.n_mass = 14.0067  # in g/mol
+        self.axis_subdivide = 5  # Number of sub-divisions on each axis
         
         # Dictionary for fragments and data
         self.fragments_x_vel_data = {}
@@ -339,8 +342,8 @@ class NewtonPlot:
             nitrogen_x_vel = self.nitrogen_x_velocities
             nitrogen_y_vel = self.nitrogen_y_velocities
 
-        plt.scatter(carbon_x_vel, carbon_y_vel, color='b', alpha=alpha, label='Carbon')
         plt.scatter(hydrogen_x_vel, hydrogen_y_vel, color='r', alpha=alpha, label='Hydrogen')
+        plt.scatter(carbon_x_vel, carbon_y_vel, color='b', alpha=alpha, label='Carbon')
         plt.scatter(oxygen_x_vel, oxygen_y_vel, color='g', alpha=alpha, label='Oxygen')
         plt.scatter(nitrogen_x_vel, nitrogen_y_vel, color='y', alpha=alpha, label='Nitrogen')
         plt.xlabel('X Velocity (Å/fs)')
@@ -389,8 +392,8 @@ class NewtonPlot:
             nitrogen_x_vel = self.nitrogen_x_velocities
             nitrogen_z_vel = self.nitrogen_z_velocities
 
-        plt.scatter(carbon_x_vel, carbon_z_vel, color='b', alpha=alpha, label='Carbon')
         plt.scatter(hydrogen_x_vel, hydrogen_z_vel, color='r', alpha=alpha, label='Hydrogen')
+        plt.scatter(carbon_x_vel, carbon_z_vel, color='b', alpha=alpha, label='Carbon')
         plt.scatter(oxygen_x_vel, oxygen_z_vel, color='g', alpha=alpha, label='Oxygen')
         plt.scatter(nitrogen_x_vel, nitrogen_z_vel, color='y', alpha=alpha, label='Nitrogen')
         plt.xlabel('X Velocity (Å/fs)')
@@ -438,8 +441,8 @@ class NewtonPlot:
             nitrogen_y_vel = self.nitrogen_y_velocities
             nitrogen_z_vel = self.nitrogen_z_velocities
 
-        plt.scatter(carbon_y_vel, carbon_z_vel, color='b', alpha=alpha, label='Carbon')
         plt.scatter(hydrogen_y_vel, hydrogen_z_vel, color='r', alpha=alpha, label='Hydrogen')
+        plt.scatter(carbon_y_vel, carbon_z_vel, color='b', alpha=alpha, label='Carbon')
         plt.scatter(oxygen_y_vel, oxygen_z_vel, color='g', alpha=alpha, label='Oxygen')
         plt.scatter(nitrogen_y_vel, nitrogen_z_vel, color='y', alpha=alpha, label='Nitrogen')
         plt.xlabel('Y Velocity (Å/fs)')
@@ -553,8 +556,8 @@ class NewtonPlot:
         ax1 = fig1.add_subplot(111, projection='3d')  # Create a 3D subplot
 
         # Scatter plot of the carbon velocities in 3D space
-        ax1.scatter(C_X, C_Y, C_Z, c='b', marker='.', label='Carbon', alpha=alpha)  # Plot with blue dots, slightly transparent
         ax1.scatter(H_X, H_Y, H_Z, c='r', marker='.', label='Hydrogen', alpha=alpha)  # Plot with red dots, slightly transparent
+        ax1.scatter(C_X, C_Y, C_Z, c='b', marker='.', label='Carbon', alpha=alpha)  # Plot with blue dots, slightly transparent
         ax1.scatter(O_X, O_Y, O_Z, c='g', marker='.', label='Oxygen', alpha=alpha)  # Plot with blue dots, slightly transparent
         ax1.scatter(N_X, N_Y, N_Z, c='y', marker='.', label='Nitrogen', alpha=alpha)  # Plot with red dots, slightly transparent
 
@@ -568,14 +571,17 @@ class NewtonPlot:
             ax1.set_title(graph_scatter_title)
         
         # Set major ticks to show only every other tick
-        ax1.set_xticks(np.arange(lim_3d_x_lower, lim_3d_x_upper+EPSILON, (abs(lim_3d_x_upper) + abs(lim_3d_x_lower)) / 5))
-        ax1.set_yticks(np.arange(lim_3d_x_lower, lim_3d_x_upper+EPSILON, (abs(lim_3d_y_upper) + abs(lim_3d_y_lower)) / 5))
-        ax1.set_zticks(np.arange(lim_3d_x_lower, lim_3d_x_upper+EPSILON, (abs(lim_3d_z_upper) + abs(lim_3d_z_lower)) / 5))
+        ax1.set_xticks(np.arange(lim_3d_x_lower, lim_3d_x_upper + EPSILON, 
+                     (abs(lim_3d_x_upper) + abs(lim_3d_x_lower)) / self.axis_subdivide))
+        ax1.set_yticks(np.arange(lim_3d_x_lower, lim_3d_x_upper+EPSILON, 
+                     (abs(lim_3d_y_upper) + abs(lim_3d_y_lower)) / self.axis_subdivide))
+        ax1.set_zticks(np.arange(lim_3d_x_lower, lim_3d_x_upper+EPSILON, 
+                     (abs(lim_3d_z_upper) + abs(lim_3d_z_lower)) / self.axis_subdivide))
 
         # Set minor ticks
-        ax1.xaxis.set_minor_locator(MultipleLocator((abs(lim_3d_x_upper) + abs(lim_3d_x_lower)) / 10))
-        ax1.yaxis.set_minor_locator(MultipleLocator((abs(lim_3d_y_upper) + abs(lim_3d_y_lower)) / 10))
-        ax1.zaxis.set_minor_locator(MultipleLocator((abs(lim_3d_z_upper) + abs(lim_3d_z_lower)) / 10))
+        ax1.xaxis.set_minor_locator(MultipleLocator((abs(lim_3d_x_upper) + abs(lim_3d_x_lower)) / (2*self.axis_subdivide)))
+        ax1.yaxis.set_minor_locator(MultipleLocator((abs(lim_3d_y_upper) + abs(lim_3d_y_lower)) / (2*self.axis_subdivide)))
+        ax1.zaxis.set_minor_locator(MultipleLocator((abs(lim_3d_z_upper) + abs(lim_3d_z_lower)) / (2*self.axis_subdivide)))
         
         if self.show_legend:
             plt.legend()
@@ -611,17 +617,12 @@ class NewtonPlot:
         c_ny = np.ones_like(N_Y) * lim_3d_y_upper  # Constant Y for XZ projection at the top edge of the plot
         c_nz = np.ones_like(N_Z) * lim_3d_z_lower  # Constant Z for XY projection at the bottom edge of the plot
 
-
-        # Scatter plots for the projections onto the XY, XZ, and YZ planes of carbon
-        ax2.scatter(C_X, C_Y, cz, c='b', marker='.', lw=0, alpha=alpha)  # XY projection, color by Z
-        ax2.scatter(C_X, cy, C_Z, c='b', marker='.', lw=0, alpha=alpha)  # XZ projection, color by negative Y
-        ax2.scatter(cx, C_Y, C_Z, c='b', marker='.', lw=0, alpha=alpha)  # YZ projection, color by X
         
         # Scatter plots for the projections onto the XY, XZ, and YZ planes of hydrogen
         ax2.scatter(H_X, H_Y, c_hz, c='r', marker='.', lw=0, alpha=alpha)  # XY projection, color by Z
         ax2.scatter(H_X, c_hy, H_Z, c='r', marker='.', lw=0, alpha=alpha)  # XZ projection, color by negative Y
         ax2.scatter(c_hx, H_Y, H_Z, c='r', marker='.', lw=0, alpha=alpha)  # YZ projection, color by X
-
+        
         # Scatter plots for the projections onto the XY, XZ, and YZ planes of oxygen
         ax2.scatter(O_X, O_Y, c_oz, c='g', marker='.', lw=0, alpha=alpha)  # XY projection, color by Z
         ax2.scatter(O_X, c_oy, O_Z, c='g', marker='.', lw=0, alpha=alpha)  # XZ projection, color by negative Y
@@ -632,20 +633,28 @@ class NewtonPlot:
         ax2.scatter(N_X, c_ny, N_Z, c='y', marker='.', lw=0, alpha=alpha)  # XZ projection, color by negative Y
         ax2.scatter(c_nx, N_Y, N_Z, c='y', marker='.', lw=0, alpha=alpha)  # YZ projection, color by X
 
+        # Scatter plots for the projections onto the XY, XZ, and YZ planes of carbon
+        ax2.scatter(C_X, C_Y, cz, c='b', marker='.', lw=0, alpha=alpha)  # XY projection, color by Z
+        ax2.scatter(C_X, cy, C_Z, c='b', marker='.', lw=0, alpha=alpha)  # XZ projection, color by negative Y
+        ax2.scatter(cx, C_Y, C_Z, c='b', marker='.', lw=0, alpha=alpha)  # YZ projection, color by X
+        
         # Set the limits of the second plot to be the same as the first plot
         ax2.set_xlim3d(lim_3d_x_lower, lim_3d_x_upper)
         ax2.set_ylim3d(lim_3d_y_lower, lim_3d_x_upper)
         ax2.set_zlim3d(lim_3d_z_lower, lim_3d_x_upper)
         
         # Set major ticks to show only every other tick
-        ax2.set_xticks(np.arange(lim_3d_x_lower, lim_3d_x_upper+EPSILON, (abs(lim_3d_x_upper) + abs(lim_3d_x_lower)) / 5))
-        ax2.set_yticks(np.arange(lim_3d_x_lower, lim_3d_x_upper+EPSILON, (abs(lim_3d_y_upper) + abs(lim_3d_y_lower)) / 5))
-        ax2.set_zticks(np.arange(lim_3d_x_lower, lim_3d_x_upper+EPSILON, (abs(lim_3d_z_upper) + abs(lim_3d_z_lower)) / 5))
+        ax2.set_xticks(np.arange(lim_3d_x_lower, lim_3d_x_upper+EPSILON, 
+                        (abs(lim_3d_x_upper) + abs(lim_3d_x_lower)) / self.axis_subdivide))
+        ax2.set_yticks(np.arange(lim_3d_x_lower, lim_3d_x_upper+EPSILON, 
+                        (abs(lim_3d_y_upper) + abs(lim_3d_y_lower)) / self.axis_subdivide))
+        ax2.set_zticks(np.arange(lim_3d_x_lower, lim_3d_x_upper+EPSILON, 
+                        (abs(lim_3d_z_upper) + abs(lim_3d_z_lower)) / self.axis_subdivide))
 
         # Set minor ticks
-        ax2.xaxis.set_minor_locator(MultipleLocator((abs(lim_3d_x_upper) + abs(lim_3d_x_lower)) / 10))
-        ax2.yaxis.set_minor_locator(MultipleLocator((abs(lim_3d_y_upper) + abs(lim_3d_y_lower)) / 10))
-        ax2.zaxis.set_minor_locator(MultipleLocator((abs(lim_3d_z_upper) + abs(lim_3d_z_lower)) / 10))
+        ax2.xaxis.set_minor_locator(MultipleLocator((abs(lim_3d_x_upper) + abs(lim_3d_x_lower)) / (2*self.axis_subdivide)))
+        ax2.yaxis.set_minor_locator(MultipleLocator((abs(lim_3d_y_upper) + abs(lim_3d_y_lower)) / (2*self.axis_subdivide)))
+        ax2.zaxis.set_minor_locator(MultipleLocator((abs(lim_3d_z_upper) + abs(lim_3d_z_lower)) / (2*self.axis_subdivide)))
 
         # Set axis labels for the second plot
         ax2.set_xlabel('X Velocity (Å/fs)', fontweight='bold')
@@ -687,44 +696,45 @@ class NewtonPlot:
 def main():
     print("-=GENERATING NEWTON PLOT=-")
     newton_plot = NewtonPlot()
-    data_mode = "c"
+    data_mode = "q"
     user_input_mode = False
     alpha = 0.2  #set alpha =0.2 for c4h10 and =0.03 for c2h2
-    lim_2d_left=-1
-    lim_2d_right=1
-    lim_2d_bottom=-1
-    lim_2d_top=1
-    lim_3d_x_lower=-1
-    lim_3d_x_upper=1
-    lim_3d_y_lower=-1
-    lim_3d_y_upper=1
-    lim_3d_z_lower=-1
-    lim_3d_z_upper=1
+    lim_2d_left=-1.3
+    lim_2d_right=1.3
+    lim_2d_bottom=-1.3
+    lim_2d_top=1.3
+    lim_3d_x_lower=-1.3
+    lim_3d_x_upper=1.3
+    lim_3d_y_lower=-1.3
+    lim_3d_y_upper=1.3
+    lim_3d_z_lower=-1.3
+    lim_3d_z_upper=1.3
+    newton_plot.axis_subdivide = 4
 
     
 
     if (data_mode.lower().startswith('c')):
         #CLASSICAL INPUT FILE:
-        input_file = 'data\\c4h10_classical\\14\\atom_info.csv'
-        input_file = 'data\\c4h10_classical\\28\\atom_info.csv'
         input_file = 'data\\isoxazole_classical\\atom_info.csv'
         input_file = 'data\\c2h2_classical\\atom_info.csv'
+        input_file = 'data\\c4h10_classical\\14\\atom_info.csv'
+        input_file = 'data\\c4h10_classical\\28\\atom_info.csv'
         graph_name_tag="classical"
         
     if (data_mode.lower().startswith('q')):
         #QUANTUM INPUT FILE:
-        input_file = 'data\\c4h10_quantum\\14\\moleculeFormations_14.csv'
-        input_file = 'data\\c4h10_quantum\\28\\moleculeFormations_14.csv' 
         input_file = 'data\\isoxazole_quantum\\moleculeFormations_14.csv' 
         input_file = 'data\\c2h2_quantum\\moleculeFormations_14.csv'
+        input_file = 'data\\c4h10_quantum\\28\\moleculeFormations_28.csv' 
+        input_file = 'data\\c4h10_quantum\\14\\moleculeFormations_14.csv'
         graph_name_tag="quantum"
 
     if (data_mode.lower().startswith('s')):
         #SEMI-CLASSICAL INPUT FILE:
-        input_file = 'data\\c4h10_semi_classical\\14\\atom_info.csv'
-        input_file = 'data\\c4h10_semi_classical\\28\\atom_info.csv'
         input_file = 'data\\isoxazole_semi_classical\\atom_info.csv'
         input_file = 'data\\c2h2_semi_classical\\atom_info.csv'
+        input_file = 'data\\c4h10_semi_classical\\14\\atom_info.csv'
+        input_file = 'data\\c4h10_semi_classical\\28\\atom_info.csv'
         graph_name_tag="semi-classical"
 
     
