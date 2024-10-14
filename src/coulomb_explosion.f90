@@ -62,6 +62,7 @@ SUBROUTINE initialize
 
   ! call compute atomic masses only if run_typ /= 3
   if (run_type /= 3) call compute_atomic_masses
+  
   call open_optional_output_files
 
   call program_checks
@@ -95,7 +96,6 @@ SUBROUTINE program_checks
   if (run_type==2) then
     print*,"run_type=2 checks"
   endif
-
   
 END SUBROUTINE program_checks
 
@@ -127,7 +127,6 @@ SUBROUTINE count_lines(filename, num_lines)
 end SUBROUTINE count_lines
 
 
-
 SUBROUTINE prepare_output
   call get_formatted_datetime(formatted_datetime)
   
@@ -157,8 +156,8 @@ SUBROUTINE prepare_output
   write(log_file,'(A, A)') " Output files created: ",  trim(output_dir_with_date_time)
   write(log_file,'(A, A, A, A)') " all variable file created: ", "'", trim(all_variable_filename), "'"
  
-
 END SUBROUTINE prepare_output
+
 
 SUBROUTINE open_optional_output_files
   if (output_trajectory) then
@@ -177,7 +176,7 @@ END SUBROUTINE
 
 SUBROUTINE calculate_simulation(i)
   integer, intent(in) :: i
-  integer :: seed, unit_num
+  integer :: seed, unit_num, j
   character(len=255) :: full_trajectory_filename, seed_string
 
   ! Reset the seed and perform the computation again
@@ -202,17 +201,34 @@ SUBROUTINE calculate_simulation(i)
   call calculate_force
 
   do iter = 0, N_time_steps
-      time = iter * time_step
-  
-      ! Output
-      if (output_trajectory .and. mod(iter, trajectory_output_frequency) == 0) then
-        call update_trajectory_file(unit_num)
-      end if
+    time = iter * time_step
 
-      ! Update via Verlet Algorithm (force, position, velocity)
-      call calculate_force
-      call calculate_position
-      call calculate_velocity
+    ! Output
+    if (output_trajectory .and. mod(iter, trajectory_output_frequency) == 0) then
+      call update_trajectory_file(unit_num)
+    end if
+
+    if (finalize_info_at_cap) then
+      do j=1, N_total_atom
+        if (atom_position(1,j) > cap_left1 + cap_tolerance .and. &
+            atom_position(1,j) < cap_right1 - cap_tolerance .and. &
+            atom_position(2,j) > cap_left2 + cap_tolerance .and. &
+            atom_position(2,j) < cap_right2 - cap_tolerance .and. &
+            atom_position(3,j) > cap_left3 + cap_tolerance .and. &
+            atom_position(3,j) < cap_right3 - cap_tolerance) then
+          atom_position_final(:,j) = atom_position(:,j)
+          atom_velocity_final(:,j) = atom_velocity(:,j)
+          atom_force_final(:,j) = atom_force(:,j)
+          atom_acceleration_final(:,j) = atom_acceleration(:,j)
+          times_at_cap(j) = time
+        end if
+      end do
+    end if
+
+    ! Update via Verlet Algorithm (force, position, velocity)
+    call calculate_force
+    call calculate_position
+    call calculate_velocity
   end do
 
   if (output_trajectory) then
@@ -260,17 +276,34 @@ SUBROUTINE simulate_cont_from_tddft(input_filename,i)
   enddo
 
   do iter = traj_time_step_to_initialize, N_time_steps
-      time = iter * time_step
-  
-      ! Output
-      if (output_trajectory .and. mod(iter, trajectory_output_frequency) == 0) then
-        call update_trajectory_file(unit_num)
-      end if
+    time = iter * time_step
 
-      ! Update via Verlet Algorithm (force, position, velocity)
-      call calculate_force
-      call calculate_position
-      call calculate_velocity
+    ! Output
+    if (output_trajectory .and. mod(iter, trajectory_output_frequency) == 0) then
+      call update_trajectory_file(unit_num)
+    end if
+
+    if (finalize_info_at_cap) then
+      do j=1, N_total_atom
+        if (atom_position(1,j) > cap_left1 + cap_tolerance .and. &
+            atom_position(1,j) < cap_right1 - cap_tolerance .and. &
+            atom_position(2,j) > cap_left2 + cap_tolerance .and. &
+            atom_position(2,j) < cap_right2 - cap_tolerance .and. &
+            atom_position(3,j) > cap_left3 + cap_tolerance .and. &
+            atom_position(3,j) < cap_right3 - cap_tolerance) then
+          atom_position_final(:,j) = atom_position(:,j)
+          atom_velocity_final(:,j) = atom_velocity(:,j)
+          atom_force_final(:,j) = atom_force(:,j)
+          atom_acceleration_final(:,j) = atom_acceleration(:,j)
+          times_at_cap(j) = time
+        end if
+      end do
+    end if
+
+    ! Update via Verlet Algorithm (force, position, velocity)
+    call calculate_force
+    call calculate_position
+    call calculate_velocity
   end do
 
   if (output_trajectory) then
@@ -290,7 +323,7 @@ END SUBROUTINE simulate_cont_from_tddft
 
 
 SUBROUTINE run_single_simulation
-  integer :: i, unit_num
+  integer :: i, unit_num,j
   character(len=255) :: full_trajectory_filename
   real*8 :: atom_velocity_magnitude
 
@@ -312,6 +345,23 @@ SUBROUTINE run_single_simulation
     ! Output
     if (output_trajectory .and. mod(iter, trajectory_output_frequency) == 0) then
       call update_trajectory_file(unit_num)
+    end if
+
+    if (finalize_info_at_cap) then
+      do j=1, N_total_atom
+        if (atom_position(1,j) > cap_left1 + cap_tolerance .and. &
+            atom_position(1,j) < cap_right1 - cap_tolerance .and. &
+            atom_position(2,j) > cap_left2 + cap_tolerance .and. &
+            atom_position(2,j) < cap_right2 - cap_tolerance .and. &
+            atom_position(3,j) > cap_left3 + cap_tolerance .and. &
+            atom_position(3,j) < cap_right3 - cap_tolerance) then
+          atom_position_final(:,j) = atom_position(:,j)
+          atom_velocity_final(:,j) = atom_velocity(:,j)
+          atom_force_final(:,j) = atom_force(:,j)
+          atom_acceleration_final(:,j) = atom_acceleration(:,j)
+          times_at_cap(j) = time
+        end if
+      end do
     end if
 
     ! Update via Verlet Algorithm (force, position, velocity)

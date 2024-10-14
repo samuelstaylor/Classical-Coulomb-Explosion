@@ -3,7 +3,7 @@ run_type=1
 
 # run_type=1 | BOLTZMANN VELOCITY DISTRIBUTION FROM GROUNDSTATE
 molecule_input_path=/mnt/c/Users/sammy/Research/Classical-Coulomb-Explosion/data/isoxazole_classical/
-seeds_input_path=/mnt/c/Users/sammy/Research/Classical-Coulomb-Explosion/input/c4h10/
+seeds_input_path=/mnt/c/Users/sammy/Research/Classical-Coulomb-Explosion/input/c2h2/
 N_simulations=30
 temperature_ions = 300.0 
 
@@ -25,6 +25,16 @@ include_electron_mass = False
 output_trajectory = True
 trajectory_output_frequency = 500
 output_atom_info = True
+
+# finalize the atom velocity and info when the molecules reach the CAP within the tolerance
+finalize_info_at_cap=True
+cap_tolerance=1.5
+cap_left1=-12
+cap_right1=12
+cap_left2=-11
+cap_right2=11
+cap_left3=-11
+cap_right3=11
 
 # ERROR: PARALLELIZATION FEATURE IS CURRENTLY BROKEN! SET TO FALSE
 parallelization = False

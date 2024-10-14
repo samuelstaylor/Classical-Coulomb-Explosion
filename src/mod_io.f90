@@ -100,8 +100,26 @@ SUBROUTINE allocate_and_initialize_arrays
   allocate(atom_velocity(3,N_total_atom))
   allocate(atom_position(3,N_total_atom))
   allocate(atom_initial_position(3,N_total_atom))
-  if (run_type==2) allocate(atom_charges_every_tddft(N_total_atom,N_simulations))
- 
+
+  if (run_type==2) then
+    allocate(atom_charges_every_tddft(N_total_atom,N_simulations))
+    atom_charges_every_tddft=0.0
+  endif
+  
+  if (finalize_info_at_cap) then
+    allocate(times_at_cap(N_total_atom))
+    allocate(atom_force_final(3,N_total_atom))
+    allocate(atom_acceleration_final(3,N_total_atom))
+    allocate(atom_velocity_final(3,N_total_atom))
+    allocate(atom_position_final(3,N_total_atom))
+
+    times_at_cap=0.0
+    atom_force_final=0.0
+    atom_acceleration_final=0.0
+    atom_velocity_final=0.0
+    atom_position_final=0.0
+  endif
+
   ! Initialize all arrays to zero
   atom_initial_position = 0.0
   atom_position = 0.0
@@ -180,6 +198,22 @@ SUBROUTINE read_control_input_file(input_filename)
           read(value_string,*)output_trajectory
         case("output_atom_info")
           read(value_string,*)output_atom_info 
+        case("finalize_info_at_cap")
+          read(value_string,*)finalize_info_at_cap
+        case("cap_tolerance")
+          read(value_string,*)cap_tolerance
+        case("cap_left1")
+          read(value_string,*)cap_left1
+        case("cap_right1")
+          read(value_string,*)cap_right1
+        case("cap_left2")
+          read(value_string,*)cap_left2
+        case("cap_right2")
+          read(value_string,*)cap_right2
+        case("cap_left3")
+          read(value_string,*)cap_left3
+        case("cap_right3")
+          read(value_string,*)cap_right3
         case("parallelization")
           read(value_string,*)parallelization 
         case default
@@ -212,6 +246,14 @@ SUBROUTINE read_control_input_file(input_filename)
   write(all_variable_file,*) "  include_electron_mass=", include_electron_mass
   write(all_variable_file,*) "  output_trajectory=", output_trajectory
   write(all_variable_file,*) "  output_atom_info=", output_atom_info
+  write(all_variable_file,*) "  finalize_info_at_cap=", finalize_info_at_cap
+  write(all_variable_file,*) "  cap_tolerance=", cap_tolerance
+  write(all_variable_file,*) "  cap_left1=", cap_left1
+  write(all_variable_file,*) "  cap_right1=", cap_right1
+  write(all_variable_file,*) "  cap_left2=", cap_left2
+  write(all_variable_file,*) "  cap_right2=", cap_right2
+  write(all_variable_file,*) "  cap_left3=", cap_left3
+  write(all_variable_file,*) "  cap_right3=", cap_right3
 
   close(all_variable_file)
 
@@ -984,10 +1026,10 @@ END SUBROUTINE print_masses_to_log
 SUBROUTINE print_initial_atom_info_to_log
   integer :: i, elem
 
-  write(log_file,*) 'Element, Atom atomic number, and mass:'
+  write(log_file,*) 'Element, Atom atomic number'
   do i=1, N_total_atom
     elem=atom_atomic_number(i)
-    write(log_File,*) element_symbols(elem), elem, atom_mass(i)
+    write(log_File,*) element_symbols(elem), elem
   end do
 
   write(log_file,*) 'Atom positions (A) in x,y,z:'
@@ -1153,7 +1195,11 @@ SUBROUTINE update_atom_info_file(j)
   ! write Time
   write(atom_info_file, '(A)', ADVANCE='NO') "Time[fs], "
   do i = 1, N_total_atom
+    if (finalize_info_at_cap) then
+      write(atom_info_file, '(F10.6, A)', ADVANCE='NO') times_at_cap(i), ", "
+    else
       write(atom_info_file, '(F10.6, A)', ADVANCE='NO') time, ", "
+    endif
   end do
   write(atom_info_file,*) ""
 
@@ -1165,28 +1211,44 @@ SUBROUTINE update_atom_info_file(j)
   ! write X Velocity
   write(atom_info_file, '(A)', ADVANCE='NO') "X Velocity[A/fs], "
   do i = 1, N_total_atom
+    if (finalize_info_at_cap) then
+      write(atom_info_file, '(F10.6, A)', ADVANCE='NO') atom_velocity_final(1, i), ", "
+    else
       write(atom_info_file, '(F10.6, A)', ADVANCE='NO') atom_velocity(1, i), ", "
+    endif
   END do
   write(atom_info_file,*) ""
 
   ! write Y Velocity
   write(atom_info_file, '(A)', ADVANCE='NO') "Y Velocity[A/fs], "
   do i = 1, N_total_atom
+    if (finalize_info_at_cap) then
+      write(atom_info_file, '(F10.6, A)', ADVANCE='NO') atom_velocity_final(2, i), ", "
+    else
       write(atom_info_file, '(F10.6, A)', ADVANCE='NO') atom_velocity(2, i), ", "
+    endif
   END do
   write(atom_info_file, '(A)') ""
 
   ! write Z Velocity
   write(atom_info_file, '(A)', ADVANCE='NO') "Z Velocity[A/fs], "
   do i = 1, N_total_atom
+    if (finalize_info_at_cap) then
+      write(atom_info_file, '(F10.6, A)', ADVANCE='NO') atom_velocity_final(3, i), ", "
+    else
       write(atom_info_file, '(F10.6, A)', ADVANCE='NO') atom_velocity(3, i), ", "
+    endif
   END do
   write(atom_info_file,*) ""
 
   ! write Speed
   write(atom_info_file, '(A)', ADVANCE='NO') "Speed[A/fs], "
   do i = 1, N_total_atom
+    if (finalize_info_at_cap) then
+      write(atom_info_file, '(F10.6, A)', ADVANCE='NO') SQRT(SUM(atom_velocity_final(:, i)**2)), ", "
+    else
       write(atom_info_file, '(F10.6, A)', ADVANCE='NO') SQRT(SUM(atom_velocity(:, i)**2)), ", "
+    endif
   end do
   write(atom_info_file,*) ""
   write(atom_info_file,*) ""

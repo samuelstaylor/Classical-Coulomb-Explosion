@@ -26,7 +26,15 @@ MODULE MOD_GLOBAL
     logical :: include_electron_mass=.FALSE. ! Add the mass of the electrons to the mass for the calculation
     logical :: output_trajectory=.TRUE.
     logical :: output_atom_info=.TRUE.
-    logical :: parallelization=.TRUE.
+    logical :: finalize_info_at_cap=.FALSE.
+    real*8 :: cap_tolerance=1.5
+    real*8 :: cap_left1=0
+    real*8 :: cap_right1=0
+    real*8 :: cap_left2=0
+    real*8 :: cap_right2=0
+    real*8 :: cap_left3=0
+    real*8 :: cap_right3=0
+    logical :: parallelization=.FALSE.
 
     integer :: ion_velocity_init_seed=1 ! Values for this will be set in the seeds.inp file
 
@@ -62,6 +70,7 @@ MODULE MOD_GLOBAL
     integer,dimension(:),allocatable :: atom_atomic_number
     real*8,dimension(:),allocatable :: atom_charge
     real*8,dimension(:),allocatable :: atom_mass
+    real*8,dimension(:),allocatable :: times_at_cap
 
     ! 2-dimensional arrays that will be allocated to N_total_atoms columns
     real*8,dimension(:,:),allocatable :: atom_initial_position 
@@ -70,6 +79,10 @@ MODULE MOD_GLOBAL
     real*8,dimension(:,:),allocatable :: atom_force
     real*8,dimension(:,:),allocatable :: atom_acceleration
     real*8,dimension(:,:),allocatable :: atom_charges_every_tddft
+    real*8,dimension(:,:),allocatable :: atom_position_final
+    real*8,dimension(:,:),allocatable :: atom_velocity_final
+    real*8,dimension(:,:),allocatable :: atom_force_final
+    real*8,dimension(:,:),allocatable :: atom_acceleration_final
 
     real*8,dimension(:),allocatable :: seed_array
     character(len=256),dimension(:),allocatable :: full_runs_array

@@ -1,11 +1,23 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib as mpl
+
+# Set global font to Times New Roman
+mpl.rcParams['font.family'] = 'Times New Roman'
+mpl.rcParams['font.weight'] = 'bold'
+mpl.rcParams['axes.labelweight'] = 'bold'
+mpl.rcParams['axes.labelsize'] = 18 # increase label font size
+mpl.rcParams['xtick.labelsize'] = 14  # increase x tick font size
+mpl.rcParams['ytick.labelsize'] = 14  # increase y tick font size
+mpl.rcParams['legend.fontsize'] = 14  # Legend font size
+# either make axis label 14, then ticks and legend 12
+# or make axis label 16, then ticks and legend 14
 
 mass_C = 1243.7123176930008  # Mass of C atom in nano units (eV_fs^2/A^2)
 mass_H = 103.64269314108340  # Mass of H atom in nano units (eV_fs^2/A^2)
 
 class AngularDistribution:
-    def __init__(self, file_path, element, atom_number, data_type):
+    def __init__(self, file_path, element, atom_number, data_type,alpha):
         self.file_path = file_path
         self.thetas = []
         self.kinetic_energies = []
@@ -18,12 +30,26 @@ class AngularDistribution:
             self.mass = mass_H
             self.color = 'b'
         self.atom_number = atom_number
+        self.atom_number_sub = atom_number
+        self.atom_number_to_subscript()
+        self.alpha=alpha
         if data_type.strip().lower().startswith('c'):  # classical
             self.data_type = 'Classical'
         if data_type.strip().lower().startswith('s'):  # semi-classical
             self.data_type = 'Semi-classical'
         if data_type.strip().lower().startswith('q'):  # quantum
             self.data_type = 'Quantum'
+
+    def atom_number_to_subscript(self):
+        # ₀ ₁ ₂ ₃ ₄ ₅ ₆ ₇ ₈ ₉
+        if self.atom_number == 0:
+            self.atom_number_sub = '₁'
+        if self.atom_number == 1:
+            self.atom_number_sub = '₂'
+        if self.atom_number == 2:
+            self.atom_number_sub = '₁'
+        if self.atom_number == 3:
+            self.atom_number_sub = '₂'
 
     def calculate_theta(self, x_vel, y_vel, z_vel):
         speed = np.sqrt(x_vel ** 2 + y_vel ** 2 + z_vel ** 2)
@@ -61,18 +87,19 @@ class AngularDistribution:
     def plot(self, ax):
         # Ensure that LaTeX-style formatting is used correctly for subscripts in labels
         ax.scatter(self.thetas, self.kinetic_energies, marker='o', color=self.color,
-                   label=f'{self.element}$_{{{self.atom_number}}}$')
+                   label=f'{self.element}{self.atom_number_sub}',alpha=self.alpha)
         # Set axis labels with bold font
-        ax.set_xlabel(r'θ°', fontsize=12, fontweight='bold')
-        ax.set_ylabel('Kinetic Energy (eV)', fontsize=12, fontweight='bold')
+        ax.set_xlabel(r'θ°', fontweight='bold')
+        ax.set_ylabel('Kinetic Energy (eV)', fontweight='bold')
         ax.grid(True)
         ax.legend()
         if self.thetas[1] > -30 and self.thetas[1] < 30:
-            ax.set_xlim(-60, 60) #default is (-30, 30)
+            ax.set_xlim(-15, 15) #default is (-30, 30)
         elif self.thetas[1] > 150 and self.thetas[1] < 210:
-            ax.set_xlim(120, 240) #default is (150, 210)
+            ax.set_xlim(165, 195) #default is (150, 210)
         else:
             ax.set_xlim(-180, 180)
+        ax.set_ylim(10, 35.5)
 
 # Create an instance of the AngularDistribution class for all atoms
 def main():
@@ -82,16 +109,22 @@ def main():
     data_type = "Semi-classical"
     '''
     file_path = 'data\\c2h2_quantum\\moleculeFormations_14.csv'
+    #file_path = 'data\\c2h2_classical\\atom_info.csv'
+    #file_path = 'data\\c2h2_semi_classical\\atom_info.csv'
+
     data_type = 'Quantum'
     
     fig, axes = plt.subplots(2, 2, figsize=(12, 10))  # Create a 2x2 grid for subplots
-    fig.suptitle(r'Angular Distribution C$_{2}$H$_{2}$ ('+data_type+')', fontsize=16, fontweight='bold')
+    #fig.suptitle(f'Angular Distribution C₂H₂ ({data_type})', fontsize=16, fontweight='bold')
+    
+    alpha=0.5
 
     for atom_number, atom_type in enumerate(atom_types):
         angular_distribution = AngularDistribution(file_path=file_path,
                                                    element=atom_type,
                                                    atom_number=atom_number,
-                                                   data_type=data_type)
+                                                   data_type=data_type,
+                                                   alpha=alpha)
         angular_distribution.parse_data()
         
         row = atom_number // 2  # Determine the row (0 or 1)
