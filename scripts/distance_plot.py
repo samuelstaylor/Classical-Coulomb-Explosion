@@ -17,8 +17,8 @@ mpl.rcParams['legend.fontsize'] = 16  # Legend font size
 matplotlib.rc('font', family='Times New Roman')  # set default font to Times New Roman
 
 # Atomic masses (eV_fs^2/A^2)
-O_mass = 1996.4246581046500
-N_mass = 1728.5655449161800
+O_mass = 1658.2830902573344
+N_mass = 1450.9977039751675
 C_mass = 1243.7123176930008
 H_mass = 103.64269314108340
 
