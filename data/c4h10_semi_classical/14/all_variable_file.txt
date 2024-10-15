@@ -1,8 +1,8 @@
    run_type=           2
    molecule_input_path=/mnt/c/Users/sammy/Research/Classical-Coulomb-Explosion/data/isoxazole_classical/                                                                                                                                                                               
    seeds_input_path=/mnt/c/Users/sammy/Research/Classical-Coulomb-Explosion/input/c2h2/                                                                                                                                                                                             
-   moleculeformations_input_path=/scratch/group/p.phy240167.000/coulomb_explosion/isoxazole/isoxazole_14_runs/                                                                                                                                                                                   
-   full_runs_dir_input_path=/scratch/group/p.phy240167.000/coulomb_explosion/isoxazole/isoxazole_14_runs/                                                                                                                                                                                   
+   moleculeformations_input_path=/scratch/group/p.phy240167.000/coulomb_explosion/C4H10/C4H10_14_runs/LeeMolOutput/03102024_162516/                                                                                                                                                              
+   full_runs_dir_input_path=/scratch/group/p.phy240167.000/coulomb_explosion/C4H10/C4H10_14_runs/                                                                                                                                                                                           
    traj_time_step_to_initialize=       25000
    fragment_input_path=/mnt/c/Users/sammy/Research/Classical-Coulomb-Explosion/input/c2h6/                                                                                                                                                                                             
    velocity_input_path=/mnt/c/Users/sammy/Research/Classical-Coulomb-Explosion/input/c2h6/                                                                                                                                                                                             
@@ -18,9 +18,9 @@
    output_atom_info= T
    finalize_info_at_cap= T
    cap_tolerance=   1.5000000000000000     
-   cap_left1=  -12.000000000000000     
-   cap_right1=   12.000000000000000     
-   cap_left2=  -11.000000000000000     
-   cap_right2=   11.000000000000000     
-   cap_left3=  -11.000000000000000     
-   cap_right3=   11.000000000000000     
+   cap_left1=  -10.000000000000000     
+   cap_right1=   10.000000000000000     
+   cap_left2=  -9.0000000000000000     
+   cap_right2=   9.0000000000000000     
+   cap_left3=  -9.0000000000000000     
+   cap_right3=   9.0000000000000000     
