@@ -39,6 +39,7 @@ class AngularDistribution:
             self.data_type = 'Semi-classical'
         if data_type.strip().lower().startswith('q'):  # quantum
             self.data_type = 'Quantum'
+        self.SHOW_LEGENDS=False
 
     def atom_number_to_subscript(self):
         # ₀ ₁ ₂ ₃ ₄ ₅ ₆ ₇ ₈ ₉
@@ -92,27 +93,28 @@ class AngularDistribution:
         ax.set_xlabel(r'θ°', fontweight='bold')
         ax.set_ylabel('Kinetic Energy (eV)', fontweight='bold')
         ax.grid(True)
-        ax.legend()
+        if self.SHOW_LEGENDS:
+            ax.legend()
         if self.thetas[1] > -30 and self.thetas[1] < 30:
             ax.set_xlim(-15, 15) #default is (-30, 30)
         elif self.thetas[1] > 150 and self.thetas[1] < 210:
             ax.set_xlim(165, 195) #default is (150, 210)
         else:
             ax.set_xlim(-180, 180)
-        ax.set_ylim(10, 35.5)
+        if self.element=="C":
+            ax.set_ylim(10, 28)
+        if self.element=="H":
+            ax.set_ylim(18, 36)
 
 # Create an instance of the AngularDistribution class for all atoms
 def main():
     atom_types = ['C', 'C', 'H', 'H']
-    '''
-    file_path = 'data\\c2h2_classical\\all_variable_file.txt'
-    data_type = "Semi-classical"
-    '''
+   
     file_path = 'data\\c2h2_quantum\\moleculeFormations_14.csv'
     #file_path = 'data\\c2h2_classical\\atom_info.csv'
     #file_path = 'data\\c2h2_semi_classical\\atom_info.csv'
 
-    data_type = 'Quantum'
+    data_type = 'q'
     
     fig, axes = plt.subplots(2, 2, figsize=(12, 10))  # Create a 2x2 grid for subplots
     #fig.suptitle(f'Angular Distribution C₂H₂ ({data_type})', fontsize=16, fontweight='bold')
