@@ -696,7 +696,7 @@ class NewtonPlot:
 def main():
     print("-=GENERATING NEWTON PLOT=-")
     newton_plot = NewtonPlot()
-    data_mode = "s"
+    data_mode = "c"
     user_input_mode = False
     alpha = 0.2  #set alpha =0.2 for c4h10 and =0.03 for c2h2
     lim_2d_left=-1.3
@@ -715,8 +715,8 @@ def main():
         #CLASSICAL INPUT FILE:
         input_file = 'data\\isoxazole_classical\\atom_info.csv'
         input_file = 'data\\c2h2_classical\\atom_info.csv'
-        input_file = 'data\\c4h10_classical\\14\\atom_info.csv'
         input_file = 'data\\c4h10_classical\\28\\atom_info.csv'
+        input_file = 'data\\c4h10_classical\\14\\atom_info.csv'
         graph_name_tag="classical"
         
     if (data_mode.lower().startswith('q')):

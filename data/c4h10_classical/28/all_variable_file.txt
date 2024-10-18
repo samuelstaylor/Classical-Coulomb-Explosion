@@ -7,7 +7,7 @@
    fragment_input_path=/mnt/c/Users/sammy/Research/Classical-Coulomb-Explosion/input/c2h6/                                                                                                                                                                                             
    velocity_input_path=/mnt/c/Users/sammy/Research/Classical-Coulomb-Explosion/input/c2h6/                                                                                                                                                                                             
    time_step_start=      120000
-   N_simulations=          50
+   N_simulations=         200
    N_time_steps=      120000
    time_step=   1.0000000000000000E-003
    trajectory_output_frequency=         500

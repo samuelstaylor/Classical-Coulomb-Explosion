@@ -1,10 +1,12 @@
 import csv
 #O, N, C, C, C, H, H, H,
-N_carbon   = 3
-N_hydrogen = 3
-N_oxygen   = 1
-N_nitrogen = 1 
+N_oxygen   = 0
+N_nitrogen = 0 
+N_carbon   = 4
+N_hydrogen = 10
+
 input_csv_file = 'data\\isoxazole_quantum\\moleculeFormations_14.csv'
+input_csv_file = 'data\\c4h10_quantum\\28\\moleculeFormations_28.csv'
 
 # Initialize sums and counters for densities and speeds for molecule
 # W/ INDEX BRACKETS
