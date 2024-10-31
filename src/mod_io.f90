@@ -198,6 +198,10 @@ SUBROUTINE read_control_input_file(input_filename)
           read(value_string,*)output_trajectory
         case("output_atom_info")
           read(value_string,*)output_atom_info 
+        case("include_pulse")
+          read(value_string,*)include_pulse 
+        case("pulse_dat_path")
+          pulse_dat_path = trim(adjustl(value_string))   
         case("finalize_info_at_cap")
           read(value_string,*)finalize_info_at_cap
         case("cap_tolerance")
@@ -246,6 +250,8 @@ SUBROUTINE read_control_input_file(input_filename)
   write(all_variable_file,*) "  include_electron_mass=", include_electron_mass
   write(all_variable_file,*) "  output_trajectory=", output_trajectory
   write(all_variable_file,*) "  output_atom_info=", output_atom_info
+  write(all_variable_file,*) "  include_pulse=", include_pulse
+  write(all_variable_file,*) "  pulse_dat_path=", pulse_dat_path
   write(all_variable_file,*) "  finalize_info_at_cap=", finalize_info_at_cap
   write(all_variable_file,*) "  cap_tolerance=", cap_tolerance
   write(all_variable_file,*) "  cap_left1=", cap_left1
@@ -485,6 +491,68 @@ SUBROUTINE read_molformations_charges(input_filename)
   !convert the densities to charges
   call convert_density_to_charges
 END SUBROUTINE read_molformations_charges
+
+
+SUBROUTINE read_pulse_input_file(input_filename)
+  character(len=*), intent(in) :: input_filename
+  integer :: i, error_code, pulse_counter
+  character(len=256) :: line
+  real :: time_value
+
+  ! Open the file
+  open(unit=pulse_file, file=trim(adjustl(input_filename)), status='old', action='read', iostat=error_code)
+  if (error_code /= 0) then
+    write(*,*) "***ERROR*** Error opening: ", input_filename
+    write(*,*) "Ensure that ", input_filename, " is in your running directory"
+    write(log_file,*) "***ERROR*** Error opening: ", input_filename
+    write(log_file,*) "Ensure that ", input_filename, " is in your running directory"
+    stop
+  end if
+
+  ! 1-dimensional arrays that will be allocated to the size N_total_atom
+  allocate(pulse_array(N_time_steps))
+  
+  pulse_counter = -1
+  pulse_array = 0
+  ! Read lines and skip those starting with '#'
+  do while (pulse_counter < N_time_steps)
+    read(pulse_file, '(A)', end=110, iostat=error_code) line
+    if (error_code /= 0) exit
+
+    ! Skip the first line
+    if (pulse_counter == -1) then
+      pulse_counter = pulse_counter + 1
+      cycle
+    endif
+
+    ! Ignore anything on the line that appears after a '#'
+    i = index(line, '#')
+    if (i > 0) then
+      line = line(1:i-1)
+    end if
+
+    ! Trim leading and trailing spaces
+    line = adjustl(line)
+    if (len_trim(line) == 0) cycle  ! Skip empty lines
+
+    ! Increment pulse_counter
+    pulse_counter = pulse_counter + 1       
+
+    ! Read only the second value (the pulse value) into the pulse_array
+    read(line, *, iostat=error_code) time_value, pulse_array(pulse_counter)
+    if (error_code /= 0) then
+      write(*,*) "***ERROR*** Error reading pulse data at line: ", pulse_counter
+      write(log_file,*) "***ERROR*** Error reading pulse data at line: ", pulse_counter
+      stop
+    end if
+  end do
+
+  ! Close the file
+  110 close(pulse_file)  
+
+  write(log_file,*) "Successfully read and initialized data from: ", input_filename
+
+END SUBROUTINE read_pulse_input_file
 
 
 SUBROUTINE read_fragment_input_file(input_filename)
@@ -969,6 +1037,14 @@ SUBROUTINE check_and_fix_paths
     endif
     if (velocity_input_path(len_trim(velocity_input_path):len_trim(velocity_input_path)) /= '/') then
       velocity_input_path = trim(adjustl(velocity_input_path)) // '/'
+    endif
+  endif
+  if (len_trim(pulse_dat_path) > 0 .and. pulse_dat_path(1:1) /= ".") then
+    if (pulse_dat_path(1:1) /= '/') then
+      pulse_dat_path = '/' // trim(adjustl(pulse_dat_path))
+    endif
+    if (pulse_dat_path(len_trim(pulse_dat_path):len_trim(pulse_dat_path)) /= '/') then
+      pulse_dat_path = trim(adjustl(pulse_dat_path)) // '/'
     endif
   endif
 

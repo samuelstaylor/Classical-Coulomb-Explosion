@@ -44,7 +44,7 @@ SUBROUTINE calculate_force
   ! This subroutine calculates the force between ions and fills the atom_force matrix 
   ! In SI units Newtons (N)
     integer :: i, j
-    real*8 :: r(3), f_vec(3), r_mag, w
+    real*8 :: r(3), f_vec(3), r_mag, w, pulse_force(3)
         
     ! Initialize atom_force array to zero
     atom_force=0.0
@@ -72,6 +72,12 @@ SUBROUTINE calculate_force
         j=j+1
       end do
       j=1
+      ! Include the external electric field pulse via the dipole approximation
+      if (include_pulse) then
+        pulse_force=atom_charge(i)*pulse_array(iter)
+        atom_force(:, i) = atom_force(:, i) + pulse_force
+
+      endif
     end do  
 
     call calculate_acceleration

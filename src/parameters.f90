@@ -44,11 +44,11 @@ MODULE PARAMETERS
 
 
     ! Files and their IDs
-    integer,parameter :: log_file=11,control_file=12,molecule_file=13,seeds_file=14
-    integer,parameter :: moleculeformations_file=15,fragment_file=16,velocity_file=17
-    integer,parameter :: all_variable_file=18, atom_info_file=19
-                         ! when run_type=2, these increment by 2, being constantly even and odd
-    integer,parameter :: trajectory_input_file=20, trajectory_output_file=21
+    integer,parameter :: log_file=11,control_file=12,pulse_file=13,molecule_file=14,seeds_file=15
+    integer,parameter :: moleculeformations_file=16,fragment_file=17,velocity_file=18
+    integer,parameter :: all_variable_file=19, atom_info_file=20
+                         ! when run_type=2, these increment by 2, being constantly odd and even
+    integer,parameter :: trajectory_input_file=21, trajectory_output_file=22
       ! Element symbols and names
     character*3,parameter   :: element_symbols(N_elements)=(/ &
     "  H"," He", &

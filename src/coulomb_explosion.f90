@@ -60,6 +60,15 @@ SUBROUTINE initialize
     stop
   endif
 
+  ! call read_pulse_input_file(pulse_path) ! TO-DO: Implement pulse input file
+  if (include_pulse) then
+    pulse_dat_filename_full = trim(adjustl(pulse_dat_path)) // 'pulse.dat'
+    call read_pulse_input_file(pulse_dat_filename_full)
+    print*, "pulse file name: ", pulse_dat_filename_full
+  else
+    print*, "Pulse not included."
+  endif
+
   ! call compute atomic masses only if run_typ /= 3
   if (run_type /= 3) call compute_atomic_masses
   
@@ -472,6 +481,7 @@ SUBROUTINE cleanup
   deallocate(atom_mass)
   if (run_type==1) deallocate(seed_array)
   if (run_type==2) deallocate(full_runs_array)
+  if (include_pulse) deallocate(pulse_array)
 
 
 END SUBROUTINE cleanup

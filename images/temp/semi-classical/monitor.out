@@ -1,0 +1,1819 @@
+ Run Started and output directory successfully created. Initializing...
+ Output folder created: output/14102024_180953
+ Output files created: output/14102024_180953
+ all variable file created: 'output/14102024_180953/all_variable_file.txt'
+ Successfully read and initialized data from: control.inp
+ All variables allocated and set, see: all_variable_file.txt                                                                                                                                                                                                                                          
+ Successfully read and initialized data from: /scratch/user/u.st199789/coulomb_explosion/C2H2/C2H2_14_runs/LeeMolOutput/24082024_160127/moleculeFormations.csv                                                                                                                                                
+ Successfully read and initialized data from: /scratch/user/u.st199789/coulomb_explosion/C2H2/C2H2_14_runs/C2H2_14r176/trajectory.xyz                                                                                                                                                                         
+ All atomic masses successfully computed:
+ Atom atomic number and mass (eV_fs^2/A^2):
+           6   1243.7123176930008     
+           6   1243.7123176930008     
+           1   103.64269314108340     
+           1   103.64269314108340     
+ Atom info file created: 'output/14102024_180953/atom_info.csv'
+ Trajectory output folder created: 'output/14102024_180953/trajectory'
+ 
+ Initialization complete. Beginning computation...
+ 
+C2H2_14r176 computation started
+ atom           1 charge=   1.9177258014678955     
+ atom           2 charge=   2.4599108695983887     
+ atom           3 charge=  0.99893293215427548     
+ atom           4 charge=  0.99990253090800252     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r176.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r176 computation completed
+
+C2H2_14r161 computation started
+ atom           1 charge=   2.1946732997894287     
+ atom           2 charge=   2.0543185472488403     
+ atom           3 charge=  0.99937404569936916     
+ atom           4 charge=  0.99988906065846095     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r161.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r161 computation completed
+
+C2H2_14r17 computation started
+ atom           1 charge=   2.1782577037811279     
+ atom           2 charge=   2.1106449365615845     
+ atom           3 charge=  0.99931757635204121     
+ atom           4 charge=  0.99995023975498043     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r17.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r17 computation completed
+
+C2H2_14r2 computation started
+ atom           1 charge=   2.0813866853713989     
+ atom           2 charge=   2.2139211893081665     
+ atom           3 charge=  0.99946404813090339     
+ atom           4 charge=  0.99996332827140577     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r2.xyz                                                                                                                                                                                                     
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r2 computation completed
+
+C2H2_14r43 computation started
+ atom           1 charge=   2.0771647691726685     
+ atom           2 charge=   2.2229580879211426     
+ atom           3 charge=  0.99923359195236117     
+ atom           4 charge=  0.99996029410249321     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r43.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r43 computation completed
+
+C2H2_14r84 computation started
+ atom           1 charge=   2.1098321676254272     
+ atom           2 charge=   2.2295202016830444     
+ atom           3 charge=  0.99926838971441612     
+ atom           4 charge=  0.99995542609394761     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r84.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r84 computation completed
+
+C2H2_14r3 computation started
+ atom           1 charge=   2.2823024988174438     
+ atom           2 charge=   2.0735789537429810     
+ atom           3 charge=  0.99889205454383045     
+ atom           4 charge=  0.99990105729375500     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r3.xyz                                                                                                                                                                                                     
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r3 computation completed
+
+C2H2_14r46 computation started
+ atom           1 charge=   2.3248972892761230     
+ atom           2 charge=   1.8974783420562744     
+ atom           3 charge=  0.99971200388972647     
+ atom           4 charge=  0.99994967391103273     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r46.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r46 computation completed
+
+C2H2_14r164 computation started
+ atom           1 charge=   2.2632799148559570     
+ atom           2 charge=   2.0742105245590210     
+ atom           3 charge=  0.99926490260986611     
+ atom           4 charge=  0.99994197743944824     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r164.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r164 computation completed
+
+C2H2_14r49 computation started
+ atom           1 charge=   2.2307589054107666     
+ atom           2 charge=   2.0468357801437378     
+ atom           3 charge=  0.99927454011049122     
+ atom           4 charge=  0.99991060658794595     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r49.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r49 computation completed
+
+C2H2_14r52 computation started
+ atom           1 charge=   2.3932404518127441     
+ atom           2 charge=   1.8941040039062500     
+ atom           3 charge=  0.99944120075087994     
+ atom           4 charge=  0.99995690728610498     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r52.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r52 computation completed
+
+C2H2_14r55 computation started
+ atom           1 charge=   1.7974877357482910     
+ atom           2 charge=   2.5380452871322632     
+ atom           3 charge=  0.99890937842428684     
+ atom           4 charge=  0.99989172274217708     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r55.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r55 computation completed
+
+C2H2_14r123 computation started
+ atom           1 charge=   1.8345990180969238     
+ atom           2 charge=   2.3311573266983032     
+ atom           3 charge=  0.99929236597381532     
+ atom           4 charge=  0.99990444509603549     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r123.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r123 computation completed
+
+C2H2_14r110 computation started
+ atom           1 charge=   1.7226319313049316     
+ atom           2 charge=   2.5811802148818970     
+ atom           3 charge=  0.99919389752903953     
+ atom           4 charge=  0.99994995953602483     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r110.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r110 computation completed
+
+C2H2_14r21 computation started
+ atom           1 charge=   2.0803755521774292     
+ atom           2 charge=   2.2582694292068481     
+ atom           3 charge=  0.99938613752601668     
+ atom           4 charge=  0.99992932045279304     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r21.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r21 computation completed
+
+C2H2_14r111 computation started
+ atom           1 charge=   2.1162780523300171     
+ atom           2 charge=   2.1929417848587036     
+ atom           3 charge=  0.99913678027223796     
+ atom           4 charge=  0.99994609516215860     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r111.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r111 computation completed
+
+C2H2_14r64 computation started
+ atom           1 charge=   1.8383522033691406     
+ atom           2 charge=   2.5559499263763428     
+ atom           3 charge=  0.99923445488093421     
+ atom           4 charge=  0.99993687713867985     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r64.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r64 computation completed
+
+C2H2_14r119 computation started
+ atom           1 charge=   2.0668531656265259     
+ atom           2 charge=   2.2808454036712646     
+ atom           3 charge=  0.99938368913717568     
+ atom           4 charge=  0.99994247922586510     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r119.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r119 computation completed
+
+C2H2_14r35 computation started
+ atom           1 charge=   2.1185960769653320     
+ atom           2 charge=   2.1026802062988281     
+ atom           3 charge=  0.99950668861856684     
+ atom           4 charge=  0.99989874754101038     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r35.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r35 computation completed
+
+C2H2_14r56 computation started
+ atom           1 charge=   2.3560347557067871     
+ atom           2 charge=   1.9464988708496094     
+ atom           3 charge=  0.99906581873074174     
+ atom           4 charge=  0.99995984802444582     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r56.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r56 computation completed
+
+C2H2_14r77 computation started
+ atom           1 charge=   2.4049944877624512     
+ atom           2 charge=   1.9765021800994873     
+ atom           3 charge=  0.99917327106231824     
+ atom           4 charge=  0.99995478492201073     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r77.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r77 computation completed
+
+C2H2_14r116 computation started
+ atom           1 charge=   1.8564341068267822     
+ atom           2 charge=   2.3184477090835571     
+ atom           3 charge=  0.99955616865190677     
+ atom           4 charge=  0.99989059472136432     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r116.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r116 computation completed
+
+C2H2_14r125 computation started
+ atom           1 charge=   2.0379718542098999     
+ atom           2 charge=   2.2654734849929810     
+ atom           3 charge=  0.99908387835603207     
+ atom           4 charge=  0.99994006029010052     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r125.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r125 computation completed
+
+C2H2_14r103 computation started
+ atom           1 charge=   2.0742454528808594     
+ atom           2 charge=   2.2825161218643188     
+ atom           3 charge=  0.99919578834669665     
+ atom           4 charge=  0.99989415719028329     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r103.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r103 computation completed
+
+C2H2_14r6 computation started
+ atom           1 charge=   2.5683317184448242     
+ atom           2 charge=   1.8170082569122314     
+ atom           3 charge=  0.99922934151254594     
+ atom           4 charge=  0.99994253246040898     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r6.xyz                                                                                                                                                                                                     
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r6 computation completed
+
+C2H2_14r44 computation started
+ atom           1 charge=   2.1287735700607300     
+ atom           2 charge=   2.2325600385665894     
+ atom           3 charge=  0.99940276629058644     
+ atom           4 charge=  0.99992237395781558     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r44.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r44 computation completed
+
+C2H2_14r174 computation started
+ atom           1 charge=   1.7808740139007568     
+ atom           2 charge=   2.5752421617507935     
+ atom           3 charge=  0.99893307313323021     
+ atom           4 charge=  0.99990540551516460     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r174.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r174 computation completed
+
+C2H2_14r82 computation started
+ atom           1 charge=   2.0299135446548462     
+ atom           2 charge=   2.2832915782928467     
+ atom           3 charge=  0.99862616299651563     
+ atom           4 charge=  0.99995357701482135     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r82.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r82 computation completed
+
+C2H2_14r114 computation started
+ atom           1 charge=   2.3726170063018799     
+ atom           2 charge=   1.9535591602325439     
+ atom           3 charge=  0.99923943716567010     
+ atom           4 charge=  0.99994347210667911     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r114.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r114 computation completed
+
+C2H2_14r58 computation started
+ atom           1 charge=   2.1173607110977173     
+ atom           2 charge=   2.2033044099807739     
+ atom           3 charge=  0.99853222456295043     
+ atom           4 charge=  0.99993743979575811     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r58.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r58 computation completed
+
+C2H2_14r138 computation started
+ atom           1 charge=   2.8441507816314697     
+ atom           2 charge=   1.5348222255706787     
+ atom           3 charge=  0.99925825977697968     
+ atom           4 charge=  0.99992937147908378     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r138.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r138 computation completed
+
+C2H2_14r39 computation started
+ atom           1 charge=   2.2258858680725098     
+ atom           2 charge=   2.1108460426330566     
+ atom           3 charge=  0.99895693990401924     
+ atom           4 charge=  0.99990169893862912     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r39.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r39 computation completed
+
+C2H2_14r5 computation started
+ atom           1 charge=   1.7870697975158691     
+ atom           2 charge=   2.5397887229919434     
+ atom           3 charge=  0.99927573086461052     
+ atom           4 charge=  0.99994927693478530     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r5.xyz                                                                                                                                                                                                     
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r5 computation completed
+
+C2H2_14r170 computation started
+ atom           1 charge=   2.0769691467285156     
+ atom           2 charge=   2.2448312044143677     
+ atom           3 charge=  0.99931754218414426     
+ atom           4 charge=  0.99993804952100618     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r170.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r170 computation completed
+
+C2H2_14r171 computation started
+ atom           1 charge=   2.1526670455932617     
+ atom           2 charge=   2.1581947803497314     
+ atom           3 charge=  0.99904266325756907     
+ atom           4 charge=  0.99991353494260693     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r171.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r171 computation completed
+
+C2H2_14r158 computation started
+ atom           1 charge=   1.7859830856323242     
+ atom           2 charge=   2.5215241909027100     
+ atom           3 charge=  0.99951297274674289     
+ atom           4 charge=  0.99994932323534158     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r158.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r158 computation completed
+
+C2H2_14r69 computation started
+ atom           1 charge=   2.0899202823638916     
+ atom           2 charge=   2.2523965835571289     
+ atom           3 charge=  0.99905467941425741     
+ atom           4 charge=  0.99990948445338290     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r69.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r69 computation completed
+
+C2H2_14r131 computation started
+ atom           1 charge=   1.6594810485839844     
+ atom           2 charge=   2.7103420495986938     
+ atom           3 charge=  0.99910454789642245     
+ atom           4 charge=  0.99995163331186632     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r131.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r131 computation completed
+
+C2H2_14r113 computation started
+ atom           1 charge=   1.6662759780883789     
+ atom           2 charge=   2.6681578159332275     
+ atom           3 charge=  0.99918839964084327     
+ atom           4 charge=  0.99994028000946855     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r113.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r113 computation completed
+
+C2H2_14r91 computation started
+ atom           1 charge=   1.7628102302551270     
+ atom           2 charge=   2.5847761631011963     
+ atom           3 charge=  0.99928600317798555     
+ atom           4 charge=  0.99993744657695061     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r91.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r91 computation completed
+
+C2H2_14r185 computation started
+ atom           1 charge=   1.9177629947662354     
+ atom           2 charge=   2.4273729324340820     
+ atom           3 charge=  0.99915789801161736     
+ atom           4 charge=  0.99990948229242349     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r185.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r185 computation completed
+
+C2H2_14r90 computation started
+ atom           1 charge=   2.0843608379364014     
+ atom           2 charge=   2.2389894723892212     
+ atom           3 charge=  0.99927107011899352     
+ atom           4 charge=  0.99996610211019288     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r90.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r90 computation completed
+
+C2H2_14r177 computation started
+ atom           1 charge=   2.0281186103820801     
+ atom           2 charge=   2.3201279640197754     
+ atom           3 charge=  0.99913788511184976     
+ atom           4 charge=  0.99991184318059823     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r177.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r177 computation completed
+
+C2H2_14r191 computation started
+ atom           1 charge=   1.9125826358795166     
+ atom           2 charge=   2.3900002241134644     
+ atom           3 charge=  0.99942680879030377     
+ atom           4 charge=  0.99995306768687442     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r191.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r191 computation completed
+
+C2H2_14r128 computation started
+ atom           1 charge=   2.2605773210525513     
+ atom           2 charge=   1.9764177799224854     
+ atom           3 charge=  0.99947030557086691     
+ atom           4 charge=  0.99991893023980083     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r128.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r128 computation completed
+
+C2H2_14r63 computation started
+ atom           1 charge=   2.0850602388381958     
+ atom           2 charge=   2.3305038213729858     
+ atom           3 charge=  0.99929792882176116     
+ atom           4 charge=  0.99996812376775779     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r63.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r63 computation completed
+
+C2H2_14r38 computation started
+ atom           1 charge=   2.2858792543411255     
+ atom           2 charge=   2.0902127027511597     
+ atom           3 charge=  0.99912454612785950     
+ atom           4 charge=  0.99994523750501685     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r38.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r38 computation completed
+
+C2H2_14r33 computation started
+ atom           1 charge=   2.1727975606918335     
+ atom           2 charge=   2.1863465309143066     
+ atom           3 charge=  0.99887790111824870     
+ atom           4 charge=  0.99986805373919196     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r33.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r33 computation completed
+
+C2H2_14r81 computation started
+ atom           1 charge=   2.0285921096801758     
+ atom           2 charge=   2.2315983772277832     
+ atom           3 charge=  0.99958198730018921     
+ atom           4 charge=  0.99991209034487838     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r81.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r81 computation completed
+
+C2H2_14r109 computation started
+ atom           1 charge=   1.7191677093505859     
+ atom           2 charge=   2.6426166296005249     
+ atom           3 charge=  0.99898521939758211     
+ atom           4 charge=  0.99991611566656502     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r109.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r109 computation completed
+
+C2H2_14r40 computation started
+ atom           1 charge=   2.1528012752532959     
+ atom           2 charge=   2.2242121696472168     
+ atom           3 charge=  0.99930149246938527     
+ atom           4 charge=  0.99989483970421134     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r40.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r40 computation completed
+
+C2H2_14r10 computation started
+ atom           1 charge=   1.7564218044281006     
+ atom           2 charge=   2.5602005720138550     
+ atom           3 charge=  0.99907524412265047     
+ atom           4 charge=  0.99995726460474543     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r10.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r10 computation completed
+
+C2H2_14r54 computation started
+ atom           1 charge=   1.7230153083801270     
+ atom           2 charge=   2.5810182094573975     
+ atom           3 charge=  0.99925813876325265     
+ atom           4 charge=  0.99996605687192641     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r54.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r54 computation completed
+
+C2H2_14r118 computation started
+ atom           1 charge=   1.6952416896820068     
+ atom           2 charge=   2.6484425067901611     
+ atom           3 charge=  0.99915893946308643     
+ atom           4 charge=  0.99992055502661970     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r118.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r118 computation completed
+
+C2H2_14r19 computation started
+ atom           1 charge=   2.0456310510635376     
+ atom           2 charge=   2.2904381752014160     
+ atom           3 charge=  0.99954818806145340     
+ atom           4 charge=  0.99989861126232427     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r19.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r19 computation completed
+
+C2H2_14r86 computation started
+ atom           1 charge=   1.7621440887451172     
+ atom           2 charge=   2.4923477172851562     
+ atom           3 charge=  0.99949375423602760     
+ atom           4 charge=  0.99994604437961243     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r86.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r86 computation completed
+
+C2H2_14r108 computation started
+ atom           1 charge=   1.7469546794891357     
+ atom           2 charge=   2.5251423120498657     
+ atom           3 charge=  0.99895499867852777     
+ atom           4 charge=  0.99989860235655215     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r108.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r108 computation completed
+
+C2H2_14r79 computation started
+ atom           1 charge=   2.3877226114273071     
+ atom           2 charge=   1.9373335838317871     
+ atom           3 charge=  0.99885560956317931     
+ atom           4 charge=  0.99991028505610302     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r79.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r79 computation completed
+
+C2H2_14r162 computation started
+ atom           1 charge=   1.7069697380065918     
+ atom           2 charge=   2.5536202192306519     
+ atom           3 charge=  0.99963688282878138     
+ atom           4 charge=  0.99995961796594202     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r162.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r162 computation completed
+
+C2H2_14r57 computation started
+ atom           1 charge=   1.9609215259552002     
+ atom           2 charge=   2.3289915323257446     
+ atom           3 charge=  0.99873898411169648     
+ atom           4 charge=  0.99992260654107668     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r57.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r57 computation completed
+
+C2H2_14r95 computation started
+ atom           1 charge=   1.9041972160339355     
+ atom           2 charge=   2.3938158750534058     
+ atom           3 charge=  0.99934019806096330     
+ atom           4 charge=  0.99996632508918992     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r95.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r95 computation completed
+
+C2H2_14r11 computation started
+ atom           1 charge=   1.8697440624237061     
+ atom           2 charge=   2.4234707355499268     
+ atom           3 charge=  0.99910068779718131     
+ atom           4 charge=  0.99992252404626925     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r11.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r11 computation completed
+
+C2H2_14r100 computation started
+ atom           1 charge=   2.9501366615295410     
+ atom           2 charge=   1.3912203311920166     
+ atom           3 charge=  0.99926393601344898     
+ atom           4 charge=  0.99995801095064962     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r100.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r100 computation completed
+
+C2H2_14r4 computation started
+ atom           1 charge=   1.9421150684356689     
+ atom           2 charge=   2.4366741180419922     
+ atom           3 charge=  0.99880281998775899     
+ atom           4 charge=  0.99993345118127763     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r4.xyz                                                                                                                                                                                                     
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r4 computation completed
+
+C2H2_14r132 computation started
+ atom           1 charge=   1.8848478794097900     
+ atom           2 charge=   2.4706051349639893     
+ atom           3 charge=  0.99894780374597758     
+ atom           4 charge=  0.99992135543288896     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r132.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r132 computation completed
+
+C2H2_14r145 computation started
+ atom           1 charge=   2.5301030874252319     
+ atom           2 charge=   1.8312919139862061     
+ atom           3 charge=  0.99931021424708888     
+ atom           4 charge=  0.99990584529587068     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r145.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r145 computation completed
+
+C2H2_14r120 computation started
+ atom           1 charge=   2.0249065160751343     
+ atom           2 charge=   2.2920126914978027     
+ atom           3 charge=  0.99948273360496387     
+ atom           4 charge=  0.99991518678871216     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r120.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r120 computation completed
+
+C2H2_14r68 computation started
+ atom           1 charge=   1.7154157161712646     
+ atom           2 charge=   2.6268904209136963     
+ atom           3 charge=  0.99888347776141018     
+ atom           4 charge=  0.99993593575345585     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r68.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r68 computation completed
+
+C2H2_14r89 computation started
+ atom           1 charge=   2.0201411247253418     
+ atom           2 charge=   2.3092964887619019     
+ atom           3 charge=  0.99878756771795452     
+ atom           4 charge=  0.99992736939020688     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r89.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r89 computation completed
+
+C2H2_14r137 computation started
+ atom           1 charge=   2.0508817434310913     
+ atom           2 charge=   2.2292008399963379     
+ atom           3 charge=  0.99924260325497016     
+ atom           4 charge=  0.99992050386936171     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r137.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r137 computation completed
+
+C2H2_14r70 computation started
+ atom           1 charge=   1.8426129817962646     
+ atom           2 charge=   2.5156426429748535     
+ atom           3 charge=  0.99920641176868230     
+ atom           4 charge=  0.99993502203869866     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r70.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r70 computation completed
+
+C2H2_14r93 computation started
+ atom           1 charge=   1.6964344978332520     
+ atom           2 charge=   2.6296093463897705     
+ atom           3 charge=  0.99866593221668154     
+ atom           4 charge=  0.99992877608747222     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r93.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r93 computation completed
+
+C2H2_14r50 computation started
+ atom           1 charge=   2.1477859020233154     
+ atom           2 charge=   2.2091120481491089     
+ atom           3 charge=  0.99924519570777193     
+ atom           4 charge=  0.99988889373344136     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r50.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r50 computation completed
+
+C2H2_14r106 computation started
+ atom           1 charge=   1.6644349098205566     
+ atom           2 charge=   2.6801995038986206     
+ atom           3 charge=  0.99899055215064436     
+ atom           4 charge=  0.99993885666481219     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r106.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r106 computation completed
+
+C2H2_14r92 computation started
+ atom           1 charge=   2.1962906122207642     
+ atom           2 charge=   2.1377801895141602     
+ atom           3 charge=  0.99910968821495771     
+ atom           4 charge=  0.99992817485326668     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r92.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r92 computation completed
+
+C2H2_14r155 computation started
+ atom           1 charge=   2.0259624719619751     
+ atom           2 charge=   2.3346356153488159     
+ atom           3 charge=  0.99925178126432002     
+ atom           4 charge=  0.99992555305652786     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r155.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r155 computation completed
+
+C2H2_14r51 computation started
+ atom           1 charge=   2.0094234943389893     
+ atom           2 charge=   2.1597803831100464     
+ atom           3 charge=  0.99952246074099094     
+ atom           4 charge=  0.99990674737637164     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r51.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r51 computation completed
+
+C2H2_14r22 computation started
+ atom           1 charge=   2.3914372920989990     
+ atom           2 charge=   1.9698140621185303     
+ atom           3 charge=  0.99904012738261372     
+ atom           4 charge=  0.99990741675719619     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r22.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r22 computation completed
+
+C2H2_14r147 computation started
+ atom           1 charge=   1.7844030857086182     
+ atom           2 charge=   2.5634372234344482     
+ atom           3 charge=  0.99918193719349802     
+ atom           4 charge=  0.99991921502805781     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r147.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r147 computation completed
+
+C2H2_14r112 computation started
+ atom           1 charge=   1.9992227554321289     
+ atom           2 charge=   2.3394479751586914     
+ atom           3 charge=  0.99895268050022423     
+ atom           4 charge=  0.99993670557887526     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r112.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r112 computation completed
+
+C2H2_14r141 computation started
+ atom           1 charge=   2.2600831985473633     
+ atom           2 charge=   2.1404305696487427     
+ atom           3 charge=  0.99880466039758176     
+ atom           4 charge=  0.99992029896384338     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r141.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r141 computation completed
+
+C2H2_14r146 computation started
+ atom           1 charge=   1.9671394824981689     
+ atom           2 charge=   2.3826966285705566     
+ atom           3 charge=  0.99920340109383687     
+ atom           4 charge=  0.99992323709739139     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r146.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r146 computation completed
+
+C2H2_14r129 computation started
+ atom           1 charge=   2.2095024585723877     
+ atom           2 charge=   2.1189234256744385     
+ atom           3 charge=  0.99895824806299061     
+ atom           4 charge=  0.99995761019090423     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r129.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r129 computation completed
+
+C2H2_14r160 computation started
+ atom           1 charge=   1.9646782875061035     
+ atom           2 charge=   2.3240884542465210     
+ atom           3 charge=  0.99918543850071728     
+ atom           4 charge=  0.99984824046259746     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r160.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r160 computation completed
+
+C2H2_14r80 computation started
+ atom           1 charge=   1.7369577884674072     
+ atom           2 charge=   2.6244547367095947     
+ atom           3 charge=  0.99935693829320371     
+ atom           4 charge=  0.99995541252428666     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r80.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r80 computation completed
+
+C2H2_14r192 computation started
+ atom           1 charge=   2.0719991922378540     
+ atom           2 charge=   2.3232358694076538     
+ atom           3 charge=  0.99843377817887813     
+ atom           4 charge=  0.99993871888727881     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r192.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r192 computation completed
+
+C2H2_14r59 computation started
+ atom           1 charge=   1.9952971935272217     
+ atom           2 charge=   2.2231905460357666     
+ atom           3 charge=  0.99925570382038131     
+ atom           4 charge=  0.99978333481703885     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r59.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r59 computation completed
+
+C2H2_14r193 computation started
+ atom           1 charge=   2.2021085023880005     
+ atom           2 charge=   1.9922211170196533     
+ atom           3 charge=  0.99958531945594586     
+ atom           4 charge=  0.99991761395358481     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r193.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r193 computation completed
+
+C2H2_14r169 computation started
+ atom           1 charge=   1.9805905818939209     
+ atom           2 charge=   2.3819385766983032     
+ atom           3 charge=  0.99902551999548450     
+ atom           4 charge=  0.99994489798700670     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r169.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r169 computation completed
+
+C2H2_14r157 computation started
+ atom           1 charge=   2.1428322792053223     
+ atom           2 charge=   2.1342186927795410     
+ atom           3 charge=  0.99872549599967897     
+ atom           4 charge=  0.99985407631902490     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r157.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r157 computation completed
+
+C2H2_14r94 computation started
+ atom           1 charge=   1.9592630863189697     
+ atom           2 charge=   2.3675417900085449     
+ atom           3 charge=  0.99915994080947712     
+ atom           4 charge=  0.99994016530399676     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r94.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r94 computation completed
+
+C2H2_14r7 computation started
+ atom           1 charge=   1.7712287902832031     
+ atom           2 charge=   2.5314307212829590     
+ atom           3 charge=  0.99948362709255889     
+ atom           4 charge=  0.99995909031349584     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r7.xyz                                                                                                                                                                                                     
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r7 computation completed
+
+C2H2_14r151 computation started
+ atom           1 charge=   1.6924653053283691     
+ atom           2 charge=   2.5614595413208008     
+ atom           3 charge=  0.99945168348494917     
+ atom           4 charge=  0.99993472690402996     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r151.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r151 computation completed
+
+C2H2_14r26 computation started
+ atom           1 charge=   2.2689003944396973     
+ atom           2 charge=   2.1085252761840820     
+ atom           3 charge=  0.99889179365709424     
+ atom           4 charge=  0.99993290792917833     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r26.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r26 computation completed
+
+C2H2_14r105 computation started
+ atom           1 charge=   1.7778778076171875     
+ atom           2 charge=   2.5630323886871338     
+ atom           3 charge=  0.99908463394967839     
+ atom           4 charge=  0.99993356010963907     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r105.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r105 computation completed
+
+C2H2_14r60 computation started
+ atom           1 charge=   2.3565795421600342     
+ atom           2 charge=   1.9360744953155518     
+ atom           3 charge=  0.99918697238899767     
+ atom           4 charge=  0.99997145432280377     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r60.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r60 computation completed
+
+C2H2_14r36 computation started
+ atom           1 charge=   2.1982048749923706     
+ atom           2 charge=   2.1524595022201538     
+ atom           3 charge=  0.99908726196736097     
+ atom           4 charge=  0.99992616505915066     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r36.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r36 computation completed
+
+C2H2_14r107 computation started
+ atom           1 charge=   1.8758301734924316     
+ atom           2 charge=   2.4584459066390991     
+ atom           3 charge=  0.99925751175032929     
+ atom           4 charge=  0.99992677869886393     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r107.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r107 computation completed
+
+C2H2_14r16 computation started
+ atom           1 charge=   1.6271350383758545     
+ atom           2 charge=   2.6037359237670898     
+ atom           3 charge=  0.99955486319959164     
+ atom           4 charge=  0.99993642082699807     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r16.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r16 computation completed
+
+C2H2_14r197 computation started
+ atom           1 charge=   2.6628551483154297     
+ atom           2 charge=   1.6923742294311523     
+ atom           3 charge=  0.99933079327456653     
+ atom           4 charge=  0.99989531707251444     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r197.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r197 computation completed
+
+C2H2_14r42 computation started
+ atom           1 charge=   1.8946576118469238     
+ atom           2 charge=   2.4460874795913696     
+ atom           3 charge=  0.99922375980531797     
+ atom           4 charge=  0.99990428554883692     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r42.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r42 computation completed
+
+C2H2_14r101 computation started
+ atom           1 charge=   2.3005232810974121     
+ atom           2 charge=   2.0085949897766113     
+ atom           3 charge=  0.99897059926297516     
+ atom           4 charge=  0.99995072122328565     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r101.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r101 computation completed
+
+C2H2_14r23 computation started
+ atom           1 charge=   1.7981593608856201     
+ atom           2 charge=   2.5359268188476562     
+ atom           3 charge=  0.99949994467897341     
+ atom           4 charge=  0.99993461785197724     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r23.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r23 computation completed
+
+C2H2_14r144 computation started
+ atom           1 charge=   1.9089748859405518     
+ atom           2 charge=   2.3836909532546997     
+ atom           3 charge=  0.99938784912228584     
+ atom           4 charge=  0.99994263213739032     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r144.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r144 computation completed
+
+C2H2_14r182 computation started
+ atom           1 charge=   2.4256073236465454     
+ atom           2 charge=   1.9025673866271973     
+ atom           3 charge=  0.99912121839588508     
+ atom           4 charge=  0.99991359830892179     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r182.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r182 computation completed
+
+C2H2_14r165 computation started
+ atom           1 charge=   1.7435216903686523     
+ atom           2 charge=   2.5105255842208862     
+ atom           3 charge=  0.99941574077820405     
+ atom           4 charge=  0.99991992958530318     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r165.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r165 computation completed
+
+C2H2_14r181 computation started
+ atom           1 charge=   2.3752021789550781     
+ atom           2 charge=   1.9361989498138428     
+ atom           3 charge=  0.99942834692774341     
+ atom           4 charge=  0.99996963885678269     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r181.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r181 computation completed
+
+C2H2_14r78 computation started
+ atom           1 charge=   1.8905572891235352     
+ atom           2 charge=   2.4281203746795654     
+ atom           3 charge=  0.99953029828611761     
+ atom           4 charge=  0.99987374109332450     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r78.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r78 computation completed
+
+C2H2_14r150 computation started
+ atom           1 charge=   1.9579505920410156     
+ atom           2 charge=   2.3667690753936768     
+ atom           3 charge=  0.99935094837564975     
+ atom           4 charge=  0.99993013088533189     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r150.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r150 computation completed
+
+C2H2_14r75 computation started
+ atom           1 charge=   2.2459968328475952     
+ atom           2 charge=   2.0263820886611938     
+ atom           3 charge=  0.99936570262070745     
+ atom           4 charge=  0.99993403137341375     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r75.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r75 computation completed
+
+C2H2_14r163 computation started
+ atom           1 charge=   2.1604050397872925     
+ atom           2 charge=   2.1562658548355103     
+ atom           3 charge=  0.99891205306630582     
+ atom           4 charge=  0.99992006123648025     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r163.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r163 computation completed
+
+C2H2_14r88 computation started
+ atom           1 charge=   2.1578104496002197     
+ atom           2 charge=   2.1713268756866455     
+ atom           3 charge=  0.99865548429079354     
+ atom           4 charge=  0.99991890913224779     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r88.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r88 computation completed
+
+C2H2_14r168 computation started
+ atom           1 charge=   2.1315163373947144     
+ atom           2 charge=   2.2234702110290527     
+ atom           3 charge=  0.99937732738908380     
+ atom           4 charge=  0.99995929706710740     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r168.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r168 computation completed
+
+C2H2_14r98 computation started
+ atom           1 charge=   2.3263131380081177     
+ atom           2 charge=   1.9094099998474121     
+ atom           3 charge=  0.99904364842223004     
+ atom           4 charge=  0.99964453544816934     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r98.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r98 computation completed
+
+C2H2_14r149 computation started
+ atom           1 charge=   2.3261777162551880     
+ atom           2 charge=   2.0251806974411011     
+ atom           3 charge=  0.99948606517864391     
+ atom           4 charge=  0.99990580038866028     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r149.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r149 computation completed
+
+C2H2_14r72 computation started
+ atom           1 charge=   1.9632918834686279     
+ atom           2 charge=   2.3039635419845581     
+ atom           3 charge=  0.99941560492152348     
+ atom           4 charge=  0.99995252573353355     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r72.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r72 computation completed
+
+C2H2_14r27 computation started
+ atom           1 charge=   2.1279489994049072     
+ atom           2 charge=   2.2405041456222534     
+ atom           3 charge=  0.99923001974821091     
+ atom           4 charge=  0.99992845986707835     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r27.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r27 computation completed
+
+C2H2_14r178 computation started
+ atom           1 charge=   2.6564974784851074     
+ atom           2 charge=   1.6660249233245850     
+ atom           3 charge=  0.99899741646368057     
+ atom           4 charge=  0.99992684602329973     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r178.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r178 computation completed
+
+C2H2_14r153 computation started
+ atom           1 charge=   1.7866251468658447     
+ atom           2 charge=   2.5542153120040894     
+ atom           3 charge=  0.99872510042041540     
+ atom           4 charge=  0.99992323487822432     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r153.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r153 computation completed
+
+C2H2_14r87 computation started
+ atom           1 charge=   1.7829883098602295     
+ atom           2 charge=   2.5352915525436401     
+ atom           3 charge=  0.99955665509332903     
+ atom           4 charge=  0.99992058805219131     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r87.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r87 computation completed
+
+C2H2_14r74 computation started
+ atom           1 charge=   2.0654422044754028     
+ atom           2 charge=   2.2815763950347900     
+ atom           3 charge=  0.99871783656999469     
+ atom           4 charge=  0.99988770011259476     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r74.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r74 computation completed
+
+C2H2_14r175 computation started
+ atom           1 charge=   2.1035118103027344     
+ atom           2 charge=   2.2054017782211304     
+ atom           3 charge=  0.99920454394305125     
+ atom           4 charge=  0.99996682175697060     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r175.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r175 computation completed
+
+C2H2_14r96 computation started
+ atom           1 charge=   2.1403833627700806     
+ atom           2 charge=   2.1720823049545288     
+ atom           3 charge=  0.99939008208457381     
+ atom           4 charge=  0.99996108285267837     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r96.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r96 computation completed
+
+C2H2_14r73 computation started
+ atom           1 charge=   2.1216769218444824     
+ atom           2 charge=   2.1899689435958862     
+ atom           3 charge=  0.99919895036146045     
+ atom           4 charge=  0.99989924074179726     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r73.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r73 computation completed
+
+C2H2_14r20 computation started
+ atom           1 charge=   1.8653643131256104     
+ atom           2 charge=   2.3337044715881348     
+ atom           3 charge=  0.99932912847725675     
+ atom           4 charge=  0.99991714504722040     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r20.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r20 computation completed
+
+C2H2_14r184 computation started
+ atom           1 charge=   2.0402655601501465     
+ atom           2 charge=   2.1625481843948364     
+ atom           3 charge=  0.99973815536941402     
+ atom           4 charge=  0.99973644033889286     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r184.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r184 computation completed
+
+C2H2_14r154 computation started
+ atom           1 charge=   2.0053739547729492     
+ atom           2 charge=   2.3453958034515381     
+ atom           3 charge=  0.99905204633250833     
+ atom           4 charge=  0.99994226836497546     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r154.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r154 computation completed
+
+C2H2_14r31 computation started
+ atom           1 charge=   1.8209228515625000     
+ atom           2 charge=   2.5524654388427734     
+ atom           3 charge=  0.99634455656632781     
+ atom           4 charge=  0.99996740628557745     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r31.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r31 computation completed
+
+C2H2_14r126 computation started
+ atom           1 charge=   2.3931945562362671     
+ atom           2 charge=   1.9430813789367676     
+ atom           3 charge=  0.99916502775158733     
+ atom           4 charge=  0.99993400282255607     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r126.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r126 computation completed
+
+C2H2_14r45 computation started
+ atom           1 charge=   2.4759366512298584     
+ atom           2 charge=   1.9340367317199707     
+ atom           3 charge=  0.99820390879176557     
+ atom           4 charge=  0.99996373672547634     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r45.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r45 computation completed
+
+C2H2_14r53 computation started
+ atom           1 charge=   1.7876596450805664     
+ atom           2 charge=   2.5499292612075806     
+ atom           3 charge=  0.99932357616489753     
+ atom           4 charge=  0.99992356410075445     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r53.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r53 computation completed
+
+C2H2_14r186 computation started
+ atom           1 charge=   2.0928890705108643     
+ atom           2 charge=   2.2077028751373291     
+ atom           3 charge=  0.99959822458913550     
+ atom           4 charge=  0.99994861950108316     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r186.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r186 computation completed
+
+C2H2_14r13 computation started
+ atom           1 charge=   2.3574929237365723     
+ atom           2 charge=   1.8849713802337646     
+ atom           3 charge=  0.99952023054356687     
+ atom           4 charge=  0.99992003293300513     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r13.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r13 computation completed
+
+C2H2_14r102 computation started
+ atom           1 charge=   1.6843736171722412     
+ atom           2 charge=   2.6669600009918213     
+ atom           3 charge=  0.99928954581264406     
+ atom           4 charge=  0.99993188957159873     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r102.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r102 computation completed
+
+C2H2_14r12 computation started
+ atom           1 charge=   2.0043158531188965     
+ atom           2 charge=   2.3760347366333008     
+ atom           3 charge=  0.99909670639317483     
+ atom           4 charge=  0.99996423353877617     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r12.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r12 computation completed
+
+C2H2_14r28 computation started
+ atom           1 charge=   1.9194550514221191     
+ atom           2 charge=   2.4023890495300293     
+ atom           3 charge=  0.99959459051024169     
+ atom           4 charge=  0.99995773518458009     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r28.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r28 computation completed
+
+C2H2_14r159 computation started
+ atom           1 charge=   2.6649523973464966     
+ atom           2 charge=   1.6679251194000244     
+ atom           3 charge=  0.99905211868463084     
+ atom           4 charge=  0.99987382677500136     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r159.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r159 computation completed
+
+C2H2_14r140 computation started
+ atom           1 charge=   1.7473034858703613     
+ atom           2 charge=   2.4447377920150757     
+ atom           3 charge=  0.99944101576693356     
+ atom           4 charge=  0.99989809725957457     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r140.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r140 computation completed
+
+C2H2_14r196 computation started
+ atom           1 charge=   1.9600710868835449     
+ atom           2 charge=   2.3551568984985352     
+ atom           3 charge=  0.99916035716887563     
+ atom           4 charge=  0.99990836791403126     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r196.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r196 computation completed
+
+C2H2_14r25 computation started
+ atom           1 charge=   2.0421020984649658     
+ atom           2 charge=   2.1736965179443359     
+ atom           3 charge=  0.99937907466664910     
+ atom           4 charge=  0.99992472687154077     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r25.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r25 computation completed
+
+C2H2_14r9 computation started
+ atom           1 charge=   2.2368739843368530     
+ atom           2 charge=   2.0866500139236450     
+ atom           3 charge=  0.99903594638453797     
+ atom           4 charge=  0.99992909213324310     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r9.xyz                                                                                                                                                                                                     
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r9 computation completed
+
+C2H2_14r76 computation started
+ atom           1 charge=   1.7294170856475830     
+ atom           2 charge=   2.6021783351898193     
+ atom           3 charge=  0.99942290358012542     
+ atom           4 charge=  0.99993582621391397     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r76.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r76 computation completed
+
+C2H2_14r148 computation started
+ atom           1 charge=   2.2269340753555298     
+ atom           2 charge=   2.1521401405334473     
+ atom           3 charge=  0.99960612095310353     
+ atom           4 charge=  0.99994945634171017     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r148.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r148 computation completed
+
+C2H2_14r30 computation started
+ atom           1 charge=   1.8295927047729492     
+ atom           2 charge=   2.4680976867675781     
+ atom           3 charge=  0.99924872361589223     
+ atom           4 charge=  0.99994946309743682     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r30.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r30 computation completed
+
+C2H2_14r124 computation started
+ atom           1 charge=   2.2625335454940796     
+ atom           2 charge=   1.9451043605804443     
+ atom           3 charge=  0.99940962862456217     
+ atom           4 charge=  0.99987047797185369     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r124.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r124 computation completed
+
+C2H2_14r179 computation started
+ atom           1 charge=   2.4090418815612793     
+ atom           2 charge=   1.9490647315979004     
+ atom           3 charge=  0.99931742576882243     
+ atom           4 charge=  0.99993292157887481     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r179.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r179 computation completed
+
+C2H2_14r156 computation started
+ atom           1 charge=   2.1064664125442505     
+ atom           2 charge=   2.2128547430038452     
+ atom           3 charge=  0.99851715972181410     
+ atom           4 charge=  0.99989726119383704     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r156.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r156 computation completed
+
+C2H2_14r187 computation started
+ atom           1 charge=   2.1170349121093750     
+ atom           2 charge=   2.2214472293853760     
+ atom           3 charge=  0.99931330862455070     
+ atom           4 charge=  0.99994014461481129     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r187.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r187 computation completed
+
+C2H2_14r135 computation started
+ atom           1 charge=   1.7559220790863037     
+ atom           2 charge=   2.5831664800643921     
+ atom           3 charge=  0.99948590632993728     
+ atom           4 charge=  0.99990589952358278     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r135.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r135 computation completed
+
+C2H2_14r62 computation started
+ atom           1 charge=   2.1819683313369751     
+ atom           2 charge=   2.2325516939163208     
+ atom           3 charge=  0.99913393956376240     
+ atom           4 charge=  0.99996156611450715     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r62.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r62 computation completed
+
+C2H2_14r195 computation started
+ atom           1 charge=   2.3410292863845825     
+ atom           2 charge=   2.0119612216949463     
+ atom           3 charge=  0.99950237490702420     
+ atom           4 charge=  0.99989255167020019     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r195.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r195 computation completed
+
+C2H2_14r121 computation started
+ atom           1 charge=   1.8279817104339600     
+ atom           2 charge=   2.5784231424331665     
+ atom           3 charge=  0.99890295928344131     
+ atom           4 charge=  0.99997377781801333     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r121.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r121 computation completed
+
+C2H2_14r115 computation started
+ atom           1 charge=   2.3809996843338013     
+ atom           2 charge=   1.9439082145690918     
+ atom           3 charge=  0.99864440271630883     
+ atom           4 charge=  0.99992580965772504     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r115.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r115 computation completed
+
+C2H2_14r139 computation started
+ atom           1 charge=   1.7935156822204590     
+ atom           2 charge=   2.5516887903213501     
+ atom           3 charge=  0.99849143519531935     
+ atom           4 charge=  0.99990547422930831     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r139.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r139 computation completed
+
+C2H2_14r32 computation started
+ atom           1 charge=   1.7374656200408936     
+ atom           2 charge=   2.6127490997314453     
+ atom           3 charge=  0.99939701665425673     
+ atom           4 charge=  0.99994147905090358     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r32.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r32 computation completed
+
+C2H2_14r48 computation started
+ atom           1 charge=   2.0985416173934937     
+ atom           2 charge=   2.2514818906784058     
+ atom           3 charge=  0.99881969031412154     
+ atom           4 charge=  0.99992723701871000     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r48.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r48 computation completed
+
+C2H2_14r172 computation started
+ atom           1 charge=   1.9858672618865967     
+ atom           2 charge=   2.3774045705795288     
+ atom           3 charge=  0.99913572939112782     
+ atom           4 charge=  0.99993703842483228     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r172.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r172 computation completed
+
+C2H2_14r85 computation started
+ atom           1 charge=   2.3706362247467041     
+ atom           2 charge=   1.9943029880523682     
+ atom           3 charge=  0.99926933890674263     
+ atom           4 charge=  0.99994997897374560     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r85.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r85 computation completed
+
+C2H2_14r133 computation started
+ atom           1 charge=   2.0847383737564087     
+ atom           2 charge=   2.3226794004440308     
+ atom           3 charge=  0.99812141549773514     
+ atom           4 charge=  0.99994754015278886     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r133.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r133 computation completed
+
+C2H2_14r104 computation started
+ atom           1 charge=   2.1175110340118408     
+ atom           2 charge=   2.2316876649856567     
+ atom           3 charge=  0.99923353665508330     
+ atom           4 charge=  0.99993898451430141     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r104.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r104 computation completed
+
+C2H2_14r127 computation started
+ atom           1 charge=   1.9739775657653809     
+ atom           2 charge=   2.2406393289566040     
+ atom           3 charge=  0.99925943237030879     
+ atom           4 charge=  0.99984238907927647     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r127.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r127 computation completed
+
+C2H2_14r180 computation started
+ atom           1 charge=   2.2557294368743896     
+ atom           2 charge=   2.1051081418991089     
+ atom           3 charge=  0.99931441305670887     
+ atom           4 charge=  0.99993526114849374     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r180.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r180 computation completed
+
+C2H2_14r130 computation started
+ atom           1 charge=   2.3133467435836792     
+ atom           2 charge=   2.0048856735229492     
+ atom           3 charge=  0.99914748576702550     
+ atom           4 charge=  0.99992314953124151     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r130.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r130 computation completed
+
+C2H2_14r29 computation started
+ atom           1 charge=   1.7315137386322021     
+ atom           2 charge=   2.5751245021820068     
+ atom           3 charge=  0.99927620968082920     
+ atom           4 charge=  0.99997099440588499     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r29.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r29 computation completed
+
+C2H2_14r194 computation started
+ atom           1 charge=   2.1179420948028564     
+ atom           2 charge=   2.2097821235656738     
+ atom           3 charge=  0.99941473250510171     
+ atom           4 charge=  0.99993619706947356     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r194.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r194 computation completed
+
+C2H2_14r97 computation started
+ atom           1 charge=   2.1310865879058838     
+ atom           2 charge=   2.2213211059570312     
+ atom           3 charge=  0.99902712332550436     
+ atom           4 charge=  0.99994913765112869     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r97.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r97 computation completed
+
+C2H2_14r190 computation started
+ atom           1 charge=   1.9560158252716064     
+ atom           2 charge=   2.3965768814086914     
+ atom           3 charge=  0.99933091562706977     
+ atom           4 charge=  0.99995625236624619     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r190.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r190 computation completed
+
+C2H2_14r66 computation started
+ atom           1 charge=   2.0508154630661011     
+ atom           2 charge=   2.2432295083999634     
+ atom           3 charge=  0.99922298273304477     
+ atom           4 charge=  0.99993628889933461     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r66.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r66 computation completed
+
+C2H2_14r152 computation started
+ atom           1 charge=   1.7606387138366699     
+ atom           2 charge=   2.5101128816604614     
+ atom           3 charge=  0.99894042138475925     
+ atom           4 charge=  0.99985677481163293     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r152.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r152 computation completed
+
+C2H2_14r188 computation started
+ atom           1 charge=   2.3547477722167969     
+ atom           2 charge=   1.9504561424255371     
+ atom           3 charge=  0.99920043052406982     
+ atom           4 charge=  0.99993874676147243     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r188.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r188 computation completed
+
+C2H2_14r117 computation started
+ atom           1 charge=   2.2744989395141602     
+ atom           2 charge=   2.0093908309936523     
+ atom           3 charge=  0.99930158432107419     
+ atom           4 charge=  0.99993265727971448     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r117.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r117 computation completed
+
+C2H2_14r198 computation started
+ atom           1 charge=   1.9535515308380127     
+ atom           2 charge=   2.4199635982513428     
+ atom           3 charge=  0.99907655478455126     
+ atom           4 charge=  0.99994109869658132     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r198.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r198 computation completed
+
+C2H2_14r200 computation started
+ atom           1 charge=   2.8246470689773560     
+ atom           2 charge=   1.5493886470794678     
+ atom           3 charge=  0.99898466374725103     
+ atom           4 charge=  0.99992232313525164     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r200.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r200 computation completed
+
+C2H2_14r136 computation started
+ atom           1 charge=   1.7743401527404785     
+ atom           2 charge=   2.5130112171173096     
+ atom           3 charge=  0.99884125764947385     
+ atom           4 charge=  0.99991713999042986     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r136.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r136 computation completed
+
+C2H2_14r67 computation started
+ atom           1 charge=   2.3688627481460571     
+ atom           2 charge=   1.8667204380035400     
+ atom           3 charge=  0.99944618227891624     
+ atom           4 charge=  0.99990401451941580     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r67.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r67 computation completed
+
+C2H2_14r41 computation started
+ atom           1 charge=   1.8724632263183594     
+ atom           2 charge=   2.5088182687759399     
+ atom           3 charge=  0.99905753805069253     
+ atom           4 charge=  0.99991605262039229     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r41.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r41 computation completed
+
+C2H2_14r167 computation started
+ atom           1 charge=   2.0663279294967651     
+ atom           2 charge=   2.2495596408843994     
+ atom           3 charge=  0.99924577464116737     
+ atom           4 charge=  0.99994645646074787     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r167.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r167 computation completed
+
+C2H2_14r142 computation started
+ atom           1 charge=   2.4392758607864380     
+ atom           2 charge=   1.8964688777923584     
+ atom           3 charge=  0.99929340271046385     
+ atom           4 charge=  0.99993279383488698     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r142.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r142 computation completed
+
+C2H2_14r8 computation started
+ atom           1 charge=   2.1554331779479980     
+ atom           2 charge=   2.1134241819381714     
+ atom           3 charge=  0.99919629056239501     
+ atom           4 charge=  0.99996644770726562     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r8.xyz                                                                                                                                                                                                     
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r8 computation completed
+
+C2H2_14r24 computation started
+ atom           1 charge=   2.1245025396347046     
+ atom           2 charge=   2.1663751602172852     
+ atom           3 charge=  0.99951870448421687     
+ atom           4 charge=  0.99978170107351616     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r24.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r24 computation completed
+
+C2H2_14r122 computation started
+ atom           1 charge=   2.1150609254837036     
+ atom           2 charge=   2.2433123588562012     
+ atom           3 charge=  0.99930291995406151     
+ atom           4 charge=  0.99994557741592871     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r122.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r122 computation completed
+
+C2H2_14r134 computation started
+ atom           1 charge=   1.9994187355041504     
+ atom           2 charge=   2.2807424068450928     
+ atom           3 charge=  0.99931928137084469     
+ atom           4 charge=  0.99994975323352264     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r134.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r134 computation completed
+
+C2H2_14r65 computation started
+ atom           1 charge=   2.4415715932846069     
+ atom           2 charge=   1.9105119705200195     
+ atom           3 charge=  0.99914555338909850     
+ atom           4 charge=  0.99992007888067747     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r65.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r65 computation completed
+
+C2H2_14r15 computation started
+ atom           1 charge=   2.0907111167907715     
+ atom           2 charge=   2.2508794069290161     
+ atom           3 charge=  0.99908638396300375     
+ atom           4 charge=  0.99990039450494805     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r15.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r15 computation completed
+
+C2H2_14r189 computation started
+ atom           1 charge=   2.0287845134735107     
+ atom           2 charge=   2.2949966192245483     
+ atom           3 charge=  0.99942527787061408     
+ atom           4 charge=  0.99993959438506863     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r189.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r189 computation completed
+
+C2H2_14r18 computation started
+ atom           1 charge=   1.8918011188507080     
+ atom           2 charge=   2.4119818210601807     
+ atom           3 charge=  0.99900084431283176     
+ atom           4 charge=  0.99989870288118254     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r18.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r18 computation completed
+
+C2H2_14r1 computation started
+ atom           1 charge=   2.0970424413681030     
+ atom           2 charge=   2.2468645572662354     
+ atom           3 charge=  0.99921438394812867     
+ atom           4 charge=  0.99991986113309395     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r1.xyz                                                                                                                                                                                                     
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r1 computation completed
+
+C2H2_14r47 computation started
+ atom           1 charge=   2.0322275161743164     
+ atom           2 charge=   2.3684726953506470     
+ atom           3 charge=  0.99873381247743964     
+ atom           4 charge=  0.99993617254222045     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r47.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r47 computation completed
+
+C2H2_14r143 computation started
+ atom           1 charge=   1.9118733406066895     
+ atom           2 charge=   2.4141105413436890     
+ atom           3 charge=  0.99924241029657423     
+ atom           4 charge=  0.99995999785460299     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r143.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r143 computation completed
+
+C2H2_14r99 computation started
+ atom           1 charge=   1.8052284717559814     
+ atom           2 charge=   2.5514396429061890     
+ atom           3 charge=  0.99622610770165920     
+ atom           4 charge=  0.99993446640291950     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r99.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r99 computation completed
+
+C2H2_14r34 computation started
+ atom           1 charge=   2.1092531681060791     
+ atom           2 charge=   2.2228357791900635     
+ atom           3 charge=  0.99854290625080466     
+ atom           4 charge=  0.99990866450389149     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r34.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r34 computation completed
+
+C2H2_14r61 computation started
+ atom           1 charge=   1.8361732959747314     
+ atom           2 charge=   2.4520753622055054     
+ atom           3 charge=  0.99917937273858115     
+ atom           4 charge=  0.99990249233087525     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r61.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r61 computation completed
+
+C2H2_14r14 computation started
+ atom           1 charge=   1.8049230575561523     
+ atom           2 charge=   2.4629293680191040     
+ atom           3 charge=  0.99951807095203549     
+ atom           4 charge=  0.99996687782913796     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r14.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r14 computation completed
+
+C2H2_14r83 computation started
+ atom           1 charge=   2.3653215169906616     
+ atom           2 charge=   1.8502910137176514     
+ atom           3 charge=  0.99972577675362118     
+ atom           4 charge=  0.99994236476413789     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r83.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r83 computation completed
+
+C2H2_14r166 computation started
+ atom           1 charge=   2.3423155546188354     
+ atom           2 charge=   2.0389835834503174     
+ atom           3 charge=  0.99828305537812412     
+ atom           4 charge=  0.99996584094697027     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r166.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r166 computation completed
+
+C2H2_14r183 computation started
+ atom           1 charge=   2.2549260854721069     
+ atom           2 charge=   2.0572123527526855     
+ atom           3 charge=  0.99906273966189474     
+ atom           4 charge=  0.99991739583492745     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r183.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r183 computation completed
+
+C2H2_14r71 computation started
+ atom           1 charge=   2.3716439008712769     
+ atom           2 charge=   1.9291121959686279     
+ atom           3 charge=  0.99874339706730098     
+ atom           4 charge=  0.99993297242326662     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r71.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r71 computation completed
+
+C2H2_14r199 computation started
+ atom           1 charge=   2.1095359325408936     
+ atom           2 charge=   2.1850603818893433     
+ atom           3 charge=  0.99889995239209384     
+ atom           4 charge=  0.99989819146867376     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r199.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r199 computation completed
+
+C2H2_14r37 computation started
+ atom           1 charge=   2.1983952522277832     
+ atom           2 charge=   2.1181212663650513     
+ atom           3 charge=  0.99938888644101098     
+ atom           4 charge=  0.99995288980790065     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r37.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r37 computation completed
+
+C2H2_14r173 computation started
+ atom           1 charge=   1.6954319477081299     
+ atom           2 charge=   2.6423444747924805     
+ atom           3 charge=  0.99913449829909950     
+ atom           4 charge=  0.99992583705898141     
+ Successfully finished trajectory file: output/14102024_180953/trajectory/trajectory_C2H2_14r173.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/14102024_180953/atom_info.csv                                                                                                                                                                                                                           
+C2H2_14r173 computation completed
+

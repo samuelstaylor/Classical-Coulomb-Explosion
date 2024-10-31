@@ -1,10 +1,9 @@
 run_type=1
 
-
 # run_type=1 | BOLTZMANN VELOCITY DISTRIBUTION FROM GROUNDSTATE
-molecule_input_path=/mnt/c/Users/sammy/Research/Classical-Coulomb-Explosion/data/c4h10_classical/28/
+molecule_input_path=/mnt/c/Users/sammy/Research/Classical-Coulomb-Explosion/data/c2h2_classical/
 seeds_input_path=/mnt/c/Users/sammy/Research/Classical-Coulomb-Explosion/input/c2h2/
-N_simulations=200
+N_simulations=1
 temperature_ions = 300.0 
 
 # run_type=2 | CONTINUE FROM TDDFT WITHOUT QUANTUM EFFECTS
@@ -18,13 +17,17 @@ velocity_input_path=/mnt/c/Users/sammy/Research/Classical-Coulomb-Explosion/inpu
 time_step_start=120000 #(120 fs) what the first iteration should be set at
 
 # UNIVERSAL CONFIGURATION
-N_time_steps = 120000
+N_time_steps = 80000
 time_step = .001
 use_average_atomic_mass = True
 include_electron_mass = False
 output_trajectory = True
 trajectory_output_frequency = 500
 output_atom_info = True
+
+# pulse.dat file path. Make sure it is the same time step as above
+include_pulse = True
+pulse_dat_path=/mnt/c/Users/sammy/Research/Classical-Coulomb-Explosion/
 
 # finalize the atom velocity and info when the molecules reach the CAP within the tolerance
 finalize_info_at_cap=True

@@ -178,6 +178,9 @@ trajectory_file_list = [
 
 modes = ['', 's', '']
 
+trajectory_file_list = ['output\\31102024_143317\\trajectory\\trajectory_r1.xyz']
+modes = ['']
+
 # Number of atoms of each type
 num_oxygen_atoms = 0
 num_nitrogen_atoms = 0

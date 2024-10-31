@@ -26,6 +26,8 @@ MODULE MOD_GLOBAL
     logical :: include_electron_mass=.FALSE. ! Add the mass of the electrons to the mass for the calculation
     logical :: output_trajectory=.TRUE.
     logical :: output_atom_info=.TRUE.
+    logical :: include_pulse=.FALSE.
+    character(len=256) :: pulse_dat_path = "./"
     logical :: finalize_info_at_cap=.FALSE.
     real*8 :: cap_tolerance=1.5
     real*8 :: cap_left1=0
@@ -58,7 +60,7 @@ MODULE MOD_GLOBAL
     character(len=256) :: trajectory_filename_full = "trajectory.xyz"
     character(len=256) :: fragment_filename_full = "fragment.inp"
     character(len=256) :: velocity_filename_full = "velocity.inp"
-
+    character(len=256) :: pulse_dat_filename_full = "pulse.dat"
 
     ! file names with directories to be set
     character*255 :: log_output_filename=bare_log_output_filename
@@ -86,6 +88,8 @@ MODULE MOD_GLOBAL
 
     real*8,dimension(:),allocatable :: seed_array
     character(len=256),dimension(:),allocatable :: full_runs_array
+    real*8,dimension(:),allocatable :: pulse_array
+
     
 
     
