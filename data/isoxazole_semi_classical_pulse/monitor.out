@@ -1,0 +1,375 @@
+ Run Started and output directory successfully created. Initializing...
+ Output folder created: output/01112024_133930
+ Output files created: output/01112024_133930
+ all variable file created: 'output/01112024_133930/all_variable_file.txt'
+ Successfully read and initialized data from: control.inp
+ All variables allocated and set, see: all_variable_file.txt                                                                                                                                                                                                                                          
+ Successfully read and initialized data from: /scratch/group/p.phy240167.000/coulomb_explosion/isoxazole/isoxazole_14_runs/moleculeFormations.csv                                                                                                                                                             
+ Successfully read and initialized data from: /scratch/group/p.phy240167.000/coulomb_explosion/isoxazole/isoxazole_14_runs/isoxazole_14r10/trajectory.xyz                                                                                                                                                     
+ Successfully read and initialized data from: /scratch/group/p.phy240167.000/coulomb_explosion/isoxazole/isoxazole_14_runs/Classical-Coulomb-Explosion/pulse.dat                                                                                                                                              
+ All atomic masses successfully computed:
+ Atom atomic number and mass (eV_fs^2/A^2):
+           8   1658.2830902573344     
+           7   1450.9977039751675     
+           6   1243.7123176930008     
+           6   1243.7123176930008     
+           6   1243.7123176930008     
+           1   103.64269314108340     
+           1   103.64269314108340     
+           1   103.64269314108340     
+ Atom info file created: 'output/01112024_133930/atom_info.csv'
+ Trajectory output folder created: 'output/01112024_133930/trajectory'
+ 
+ Initialization complete. Beginning computation...
+ 
+isoxazole_14r10 computation started
+ atom           1 charge=   1.0090517997741699     
+ atom           2 charge=   1.0339543819427490     
+ atom           3 charge=   1.4341018199920654     
+ atom           4 charge=   1.4189028739929199     
+ atom           5 charge=   1.5304553508758545     
+ atom           6 charge=  0.99987810433958657     
+ atom           7 charge=  0.99971125819138251     
+ atom           8 charge=  0.99979707926104311     
+ Successfully finished trajectory file: output/01112024_133930/trajectory/trajectory_isoxazole_14r10.xyz                                                                                                                                                                                               
+ Successfully updated atom info file: output/01112024_133930/atom_info.csv                                                                                                                                                                                                                           
+isoxazole_14r10 computation completed
+
+isoxazole_14r11 computation started
+ atom           1 charge=   1.2184467315673828     
+ atom           2 charge=   1.0643413066864014     
+ atom           3 charge=   1.4012753963470459     
+ atom           4 charge=   1.5204360485076904     
+ atom           5 charge=   1.3948929309844971     
+ atom           6 charge=  0.99991096263693180     
+ atom           7 charge=  0.99978682177606970     
+ atom           8 charge=  0.99987505383614916     
+ Successfully finished trajectory file: output/01112024_133930/trajectory/trajectory_isoxazole_14r11.xyz                                                                                                                                                                                               
+ Successfully updated atom info file: output/01112024_133930/atom_info.csv                                                                                                                                                                                                                           
+isoxazole_14r11 computation completed
+
+isoxazole_14r12 computation started
+ atom           1 charge=   1.0284166336059570     
+ atom           2 charge=   1.1638906002044678     
+ atom           3 charge=   1.2906241416931152     
+ atom           4 charge=   1.6765217781066895     
+ atom           5 charge=   1.4708790779113770     
+ atom           6 charge=  0.99979136804176960     
+ atom           7 charge=  0.99959877596120350     
+ atom           8 charge=  0.99986306218488608     
+ Successfully finished trajectory file: output/01112024_133930/trajectory/trajectory_isoxazole_14r12.xyz                                                                                                                                                                                               
+ Successfully updated atom info file: output/01112024_133930/atom_info.csv                                                                                                                                                                                                                           
+isoxazole_14r12 computation completed
+
+isoxazole_14r13 computation started
+ atom           1 charge=   1.1345696449279785     
+ atom           2 charge=   1.1118574142456055     
+ atom           3 charge=   1.4258770942687988     
+ atom           4 charge=   1.5551064014434814     
+ atom           5 charge=   1.4341416358947754     
+ atom           6 charge=  0.99989432790607680     
+ atom           7 charge=  0.99964835471473634     
+ atom           8 charge=  0.99983251535741147     
+ Successfully finished trajectory file: output/01112024_133930/trajectory/trajectory_isoxazole_14r13.xyz                                                                                                                                                                                               
+ Successfully updated atom info file: output/01112024_133930/atom_info.csv                                                                                                                                                                                                                           
+isoxazole_14r13 computation completed
+
+isoxazole_14r14 computation started
+ atom           1 charge=   1.1755061149597168     
+ atom           2 charge=   1.0296380519866943     
+ atom           3 charge=   1.2155799865722656     
+ atom           4 charge=   1.4544537067413330     
+ atom           5 charge=   1.5665886402130127     
+ atom           6 charge=  0.99991712319751969     
+ atom           7 charge=  0.99979543017980177     
+ atom           8 charge=  0.99977561271225568     
+ Successfully finished trajectory file: output/01112024_133930/trajectory/trajectory_isoxazole_14r14.xyz                                                                                                                                                                                               
+ Successfully updated atom info file: output/01112024_133930/atom_info.csv                                                                                                                                                                                                                           
+isoxazole_14r14 computation completed
+
+isoxazole_14r15 computation started
+ atom           1 charge=   1.1069536209106445     
+ atom           2 charge=  0.87151145935058594     
+ atom           3 charge=   1.3277602195739746     
+ atom           4 charge=   1.7202441692352295     
+ atom           5 charge=   1.5369622707366943     
+ atom           6 charge=  0.99989877375628566     
+ atom           7 charge=  0.99977741389011499     
+ atom           8 charge=  0.99981542458408512     
+ Successfully finished trajectory file: output/01112024_133930/trajectory/trajectory_isoxazole_14r15.xyz                                                                                                                                                                                               
+ Successfully updated atom info file: output/01112024_133930/atom_info.csv                                                                                                                                                                                                                           
+isoxazole_14r15 computation completed
+
+isoxazole_14r16 computation started
+ atom           1 charge=  0.62968015670776367     
+ atom           2 charge=   1.1882045269012451     
+ atom           3 charge=   1.4908039569854736     
+ atom           4 charge=   1.5449419021606445     
+ atom           5 charge=   1.5536777973175049     
+ atom           6 charge=  0.99986328993691131     
+ atom           7 charge=  0.99967339666909538     
+ atom           8 charge=  0.99981949702487327     
+ Successfully finished trajectory file: output/01112024_133930/trajectory/trajectory_isoxazole_14r16.xyz                                                                                                                                                                                               
+ Successfully updated atom info file: output/01112024_133930/atom_info.csv                                                                                                                                                                                                                           
+isoxazole_14r16 computation completed
+
+isoxazole_14r17 computation started
+ atom           1 charge=   1.1076169013977051     
+ atom           2 charge=   1.0938422679901123     
+ atom           3 charge=   1.3273844718933105     
+ atom           4 charge=   1.5691094398498535     
+ atom           5 charge=   1.6355702877044678     
+ atom           6 charge=  0.99990622085897485     
+ atom           7 charge=  0.99982704893045593     
+ atom           8 charge=  0.99991021035384620     
+ Successfully finished trajectory file: output/01112024_133930/trajectory/trajectory_isoxazole_14r17.xyz                                                                                                                                                                                               
+ Successfully updated atom info file: output/01112024_133930/atom_info.csv                                                                                                                                                                                                                           
+isoxazole_14r17 computation completed
+
+isoxazole_14r18 computation started
+ atom           1 charge=   1.1707606315612793     
+ atom           2 charge=   1.0108473300933838     
+ atom           3 charge=   1.4509620666503906     
+ atom           4 charge=   1.4663832187652588     
+ atom           5 charge=   1.6121504306793213     
+ atom           6 charge=  0.99981235651648603     
+ atom           7 charge=  0.99974552248022519     
+ atom           8 charge=  0.99988579029013636     
+ Successfully finished trajectory file: output/01112024_133930/trajectory/trajectory_isoxazole_14r18.xyz                                                                                                                                                                                               
+ Successfully updated atom info file: output/01112024_133930/atom_info.csv                                                                                                                                                                                                                           
+isoxazole_14r18 computation completed
+
+isoxazole_14r19 computation started
+ atom           1 charge=   1.2638783454895020     
+ atom           2 charge=   1.2279849052429199     
+ atom           3 charge=   1.3497822284698486     
+ atom           4 charge=   1.6040163040161133     
+ atom           5 charge=   1.3506491184234619     
+ atom           6 charge=  0.99982989131240174     
+ atom           7 charge=  0.99937864992534742     
+ atom           8 charge=  0.99973260564729571     
+ Successfully finished trajectory file: output/01112024_133930/trajectory/trajectory_isoxazole_14r19.xyz                                                                                                                                                                                               
+ Successfully updated atom info file: output/01112024_133930/atom_info.csv                                                                                                                                                                                                                           
+isoxazole_14r19 computation completed
+
+isoxazole_14r20 computation started
+ atom           1 charge=   1.0887341499328613     
+ atom           2 charge=   1.1936986446380615     
+ atom           3 charge=   1.3918790817260742     
+ atom           4 charge=   1.5215845108032227     
+ atom           5 charge=   1.4071567058563232     
+ atom           6 charge=  0.99987524126481730     
+ atom           7 charge=  0.99973008866072632     
+ atom           8 charge=  0.99981390134780668     
+ Successfully finished trajectory file: output/01112024_133930/trajectory/trajectory_isoxazole_14r20.xyz                                                                                                                                                                                               
+ Successfully updated atom info file: output/01112024_133930/atom_info.csv                                                                                                                                                                                                                           
+isoxazole_14r20 computation completed
+
+isoxazole_14r21 computation started
+ atom           1 charge=   1.1849703788757324     
+ atom           2 charge=   1.1465582847595215     
+ atom           3 charge=   1.3555724620819092     
+ atom           4 charge=   1.3809041976928711     
+ atom           5 charge=   1.5390362739562988     
+ atom           6 charge=  0.99987527755729388     
+ atom           7 charge=  0.99964652280323207     
+ atom           8 charge=  0.99991568308178103     
+ Successfully finished trajectory file: output/01112024_133930/trajectory/trajectory_isoxazole_14r21.xyz                                                                                                                                                                                               
+ Successfully updated atom info file: output/01112024_133930/atom_info.csv                                                                                                                                                                                                                           
+isoxazole_14r21 computation completed
+
+isoxazole_14r22 computation started
+ atom           1 charge=   1.3892669677734375     
+ atom           2 charge=  0.97672224044799805     
+ atom           3 charge=   1.3623137474060059     
+ atom           4 charge=   1.5847687721252441     
+ atom           5 charge=   1.5791978836059570     
+ atom           6 charge=  0.99987626855727285     
+ atom           7 charge=  0.99956184840993956     
+ atom           8 charge=  0.99982630171871278     
+ Successfully finished trajectory file: output/01112024_133930/trajectory/trajectory_isoxazole_14r22.xyz                                                                                                                                                                                               
+ Successfully updated atom info file: output/01112024_133930/atom_info.csv                                                                                                                                                                                                                           
+isoxazole_14r22 computation completed
+
+isoxazole_14r23 computation started
+ atom           1 charge=   1.1442465782165527     
+ atom           2 charge=   1.2324845790863037     
+ atom           3 charge=   1.3556404113769531     
+ atom           4 charge=   1.5763587951660156     
+ atom           5 charge=   1.4067492485046387     
+ atom           6 charge=  0.99988218044018140     
+ atom           7 charge=  0.99986670083308127     
+ atom           8 charge=  0.99990130343212513     
+ Successfully finished trajectory file: output/01112024_133930/trajectory/trajectory_isoxazole_14r23.xyz                                                                                                                                                                                               
+ Successfully updated atom info file: output/01112024_133930/atom_info.csv                                                                                                                                                                                                                           
+isoxazole_14r23 computation completed
+
+isoxazole_14r24 computation started
+ atom           1 charge=   1.1227746009826660     
+ atom           2 charge=  0.92704677581787109     
+ atom           3 charge=   1.3915467262268066     
+ atom           4 charge=   1.4724469184875488     
+ atom           5 charge=   1.5701932907104492     
+ atom           6 charge=  0.99980939063243568     
+ atom           7 charge=  0.99960859076236375     
+ atom           8 charge=  0.99974353719153441     
+ Successfully finished trajectory file: output/01112024_133930/trajectory/trajectory_isoxazole_14r24.xyz                                                                                                                                                                                               
+ Successfully updated atom info file: output/01112024_133930/atom_info.csv                                                                                                                                                                                                                           
+isoxazole_14r24 computation completed
+
+isoxazole_14r25 computation started
+ atom           1 charge=  0.82270908355712891     
+ atom           2 charge=   1.0793750286102295     
+ atom           3 charge=   1.3768806457519531     
+ atom           4 charge=   1.4707317352294922     
+ atom           5 charge=   1.6474390029907227     
+ atom           6 charge=  0.99981714162277058     
+ atom           7 charge=  0.99976270129263867     
+ atom           8 charge=  0.99987616256112233     
+ Successfully finished trajectory file: output/01112024_133930/trajectory/trajectory_isoxazole_14r25.xyz                                                                                                                                                                                               
+ Successfully updated atom info file: output/01112024_133930/atom_info.csv                                                                                                                                                                                                                           
+isoxazole_14r25 computation completed
+
+isoxazole_14r26 computation started
+ atom           1 charge=   1.1004686355590820     
+ atom           2 charge=   1.1521143913269043     
+ atom           3 charge=   1.3731076717376709     
+ atom           4 charge=   1.3986728191375732     
+ atom           5 charge=   1.4087557792663574     
+ atom           6 charge=  0.99986342187912669     
+ atom           7 charge=  0.99961643325514160     
+ atom           8 charge=  0.99990959871502127     
+ Successfully finished trajectory file: output/01112024_133930/trajectory/trajectory_isoxazole_14r26.xyz                                                                                                                                                                                               
+ Successfully updated atom info file: output/01112024_133930/atom_info.csv                                                                                                                                                                                                                           
+isoxazole_14r26 computation completed
+
+isoxazole_14r27 computation started
+ atom           1 charge=   1.0600180625915527     
+ atom           2 charge=   1.2486097812652588     
+ atom           3 charge=   1.4762437343597412     
+ atom           4 charge=   1.4679479598999023     
+ atom           5 charge=   1.2882866859436035     
+ atom           6 charge=  0.99988061546173412     
+ atom           7 charge=  0.99965410173172131     
+ atom           8 charge=  0.99988473900884856     
+ Successfully finished trajectory file: output/01112024_133930/trajectory/trajectory_isoxazole_14r27.xyz                                                                                                                                                                                               
+ Successfully updated atom info file: output/01112024_133930/atom_info.csv                                                                                                                                                                                                                           
+isoxazole_14r27 computation completed
+
+isoxazole_14r29 computation started
+ atom           1 charge=   1.0942425727844238     
+ atom           2 charge=   1.0104100704193115     
+ atom           3 charge=   1.3415198326110840     
+ atom           4 charge=   1.6438271999359131     
+ atom           5 charge=   1.4843826293945312     
+ atom           6 charge=  0.99981913460942451     
+ atom           7 charge=  0.99987655339646153     
+ atom           8 charge=  0.99989091002498753     
+ Successfully finished trajectory file: output/01112024_133930/trajectory/trajectory_isoxazole_14r29.xyz                                                                                                                                                                                               
+ Successfully updated atom info file: output/01112024_133930/atom_info.csv                                                                                                                                                                                                                           
+isoxazole_14r29 computation completed
+
+isoxazole_14r3 computation started
+ atom           1 charge=   1.2277941703796387     
+ atom           2 charge=   1.2599825859069824     
+ atom           3 charge=   1.3982722759246826     
+ atom           4 charge=   1.4194824695587158     
+ atom           5 charge=   1.6307966709136963     
+ atom           6 charge=  0.99980791640700772     
+ atom           7 charge=  0.99969364496064372     
+ atom           8 charge=  0.99990795943449484     
+ Successfully finished trajectory file: output/01112024_133930/trajectory/trajectory_isoxazole_14r3.xyz                                                                                                                                                                                                
+ Successfully updated atom info file: output/01112024_133930/atom_info.csv                                                                                                                                                                                                                           
+isoxazole_14r3 computation completed
+
+isoxazole_14r30 computation started
+ atom           1 charge=   1.1672606468200684     
+ atom           2 charge=   1.0355329513549805     
+ atom           3 charge=   1.5754003524780273     
+ atom           4 charge=   1.4734351634979248     
+ atom           5 charge=   1.4770085811614990     
+ atom           6 charge=  0.99976334403618239     
+ atom           7 charge=  0.99951950751710683     
+ atom           8 charge=  0.99981342830869835     
+ Successfully finished trajectory file: output/01112024_133930/trajectory/trajectory_isoxazole_14r30.xyz                                                                                                                                                                                               
+ Successfully updated atom info file: output/01112024_133930/atom_info.csv                                                                                                                                                                                                                           
+isoxazole_14r30 computation completed
+
+isoxazole_14r4 computation started
+ atom           1 charge=   1.1533956527709961     
+ atom           2 charge=   1.1112480163574219     
+ atom           3 charge=   1.3188934326171875     
+ atom           4 charge=   1.4571352005004883     
+ atom           5 charge=   1.4193949699401855     
+ atom           6 charge=  0.99987445562146604     
+ atom           7 charge=  0.99981960190052632     
+ atom           8 charge=  0.99990713434817735     
+ Successfully finished trajectory file: output/01112024_133930/trajectory/trajectory_isoxazole_14r4.xyz                                                                                                                                                                                                
+ Successfully updated atom info file: output/01112024_133930/atom_info.csv                                                                                                                                                                                                                           
+isoxazole_14r4 computation completed
+
+isoxazole_14r5 computation started
+ atom           1 charge=   1.1988420486450195     
+ atom           2 charge=   1.1357972621917725     
+ atom           3 charge=   1.3806293010711670     
+ atom           4 charge=   1.6316628456115723     
+ atom           5 charge=   1.4629089832305908     
+ atom           6 charge=  0.99986518276273273     
+ atom           7 charge=  0.99958770940429531     
+ atom           8 charge=  0.99979996042384300     
+ Successfully finished trajectory file: output/01112024_133930/trajectory/trajectory_isoxazole_14r5.xyz                                                                                                                                                                                                
+ Successfully updated atom info file: output/01112024_133930/atom_info.csv                                                                                                                                                                                                                           
+isoxazole_14r5 computation completed
+
+isoxazole_14r6 computation started
+ atom           1 charge=   1.2425203323364258     
+ atom           2 charge=   1.2188546657562256     
+ atom           3 charge=   1.3714213371276855     
+ atom           4 charge=   1.5525214672088623     
+ atom           5 charge=   1.5017259120941162     
+ atom           6 charge=  0.99966438603587449     
+ atom           7 charge=  0.99931068089790642     
+ atom           8 charge=  0.99972763567348011     
+ Successfully finished trajectory file: output/01112024_133930/trajectory/trajectory_isoxazole_14r6.xyz                                                                                                                                                                                                
+ Successfully updated atom info file: output/01112024_133930/atom_info.csv                                                                                                                                                                                                                           
+isoxazole_14r6 computation completed
+
+isoxazole_14r7 computation started
+ atom           1 charge=   1.1471228599548340     
+ atom           2 charge=   1.0650916099548340     
+ atom           3 charge=   1.3922491073608398     
+ atom           4 charge=   1.3796384334564209     
+ atom           5 charge=   1.7664475440979004     
+ atom           6 charge=  0.99980983203568030     
+ atom           7 charge=  0.99969477110425942     
+ atom           8 charge=  0.99986294747213833     
+ Successfully finished trajectory file: output/01112024_133930/trajectory/trajectory_isoxazole_14r7.xyz                                                                                                                                                                                                
+ Successfully updated atom info file: output/01112024_133930/atom_info.csv                                                                                                                                                                                                                           
+isoxazole_14r7 computation completed
+
+isoxazole_14r8 computation started
+ atom           1 charge=  0.98615026473999023     
+ atom           2 charge=   1.2627062797546387     
+ atom           3 charge=   1.4119226932525635     
+ atom           4 charge=   1.2972064018249512     
+ atom           5 charge=   1.6339743137359619     
+ atom           6 charge=  0.99970224549178965     
+ atom           7 charge=  0.99947790149599314     
+ atom           8 charge=  0.99970444923383184     
+ Successfully finished trajectory file: output/01112024_133930/trajectory/trajectory_isoxazole_14r8.xyz                                                                                                                                                                                                
+ Successfully updated atom info file: output/01112024_133930/atom_info.csv                                                                                                                                                                                                                           
+isoxazole_14r8 computation completed
+
+isoxazole_14r9 computation started
+ atom           1 charge=   1.1667332649230957     
+ atom           2 charge=   1.2425007820129395     
+ atom           3 charge=   1.3591015338897705     
+ atom           4 charge=   1.6377449035644531     
+ atom           5 charge=   1.3051400184631348     
+ atom           6 charge=  0.99979197880020365     
+ atom           7 charge=  0.99970218786620535     
+ atom           8 charge=  0.99992421155184275     
+ Successfully finished trajectory file: output/01112024_133930/trajectory/trajectory_isoxazole_14r9.xyz                                                                                                                                                                                                
+ Successfully updated atom info file: output/01112024_133930/atom_info.csv                                                                                                                                                                                                                           
+isoxazole_14r9 computation completed
+
