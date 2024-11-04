@@ -110,9 +110,11 @@ class AngularDistribution:
 def main():
     atom_types = ['C', 'C', 'H', 'H']
    
-    file_path = 'data\\c2h2_quantum\\moleculeFormations_14.csv'
+    #file_path = 'data\\c2h2_quantum\\moleculeFormations_14.csv'
     #file_path = 'data\\c2h2_classical\\atom_info.csv'
     #file_path = 'data\\c2h2_semi_classical\\atom_info.csv'
+    file_path = 'data\\c2h2_semi_classical_pulse\\atom_info.csv'
+
 
     data_type = 'q'
     

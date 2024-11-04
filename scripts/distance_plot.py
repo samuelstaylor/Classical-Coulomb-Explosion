@@ -22,7 +22,7 @@ N_mass = 1450.9977039751675
 C_mass = 1243.7123176930008
 H_mass = 103.64269314108340
 
-SHOW_LEGENDS = False
+SHOW_LEGENDS = True
 
 def read_trajectory(file, num_atoms):
     with open(file, 'r') as f:
@@ -84,8 +84,13 @@ def plot_positions(time, positions, directory, labels, mode='', show=False):
     
     plt.xlabel('Time (fs)')
     plt.ylabel('Distance from origin (Å)')
+    plt.xlim(0, 80)
+    plt.ylim(0, 55)  # Set y-axis limits
+    
+    ''' For isoxazole
     plt.xlim(0, 90)
     plt.ylim(0, 80)  # Set y-axis limits
+    '''
     
     ''' For c41h10 e28
     plt.xlim(0, 27.5)
@@ -118,8 +123,13 @@ def plot_velocity(time, speeds, directory, labels, mode='', show=False):
         plt.axvline(x=25, color='#ee87ee', linestyle='--')  # Add vertical dashed line at time=25
     plt.xlabel('Time (fs)')
     plt.ylabel('Speed (Å/fs)')
+    plt.xlim(0, 80)
+    plt.ylim(0, 0.85)  # Set y-axis limits
+    
+    ''' For isoxazole
     plt.xlim(0, 90)
     plt.ylim(0, 0.9)  # Set y-axis limits
+    '''
     
     ''' For c4h10 e28
     plt.xlim(0, 27.5)
@@ -185,6 +195,7 @@ def plot_force(time, accelerations, masses, directory, labels, mode='', show=Fal
 trajectory_file_list = [
     'data\\c2h2_classical\\trajectory_r1.xyz',
     'data\\c2h2_semi_classical\\trajectory_r1.xyz',
+    'data\\c2h2_semi_classical_pulse\\trajectory_r1.xyz',
     'data\\c2h2_quantum\\trajectory_r1.xyz'
 ]
 '''
@@ -193,6 +204,7 @@ trajectory_file_list = [
 trajectory_file_list = [
     'data\\c4h10_classical\\14\\trajectory_r1.xyz',
     'data\\c4h10_semi_classical\\14\\trajectory_r1.xyz',
+    'data\\c4h10_semi_classical_pulse\\14\\trajectory_r1.xyz',
     'data\\c4h10_quantum\\14\\trajectory_r1.xyz'
 ]
 '''
@@ -201,24 +213,26 @@ trajectory_file_list = [
 trajectory_file_list = [
     'data\\isoxazole_classical\\trajectory_r3.xyz',
     'data\\isoxazole_semi_classical\\trajectory_r3.xyz',
+    'data\\isoxazole_semi_classical_pulse\\trajectory_r3.xyz',
     'data\\isoxazole_quantum\\trajectory_r3.xyz'
 ]
 '''
 
 trajectory_file_list = [
-    'data\\isoxazole_classical\\trajectory_r3.xyz',
-    'data\\isoxazole_semi_classical\\trajectory_r3.xyz',
-    'data\\isoxazole_semi_classical_pulse\\trajectory_r3.xyz',
-    'data\\isoxazole_quantum\\trajectory_r3.xyz'
+    'data\\c2h2_classical\\trajectory_r1.xyz',
+    'data\\c2h2_classical_pulse\\trajectory_r1.xyz',
+    'data\\c2h2_semi_classical\\trajectory_r1.xyz',
+    'data\\c2h2_semi_classical_pulse\\trajectory_r1.xyz',
+    'data\\c2h2_quantum\\trajectory_r1.xyz'
 ]
 
-modes = ['', 's', 's', '']
+modes = ['', '', 's', 's', '']
 
 # Number of atoms of each type
-num_oxygen_atoms = 1
-num_nitrogen_atoms = 1
-num_carbon_atoms = 3
-num_hydrogen_atoms = 3
+num_oxygen_atoms = 0
+num_nitrogen_atoms = 0
+num_carbon_atoms = 2
+num_hydrogen_atoms = 2
 
 total_atoms = num_carbon_atoms + num_hydrogen_atoms + num_oxygen_atoms + num_nitrogen_atoms
 show = False

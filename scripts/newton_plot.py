@@ -696,13 +696,13 @@ class NewtonPlot:
 def main():
     print("-=GENERATING NEWTON PLOT=-")
     newton_plot = NewtonPlot()
-    data_mode = "c"
+    data_mode = "p"
     user_input_mode = False
     alpha = 0.2  #set alpha =0.2 for c4h10 and =0.03 for c2h2
     lim_2d_left=-1.3
     lim_2d_right=1.3
     lim_2d_bottom=-1.3
-    lim_2d_top=1.3
+    lim_2d_top=1.3  
     lim_3d_x_lower=-1.3
     lim_3d_x_upper=1.3
     lim_3d_y_lower=-1.3
@@ -734,6 +734,15 @@ def main():
         input_file = 'data\\c4h10_semi_classical\\14\\atom_info.csv'
         input_file = 'data\\c4h10_semi_classical\\28\\atom_info.csv'
         graph_name_tag="semi-classical"
+        
+    if (data_mode.lower().startswith('p')):
+        #SEMI-CLASSICAL-with-PULSE INPUT FILE:
+        input_file = 'data\\c4h10_semi_classical_pulse\\14\\atom_info.csv'
+        input_file = 'data\\c4h10_semi_classical_pulse\\28\\atom_info.csv'
+        input_file = 'data\\isoxazole_semi_classical_pulse\\atom_info.csv'
+        input_file = 'data\\c2h2_semi_classical_pulse\\atom_info.csv'
+        input_file = 'data\\c4h10_semi_classical_pulse\\28\\atom_info.csv'
+        graph_name_tag="semi-classical-pulse"
 
     
     if user_input_mode:

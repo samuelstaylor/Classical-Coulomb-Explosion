@@ -1,7 +1,7 @@
  Run Started and output directory successfully created. Initializing...
- Output folder created: output/01112024_133421
- Output files created: output/01112024_133421
- all variable file created: 'output/01112024_133421/all_variable_file.txt'
+ Output folder created: output/03112024_115916
+ Output files created: output/03112024_115916
+ all variable file created: 'output/03112024_115916/all_variable_file.txt'
  Successfully read and initialized data from: control.inp
  All variables allocated and set, see: all_variable_file.txt                                                                                                                                                                                                                                          
  Successfully read and initialized data from: /scratch/group/p.phy240167.000/coulomb_explosion/C4H10/C4H10_28_runs/LeeMolOutput/03102024_204348/moleculeFormations.csv                                                                                                                                        
@@ -23,8 +23,8 @@
            1   103.64269314108340     
            1   103.64269314108340     
            1   103.64269314108340     
- Atom info file created: 'output/01112024_133421/atom_info.csv'
- Trajectory output folder created: 'output/01112024_133421/trajectory'
+ Atom info file created: 'output/03112024_115916/atom_info.csv'
+ Trajectory output folder created: 'output/03112024_115916/trajectory'
  
  Initialization complete. Beginning computation...
  
@@ -43,8 +43,8 @@ C4H10_28r18 computation started
  atom          12 charge=  0.99841517372988164     
  atom          13 charge=  0.99990197813895065     
  atom          14 charge=  0.85954961180686951     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r18.xyz                                                                                                                                                                                                   
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r18.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r18 computation completed
 
 C4H10_28r45 computation started
@@ -62,8 +62,8 @@ C4H10_28r45 computation started
  atom          12 charge=  0.99744667275808752     
  atom          13 charge=  0.99922324949875474     
  atom          14 charge=  0.98373809643089771     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r45.xyz                                                                                                                                                                                                   
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r45.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r45 computation completed
 
 C4H10_28r11 computation started
@@ -81,8 +81,8 @@ C4H10_28r11 computation started
  atom          12 charge=  0.99758549570105970     
  atom          13 charge=  0.99939110752893612     
  atom          14 charge=  0.87309893965721130     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r11.xyz                                                                                                                                                                                                   
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r11.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r11 computation completed
 
 C4H10_28r16 computation started
@@ -100,8 +100,8 @@ C4H10_28r16 computation started
  atom          12 charge=  0.99838122760411352     
  atom          13 charge=  0.99947325134417042     
  atom          14 charge=  0.92904326319694519     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r16.xyz                                                                                                                                                                                                   
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r16.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r16 computation completed
 
 C4H10_28r19 computation started
@@ -119,8 +119,8 @@ C4H10_28r19 computation started
  atom          12 charge=  0.99836835428141057     
  atom          13 charge=  0.99941967969061807     
  atom          14 charge=  0.88961063325405121     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r19.xyz                                                                                                                                                                                                   
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r19.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r19 computation completed
 
 C4H10_28r29 computation started
@@ -138,8 +138,8 @@ C4H10_28r29 computation started
  atom          12 charge=  0.99986828648252413     
  atom          13 charge=  0.99959226223290898     
  atom          14 charge=  0.90687685459852219     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r29.xyz                                                                                                                                                                                                   
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r29.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r29 computation completed
 
 C4H10_28r2 computation started
@@ -157,8 +157,8 @@ C4H10_28r2 computation started
  atom          12 charge=  0.99975880254351068     
  atom          13 charge=  0.99997626584445243     
  atom          14 charge=  0.86024877429008484     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r2.xyz                                                                                                                                                                                                    
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r2.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r2 computation completed
 
 C4H10_28r20 computation started
@@ -176,8 +176,8 @@ C4H10_28r20 computation started
  atom          12 charge=  0.99835014448035508     
  atom          13 charge=  0.99937452789163217     
  atom          14 charge=  0.87131465971469879     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r20.xyz                                                                                                                                                                                                   
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r20.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r20 computation completed
 
 C4H10_28r28 computation started
@@ -195,8 +195,8 @@ C4H10_28r28 computation started
  atom          12 charge=  0.99970019180909730     
  atom          13 charge=  0.99997970943331893     
  atom          14 charge=  0.88476700335741043     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r28.xyz                                                                                                                                                                                                   
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r28.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r28 computation completed
 
 C4H10_28r46 computation started
@@ -214,8 +214,8 @@ C4H10_28r46 computation started
  atom          12 charge=  0.99804501025937498     
  atom          13 charge=  0.99997645479743369     
  atom          14 charge=  0.89030063152313232     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r46.xyz                                                                                                                                                                                                   
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r46.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r46 computation completed
 
 C4H10_28r26 computation started
@@ -233,8 +233,8 @@ C4H10_28r26 computation started
  atom          12 charge=  0.99729605112224817     
  atom          13 charge=  0.99997815716233163     
  atom          14 charge=  0.90388602763414383     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r26.xyz                                                                                                                                                                                                   
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r26.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r26 computation completed
 
 C4H10_28r8 computation started
@@ -252,8 +252,8 @@ C4H10_28r8 computation started
  atom          12 charge=  0.99977448736899532     
  atom          13 charge=  0.99931067647412419     
  atom          14 charge=  0.77177552878856659     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r8.xyz                                                                                                                                                                                                    
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r8.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r8 computation completed
 
 C4H10_28r44 computation started
@@ -271,8 +271,8 @@ C4H10_28r44 computation started
  atom          12 charge=  0.99979374700342305     
  atom          13 charge=  0.99992524449044140     
  atom          14 charge=  0.87914787232875824     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r44.xyz                                                                                                                                                                                                   
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r44.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r44 computation completed
 
 C4H10_28r6 computation started
@@ -290,8 +290,8 @@ C4H10_28r6 computation started
  atom          12 charge=  0.99842329951934516     
  atom          13 charge=  0.99990719537890982     
  atom          14 charge=  0.86956807971000671     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r6.xyz                                                                                                                                                                                                    
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r6.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r6 computation completed
 
 C4H10_28r39 computation started
@@ -309,8 +309,8 @@ C4H10_28r39 computation started
  atom          12 charge=  0.99721606797538698     
  atom          13 charge=  0.99997239698859630     
  atom          14 charge=  0.98518581222742796     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r39.xyz                                                                                                                                                                                                   
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r39.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r39 computation completed
 
 C4H10_28r5 computation started
@@ -328,8 +328,8 @@ C4H10_28r5 computation started
  atom          12 charge=  0.99961420055478811     
  atom          13 charge=  0.99991829237114871     
  atom          14 charge=  0.86982876062393188     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r5.xyz                                                                                                                                                                                                    
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r5.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r5 computation completed
 
 C4H10_28r38 computation started
@@ -347,8 +347,8 @@ C4H10_28r38 computation started
  atom          12 charge=  0.99746247939765453     
  atom          13 charge=  0.99995949488584301     
  atom          14 charge=  0.97873146459460258     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r38.xyz                                                                                                                                                                                                   
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r38.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r38 computation completed
 
 C4H10_28r31 computation started
@@ -366,8 +366,8 @@ C4H10_28r31 computation started
  atom          12 charge=  0.99846044543664902     
  atom          13 charge=  0.99939819349674508     
  atom          14 charge=  0.88159951567649841     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r31.xyz                                                                                                                                                                                                   
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r31.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r31 computation completed
 
 C4H10_28r33 computation started
@@ -385,8 +385,8 @@ C4H10_28r33 computation started
  atom          12 charge=  0.99817938229534775     
  atom          13 charge=  0.99997923294358770     
  atom          14 charge=  0.90050799399614334     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r33.xyz                                                                                                                                                                                                   
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r33.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r33 computation completed
 
 C4H10_28r50 computation started
@@ -404,8 +404,8 @@ C4H10_28r50 computation started
  atom          12 charge=  0.99744277726858854     
  atom          13 charge=  0.99997534648900910     
  atom          14 charge=  0.87738583236932755     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r50.xyz                                                                                                                                                                                                   
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r50.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r50 computation completed
 
 C4H10_28r41 computation started
@@ -423,8 +423,8 @@ C4H10_28r41 computation started
  atom          12 charge=  0.99830187461338937     
  atom          13 charge=  0.99937211751239374     
  atom          14 charge=  0.99990003496350255     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r41.xyz                                                                                                                                                                                                   
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r41.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r41 computation completed
 
 C4H10_28r37 computation started
@@ -442,8 +442,8 @@ C4H10_28r37 computation started
  atom          12 charge=  0.99982164430548437     
  atom          13 charge=  0.99949285073671490     
  atom          14 charge=  0.87456701695919037     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r37.xyz                                                                                                                                                                                                   
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r37.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r37 computation completed
 
 C4H10_28r7 computation started
@@ -461,8 +461,8 @@ C4H10_28r7 computation started
  atom          12 charge=  0.99982847989303991     
  atom          13 charge=  0.99951578889158554     
  atom          14 charge=  0.89342366158962250     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r7.xyz                                                                                                                                                                                                    
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r7.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r7 computation completed
 
 C4H10_28r22 computation started
@@ -480,8 +480,8 @@ C4H10_28r22 computation started
  atom          12 charge=  0.99795244890265167     
  atom          13 charge=  0.99998183078241709     
  atom          14 charge=  0.91071902960538864     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r22.xyz                                                                                                                                                                                                   
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r22.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r22 computation completed
 
 C4H10_28r36 computation started
@@ -499,8 +499,8 @@ C4H10_28r36 computation started
  atom          12 charge=  0.99977622993174009     
  atom          13 charge=  0.99997193198760215     
  atom          14 charge=  0.88484026491641998     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r36.xyz                                                                                                                                                                                                   
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r36.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r36 computation completed
 
 C4H10_28r27 computation started
@@ -518,8 +518,8 @@ C4H10_28r27 computation started
  atom          12 charge=  0.99760074866935611     
  atom          13 charge=  0.99997239399453974     
  atom          14 charge=  0.89241737127304077     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r27.xyz                                                                                                                                                                                                   
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r27.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r27 computation completed
 
 C4H10_28r47 computation started
@@ -537,8 +537,8 @@ C4H10_28r47 computation started
  atom          12 charge=  0.99735456588678062     
  atom          13 charge=  0.99932567472569644     
  atom          14 charge=  0.98261932842433453     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r47.xyz                                                                                                                                                                                                   
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r47.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r47 computation completed
 
 C4H10_28r3 computation started
@@ -556,8 +556,8 @@ C4H10_28r3 computation started
  atom          12 charge=  0.99710268201306462     
  atom          13 charge=  0.99996776516127284     
  atom          14 charge=  0.98240663111209869     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r3.xyz                                                                                                                                                                                                    
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r3.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r3 computation completed
 
 C4H10_28r9 computation started
@@ -575,8 +575,8 @@ C4H10_28r9 computation started
  atom          12 charge=  0.99988956015295116     
  atom          13 charge=  0.99739116849377751     
  atom          14 charge=  0.84340716898441315     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r9.xyz                                                                                                                                                                                                    
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r9.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r9 computation completed
 
 C4H10_28r23 computation started
@@ -594,8 +594,8 @@ C4H10_28r23 computation started
  atom          12 charge=  0.99863677599932998     
  atom          13 charge=  0.99997329320285644     
  atom          14 charge=  0.98704124614596367     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r23.xyz                                                                                                                                                                                                   
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r23.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r23 computation completed
 
 C4H10_28r13 computation started
@@ -613,8 +613,8 @@ C4H10_28r13 computation started
  atom          12 charge=  0.99860500171780586     
  atom          13 charge=  0.99996981131698703     
  atom          14 charge=  0.98304257728159428     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r13.xyz                                                                                                                                                                                                   
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r13.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r13 computation completed
 
 C4H10_28r32 computation started
@@ -632,8 +632,8 @@ C4H10_28r32 computation started
  atom          12 charge=  0.99821143073495477     
  atom          13 charge=  0.99932132795220241     
  atom          14 charge=  0.90296948701143265     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r32.xyz                                                                                                                                                                                                   
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r32.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r32 computation completed
 
 C4H10_28r35 computation started
@@ -651,8 +651,8 @@ C4H10_28r35 computation started
  atom          12 charge=  0.99877386062871665     
  atom          13 charge=  0.99943949677981436     
  atom          14 charge=  0.99989974407071713     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r35.xyz                                                                                                                                                                                                   
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r35.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r35 computation completed
 
 C4H10_28r43 computation started
@@ -670,8 +670,8 @@ C4H10_28r43 computation started
  atom          12 charge=  0.99824807292316109     
  atom          13 charge=  0.99997429463110166     
  atom          14 charge=  0.89930757880210876     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r43.xyz                                                                                                                                                                                                   
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r43.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r43 computation completed
 
 C4H10_28r17 computation started
@@ -689,8 +689,8 @@ C4H10_28r17 computation started
  atom          12 charge=  0.99982002859178465     
  atom          13 charge=  0.99930505972588435     
  atom          14 charge=  0.87116533517837524     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r17.xyz                                                                                                                                                                                                   
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r17.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r17 computation completed
 
 C4H10_28r49 computation started
@@ -708,8 +708,8 @@ C4H10_28r49 computation started
  atom          12 charge=  0.99796735495328903     
  atom          13 charge=  0.99942043679766357     
  atom          14 charge=  0.87211970984935760     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r49.xyz                                                                                                                                                                                                   
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r49.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r49 computation completed
 
 C4H10_28r42 computation started
@@ -727,8 +727,8 @@ C4H10_28r42 computation started
  atom          12 charge=  0.99834707425907254     
  atom          13 charge=  0.99997307296325744     
  atom          14 charge=  0.87176381051540375     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r42.xyz                                                                                                                                                                                                   
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r42.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r42 computation completed
 
 C4H10_28r10 computation started
@@ -746,8 +746,8 @@ C4H10_28r10 computation started
  atom          12 charge=  0.99863965879194438     
  atom          13 charge=  0.99997481935861288     
  atom          14 charge=  0.86983287334442139     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r10.xyz                                                                                                                                                                                                   
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r10.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r10 computation completed
 
 C4H10_28r12 computation started
@@ -765,8 +765,8 @@ C4H10_28r12 computation started
  atom          12 charge=  0.99808223743457347     
  atom          13 charge=  0.99947971419896930     
  atom          14 charge=  0.89584710448980331     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r12.xyz                                                                                                                                                                                                   
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r12.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r12 computation completed
 
 C4H10_28r1 computation started
@@ -784,8 +784,8 @@ C4H10_28r1 computation started
  atom          12 charge=  0.99985126929823309     
  atom          13 charge=  0.99944114504614845     
  atom          14 charge=  0.87918217480182648     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r1.xyz                                                                                                                                                                                                    
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r1.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r1 computation completed
 
 C4H10_28r34 computation started
@@ -803,8 +803,8 @@ C4H10_28r34 computation started
  atom          12 charge=  0.99770593713037670     
  atom          13 charge=  0.99996802321766154     
  atom          14 charge=  0.98281550966203213     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r34.xyz                                                                                                                                                                                                   
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r34.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r34 computation completed
 
 C4H10_28r30 computation started
@@ -822,8 +822,8 @@ C4H10_28r30 computation started
  atom          12 charge=  0.99983905162662268     
  atom          13 charge=  0.99997874221298844     
  atom          14 charge=  0.90658561140298843     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r30.xyz                                                                                                                                                                                                   
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r30.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r30 computation completed
 
 C4H10_28r24 computation started
@@ -841,8 +841,8 @@ C4H10_28r24 computation started
  atom          12 charge=  0.99988909712556051     
  atom          13 charge=  0.99953771985019557     
  atom          14 charge=  0.88604290038347244     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r24.xyz                                                                                                                                                                                                   
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r24.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r24 computation completed
 
 C4H10_28r48 computation started
@@ -860,8 +860,8 @@ C4H10_28r48 computation started
  atom          12 charge=  0.99867548875045031     
  atom          13 charge=  0.99997297494155646     
  atom          14 charge=  0.85838988423347473     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r48.xyz                                                                                                                                                                                                   
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r48.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r48 computation completed
 
 C4H10_28r4 computation started
@@ -879,8 +879,8 @@ C4H10_28r4 computation started
  atom          12 charge=  0.99966733236215077     
  atom          13 charge=  0.99942443752661347     
  atom          14 charge=  0.84646722674369812     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r4.xyz                                                                                                                                                                                                    
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r4.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r4 computation completed
 
 C4H10_28r21 computation started
@@ -898,8 +898,8 @@ C4H10_28r21 computation started
  atom          12 charge=  0.99699520389549434     
  atom          13 charge=  0.99930001032771543     
  atom          14 charge=  0.87147019803524017     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r21.xyz                                                                                                                                                                                                   
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r21.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r21 computation completed
 
 C4H10_28r15 computation started
@@ -917,8 +917,8 @@ C4H10_28r15 computation started
  atom          12 charge=  0.99857954622711986     
  atom          13 charge=  0.99998216487438185     
  atom          14 charge=  0.91840346157550812     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r15.xyz                                                                                                                                                                                                   
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r15.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r15 computation completed
 
 C4H10_28r40 computation started
@@ -936,8 +936,8 @@ C4H10_28r40 computation started
  atom          12 charge=  0.99807654251344502     
  atom          13 charge=  0.99997705219539057     
  atom          14 charge=  0.83591434359550476     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r40.xyz                                                                                                                                                                                                   
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r40.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r40 computation completed
 
 C4H10_28r25 computation started
@@ -955,8 +955,8 @@ C4H10_28r25 computation started
  atom          12 charge=  0.99796546599827707     
  atom          13 charge=  0.99997075411920378     
  atom          14 charge=  0.83826036751270294     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r25.xyz                                                                                                                                                                                                   
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r25.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r25 computation completed
 
 C4H10_28r14 computation started
@@ -974,7 +974,7 @@ C4H10_28r14 computation started
  atom          12 charge=  0.99779701465740800     
  atom          13 charge=  0.99996959746567882     
  atom          14 charge=  0.84170168638229370     
- Successfully finished trajectory file: output/01112024_133421/trajectory/trajectory_C4H10_28r14.xyz                                                                                                                                                                                                   
- Successfully updated atom info file: output/01112024_133421/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/03112024_115916/trajectory/trajectory_C4H10_28r14.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/03112024_115916/atom_info.csv                                                                                                                                                                                                                           
 C4H10_28r14 computation completed
 
