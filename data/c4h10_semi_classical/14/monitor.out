@@ -1,0 +1,979 @@
+ Run Started and output directory successfully created. Initializing...
+ Output folder created: output/20112024_092728
+ Output files created: output/20112024_092728
+ all variable file created: 'output/20112024_092728/all_variable_file.txt'
+ Successfully read and initialized data from: control.inp
+ All variables allocated and set, see: all_variable_file.txt                                                                                                                                                                                                                                          
+ Successfully read and initialized data from: /scratch/group/p.phy240167.000/coulomb_explosion/C4H10/C4H10_14_runs/LeeMolOutput/03102024_162516/moleculeFormations.csv                                                                                                                                        
+ Successfully read and initialized data from: /scratch/group/p.phy240167.000/coulomb_explosion/C4H10/C4H10_14_runs/C4H10_14r45/trajectory.xyz                                                                                                                                                                 
+ All atomic masses successfully computed:
+ Atom atomic number and mass (eV_fs^2/A^2):
+           6   1243.7123176930008     
+           6   1243.7123176930008     
+           6   1243.7123176930008     
+           6   1243.7123176930008     
+           1   103.64269314108340     
+           1   103.64269314108340     
+           1   103.64269314108340     
+           1   103.64269314108340     
+           1   103.64269314108340     
+           1   103.64269314108340     
+           1   103.64269314108340     
+           1   103.64269314108340     
+           1   103.64269314108340     
+           1   103.64269314108340     
+ Atom info file created: 'output/20112024_092728/atom_info.csv'
+ Trajectory output folder created: 'output/20112024_092728/trajectory'
+ 
+ Initialization complete. Beginning computation...
+ 
+C4H10_14r45 computation started
+ atom           1 charge=   1.8271033763885498     
+ atom           2 charge=   1.9202253818511963     
+ atom           3 charge=   1.5992848873138428     
+ atom           4 charge=   1.8689763545989990     
+ atom           5 charge=  0.99899885978084058     
+ atom           6 charge=  0.99605587404221296     
+ atom           7 charge=  0.96034435555338860     
+ atom           8 charge=  0.99910440435633063     
+ atom           9 charge=  0.99494953965768218     
+ atom          10 charge=  0.99902397615369409     
+ atom          11 charge=  0.99599613714963198     
+ atom          12 charge=  0.99527939548715949     
+ atom          13 charge=  0.99929112562676892     
+ atom          14 charge=  0.99996193616607343     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r45.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r45 computation completed
+
+C4H10_14r50 computation started
+ atom           1 charge=   1.7544584274291992     
+ atom           2 charge=   1.7009017467498779     
+ atom           3 charge=   1.6598536968231201     
+ atom           4 charge=   2.1096961498260498     
+ atom           5 charge=  0.99970864955685101     
+ atom           6 charge=  0.99947264132788405     
+ atom           7 charge=  0.99961857465677895     
+ atom           8 charge=  0.99980362721544225     
+ atom           9 charge=  0.99910321785137057     
+ atom          10 charge=  0.99929255538154393     
+ atom          11 charge=  0.99939139425987378     
+ atom          12 charge=  0.99885179044213146     
+ atom          13 charge=  0.99993242297932738     
+ atom          14 charge=  0.99996211728284834     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r50.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r50 computation completed
+
+C4H10_14r37 computation started
+ atom           1 charge=   1.6081187725067139     
+ atom           2 charge=   1.7640211582183838     
+ atom           3 charge=   1.8875098228454590     
+ atom           4 charge=   1.8605563640594482     
+ atom           5 charge=  0.99945493665290996     
+ atom           6 charge=  0.99962936478550546     
+ atom           7 charge=  0.99916173616657034     
+ atom           8 charge=  0.99955450629931875     
+ atom           9 charge=  0.99733040481805801     
+ atom          10 charge=  0.99975965020712465     
+ atom          11 charge=  0.99797867005690932     
+ atom          12 charge=  0.99749772739596665     
+ atom          13 charge=  0.99978767854918260     
+ atom          14 charge=  0.99986406975949649     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r37.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r37 computation completed
+
+C4H10_14r49 computation started
+ atom           1 charge=   1.8497028350830078     
+ atom           2 charge=   1.5453152656555176     
+ atom           3 charge=   1.7837784290313721     
+ atom           4 charge=   2.2008752822875977     
+ atom           5 charge=  0.99943771463586017     
+ atom           6 charge=  0.99814551335293800     
+ atom           7 charge=  0.96259432658553123     
+ atom           8 charge=  0.99964944936800748     
+ atom           9 charge=  0.99835057649761438     
+ atom          10 charge=  0.99803970986977220     
+ atom          11 charge=  0.99909383128397167     
+ atom          12 charge=  0.99849333998281509     
+ atom          13 charge=  0.99961995237390511     
+ atom          14 charge=  0.99984671296260785     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r49.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r49 computation completed
+
+C4H10_14r3 computation started
+ atom           1 charge=   1.4689042568206787     
+ atom           2 charge=   1.7642037868499756     
+ atom           3 charge=   1.7659919261932373     
+ atom           4 charge=   2.0646393299102783     
+ atom           5 charge=  0.99956844115513377     
+ atom           6 charge=  0.99872589833103120     
+ atom           7 charge=  0.96135634183883667     
+ atom           8 charge=  0.99968166925827973     
+ atom           9 charge=  0.99789656721986830     
+ atom          10 charge=  0.99847633054014295     
+ atom          11 charge=  0.99930331110954285     
+ atom          12 charge=  0.99834974179975688     
+ atom          13 charge=  0.99985196394845843     
+ atom          14 charge=  0.99533692281693220     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r3.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r3 computation completed
+
+C4H10_14r2 computation started
+ atom           1 charge=   1.9105086326599121     
+ atom           2 charge=   2.0089557170867920     
+ atom           3 charge=   1.8917520046234131     
+ atom           4 charge=   1.9286270141601562     
+ atom           5 charge=  0.99907108483603224     
+ atom           6 charge=  0.99663345911540091     
+ atom           7 charge=  0.92195467650890350     
+ atom           8 charge=  0.99896033795084804     
+ atom           9 charge=  0.99593532970175147     
+ atom          10 charge=  0.99933671683538705     
+ atom          11 charge=  0.99691603053361177     
+ atom          12 charge=  0.99771397607401013     
+ atom          13 charge=  0.99968388205161318     
+ atom          14 charge=  0.99970225151628256     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r2.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r2 computation completed
+
+C4H10_14r38 computation started
+ atom           1 charge=   1.8802790641784668     
+ atom           2 charge=   2.0150299072265625     
+ atom           3 charge=   1.8422675132751465     
+ atom           4 charge=   1.7453563213348389     
+ atom           5 charge=  0.99949952017050236     
+ atom           6 charge=  0.99736782419495285     
+ atom           7 charge=  0.94596817344427109     
+ atom           8 charge=  0.99951102281920612     
+ atom           9 charge=  0.99782111984677613     
+ atom          10 charge=  0.99719813163392246     
+ atom          11 charge=  0.99781053839251399     
+ atom          12 charge=  0.99690013122744858     
+ atom          13 charge=  0.99978852279309649     
+ atom          14 charge=  0.99491029791533947     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r38.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r38 computation completed
+
+C4H10_14r4 computation started
+ atom           1 charge=   1.8776807785034180     
+ atom           2 charge=   1.7966670989990234     
+ atom           3 charge=   1.4627828598022461     
+ atom           4 charge=   1.9408261775970459     
+ atom           5 charge=  0.99912154831690714     
+ atom           6 charge=  0.99723101477138698     
+ atom           7 charge=  0.97868605703115463     
+ atom           8 charge=  0.99935984925832599     
+ atom           9 charge=  0.99982103289221413     
+ atom          10 charge=  0.99269602401182055     
+ atom          11 charge=  0.99672044604085386     
+ atom          12 charge=  0.99934864859096706     
+ atom          13 charge=  0.99967516088509001     
+ atom          14 charge=  0.99969360511749983     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r4.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r4 computation completed
+
+C4H10_14r44 computation started
+ atom           1 charge=   1.7899980545043945     
+ atom           2 charge=   1.6370568275451660     
+ atom           3 charge=   2.1645054817199707     
+ atom           4 charge=   2.2123899459838867     
+ atom           5 charge=  0.99949334713164717     
+ atom           6 charge=  0.99723250954411924     
+ atom           7 charge=  0.94605573639273643     
+ atom           8 charge=  0.99927602929528803     
+ atom           9 charge=  0.99690439226105809     
+ atom          10 charge=  0.99709435133263469     
+ atom          11 charge=  0.99777090665884316     
+ atom          12 charge=  0.99892801989335567     
+ atom          13 charge=  0.99638691660948098     
+ atom          14 charge=  0.99980765979853459     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r44.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r44 computation completed
+
+C4H10_14r46 computation started
+ atom           1 charge=   1.7598938941955566     
+ atom           2 charge=   1.8612248897552490     
+ atom           3 charge=   2.0652760267257690     
+ atom           4 charge=   1.7017853260040283     
+ atom           5 charge=  0.99969720782246441     
+ atom           6 charge=  0.99989691587688867     
+ atom           7 charge=  0.98556804750114679     
+ atom           8 charge=  0.99861288140527904     
+ atom           9 charge=  0.99984352254250553     
+ atom          10 charge=  0.99957499708398245     
+ atom          11 charge=  0.99762166757136583     
+ atom          12 charge=  0.99858892324846238     
+ atom          13 charge=  0.99982265963626560     
+ atom          14 charge=  0.99986518037621863     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r46.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r46 computation completed
+
+C4H10_14r30 computation started
+ atom           1 charge=   1.5808281898498535     
+ atom           2 charge=   1.9638609886169434     
+ atom           3 charge=   1.8335134983062744     
+ atom           4 charge=   2.1461923122406006     
+ atom           5 charge=  0.99820157722570002     
+ atom           6 charge=  0.99843567144125700     
+ atom           7 charge=  0.95359929278492928     
+ atom           8 charge=  0.99936799862189218     
+ atom           9 charge=  0.99987725158280227     
+ atom          10 charge=  0.99807953380513936     
+ atom          11 charge=  0.99773217714391649     
+ atom          12 charge=  0.99905688752187416     
+ atom          13 charge=  0.99971190391806886     
+ atom          14 charge=  0.99991257413785206     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r30.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r30 computation completed
+
+C4H10_14r6 computation started
+ atom           1 charge=   1.9728629589080811     
+ atom           2 charge=   2.0675982236862183     
+ atom           3 charge=   1.9363138675689697     
+ atom           4 charge=   1.7604708671569824     
+ atom           5 charge=  0.99918117746710777     
+ atom           6 charge=  0.99504510639235377     
+ atom           7 charge=  0.97081844136118889     
+ atom           8 charge=  0.99890891963150352     
+ atom           9 charge=  0.99440951831638813     
+ atom          10 charge=  0.99955340646556579     
+ atom          11 charge=  0.99591282289475203     
+ atom          12 charge=  0.99485065601766109     
+ atom          13 charge=  0.99304356751963496     
+ atom          14 charge=  0.99981427597231232     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r6.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r6 computation completed
+
+C4H10_14r14 computation started
+ atom           1 charge=   1.8526623249053955     
+ atom           2 charge=   1.8330490589141846     
+ atom           3 charge=   1.6135458946228027     
+ atom           4 charge=   2.0481109619140625     
+ atom           5 charge=  0.99825267156120390     
+ atom           6 charge=  0.99767929990775883     
+ atom           7 charge=  0.98944397456943989     
+ atom           8 charge=  0.99962952712667175     
+ atom           9 charge=  0.99815243936609477     
+ atom          10 charge=  0.99836331070400774     
+ atom          11 charge=  0.99901127163320780     
+ atom          12 charge=  0.99887470051180571     
+ atom          13 charge=  0.99980090497410856     
+ atom          14 charge=  0.99993511634966126     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r14.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r14 computation completed
+
+C4H10_14r40 computation started
+ atom           1 charge=   1.8700089454650879     
+ atom           2 charge=   1.6710104942321777     
+ atom           3 charge=   1.8428542613983154     
+ atom           4 charge=   1.9336905479431152     
+ atom           5 charge=  0.99933881312608719     
+ atom           6 charge=  0.99762078840285540     
+ atom           7 charge=  0.97385048121213913     
+ atom           8 charge=  0.99942975083831698     
+ atom           9 charge=  0.99986274927505292     
+ atom          10 charge=  0.99978636272135191     
+ atom          11 charge=  0.99884781497530639     
+ atom          12 charge=  0.99538835976272821     
+ atom          13 charge=  0.99630458257161081     
+ atom          14 charge=  0.99984233094437514     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r40.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r40 computation completed
+
+C4H10_14r39 computation started
+ atom           1 charge=   1.7337331771850586     
+ atom           2 charge=   2.0079135894775391     
+ atom           3 charge=   1.5978171825408936     
+ atom           4 charge=   2.1253885030746460     
+ atom           5 charge=  0.99925888498546556     
+ atom           6 charge=  0.99716559075750411     
+ atom           7 charge=  0.96342393383383751     
+ atom           8 charge=  0.99945871037198231     
+ atom           9 charge=  0.99782285373657942     
+ atom          10 charge=  0.99980449384020176     
+ atom          11 charge=  0.99933671491453424     
+ atom          12 charge=  0.99857864179648459     
+ atom          13 charge=  0.99988238641526550     
+ atom          14 charge=  0.99538146145641804     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r39.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r39 computation completed
+
+C4H10_14r28 computation started
+ atom           1 charge=   2.1106756925582886     
+ atom           2 charge=   1.7152831554412842     
+ atom           3 charge=   1.6011390686035156     
+ atom           4 charge=   2.1104094982147217     
+ atom           5 charge=  0.99906697758706287     
+ atom           6 charge=  0.99975477877887897     
+ atom           7 charge=  0.98457627370953560     
+ atom           8 charge=  0.99924692197237164     
+ atom           9 charge=  0.99984625246725045     
+ atom          10 charge=  0.99976878229063004     
+ atom          11 charge=  0.99848028540145606     
+ atom          12 charge=  0.99952932598534971     
+ atom          13 charge=  0.99973984441021457     
+ atom          14 charge=  0.99995670347561827     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r28.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r28 computation completed
+
+C4H10_14r26 computation started
+ atom           1 charge=   1.8469321727752686     
+ atom           2 charge=   1.7372219562530518     
+ atom           3 charge=   1.6185677051544189     
+ atom           4 charge=   1.8738393783569336     
+ atom           5 charge=  0.99918097612680867     
+ atom           6 charge=  0.99726020172238350     
+ atom           7 charge=  0.95127999410033226     
+ atom           8 charge=  0.99911412538494915     
+ atom           9 charge=  0.99976512129069306     
+ atom          10 charge=  0.99893084040377289     
+ atom          11 charge=  0.99766830750741065     
+ atom          12 charge=  0.99462015088647604     
+ atom          13 charge=  0.99955315259285271     
+ atom          14 charge=  0.99969952370156534     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r26.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r26 computation completed
+
+C4H10_14r1 computation started
+ atom           1 charge=   2.0106098651885986     
+ atom           2 charge=   1.8003778457641602     
+ atom           3 charge=   1.3881127834320068     
+ atom           4 charge=   2.0583567619323730     
+ atom           5 charge=  0.99952674968517385     
+ atom           6 charge=  0.99803405324928463     
+ atom           7 charge=  0.99076794926077127     
+ atom           8 charge=  0.99970255998778157     
+ atom           9 charge=  0.99994979896655423     
+ atom          10 charge=  0.99961841909680516     
+ atom          11 charge=  0.99894817732274532     
+ atom          12 charge=  0.99850102292839438     
+ atom          13 charge=  0.99875789450015873     
+ atom          14 charge=  0.99990735494066030     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r1.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r1 computation completed
+
+C4H10_14r36 computation started
+ atom           1 charge=   2.0493292808532715     
+ atom           2 charge=   1.5807943344116211     
+ atom           3 charge=   1.7308042049407959     
+ atom           4 charge=   2.0504785776138306     
+ atom           5 charge=  0.99931612511863932     
+ atom           6 charge=  0.99859310023020953     
+ atom           7 charge=  0.96038966625928879     
+ atom           8 charge=  0.99955322113237344     
+ atom           9 charge=  0.99895312392618507     
+ atom          10 charge=  0.99833890923764557     
+ atom          11 charge=  0.99850761285051703     
+ atom          12 charge=  0.99849480169359595     
+ atom          13 charge=  0.99985221486713272     
+ atom          14 charge=  0.99997218706630520     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r36.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r36 computation completed
+
+C4H10_14r7 computation started
+ atom           1 charge=   2.1634814739227295     
+ atom           2 charge=   1.7752821445465088     
+ atom           3 charge=   1.2964682579040527     
+ atom           4 charge=   2.1295408010482788     
+ atom           5 charge=  0.99917398602701724     
+ atom           6 charge=  0.99666712991893291     
+ atom           7 charge=  0.94895115867257118     
+ atom           8 charge=  0.99841814127285033     
+ atom           9 charge=  0.99603992514312267     
+ atom          10 charge=  0.99923079396830872     
+ atom          11 charge=  0.99792786268517375     
+ atom          12 charge=  0.99833618802949786     
+ atom          13 charge=  0.99969025480095297     
+ atom          14 charge=  0.99973075711750425     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r7.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r7 computation completed
+
+C4H10_14r16 computation started
+ atom           1 charge=   1.9257948398590088     
+ atom           2 charge=   1.8962395191192627     
+ atom           3 charge=   1.5841484069824219     
+ atom           4 charge=   1.9230759143829346     
+ atom           5 charge=  0.99830680049490184     
+ atom           6 charge=  0.99393776012584567     
+ atom           7 charge=  0.94370539113879204     
+ atom           8 charge=  0.99918507755501196     
+ atom           9 charge=  0.99983047535351943     
+ atom          10 charge=  0.99958722793962806     
+ atom          11 charge=  0.99581408593803644     
+ atom          12 charge=  0.99732244689948857     
+ atom          13 charge=  0.99963727424619719     
+ atom          14 charge=  0.99990331850858638     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r16.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r16 computation completed
+
+C4H10_14r42 computation started
+ atom           1 charge=   1.7585299015045166     
+ atom           2 charge=   1.7807805538177490     
+ atom           3 charge=   1.9439735412597656     
+ atom           4 charge=   1.7917051315307617     
+ atom           5 charge=  0.99726278032176197     
+ atom           6 charge=  0.99965721002081409     
+ atom           7 charge=  0.98013852536678314     
+ atom           8 charge=  0.99949085310800001     
+ atom           9 charge=  0.99577784398570657     
+ atom          10 charge=  0.99937282828614116     
+ atom          11 charge=  0.99741197004914284     
+ atom          12 charge=  0.99597060540691018     
+ atom          13 charge=  0.99649221380241215     
+ atom          14 charge=  0.99988910622050753     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r42.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r42 computation completed
+
+C4H10_14r17 computation started
+ atom           1 charge=   2.0668406486511230     
+ atom           2 charge=   1.7192568778991699     
+ atom           3 charge=   1.8047037124633789     
+ atom           4 charge=   1.5315840244293213     
+ atom           5 charge=  0.99854539230000228     
+ atom           6 charge=  0.99779908987693489     
+ atom           7 charge=  0.99830347811803222     
+ atom           8 charge=  0.99944873974891379     
+ atom           9 charge=  0.99568344885483384     
+ atom          10 charge=  0.99969403623254038     
+ atom          11 charge=  0.99610832892358303     
+ atom          12 charge=  0.99758691736496985     
+ atom          13 charge=  0.99960668696439825     
+ atom          14 charge=  0.99996018976162304     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r17.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r17 computation completed
+
+C4H10_14r48 computation started
+ atom           1 charge=   1.6195406913757324     
+ atom           2 charge=   2.0077869892120361     
+ atom           3 charge=   1.8783531188964844     
+ atom           4 charge=   2.1566183567047119     
+ atom           5 charge=  0.99926185718504712     
+ atom           6 charge=  0.99965391622390598     
+ atom           7 charge=  0.94951128214597702     
+ atom           8 charge=  0.99934318667510524     
+ atom           9 charge=  0.99769819877110422     
+ atom          10 charge=  0.99768356094136834     
+ atom          11 charge=  0.99818207812495530     
+ atom          12 charge=  0.99820461764466017     
+ atom          13 charge=  0.99977461734670214     
+ atom          14 charge=  0.99994694450651878     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r48.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r48 computation completed
+
+C4H10_14r27 computation started
+ atom           1 charge=   2.0733579397201538     
+ atom           2 charge=   1.6891345977783203     
+ atom           3 charge=   1.9260294437408447     
+ atom           4 charge=   2.0920531749725342     
+ atom           5 charge=  0.99930668476736173     
+ atom           6 charge=  0.99961537271155976     
+ atom           7 charge=  0.97892729938030243     
+ atom           8 charge=  0.99919868004508317     
+ atom           9 charge=  0.99616633984260261     
+ atom          10 charge=  0.99931565491715446     
+ atom          11 charge=  0.99793701642192900     
+ atom          12 charge=  0.99623512453399599     
+ atom          13 charge=  0.99711481388658285     
+ atom          14 charge=  0.99993550329963909     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r27.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r27 computation completed
+
+C4H10_14r31 computation started
+ atom           1 charge=   1.8912780284881592     
+ atom           2 charge=   1.8216795921325684     
+ atom           3 charge=   1.6693263053894043     
+ atom           4 charge=   1.9970440864562988     
+ atom           5 charge=  0.99794983793981373     
+ atom           6 charge=  0.99956526025198400     
+ atom           7 charge=  0.98556999675929546     
+ atom           8 charge=  0.99822429672349244     
+ atom           9 charge=  0.99984695273451507     
+ atom          10 charge=  0.99715198366902769     
+ atom          11 charge=  0.99749438627623022     
+ atom          12 charge=  0.99718707217834890     
+ atom          13 charge=  0.99964306520996615     
+ atom          14 charge=  0.99997922588045185     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r31.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r31 computation completed
+
+C4H10_14r47 computation started
+ atom           1 charge=   1.8139278888702393     
+ atom           2 charge=   2.0329017639160156     
+ atom           3 charge=   1.5186221599578857     
+ atom           4 charge=   1.7488250732421875     
+ atom           5 charge=  0.99681146047078073     
+ atom           6 charge=  0.99971114803338423     
+ atom           7 charge=  0.97668842226266861     
+ atom           8 charge=  0.99916548235341907     
+ atom           9 charge=  0.99983958396478556     
+ atom          10 charge=  0.99926595541182905     
+ atom          11 charge=  0.99846857390366495     
+ atom          12 charge=  0.99532809900119901     
+ atom          13 charge=  0.99774674256332219     
+ atom          14 charge=  0.97639781609177589     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r47.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r47 computation completed
+
+C4H10_14r10 computation started
+ atom           1 charge=   1.9363832473754883     
+ atom           2 charge=   1.8357794284820557     
+ atom           3 charge=   1.2884664535522461     
+ atom           4 charge=   1.8912887573242188     
+ atom           5 charge=  0.99973797419806942     
+ atom           6 charge=  0.99865554168354720     
+ atom           7 charge=  0.98792877234518528     
+ atom           8 charge=  0.99873337510507554     
+ atom           9 charge=  0.99880054232198745     
+ atom          10 charge=  0.99774645571596920     
+ atom          11 charge=  0.99870992836076766     
+ atom          12 charge=  0.99686566391028464     
+ atom          13 charge=  0.99991915418650024     
+ atom          14 charge=  0.99996991219450138     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r10.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r10 computation completed
+
+C4H10_14r32 computation started
+ atom           1 charge=   2.0676584243774414     
+ atom           2 charge=   1.8147840499877930     
+ atom           3 charge=   1.9163930416107178     
+ atom           4 charge=   2.0340863466262817     
+ atom           5 charge=  0.99864769144915044     
+ atom           6 charge=  0.99836604867596179     
+ atom           7 charge=  0.98341715522110462     
+ atom           8 charge=  0.99961813024128787     
+ atom           9 charge=  0.99755557999014854     
+ atom          10 charge=  0.99988048199156765     
+ atom          11 charge=  0.99819811445195228     
+ atom          12 charge=  0.99827887397259474     
+ atom          13 charge=  0.99818198406137526     
+ atom          14 charge=  0.99990498537954409     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r32.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r32 computation completed
+
+C4H10_14r21 computation started
+ atom           1 charge=   1.4893167018890381     
+ atom           2 charge=   1.7719419002532959     
+ atom           3 charge=   2.0813543796539307     
+ atom           4 charge=   1.8926725387573242     
+ atom           5 charge=  0.99767152476124465     
+ atom           6 charge=  0.99669118388555944     
+ atom           7 charge=  0.96091017872095108     
+ atom           8 charge=  0.99902257125359029     
+ atom           9 charge=  0.99984702638175804     
+ atom          10 charge=  0.99934348213719204     
+ atom          11 charge=  0.99904177262214944     
+ atom          12 charge=  0.99827327672392130     
+ atom          13 charge=  0.99980042067181785     
+ atom          14 charge=  0.99993656970764278     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r21.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r21 computation completed
+
+C4H10_14r43 computation started
+ atom           1 charge=   1.8526737689971924     
+ atom           2 charge=   1.5292837619781494     
+ atom           3 charge=   1.9605295658111572     
+ atom           4 charge=   2.0730365514755249     
+ atom           5 charge=  0.99939385364996269     
+ atom           6 charge=  0.99982591519074049     
+ atom           7 charge=  0.96447218582034111     
+ atom           8 charge=  0.99872487178072333     
+ atom           9 charge=  0.99988064216449857     
+ atom          10 charge=  0.99975426626042463     
+ atom          11 charge=  0.99782840069383383     
+ atom          12 charge=  0.99699991568922997     
+ atom          13 charge=  0.99983465531840920     
+ atom          14 charge=  0.99997645884832309     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r43.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r43 computation completed
+
+C4H10_14r5 computation started
+ atom           1 charge=   2.3707296848297119     
+ atom           2 charge=   1.2287657260894775     
+ atom           3 charge=   1.8700788021087646     
+ atom           4 charge=   2.0884089469909668     
+ atom           5 charge=  0.99945436214329675     
+ atom           6 charge=  0.99755262862890959     
+ atom           7 charge=  0.95072615146636963     
+ atom           8 charge=  0.99719084356911480     
+ atom           9 charge=  0.99988429452787386     
+ atom          10 charge=  0.99824690911918879     
+ atom          11 charge=  0.99803661811165512     
+ atom          12 charge=  0.99825693364255130     
+ atom          13 charge=  0.99721360858529806     
+ atom          14 charge=  0.99968667060602456     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r5.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r5 computation completed
+
+C4H10_14r9 computation started
+ atom           1 charge=   1.8189163208007812     
+ atom           2 charge=   1.5947110652923584     
+ atom           3 charge=   1.9356935024261475     
+ atom           4 charge=   1.8942282199859619     
+ atom           5 charge=  0.99878093926236033     
+ atom           6 charge=  0.99967146525159478     
+ atom           7 charge=  0.99987772169697564     
+ atom           8 charge=  0.99891134700737894     
+ atom           9 charge=  0.99347713775932789     
+ atom          10 charge=  0.99920886283507571     
+ atom          11 charge=  0.99567455612123013     
+ atom          12 charge=  0.99373364634811878     
+ atom          13 charge=  0.99226329708471894     
+ atom          14 charge=  0.99982557249313686     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r9.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r9 computation completed
+
+C4H10_14r33 computation started
+ atom           1 charge=   1.9192998409271240     
+ atom           2 charge=   1.4551362991333008     
+ atom           3 charge=   1.9816467761993408     
+ atom           4 charge=   2.2020533084869385     
+ atom           5 charge=  0.99969903522287495     
+ atom           6 charge=  0.99591607274487615     
+ atom           7 charge=  0.94364904612302780     
+ atom           8 charge=  0.99855471693444997     
+ atom           9 charge=  0.99699951009824872     
+ atom          10 charge=  0.99815276032313704     
+ atom          11 charge=  0.99779147608205676     
+ atom          12 charge=  0.99757519620470703     
+ atom          13 charge=  0.99978686094982550     
+ atom          14 charge=  0.99987912400683854     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r33.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r33 computation completed
+
+C4H10_14r11 computation started
+ atom           1 charge=   1.8315057754516602     
+ atom           2 charge=   1.8563125133514404     
+ atom           3 charge=   1.8775081634521484     
+ atom           4 charge=   1.9774305820465088     
+ atom           5 charge=  0.99936488509410992     
+ atom           6 charge=  0.99717622832395136     
+ atom           7 charge=  0.98109355755150318     
+ atom           8 charge=  0.99951004586182535     
+ atom           9 charge=  0.99658934772014618     
+ atom          10 charge=  0.99915789387887344     
+ atom          11 charge=  0.99766423739492893     
+ atom          12 charge=  0.99540574848651886     
+ atom          13 charge=  0.99637036118656397     
+ atom          14 charge=  0.99995716091871145     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r11.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r11 computation completed
+
+C4H10_14r20 computation started
+ atom           1 charge=   1.6882834434509277     
+ atom           2 charge=   1.7925183773040771     
+ atom           3 charge=   1.5693013668060303     
+ atom           4 charge=   1.9189138412475586     
+ atom           5 charge=  0.99883893225342035     
+ atom           6 charge=  0.99897014431189746     
+ atom           7 charge=  0.98601382039487362     
+ atom           8 charge=  0.99969114252598956     
+ atom           9 charge=  0.99851703387685120     
+ atom          10 charge=  0.99976422335021198     
+ atom          11 charge=  0.99926416011294350     
+ atom          12 charge=  0.99814715608954430     
+ atom          13 charge=  0.99990034620714141     
+ atom          14 charge=  0.99998320119993878     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r20.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r20 computation completed
+
+C4H10_14r8 computation started
+ atom           1 charge=   2.3075383901596069     
+ atom           2 charge=   1.6904115676879883     
+ atom           3 charge=   1.6637797355651855     
+ atom           4 charge=   1.9302327632904053     
+ atom           5 charge=  0.99941624375060201     
+ atom           6 charge=  0.99718893761746585     
+ atom           7 charge=  0.98353372886776924     
+ atom           8 charge=  0.99954918600269593     
+ atom           9 charge=  0.99768790369853377     
+ atom          10 charge=  0.99943631899077445     
+ atom          11 charge=  0.99772208486683667     
+ atom          12 charge=  0.99752402561716735     
+ atom          13 charge=  0.99978790912427939     
+ atom          14 charge=  0.99988347536418587     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r8.xyz                                                                                                                                                                                                    
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r8 computation completed
+
+C4H10_14r19 computation started
+ atom           1 charge=   1.9940564632415771     
+ atom           2 charge=   1.4138946533203125     
+ atom           3 charge=   2.1515693664550781     
+ atom           4 charge=   1.8038547039031982     
+ atom           5 charge=  0.99931325443321839     
+ atom           6 charge=  0.99703015433624387     
+ atom           7 charge=  0.98329924419522285     
+ atom           8 charge=  0.99968137784162536     
+ atom           9 charge=  0.99725209455937147     
+ atom          10 charge=  0.99666066607460380     
+ atom          11 charge=  0.99812157510314137     
+ atom          12 charge=  0.99743383517488837     
+ atom          13 charge=  0.99916861986275762     
+ atom          14 charge=  0.99996186320640845     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r19.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r19 computation completed
+
+C4H10_14r22 computation started
+ atom           1 charge=   2.1552841663360596     
+ atom           2 charge=   1.3461744785308838     
+ atom           3 charge=   1.7328417301177979     
+ atom           4 charge=   2.1322246789932251     
+ atom           5 charge=  0.99946276639821008     
+ atom           6 charge=  0.99748064065352082     
+ atom           7 charge=  0.96572579815983772     
+ atom           8 charge=  0.99959867715369910     
+ atom           9 charge=  0.99712063651531935     
+ atom          10 charge=  0.99919601529836655     
+ atom          11 charge=  0.99835641041863710     
+ atom          12 charge=  0.99719245475716889     
+ atom          13 charge=  0.99979688327584881     
+ atom          14 charge=  0.99995508692518342     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r22.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r22 computation completed
+
+C4H10_14r24 computation started
+ atom           1 charge=   1.7251946926116943     
+ atom           2 charge=   1.8935606479644775     
+ atom           3 charge=   1.9830274581909180     
+ atom           4 charge=   2.0256088972091675     
+ atom           5 charge=  0.99967078599729575     
+ atom           6 charge=  0.99695192719809711     
+ atom           7 charge=  0.95786016434431076     
+ atom           8 charge=  0.99868942180182785     
+ atom           9 charge=  0.99657907988876104     
+ atom          10 charge=  0.99762448552064598     
+ atom          11 charge=  0.99758270080201328     
+ atom          12 charge=  0.99894579569809139     
+ atom          13 charge=  0.99979295462253504     
+ atom          14 charge=  0.99987490441708360     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r24.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r24 computation completed
+
+C4H10_14r12 computation started
+ atom           1 charge=   1.8374788761138916     
+ atom           2 charge=   1.7174088954925537     
+ atom           3 charge=   1.6569612026214600     
+ atom           4 charge=   1.8815002441406250     
+ atom           5 charge=  0.99936001730384305     
+ atom           6 charge=  0.99349766410887241     
+ atom           7 charge=  0.95902639254927635     
+ atom           8 charge=  0.99928048759466037     
+ atom           9 charge=  0.99980789545224980     
+ atom          10 charge=  0.99959659206797369     
+ atom          11 charge=  0.99689227296039462     
+ atom          12 charge=  0.99675758299417794     
+ atom          13 charge=  0.99963557478622533     
+ atom          14 charge=  0.99993018744862638     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r12.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r12 computation completed
+
+C4H10_14r34 computation started
+ atom           1 charge=   1.9329955577850342     
+ atom           2 charge=   1.9063045978546143     
+ atom           3 charge=   1.7209875583648682     
+ atom           4 charge=   1.8579251766204834     
+ atom           5 charge=  0.99950070620980114     
+ atom           6 charge=  0.99774746433831751     
+ atom           7 charge=  0.97672053240239620     
+ atom           8 charge=  0.99955382509506308     
+ atom           9 charge=  0.99764973111450672     
+ atom          10 charge=  0.99970726569881663     
+ atom          11 charge=  0.99860909266863018     
+ atom          12 charge=  0.99791709636338055     
+ atom          13 charge=  0.99773192778229713     
+ atom          14 charge=  0.99335479363799095     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r34.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r34 computation completed
+
+C4H10_14r29 computation started
+ atom           1 charge=   1.9553732872009277     
+ atom           2 charge=   1.6090478897094727     
+ atom           3 charge=   1.6186563968658447     
+ atom           4 charge=   2.1975642442703247     
+ atom           5 charge=  0.99971017849748023     
+ atom           6 charge=  0.99973116765613668     
+ atom           7 charge=  0.98870796803385019     
+ atom           8 charge=  0.99973599510849454     
+ atom           9 charge=  0.99820110166911036     
+ atom          10 charge=  0.99986578321841080     
+ atom          11 charge=  0.99856685509439558     
+ atom          12 charge=  0.99915247765602544     
+ atom          13 charge=  0.99966907579801045     
+ atom          14 charge=  0.99994042276739492     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r29.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r29 computation completed
+
+C4H10_14r18 computation started
+ atom           1 charge=   2.1101627349853516     
+ atom           2 charge=   1.5696241855621338     
+ atom           3 charge=   1.7378773689270020     
+ atom           4 charge=   1.8458073139190674     
+ atom           5 charge=  0.99956009161542170     
+ atom           6 charge=  0.99748541368171573     
+ atom           7 charge=  0.98209357447922230     
+ atom           8 charge=  0.99954417554545216     
+ atom           9 charge=  0.99989780943724327     
+ atom          10 charge=  0.99931425944669172     
+ atom          11 charge=  0.99694537790492177     
+ atom          12 charge=  0.99720021057873964     
+ atom          13 charge=  0.99716786318458617     
+ atom          14 charge=  0.99983130011241883     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r18.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r18 computation completed
+
+C4H10_14r23 computation started
+ atom           1 charge=   1.6984257698059082     
+ atom           2 charge=   1.7295935153961182     
+ atom           3 charge=   1.7523818016052246     
+ atom           4 charge=   1.9841654300689697     
+ atom           5 charge=  0.99909863766515628     
+ atom           6 charge=  0.99717087857425213     
+ atom           7 charge=  0.96463210135698318     
+ atom           8 charge=  0.99959259721799754     
+ atom           9 charge=  0.99795868759974837     
+ atom          10 charge=  0.99983442574739456     
+ atom          11 charge=  0.99863361380994320     
+ atom          12 charge=  0.99672009819187224     
+ atom          13 charge=  0.99987744668032974     
+ atom          14 charge=  0.99609565106220543     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r23.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r23 computation completed
+
+C4H10_14r35 computation started
+ atom           1 charge=   2.1986999511718750     
+ atom           2 charge=   1.4515993595123291     
+ atom           3 charge=   2.0062289237976074     
+ atom           4 charge=   1.8378522396087646     
+ atom           5 charge=  0.99964701678254642     
+ atom           6 charge=  0.99780320166610181     
+ atom           7 charge=  0.97176184691488743     
+ atom           8 charge=  0.99842381023336202     
+ atom           9 charge=  0.99803682346828282     
+ atom          10 charge=  0.99976306615280919     
+ atom          11 charge=  0.99834399961400777     
+ atom          12 charge=  0.99722248502075672     
+ atom          13 charge=  0.99841744685545564     
+ atom          14 charge=  0.98727454617619514     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r35.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r35 computation completed
+
+C4H10_14r15 computation started
+ atom           1 charge=   1.9786007404327393     
+ atom           2 charge=   1.9131431579589844     
+ atom           3 charge=   1.8669347763061523     
+ atom           4 charge=   2.1428974866867065     
+ atom           5 charge=  0.99683409067802131     
+ atom           6 charge=  0.99958264062297530     
+ atom           7 charge=  0.91468191891908646     
+ atom           8 charge=  0.99886059807613492     
+ atom           9 charge=  0.99657583492808044     
+ atom          10 charge=  0.99555449513718486     
+ atom          11 charge=  0.99679744406603277     
+ atom          12 charge=  0.99632036942057312     
+ atom          13 charge=  0.99977437262714375     
+ atom          14 charge=  0.99979670123138931     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r15.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r15 computation completed
+
+C4H10_14r13 computation started
+ atom           1 charge=   1.9207403659820557     
+ atom           2 charge=   2.0560340881347656     
+ atom           3 charge=   1.6310386657714844     
+ atom           4 charge=   2.0457013845443726     
+ atom           5 charge=  0.99910959356930107     
+ atom           6 charge=  0.99481104081496596     
+ atom           7 charge=  0.98602064140141010     
+ atom           8 charge=  0.99948610895080492     
+ atom           9 charge=  0.99561188789084554     
+ atom          10 charge=  0.99636968667618930     
+ atom          11 charge=  0.99797694641165435     
+ atom          12 charge=  0.99719817889854312     
+ atom          13 charge=  0.99965792233706452     
+ atom          14 charge=  0.99267294351011515     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r13.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r13 computation completed
+
+C4H10_14r41 computation started
+ atom           1 charge=   1.8936512470245361     
+ atom           2 charge=   1.6673297882080078     
+ atom           3 charge=   1.6419644355773926     
+ atom           4 charge=   1.9632663726806641     
+ atom           5 charge=  0.99610030231997371     
+ atom           6 charge=  0.99679678957909346     
+ atom           7 charge=  0.98401003144681454     
+ atom           8 charge=  0.99932588724186644     
+ atom           9 charge=  0.99568092962726951     
+ atom          10 charge=  0.99918550957227126     
+ atom          11 charge=  0.99769123597070575     
+ atom          12 charge=  0.99638800788670778     
+ atom          13 charge=  0.99697306961752474     
+ atom          14 charge=  0.99128715042024851     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r41.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r41 computation completed
+
+C4H10_14r25 computation started
+ atom           1 charge=   1.9437036514282227     
+ atom           2 charge=   2.0173685550689697     
+ atom           3 charge=   1.4776885509490967     
+ atom           4 charge=   1.8754525184631348     
+ atom           5 charge=  0.99922410992439836     
+ atom           6 charge=  0.99978421746345703     
+ atom           7 charge=  0.97603360749781132     
+ atom           8 charge=  0.99967486714012921     
+ atom           9 charge=  0.99853193282615393     
+ atom          10 charge=  0.99884656246285886     
+ atom          11 charge=  0.99920445575844496     
+ atom          12 charge=  0.99918901978526264     
+ atom          13 charge=  0.99988349380873842     
+ atom          14 charge=  0.99996948369698657     
+ Successfully finished trajectory file: output/20112024_092728/trajectory/trajectory_C4H10_14r25.xyz                                                                                                                                                                                                   
+ Successfully updated atom info file: output/20112024_092728/atom_info.csv                                                                                                                                                                                                                           
+C4H10_14r25 computation completed
+
