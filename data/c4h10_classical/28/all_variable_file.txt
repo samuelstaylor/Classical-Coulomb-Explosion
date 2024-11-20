@@ -7,7 +7,7 @@
    fragment_input_path=/mnt/c/Users/sammy/Research/Classical-Coulomb-Explosion/input/c2h6/                                                                                                                                                                                             
    velocity_input_path=/mnt/c/Users/sammy/Research/Classical-Coulomb-Explosion/input/c2h6/                                                                                                                                                                                             
    time_step_start=      120000
-   N_simulations=         200
+   N_simulations=          50
    N_time_steps=      120000
    time_step=   1.0000000000000000E-003
    trajectory_output_frequency=         500
@@ -16,6 +16,8 @@
    include_electron_mass= F
    output_trajectory= T
    output_atom_info= T
+   include_pulse= F
+   pulse_dat_path=/mnt/c/Users/sammy/Research/Classical-Coulomb-Explosion/                                                                                                                                                                                                        
    finalize_info_at_cap= T
    cap_tolerance=   1.5000000000000000     
    cap_left1=  -10.000000000000000     

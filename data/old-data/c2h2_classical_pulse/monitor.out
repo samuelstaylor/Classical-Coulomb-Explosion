@@ -1,0 +1,35 @@
+ Run Started and output directory successfully created. Initializing...
+ Output folder created: output/04112024_135616
+ Output files created: output/04112024_135616
+ all variable file created: 'output/04112024_135616/all_variable_file.txt'
+ Successfully read and initialized data from: control.inp
+ All variables allocated and set, see: all_variable_file.txt                                                                                                                                                                                                                                          
+ Successfully read and initialized data from: /mnt/c/Users/sammy/Research/Classical-Coulomb-Explosion/data/c2h2_classical/molecule.inp                                                                                                                                                                        
+ Element, Atom atomic number
+   C           6
+   C           6
+   H           1
+   H           1
+ Atom positions (A) in x,y,z:
+ -0.60259638540000005        0.0000000000000000        5.1467593000000004E-003
+  0.60259638540000005        0.0000000000000000        5.1467593000000004E-003
+  -1.6696011025999999        0.0000000000000000        4.8532406999999998E-003
+   1.6696011025999999        0.0000000000000000        4.8532406999999998E-003
+ Successfully read and initialized data from: /mnt/c/Users/sammy/Research/Classical-Coulomb-Explosion/input/c2h2/seeds.inp                                                                                                                                                                                    
+ Successfully read and initialized data from: /mnt/c/Users/sammy/Research/Classical-Coulomb-Explosion/pulse.dat                                                                                                                                                                                               
+ All atomic masses successfully computed:
+ Atom atomic number and mass (eV_fs^2/A^2):
+           6   1243.7123176930008     
+           6   1243.7123176930008     
+           1   103.64269314108340     
+           1   103.64269314108340     
+ Atom info file created: 'output/04112024_135616/atom_info.csv'
+ Trajectory output folder created: 'output/04112024_135616/trajectory'
+ 
+ Initialization complete. Beginning computation...
+ 
+r=1 computation started
+ Successfully finished trajectory file: output/04112024_135616/trajectory/trajectory_r1.xyz                                                                                                                                                                                                            
+ Successfully updated atom info file: output/04112024_135616/atom_info.csv                                                                                                                                                                                                                           
+r=1 computation completed
+

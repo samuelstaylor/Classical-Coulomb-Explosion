@@ -45,10 +45,12 @@ SUBROUTINE calculate_force
   ! In SI units Newtons (N)
     integer :: i, j
     real*8 :: r(3), f_vec(3), r_mag, w, pulse_force(3)
-        
+    real*8 :: f_mag
+
     ! Initialize atom_force array to zero
     atom_force=0.0
 
+    ! say there are 4 atoms.. first (i=2, j=1) calculation. then (i=3, j=1), (i=3, j=2), (i=4, j=1), (i=4, j=2), (i=4, j=3)
     j=1
     do i=1, N_total_atom
       do while (j < i)
@@ -57,10 +59,21 @@ SUBROUTINE calculate_force
         r_mag = SQRT(SUM(r**2))
       
         ! Coulomb's law in next following two lines of code:
-        w=atom_charge(i)*atom_charge(i)/r_mag**3*E2
+        w=atom_charge(i)*atom_charge(j)/r_mag**3*E2
 
         ! Calculate the force vector
         f_vec = w * r 
+
+        ! make i in the index of atom1 and j the index of atom2
+        ! if (i==2 .and. j==1) then
+        ! ! Check if the current iteration is a multiple of 100
+        !   if (MOD(iter, 100) == 0) then
+        !     ! Write the iteration number and force vector components to the file
+        !     f_mag = SQRT(SUM(f_vec(:)**2))
+        !     ! print the iter and force acting on atom j from atom i.
+        !     write(log_file, '(A, I10, I10, I10, 4F15.8)') "FORCELINE:", iter, j, i, f_vec(1), f_vec(2), f_vec(3), f_mag
+        !   end if
+        ! endif
 
         ! Add the force contribution to the i-th atom
         ! Force experienced on atom j from atom i
@@ -76,12 +89,18 @@ SUBROUTINE calculate_force
       if (include_pulse) then
         pulse_force=atom_charge(i)*pulse_array(iter)
         atom_force(:, i) = atom_force(:, i) + pulse_force
-
       endif
     end do  
 
+    ! write(999,*)'force_wf', iter
+    ! do i=1,N_total_atom
+    !  write(999,*)i
+    !  write(999,*)atom_force(:,i)
+    ! end do
+    ! write(999,*)
     call calculate_acceleration
 END SUBROUTINE calculate_force
+
 
 
 SUBROUTINE calculate_acceleration

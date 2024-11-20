@@ -85,7 +85,7 @@ def plot_positions(time, positions, directory, labels, mode='', show=False):
     plt.xlabel('Time (fs)')
     plt.ylabel('Distance from origin (Å)')
     plt.xlim(0, 80)
-    plt.ylim(0, 55)  # Set y-axis limits
+    plt.ylim(0, 80)  # Set y-axis limits
     
     ''' For isoxazole
     plt.xlim(0, 90)
@@ -124,7 +124,7 @@ def plot_velocity(time, speeds, directory, labels, mode='', show=False):
     plt.xlabel('Time (fs)')
     plt.ylabel('Speed (Å/fs)')
     plt.xlim(0, 80)
-    plt.ylim(0, 0.85)  # Set y-axis limits
+    plt.ylim(0, 1.00)  # Set y-axis limits
     
     ''' For isoxazole
     plt.xlim(0, 90)
@@ -228,6 +228,14 @@ trajectory_file_list = [
 
 modes = ['', '', 's', 's', '']
 
+
+trajectory_file_list = [
+     'data\\c2h2_classical\\trajectory_r1.xyz',
+    'data\\c2h2_classical_pulse\\trajectory_r1.xyz'
+]
+
+modes = ['','']
+
 # Number of atoms of each type
 num_oxygen_atoms = 0
 num_nitrogen_atoms = 0
@@ -235,7 +243,7 @@ num_carbon_atoms = 2
 num_hydrogen_atoms = 2
 
 total_atoms = num_carbon_atoms + num_hydrogen_atoms + num_oxygen_atoms + num_nitrogen_atoms
-show = False
+show = True
 
 for i in range(len(trajectory_file_list)):
     trajectory_file = trajectory_file_list[i]

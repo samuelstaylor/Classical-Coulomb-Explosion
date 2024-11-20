@@ -1,7 +1,7 @@
  Run Started and output directory successfully created. Initializing...
- Output folder created: output/17102024_161728
- Output files created: output/17102024_161728
- all variable file created: 'output/17102024_161728/all_variable_file.txt'
+ Output folder created: output/20112024_090320
+ Output files created: output/20112024_090320
+ all variable file created: 'output/20112024_090320/all_variable_file.txt'
  Successfully read and initialized data from: control.inp
  All variables allocated and set, see: all_variable_file.txt                                                                                                                                                                                                                                          
  Successfully read and initialized data from: /mnt/c/Users/sammy/Research/Classical-Coulomb-Explosion/data/c4h10_classical/14/molecule.inp                                                                                                                                                                    
@@ -52,1008 +52,258 @@
            1   103.64269314108340     
            1   103.64269314108340     
            1   103.64269314108340     
- Atom info file created: 'output/17102024_161728/atom_info.csv'
- Trajectory output folder created: 'output/17102024_161728/trajectory'
+ Atom info file created: 'output/20112024_090320/atom_info.csv'
+ Trajectory output folder created: 'output/20112024_090320/trajectory'
  
  Initialization complete. Beginning computation...
  
 r=1 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r1.xyz                                                                                                                                                                                                            
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r1.xyz                                                                                                                                                                                                            
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=1 computation completed
 
 r=2 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r2.xyz                                                                                                                                                                                                            
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r2.xyz                                                                                                                                                                                                            
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=2 computation completed
 
 r=3 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r3.xyz                                                                                                                                                                                                            
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r3.xyz                                                                                                                                                                                                            
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=3 computation completed
 
 r=4 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r4.xyz                                                                                                                                                                                                            
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r4.xyz                                                                                                                                                                                                            
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=4 computation completed
 
 r=5 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r5.xyz                                                                                                                                                                                                            
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r5.xyz                                                                                                                                                                                                            
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=5 computation completed
 
 r=6 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r6.xyz                                                                                                                                                                                                            
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r6.xyz                                                                                                                                                                                                            
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=6 computation completed
 
 r=7 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r7.xyz                                                                                                                                                                                                            
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r7.xyz                                                                                                                                                                                                            
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=7 computation completed
 
 r=8 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r8.xyz                                                                                                                                                                                                            
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r8.xyz                                                                                                                                                                                                            
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=8 computation completed
 
 r=9 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r9.xyz                                                                                                                                                                                                            
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r9.xyz                                                                                                                                                                                                            
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=9 computation completed
 
 r=10 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r10.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r10.xyz                                                                                                                                                                                                           
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=10 computation completed
 
 r=11 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r11.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r11.xyz                                                                                                                                                                                                           
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=11 computation completed
 
 r=12 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r12.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r12.xyz                                                                                                                                                                                                           
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=12 computation completed
 
 r=13 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r13.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r13.xyz                                                                                                                                                                                                           
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=13 computation completed
 
 r=14 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r14.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r14.xyz                                                                                                                                                                                                           
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=14 computation completed
 
 r=15 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r15.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r15.xyz                                                                                                                                                                                                           
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=15 computation completed
 
 r=16 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r16.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r16.xyz                                                                                                                                                                                                           
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=16 computation completed
 
 r=17 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r17.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r17.xyz                                                                                                                                                                                                           
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=17 computation completed
 
 r=18 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r18.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r18.xyz                                                                                                                                                                                                           
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=18 computation completed
 
 r=19 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r19.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r19.xyz                                                                                                                                                                                                           
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=19 computation completed
 
 r=20 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r20.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r20.xyz                                                                                                                                                                                                           
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=20 computation completed
 
 r=21 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r21.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r21.xyz                                                                                                                                                                                                           
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=21 computation completed
 
 r=22 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r22.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r22.xyz                                                                                                                                                                                                           
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=22 computation completed
 
 r=23 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r23.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r23.xyz                                                                                                                                                                                                           
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=23 computation completed
 
 r=24 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r24.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r24.xyz                                                                                                                                                                                                           
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=24 computation completed
 
 r=25 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r25.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r25.xyz                                                                                                                                                                                                           
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=25 computation completed
 
 r=26 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r26.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r26.xyz                                                                                                                                                                                                           
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=26 computation completed
 
 r=27 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r27.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r27.xyz                                                                                                                                                                                                           
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=27 computation completed
 
 r=28 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r28.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r28.xyz                                                                                                                                                                                                           
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=28 computation completed
 
 r=29 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r29.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r29.xyz                                                                                                                                                                                                           
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=29 computation completed
 
 r=30 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r30.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r30.xyz                                                                                                                                                                                                           
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=30 computation completed
 
 r=31 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r31.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r31.xyz                                                                                                                                                                                                           
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=31 computation completed
 
 r=32 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r32.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r32.xyz                                                                                                                                                                                                           
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=32 computation completed
 
 r=33 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r33.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r33.xyz                                                                                                                                                                                                           
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=33 computation completed
 
 r=34 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r34.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r34.xyz                                                                                                                                                                                                           
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=34 computation completed
 
 r=35 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r35.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r35.xyz                                                                                                                                                                                                           
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=35 computation completed
 
 r=36 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r36.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r36.xyz                                                                                                                                                                                                           
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=36 computation completed
 
 r=37 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r37.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r37.xyz                                                                                                                                                                                                           
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=37 computation completed
 
 r=38 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r38.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r38.xyz                                                                                                                                                                                                           
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=38 computation completed
 
 r=39 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r39.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r39.xyz                                                                                                                                                                                                           
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=39 computation completed
 
 r=40 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r40.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r40.xyz                                                                                                                                                                                                           
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=40 computation completed
 
 r=41 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r41.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r41.xyz                                                                                                                                                                                                           
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=41 computation completed
 
 r=42 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r42.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r42.xyz                                                                                                                                                                                                           
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=42 computation completed
 
 r=43 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r43.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r43.xyz                                                                                                                                                                                                           
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=43 computation completed
 
 r=44 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r44.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r44.xyz                                                                                                                                                                                                           
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=44 computation completed
 
 r=45 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r45.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r45.xyz                                                                                                                                                                                                           
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=45 computation completed
 
 r=46 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r46.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r46.xyz                                                                                                                                                                                                           
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=46 computation completed
 
 r=47 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r47.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r47.xyz                                                                                                                                                                                                           
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=47 computation completed
 
 r=48 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r48.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r48.xyz                                                                                                                                                                                                           
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=48 computation completed
 
 r=49 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r49.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r49.xyz                                                                                                                                                                                                           
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=49 computation completed
 
 r=50 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r50.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
+ Successfully finished trajectory file: output/20112024_090320/trajectory/trajectory_r50.xyz                                                                                                                                                                                                           
+ Successfully updated atom info file: output/20112024_090320/atom_info.csv                                                                                                                                                                                                                           
 r=50 computation completed
-
-r=51 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r51.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=51 computation completed
-
-r=52 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r52.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=52 computation completed
-
-r=53 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r53.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=53 computation completed
-
-r=54 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r54.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=54 computation completed
-
-r=55 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r55.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=55 computation completed
-
-r=56 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r56.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=56 computation completed
-
-r=57 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r57.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=57 computation completed
-
-r=58 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r58.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=58 computation completed
-
-r=59 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r59.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=59 computation completed
-
-r=60 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r60.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=60 computation completed
-
-r=61 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r61.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=61 computation completed
-
-r=62 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r62.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=62 computation completed
-
-r=63 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r63.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=63 computation completed
-
-r=64 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r64.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=64 computation completed
-
-r=65 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r65.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=65 computation completed
-
-r=66 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r66.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=66 computation completed
-
-r=67 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r67.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=67 computation completed
-
-r=68 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r68.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=68 computation completed
-
-r=69 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r69.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=69 computation completed
-
-r=70 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r70.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=70 computation completed
-
-r=71 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r71.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=71 computation completed
-
-r=72 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r72.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=72 computation completed
-
-r=73 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r73.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=73 computation completed
-
-r=74 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r74.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=74 computation completed
-
-r=75 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r75.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=75 computation completed
-
-r=76 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r76.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=76 computation completed
-
-r=77 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r77.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=77 computation completed
-
-r=78 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r78.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=78 computation completed
-
-r=79 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r79.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=79 computation completed
-
-r=80 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r80.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=80 computation completed
-
-r=81 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r81.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=81 computation completed
-
-r=82 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r82.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=82 computation completed
-
-r=83 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r83.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=83 computation completed
-
-r=84 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r84.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=84 computation completed
-
-r=85 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r85.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=85 computation completed
-
-r=86 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r86.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=86 computation completed
-
-r=87 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r87.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=87 computation completed
-
-r=88 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r88.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=88 computation completed
-
-r=89 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r89.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=89 computation completed
-
-r=90 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r90.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=90 computation completed
-
-r=91 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r91.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=91 computation completed
-
-r=92 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r92.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=92 computation completed
-
-r=93 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r93.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=93 computation completed
-
-r=94 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r94.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=94 computation completed
-
-r=95 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r95.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=95 computation completed
-
-r=96 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r96.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=96 computation completed
-
-r=97 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r97.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=97 computation completed
-
-r=98 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r98.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=98 computation completed
-
-r=99 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r99.xyz                                                                                                                                                                                                           
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=99 computation completed
-
-r=100 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r100.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=100 computation completed
-
-r=101 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r101.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=101 computation completed
-
-r=102 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r102.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=102 computation completed
-
-r=103 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r103.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=103 computation completed
-
-r=104 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r104.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=104 computation completed
-
-r=105 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r105.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=105 computation completed
-
-r=106 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r106.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=106 computation completed
-
-r=107 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r107.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=107 computation completed
-
-r=108 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r108.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=108 computation completed
-
-r=109 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r109.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=109 computation completed
-
-r=110 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r110.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=110 computation completed
-
-r=111 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r111.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=111 computation completed
-
-r=112 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r112.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=112 computation completed
-
-r=113 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r113.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=113 computation completed
-
-r=114 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r114.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=114 computation completed
-
-r=115 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r115.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=115 computation completed
-
-r=116 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r116.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=116 computation completed
-
-r=117 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r117.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=117 computation completed
-
-r=118 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r118.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=118 computation completed
-
-r=119 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r119.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=119 computation completed
-
-r=120 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r120.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=120 computation completed
-
-r=121 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r121.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=121 computation completed
-
-r=122 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r122.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=122 computation completed
-
-r=123 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r123.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=123 computation completed
-
-r=124 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r124.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=124 computation completed
-
-r=125 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r125.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=125 computation completed
-
-r=126 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r126.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=126 computation completed
-
-r=127 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r127.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=127 computation completed
-
-r=128 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r128.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=128 computation completed
-
-r=129 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r129.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=129 computation completed
-
-r=130 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r130.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=130 computation completed
-
-r=131 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r131.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=131 computation completed
-
-r=132 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r132.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=132 computation completed
-
-r=133 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r133.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=133 computation completed
-
-r=134 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r134.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=134 computation completed
-
-r=135 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r135.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=135 computation completed
-
-r=136 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r136.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=136 computation completed
-
-r=137 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r137.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=137 computation completed
-
-r=138 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r138.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=138 computation completed
-
-r=139 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r139.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=139 computation completed
-
-r=140 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r140.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=140 computation completed
-
-r=141 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r141.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=141 computation completed
-
-r=142 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r142.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=142 computation completed
-
-r=143 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r143.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=143 computation completed
-
-r=144 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r144.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=144 computation completed
-
-r=145 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r145.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=145 computation completed
-
-r=146 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r146.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=146 computation completed
-
-r=147 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r147.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=147 computation completed
-
-r=148 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r148.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=148 computation completed
-
-r=149 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r149.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=149 computation completed
-
-r=150 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r150.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=150 computation completed
-
-r=151 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r151.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=151 computation completed
-
-r=152 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r152.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=152 computation completed
-
-r=153 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r153.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=153 computation completed
-
-r=154 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r154.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=154 computation completed
-
-r=155 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r155.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=155 computation completed
-
-r=156 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r156.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=156 computation completed
-
-r=157 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r157.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=157 computation completed
-
-r=158 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r158.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=158 computation completed
-
-r=159 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r159.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=159 computation completed
-
-r=160 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r160.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=160 computation completed
-
-r=161 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r161.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=161 computation completed
-
-r=162 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r162.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=162 computation completed
-
-r=163 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r163.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=163 computation completed
-
-r=164 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r164.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=164 computation completed
-
-r=165 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r165.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=165 computation completed
-
-r=166 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r166.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=166 computation completed
-
-r=167 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r167.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=167 computation completed
-
-r=168 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r168.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=168 computation completed
-
-r=169 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r169.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=169 computation completed
-
-r=170 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r170.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=170 computation completed
-
-r=171 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r171.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=171 computation completed
-
-r=172 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r172.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=172 computation completed
-
-r=173 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r173.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=173 computation completed
-
-r=174 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r174.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=174 computation completed
-
-r=175 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r175.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=175 computation completed
-
-r=176 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r176.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=176 computation completed
-
-r=177 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r177.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=177 computation completed
-
-r=178 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r178.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=178 computation completed
-
-r=179 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r179.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=179 computation completed
-
-r=180 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r180.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=180 computation completed
-
-r=181 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r181.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=181 computation completed
-
-r=182 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r182.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=182 computation completed
-
-r=183 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r183.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=183 computation completed
-
-r=184 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r184.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=184 computation completed
-
-r=185 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r185.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=185 computation completed
-
-r=186 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r186.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=186 computation completed
-
-r=187 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r187.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=187 computation completed
-
-r=188 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r188.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=188 computation completed
-
-r=189 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r189.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=189 computation completed
-
-r=190 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r190.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=190 computation completed
-
-r=191 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r191.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=191 computation completed
-
-r=192 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r192.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=192 computation completed
-
-r=193 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r193.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=193 computation completed
-
-r=194 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r194.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=194 computation completed
-
-r=195 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r195.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=195 computation completed
-
-r=196 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r196.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=196 computation completed
-
-r=197 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r197.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=197 computation completed
-
-r=198 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r198.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=198 computation completed
-
-r=199 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r199.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=199 computation completed
-
-r=200 computation started
- Successfully finished trajectory file: output/17102024_161728/trajectory/trajectory_r200.xyz                                                                                                                                                                                                          
- Successfully updated atom info file: output/17102024_161728/atom_info.csv                                                                                                                                                                                                                           
-r=200 computation completed
 

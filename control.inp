@@ -1,9 +1,9 @@
 run_type=1
 
 # run_type=1 | BOLTZMANN VELOCITY DISTRIBUTION FROM GROUNDSTATE
-molecule_input_path=/mnt/c/Users/sammy/Research/Classical-Coulomb-Explosion/data/c2h2_classical/
+molecule_input_path=/mnt/c/Users/sammy/Research/Classical-Coulomb-Explosion/data/isoxazole_classical
 seeds_input_path=/mnt/c/Users/sammy/Research/Classical-Coulomb-Explosion/input/c2h2/
-N_simulations=1
+N_simulations=30
 temperature_ions = 300.0 
 
 # run_type=2 | CONTINUE FROM TDDFT WITHOUT QUANTUM EFFECTS
@@ -17,7 +17,7 @@ velocity_input_path=/mnt/c/Users/sammy/Research/Classical-Coulomb-Explosion/inpu
 time_step_start=120000 #(120 fs) what the first iteration should be set at
 
 # UNIVERSAL CONFIGURATION
-N_time_steps = 80000
+N_time_steps = 120000
 time_step = .001
 use_average_atomic_mass = True
 include_electron_mass = False
@@ -26,18 +26,18 @@ trajectory_output_frequency = 500
 output_atom_info = True
 
 # pulse.dat file path. Make sure it is the same time step as above
-include_pulse = True
+include_pulse = False
 pulse_dat_path=/mnt/c/Users/sammy/Research/Classical-Coulomb-Explosion/
 
 # finalize the atom velocity and info when the molecules reach the CAP within the tolerance
 finalize_info_at_cap=True
 cap_tolerance=1.5
-cap_left1=-10
-cap_right1=10
-cap_left2=-9
-cap_right2=9
-cap_left3=-9
-cap_right3=9
+cap_left1=-12
+cap_right1=12
+cap_left2=-11
+cap_right2=11
+cap_left3=-11
+cap_right3=11
 
 # ERROR: PARALLELIZATION FEATURE IS CURRENTLY BROKEN! SET TO FALSE
 parallelization = False

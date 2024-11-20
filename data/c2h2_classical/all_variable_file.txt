@@ -16,6 +16,8 @@
    include_electron_mass= F
    output_trajectory= T
    output_atom_info= T
+   include_pulse= F
+   pulse_dat_path=/mnt/c/Users/sammy/Research/Classical-Coulomb-Explosion/                                                                                                                                                                                                        
    finalize_info_at_cap= T
    cap_tolerance=   1.5000000000000000     
    cap_left1=  -8.0000000000000000     
