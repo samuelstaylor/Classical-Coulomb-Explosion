@@ -696,43 +696,56 @@ class NewtonPlot:
 def main():
     print("-=GENERATING NEWTON PLOT=-")
     newton_plot = NewtonPlot()
-    data_mode = "p"
+    data_mode = "q"
     user_input_mode = False
+    alpha = 0.2 #set alpha =0.2 for c4h10 and =0.03 for c2h2
+    lim_2d_left=-0.15
+    lim_2d_right=0.15
+    lim_2d_bottom=-0.15
+    lim_2d_top=0.15
+    lim_3d_x_lower=-1
+    lim_3d_x_upper=1
+    lim_3d_y_lower=-1
+    lim_3d_y_upper=1
+    lim_3d_z_lower=-1
+    lim_3d_z_upper=1
+    newton_plot.axis_subdivide = 4   
+    # FOR C4H10
     alpha = 0.2  #set alpha =0.2 for c4h10 and =0.03 for c2h2
-    lim_2d_left=-1.3
-    lim_2d_right=1.3
-    lim_2d_bottom=-1.3
-    lim_2d_top=1.3  
-    lim_3d_x_lower=-1.3
-    lim_3d_x_upper=1.3
-    lim_3d_y_lower=-1.3
-    lim_3d_y_upper=1.3
-    lim_3d_z_lower=-1.3
-    lim_3d_z_upper=1.3
+    lim_2d_left=-1.5
+    lim_2d_right=1.5
+    lim_2d_bottom=-1.5
+    lim_2d_top=1.5
+    lim_3d_x_lower=-1.5
+    lim_3d_x_upper=1.5
+    lim_3d_y_lower=-1.5
+    lim_3d_y_upper=1.5
+    lim_3d_z_lower=-1.5
+    lim_3d_z_upper=1.5
     newton_plot.axis_subdivide = 4    
 
     if (data_mode.lower().startswith('c')):
         #CLASSICAL INPUT FILE:
-        input_file = 'data\\isoxazole_classical\\atom_info.csv'
         input_file = 'data\\c2h2_classical\\atom_info.csv'
         input_file = 'data\\c4h10_classical\\28\\atom_info.csv'
         input_file = 'data\\c4h10_classical\\14\\atom_info.csv'
+        input_file = 'data\\isoxazole_classical\\atom_info.csv'
         graph_name_tag="classical"
         
     if (data_mode.lower().startswith('q')):
         #QUANTUM INPUT FILE:
-        input_file = 'data\\isoxazole_quantum\\moleculeFormations_14.csv' 
-        input_file = 'data\\c2h2_quantum\\moleculeFormations_14.csv'
-        input_file = 'data\\c4h10_quantum\\14\\moleculeFormations_14.csv'
+        input_file = 'data\\isoxazole_quantum\\moleculeFormations_14.csv'
+        input_file = 'data\\c2h2_quantum\\moleculeFormations_14.csv' 
         input_file = 'data\\c4h10_quantum\\28\\moleculeFormations_28.csv' 
+        input_file = 'data\\c4h10_quantum\\14\\moleculeFormations_14.csv'
         graph_name_tag="quantum"
 
     if (data_mode.lower().startswith('s')):
         #SEMI-CLASSICAL INPUT FILE:
-        input_file = 'data\\isoxazole_semi_classical\\atom_info.csv'
         input_file = 'data\\c2h2_semi_classical\\atom_info.csv'
-        input_file = 'data\\c4h10_semi_classical\\14\\atom_info.csv'
         input_file = 'data\\c4h10_semi_classical\\28\\atom_info.csv'
+        input_file = 'data\\c4h10_semi_classical\\14\\atom_info.csv'
+        input_file = 'data\\isoxazole_semi_classical\\atom_info.csv'
         graph_name_tag="semi-classical"
         
     if (data_mode.lower().startswith('p')):

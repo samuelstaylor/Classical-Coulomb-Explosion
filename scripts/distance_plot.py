@@ -22,7 +22,8 @@ N_mass = 1450.9977039751675
 C_mass = 1243.7123176930008
 H_mass = 103.64269314108340
 
-SHOW_LEGENDS = True
+SHOW_LEGENDS = False
+SAVE = False
 
 def read_trajectory(file, num_atoms):
     with open(file, 'r') as f:
@@ -69,7 +70,8 @@ def plot_distance(time, distances, directory, mode='', show=False):
     plt.ylabel('Distance (Å)')
     plt.grid(True)
     plt.tight_layout()
-    plt.savefig(os.path.join(directory, 'distance.png'))
+    if SAVE:
+        plt.savefig(os.path.join(directory, 'distance.png'))
     if show:
         plt.show()
     plt.close()
@@ -94,23 +96,24 @@ def plot_positions(time, positions, directory, labels, mode='', show=False):
     
     ''' For c41h10 e28
     plt.xlim(0, 27.5)
-    plt.ylim(0, 27)  # Set y-axis limits
+    plt.ylim(0, 50)  # Set y-axis limits
     '''
     
     ''' For c4h10 e14
     plt.xlim(0, 33.5)
-    plt.ylim(0, 33)  # Set y-axis limits
+    plt.ylim(0, 40)  # Set y-axis limits
     '''
     
     ''' For c2h2 
     plt.xlim(0, 80)
-    plt.ylim(0, 55)  # Set y-axis limits
+    plt.ylim(0, 80)  # Set y-axis limits
     '''
     plt.grid(True)
     if SHOW_LEGENDS:
         plt.legend(prop={'family': 'Times New Roman'})
     plt.tight_layout()
-    plt.savefig(os.path.join(directory, 'position.png'))
+    if SAVE:
+        plt.savefig(os.path.join(directory, 'position.png'))
     if show:
         plt.show()
     plt.close()
@@ -133,24 +136,25 @@ def plot_velocity(time, speeds, directory, labels, mode='', show=False):
     
     ''' For c4h10 e28
     plt.xlim(0, 27.5)
-    plt.ylim(0, 1.3)  # Set y-axis limits
+    plt.ylim(0, 1.75)  # Set y-axis limits
     '''
     
     ''' For c4h10 e14
     plt.xlim(0, 33.5)
-    plt.ylim(0, 1.05)  # Set y-axis limits
+    plt.ylim(0, 1.25)  # Set y-axis limits
     '''
     
     ''' For c2h2
     plt.xlim(0, 80)
-    plt.ylim(0, 0.85)  # Set y-axis limits
+    plt.ylim(0, 1.00)  # Set y-axis limits
     '''
     
     plt.grid(True)
     if SHOW_LEGENDS:
         plt.legend(prop={'family': 'Times New Roman'})
     plt.tight_layout()    
-    plt.savefig(os.path.join(directory, 'velocity.png'))
+    if SAVE:
+        plt.savefig(os.path.join(directory, 'velocity.png'))
     if show:
         plt.show()
     plt.close()
@@ -168,7 +172,8 @@ def plot_acceleration(time, accelerations, directory, labels, mode='', show=Fals
     if SHOW_LEGENDS:
         plt.legend(prop={'family': 'Times New Roman'})
     plt.tight_layout()
-    plt.savefig(os.path.join(directory, 'acceleration.png'))
+    if SAVE:
+        plt.savefig(os.path.join(directory, 'acceleration.png'))
     if show:
         plt.show()
     plt.close()
@@ -185,7 +190,8 @@ def plot_force(time, accelerations, masses, directory, labels, mode='', show=Fal
     if SHOW_LEGENDS:
         plt.legend(prop={'family': 'Times New Roman'})
     plt.tight_layout()
-    plt.savefig(os.path.join(directory, 'force.png'))
+    if SAVE:
+        plt.savefig(os.path.join(directory, 'force.png'))
     if show:
         plt.show()
     plt.close()
@@ -217,24 +223,12 @@ trajectory_file_list = [
     'data\\isoxazole_quantum\\trajectory_r3.xyz'
 ]
 '''
-
 trajectory_file_list = [
-    'data\\c2h2_classical\\trajectory_r1.xyz',
-    'data\\c2h2_classical_pulse\\trajectory_r1.xyz',
     'data\\c2h2_semi_classical\\trajectory_r1.xyz',
-    'data\\c2h2_semi_classical_pulse\\trajectory_r1.xyz',
     'data\\c2h2_quantum\\trajectory_r1.xyz'
 ]
 
-modes = ['', '', 's', 's', '']
-
-
-trajectory_file_list = [
-     'data\\c2h2_classical\\trajectory_r1.xyz',
-    'data\\c2h2_classical_pulse\\trajectory_r1.xyz'
-]
-
-modes = ['','']
+modes = ['', 's']
 
 # Number of atoms of each type
 num_oxygen_atoms = 0
@@ -243,7 +237,7 @@ num_carbon_atoms = 2
 num_hydrogen_atoms = 2
 
 total_atoms = num_carbon_atoms + num_hydrogen_atoms + num_oxygen_atoms + num_nitrogen_atoms
-show = True
+show = False
 
 for i in range(len(trajectory_file_list)):
     trajectory_file = trajectory_file_list[i]
@@ -256,7 +250,11 @@ for i in range(len(trajectory_file_list)):
     time = np.array(iterations) / 1000  # convert iterations to time in fs
     speeds = calculate_velocity(positions, time)
     accelerations = calculate_acceleration(speeds, time)
-
+    
+    print("Trajectory file:", trajectory_file)
+    for j in range(len(speeds[3])):
+        print("time:", time[j], "    speed:", speeds[3][j])
+        
     plot_distance(time, distances, directory, mode=mode, show=show)
     plot_positions(time, positions, directory, labels, mode=mode, show=show)
     plot_velocity(time, speeds, directory, labels, mode=mode, show=show)

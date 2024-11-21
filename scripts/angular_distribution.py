@@ -80,18 +80,19 @@ class AngularDistribution:
         else:
             ax.set_xlim(-180, 180)
         if self.element == "C":
-            ax.set_ylim(10, 28)
+            ax.set_ylim(12, 26)
         if self.element == "H":
-            ax.set_ylim(18, 36)
+            ax.set_ylim(20, 38)
 
 # Create an instance of the AngularDistribution class for all atoms
 def main():
     atom_types = ['C', 'C', 'H', 'H']
     
-    file_path = 'data\\c2h2_quantum\\moleculeFormations_14.csv'
-    file_path = 'data\\c2h2_classical\\atom_info.csv'
     file_path = 'data\\c2h2_semi_classical_pulse\\atom_info.csv'
+    file_path = 'data\\c2h2_quantum\\moleculeFormations_14.csv'
     file_path = 'data\\c2h2_semi_classical\\atom_info.csv'
+    file_path = 'data\\c2h2_classical\\atom_info.csv'
+
 
 
     data_type = 'q'
