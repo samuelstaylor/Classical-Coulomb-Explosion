@@ -1,5 +1,5 @@
 # Classical-Coulomb-Explosion
-Program simulate Coulomb explosion of molecules and generate output files.
+Program to simulate Coulomb explosion of molecules and generate output files.
 
 **Description:** Simulates coulomb explosion of molecules given their atoms' element, initial position, and charge. 
 Initializes the atoms' velocities to the Boltzmann distribution. Can perform an number of simulations in a given run
